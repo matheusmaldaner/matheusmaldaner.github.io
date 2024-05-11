@@ -1574,12 +1574,25 @@ input, select, textarea {
 		padding: 2.75em 1.75em 2.75em 1.75em;
 	}
 
+		.box img {
+			width: 100%;  /* Makes the image take the full width of the parent container */
+			height: 250px;  /* Sets a fixed height for the images */
+			object-fit: cover;  /* Ensures the image covers the set area, cropping if necessary */
+		}
+	
+		.disabled-box {
+			opacity: 0.5;  /* Reduces the opacity, making it look disabled */
+			pointer-events: none;  /* Disables all mouse events on this element */
+		}
+
 		.box .image.featured {
+
 			position: relative;
 			width: auto;
 			left: 1.75em;
 			top: 1.75em;
 			margin: -4.5em 0 4.25em -3.5em;
+			object-fit: contain;
 		}
 
 		.box.post header {
@@ -1626,6 +1639,12 @@ input, select, textarea {
 		-ms-transition: background-color .25s ease-in-out;
 		transition: background-color .25s ease-in-out;
 	}
+
+	.button.disabled {
+        opacity: 0.5; /* Makes the button appear faded */
+        pointer-events: none; /* Disables any click on the button */
+        cursor: default; /* Shows the default cursor instead of a pointer */
+    }
 
 		input[type="button"]:hover,
 		input[type="submit"]:hover,
