@@ -1571,47 +1571,41 @@ input, select, textarea {
 	.box {
 		background: #ffffff;
 		border-bottom: solid 1px #ccc;
-		padding: 2.75em 1.75em 2.75em 1.75em;
+		padding: 0.5em 1.5em 0em 1.5em; /* Reduce padding to make the overall box tighter */
+		width: 100%; /* Ensure it takes the full width of the parent */
+		box-sizing: border-box; /* Include padding/border in the width */
 	}
 
 		.box img {
-			width: 100%;  /* Makes the image take the full width of the parent container */
-			height: 250px;  /* Sets a fixed height for the images */
-			object-fit: cover;  /* Ensures the image covers the set area, cropping if necessary */
-		}
-	
-		.disabled-box {
-			opacity: 0.5;  /* Reduces the opacity, making it look disabled */
-			pointer-events: none;  /* Disables all mouse events on this element */
+			width: 100%; /* Full width of the parent container */
+			height: 250px; /* Fixed height */
+			object-fit: cover; /* Crop if necessary */
+			margin-bottom: 0.5em; /* Reduce space below the image */
 		}
 
 		.box .image.featured {
-
 			position: relative;
-			width: auto;
-			left: 1.75em;
-			top: 1.75em;
-			margin: -4.5em 0 4.25em -3.5em;
-			object-fit: contain;
+			margin: 0; /* Remove custom margin to reduce extra space */
+			object-fit: contain; /* Ensure the image doesn't stretch */
 		}
 
-		.box.post header {
-			padding-top: 1em;
-			margin: 0 0 2em 0;
+		.box header {
+			margin-top: 0.5em; /* Reduce space above the header */
+			margin-bottom: 0.5em; /* Reduce space below the header */
 		}
 
-		.box.post h2 {
-			font-size: 2.5em;
-			letter-spacing: -0.015em;
+		.box header h3 {
+			font-size: 1.2em;
+			margin: 0.5em 0; /* Tighter spacing around the title */
 		}
 
-		.box.post header > p {
-			margin-top: 1.25em;
-			font-size: 1.25em;
+		.box p {
+			flex-grow: 1; /* Allows the paragraph to take up remaining space */
+			margin-bottom: 1em; /* Reduce bottom margin for tighter layout */
 		}
 
-		.box footer ul.actions {
-			margin-bottom: 0;
+		.box footer {
+			margin-top: 1em; /* Adjust footer spacing if needed */
 		}
 
 /* Button */
@@ -2925,3 +2919,62 @@ input, select, textarea {
 			}
 
 	}
+
+
+/* Style for the Awards button */
+.button.alt.award-button {
+    background-color: #ffd700; /* Gold background */
+    color: #000; /* Icon color */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    border-radius: 5px; /* Rounded corners (optional) */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.button.alt.award-button .fa-trophy {
+	font-size: 20px;
+}
+
+.button.alt.award-button:hover {
+	background-color: #e5c100;
+}
+
+.button.alt.award-button:focus {
+	outline: 2px solid #000;
+	outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+	.button.alt.award-button {
+		width: 50px;
+		height: 50px;
+	}
+
+	.button.alt.award-button .fa-trophy {
+		font-size: 24px;
+	}
+}
+
+/* consistent size for all project boxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px; 
+}
+
+.row > [class*="col-"] {
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    padding: 1em; /* Consistent padding around each column */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    display: flex; /* Enables Flexbox within columns */
+    align-items: stretch; /* Ensures that child .box elements stretch to the same height */
+}
+
