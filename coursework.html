@@ -132,44 +132,63 @@
                         <!-- Distinctions/Awards (Optional) -->
                         <div class="col-12">
                             <section class="box">
-                                <header>
-                                    <h3>Distinctions and Awards</h3>
-                                </header>
-                                <ul>
-                                    <li>Joe Glover Data Science Scholarship (2024)</li>
-                                    <li>University of Florida AI Scholars Program (2024)</li>
-                                    <li>University of Florida University Scholars Program (2024)</li>
-                                    <li>Apple Pathways Alliance Fellow (2024)</li>
-                                    <li>ASA DataFest Best Overall (2024)</li>
-                                    <li>OSC Hackathon Best AI Hack (2024)</li>
-                                    <li>William G. Cross Award Finalist (2024)</li>
-                                    <li>FURC Travel Award (2024)</li>
-                                    <li>Dean’s Honor List (2021, 2022, 2023)</li>
-                                    <li>President’s Honor Roll (2023)</li>
-                                    <li>University of Florida AI Days Hackathon Finalist (2023)</li>
-                                    <li>Bright Futures Program Scholarship (2021, 2022, 2023, 2024)</li>
-                                    <li>College Board Foundation Scholarship (2021)</li>
-                                    <!-- Add more distinctions or awards as needed -->
-                                </ul>
+                                <div class="distinctions">
+                                    <header>
+                                        <h3>Distinctions and Awards</h3>
+                                    </header>
+                                    <ul>
+                                        <li>UF Swamphacks X Best AI Hack (Jan 26, 2025)</li>
+                                        <li>Hispanic Scholarship Fund Scholar (Nov 27, 2024)</li>
+                                        <li>UF GenAI Arts Competition 2nd Place Overall (Oct 28, 2024)</li>
+                                        <li>UF AI Days Hackathon Most Popular (Oct 28, 2024)</li>
+                                        <li>NSF REU Travel Award (Oct 01, 2024)</li>
+                                        <li>ShellHacks Hackathon Most Popular (Sept 30, 2024)</li>
+                                        <li>FGLSAMP Scholar (Sept 19, 2024)</li>
+                                        <li>USCLAP 2nd Place Overall (Sept 17, 2024)</li>
+                                        <li>UF Joe Glover Data Science Scholarship (May 08, 2024)</li>
+                                        <li>William G. Cross Award Finalist (April 10, 2024)</li>
+                                        <li>UF ASA DataFest Best Overall (April 7, 2024)</li>
+                                        <li>OSC Hackathon Best AI Hack & 2nd Place Overall (March 24, 2024)</li>
+                                        <li>UF AI Scholar (March 20, 2024)</li>
+                                        <li>UF University Scholar (March 20, 2024)</li>
+                                        <li>FURC Travel Award (Feb 17, 2024)</li>
+                                        <li>Apple Pathways Alliance Scholar (Dec 20, 2023)</li>
+                                        <li>UF AI Days Hackathon Finalist (Oct 15, 2023)</li>
+                                        <li>Dean’s Honor List (2021, 2022, 2023, 2024)</li>
+                                        <li>Bright Futures Program Scholar (2021, 2022, 2023, 2024)</li>
+                                        <li>President’s Honor Roll (2023)</li>
+                                        <!-- Add more distinctions or awards as needed -->
+                                    </ul>
+                                </div>
                             </section>
                         </div>
-                        <!-- Involvement (Optional) -->
+
+                        <!-- Involvement -->
                         <div class="col-12">
                             <section class="box">
-                                <header>
-                                    <h3>University of Florida Involvement</h3>
-                                </header>
-                                <p>Data Science and Informatics - President (2024-Current)</p>
-                                <p>Data Science and Informatics - Workshop Director (2023-2024)</p>
-                                <p>AI Student Advisory Council - Director (2024-Current)</p>
-                                <p>IEEE Signal Processing Society - Vice President (2024-Current)</p>
-                                <p>American Statistical Association- Vice President (2023-2024)</p>
-                                <p>Society of Hispanic Professional Engineers - Mentor (2023-2024)</p>
-                                <p>University of Florida Resident Assistant (2022-2023)</p>
+                                <div="involvement"> 
+                                    <header>
+                                        <h3>University of Florida Involvement</h3>
+                                    </header>
+                                    <ul>
+                                        <li>Data Science and Informatics - President (2024-Current)</li>
+                                        <li>Data Science and Informatics - Workshop Director (2023-2024)</li>
+                                        <li>AI Student Advisory Council - Director (2024-Current)</li>
+                                        <li>IEEE Signal Processing Society - Vice President (2024-Current)</li>
+                                        <li>American Statistical Association- Vice President (2023-2024)</li>
+                                        <li>Society of Hispanic Professional Engineers - Mentor (2023-2024)</li>
+                                        <li>University of Florida Resident Assistant (2022-2023)</li>
+                                    </ul>
+                                </div>
                             </section>
                         </div>
                         
                     </div>
+
+                    <div style="text-align: center; font-size: 12px; color: rgba(0, 0, 0, 0.5); margin-top: 5px;">
+						Last edited on: <span id="lastEdited"></span>
+					</div>
+
                 </div>
             </section>
         </div>
@@ -181,5 +200,7 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>document.getElementById("lastEdited").innerText = document.lastModified;</script>
+
     </body>
 </html>
