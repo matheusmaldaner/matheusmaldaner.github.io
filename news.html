@@ -1,0 +1,568 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>News | Matheus Maldaner</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      .news-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      .timeline-item {
+        margin-bottom: 1em;
+        position: relative;
+        padding-left: 1.5em;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #ddd;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #d1002a;
+      }
+
+      .date {
+        font-weight: bold;
+        margin-bottom: 0.2em;
+        color: #333;
+        font-size: 0.9em;
+      }
+
+      .content {
+        background: #f8f8f8;
+        padding: 0.8em 1em;
+        border-radius: 6px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        position: relative;
+        margin-bottom: 0.5em;
+      }
+
+      .content p {
+        margin: 0;
+        padding-right: 1.5em;
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+
+      .info-icon {
+        position: absolute;
+        top: 50%;
+        right: 0.8em;
+        transform: translateY(-50%);
+        color: #888;
+        cursor: pointer;
+        font-size: 0.85em;
+        transition: color 0.3s;
+      }
+
+      .info-icon:hover {
+        color: #d1002a;
+      }
+
+      /* Modal styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 2em;
+        border: none;
+        border-radius: 8px;
+        width: 80%;
+        max-width: 600px;
+        position: relative;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header / Nav -->
+      <section id="header">
+        <h1><a href="index.html">Matheus Kunzler Maldaner</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">About</a></li>
+            <li class="current"><a href="news.html">News</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="coursework.html">Coursework</a></li>
+            <li>
+              <a href="#">Socials</a>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/matheusmaldaner/">LinkedIn</a></li>
+                <li><a href="https://github.com/matheusmaldaner">GitHub</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Resume</a>
+              <ul>
+                <li><a href="https://docs.google.com/document/d/1UJ6ly5GxkVkUtCn1Yx0iDY2VqmUKr-V7QwW5elUrRSQ/edit?tab=t.0" target="_blank">Resume</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Main -->
+      <section id="main">
+        <div class="container">
+          <header class="major">
+            <h2>News &amp; Updates</h2>
+          </header>
+
+          <div class="news-container">
+            <!-- Timeline items -->
+            <div class="timeline-item">
+              <div class="date">Mar 10, 2025</div>
+              <div class="content">
+                <p>I was awarded the Outstanding Leader and Scholar Award</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal1" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Feb 27, 2025</div>
+              <div class="content">
+                <p>I was inducted into the UF Hall of Fame</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal2" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Jan 26, 2025</div>
+              <div class="content">
+                <p>My team and I won Best AI Hack at UF Swamphacks X</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal3" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Nov 27, 2024</div>
+              <div class="content">
+                <p>I was selected as a Hispanic Scholarship Fund Scholar</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal4" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Oct 28, 2024</div>
+              <div class="content">
+                <p>I won 2nd Place Overall in the UF GenAI Arts Competition</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal5" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Oct 28, 2024</div>
+              <div class="content">
+                <p>My project was voted Most Popular at UF AI Days Hackathon</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal6" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Oct 01, 2024</div>
+              <div class="content">
+                <p>I received the NSF REU Travel Award</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal7" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Sept 30, 2024</div>
+              <div class="content">
+                <p>Our team won Most Popular at ShellHacks Hackathon</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal8" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Sept 19, 2024</div>
+              <div class="content">
+                <p>I was selected as a FGLSAMP Scholar</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal9" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Sept 17, 2024</div>
+              <div class="content">
+                <p>My team and I won 2nd Place Overall at USCLAP</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal10" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">May 08, 2024</div>
+              <div class="content">
+                <p>I was awarded the UF Joe Glover Data Science Scholarship</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal11" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">April 10, 2024</div>
+              <div class="content">
+                <p>I was selected as a William G. Cross Award Finalist</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal12" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">April 7, 2024</div>
+              <div class="content">
+                <p>Our team won Best Overall at UF ASA DataFest</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal13" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">March 24, 2024</div>
+              <div class="content">
+                <p>My team won Best AI Hack & 2nd Place Overall at OSC Hackathon</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal14" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">March 20, 2024</div>
+              <div class="content">
+                <p>I was selected as a UF AI Scholar</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal15" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">March 20, 2024</div>
+              <div class="content">
+                <p>I was named a UF University Scholar</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal16" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Feb 17, 2024</div>
+              <div class="content">
+                <p>I received the FURC Travel Award</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal17" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Dec 20, 2023</div>
+              <div class="content">
+                <p>I was selected as an Apple Pathways Alliance Scholar</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal18" title="Click for more information"></i>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="date">Oct 15, 2023</div>
+              <div class="content">
+                <p>My team was selected as a Finalist at UF AI Days Hackathon</p>
+                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal19" title="Click for more information"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modals -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal1">&times;</span>
+              <h3>Outstanding Leader and Scholar Award</h3>
+              <p>
+                Received this prestigious award in recognition of exceptional leadership skills and academic excellence.
+                This award honors students who demonstrate outstanding contributions to both academic and leadership domains.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal2" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal2">&times;</span>
+              <h3>UF Hall of Fame</h3>
+              <p>
+                Inducted into the University of Florida Hall of Fame, one of the highest honors a student can receive
+                at UF. This honor recognizes exceptional achievements in leadership, service, and academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal3" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal3">&times;</span>
+              <h3>UF Swamphacks X - Best AI Hack</h3>
+              <p>
+                Led a team that won the Best AI Hack award at UF's premier hackathon, SwampHacks X.
+                Our project demonstrated innovative uses of artificial intelligence to solve real-world problems.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal4" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal4">&times;</span>
+              <h3>Hispanic Scholarship Fund Scholar</h3>
+              <p>
+                Selected as a Hispanic Scholarship Fund Scholar, recognizing academic excellence and leadership
+                within the Hispanic community. This prestigious scholarship supports outstanding Hispanic students
+                in their pursuit of higher education.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal5" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal5">&times;</span>
+              <h3>UF GenAI Arts Competition - 2nd Place Overall</h3>
+              <p>
+                Awarded 2nd Place Overall in the UF Generative AI Arts Competition for creating an innovative
+                AI-powered art piece that showcased the intersection of technology and creative expression.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal6" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal6">&times;</span>
+              <h3>UF AI Days Hackathon - Most Popular</h3>
+              <p>
+                My project was voted as the Most Popular at the UF AI Days Hackathon, demonstrating
+                both technical excellence and strong appeal to the audience and judges.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal7" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal7">&times;</span>
+              <h3>NSF REU Travel Award</h3>
+              <p>
+                Received a travel award from the National Science Foundation's Research Experience for Undergraduates (REU)
+                program to present research findings at a conference, recognizing the significance of my research contributions.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal8" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal8">&times;</span>
+              <h3>ShellHacks Hackathon - Most Popular</h3>
+              <p>
+                Our team created a project that was voted Most Popular at ShellHacks, Florida's largest hackathon.
+                This recognition highlights the project's innovative approach and strong appeal to the tech community.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal9" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal9">&times;</span>
+              <h3>FGLSAMP Scholar</h3>
+              <p>
+                Selected as a Florida-Georgia Louis Stokes Alliance for Minority Participation (FGLSAMP) Scholar,
+                a program that supports underrepresented students in STEM fields to achieve academic and professional success.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal10" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal10">&times;</span>
+              <h3>USCLAP - 2nd Place Overall</h3>
+              <p>
+                My team and I won 2nd Place Overall at the Undergraduate Statistics Class Project Competition (USCLAP),
+                recognizing excellence in statistical analysis and data-driven research.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal11" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal11">&times;</span>
+              <h3>UF Joe Glover Data Science Scholarship</h3>
+              <p>
+                Awarded the Joe Glover Data Science Scholarship at the University of Florida, recognizing
+                academic excellence and potential in the field of data science and analytics.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal12" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal12">&times;</span>
+              <h3>William G. Cross Award Finalist</h3>
+              <p>
+                Selected as a finalist for the prestigious William G. Cross Award, which recognizes
+                exceptional achievements in research and academic excellence.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal13" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal13">&times;</span>
+              <h3>UF ASA DataFest - Best Overall</h3>
+              <p>
+                Led a team to win Best Overall at the American Statistical Association (ASA) DataFest competition
+                at UF, demonstrating exceptional skills in data analysis, visualization, and presentation.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal14" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal14">&times;</span>
+              <h3>OSC Hackathon - Best AI Hack & 2nd Place Overall</h3>
+              <p>
+                My team's project won both the Best AI Hack award and 2nd Place Overall at the OSC Hackathon,
+                showcasing innovative use of artificial intelligence and strong technical implementation.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal15" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal15">&times;</span>
+              <h3>UF AI Scholar</h3>
+              <p>
+                Selected as a UF AI Scholar, a prestigious designation recognizing students with exceptional
+                potential and achievements in the field of artificial intelligence and machine learning.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal16" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal16">&times;</span>
+              <h3>UF University Scholar</h3>
+              <p>
+                Named a University Scholar at UF, a selective program that supports undergraduate research
+                and provides opportunities to work closely with faculty mentors on significant research projects.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal17" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal17">&times;</span>
+              <h3>FURC Travel Award</h3>
+              <p>
+                Received the Florida Undergraduate Research Conference (FURC) Travel Award to present
+                research at this prestigious statewide conference, recognizing the quality and significance of my research.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal18" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal18">&times;</span>
+              <h3>Apple Pathways Alliance Scholar</h3>
+              <p>
+                Selected as an Apple Pathways Alliance Scholar, a program that supports promising students 
+                in computer science and technology fields through mentorship, resources, and career opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div id="modal19" class="modal">
+            <div class="modal-content">
+              <span class="close" data-modal="modal19">&times;</span>
+              <h3>UF AI Days Hackathon Finalist</h3>
+              <p>
+                My team was selected as a finalist at the UF AI Days Hackathon, recognizing our innovative
+                approach and technical implementation in artificial intelligence applications.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Modal Logic -->
+    <script>
+      const openButtons = document.querySelectorAll('.open-modal');
+      const closeButtons = document.querySelectorAll('.close');
+      const modals = document.querySelectorAll('.modal');
+
+      // Open modal
+      openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const modalId = button.getAttribute('data-modal');
+          document.getElementById(modalId).style.display = 'block';
+        });
+      });
+
+      // Close modal when clicking X
+      closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const modalId = button.getAttribute('data-modal');
+          document.getElementById(modalId).style.display = 'none';
+        });
+      });
+
+      // Close modal when clicking outside
+      window.onclick = function(event) {
+        modals.forEach(modal => {
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
