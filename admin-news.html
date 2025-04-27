@@ -1,0 +1,932 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>News Admin | Matheus Maldaner</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      .admin-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .admin-panel {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .form-section {
+        flex: 1;
+        min-width: 300px;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .preview-section {
+        flex: 1;
+        min-width: 300px;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .output-section {
+        width: 100%;
+        margin-top: 30px;
+        background-color: #f8f8f8;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+
+      .news-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .form-group label {
+        font-weight: bold;
+        font-size: 0.9em;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        padding: 8px 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: inherit;
+      }
+
+      .form-group textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .btn {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+
+      .btn-primary {
+        background-color: #d1002a;
+        color: white;
+      }
+
+      .btn-secondary {
+        background-color: #666;
+        color: white;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+
+      .timeline-preview {
+        position: relative;
+        padding-left: 1.5em;
+        margin-bottom: 20px;
+      }
+
+      .timeline-preview::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: #ddd;
+      }
+
+      .timeline-preview::after {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: 8px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: #d1002a;
+      }
+
+      .preview-date {
+        font-weight: bold;
+        margin-bottom: 0.2em;
+        color: #333;
+        font-size: 0.9em;
+      }
+
+      .preview-content {
+        background: white;
+        padding: 0.8em 1em;
+        border-radius: 6px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        position: relative;
+      }
+
+      .preview-content p {
+        margin: 0;
+        padding-right: 1.5em;
+        font-size: 0.95em;
+        line-height: 1.4;
+      }
+
+      .preview-icon {
+        position: absolute;
+        top: 50%;
+        right: 0.8em;
+        transform: translateY(-50%);
+        color: #888;
+        font-size: 0.85em;
+      }
+
+      .link-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .link-icon {
+        margin-right: 10px;
+        width: 20px;
+        text-align: center;
+      }
+
+      .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin-bottom: 10px;
+      }
+
+      .gallery-instructions {
+        font-size: 0.85em;
+        color: #666;
+        margin-top: 5px;
+      }
+
+      .image-preview {
+        width: 100%;
+        height: 180px;
+        background-color: #eee;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #666;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .links-section input {
+        margin-bottom: 5px;
+      }
+
+      .tab-container {
+        margin-bottom: 15px;
+      }
+
+      .tab-buttons {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 15px;
+      }
+
+      .tab-button {
+        padding: 8px 16px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        font-weight: bold;
+        color: #666;
+      }
+
+      .tab-button.active {
+        border-bottom: 2px solid #d1002a;
+        color: #d1002a;
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .output-code {
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 15px;
+        font-family: monospace;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        font-size: 14px;
+        line-height: 1.5;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+
+      .copy-btn {
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 5px 10px;
+        font-size: 0.8em;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .success-message {
+        display: none;
+        color: green;
+        font-size: 0.9em;
+        margin-left: 10px;
+        animation: fadeOut 2s forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+
+      #generated-modal-id {
+        font-weight: bold;
+        color: #d1002a;
+      }
+
+      /* Image gallery preview styles */
+      .preview-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .preview-gallery-item {
+        width: 80px;
+        height: 80px;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .preview-gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .preview-gallery-item .remove-image {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        cursor: pointer;
+      }
+
+      .image-instructions {
+        margin-top: 10px;
+        font-size: 0.85em;
+        color: #666;
+      }
+    </style>
+  </head>
+
+  <body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header / Nav -->
+      <section id="header">
+        <h1><a href="index.html">Matheus Kunzler Maldaner</a></h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">About</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="coursework.html">Coursework</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <!-- Main -->
+      <section id="main">
+        <div class="container">
+          <header class="major">
+            <h2>News Admin Panel</h2>
+            <p>Easily add or update news entries</p>
+          </header>
+
+          <div class="admin-container">
+            <div class="admin-panel">
+              <div class="form-section">
+                <h3>News Entry Form</h3>
+                <div class="tab-container">
+                  <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="basic-info">Basic Info</button>
+                    <button class="tab-button" data-tab="description">Description</button>
+                    <button class="tab-button" data-tab="gallery">Gallery</button>
+                    <button class="tab-button" data-tab="links">Links</button>
+                  </div>
+                  
+                  <form id="news-form" class="news-form">
+                    <div id="basic-info" class="tab-content active">
+                      <div class="form-group">
+                        <label for="news-title">Title</label>
+                        <input type="text" id="news-title" placeholder="e.g., Data Science and Informatics named Student Organization of the Year">
+                      </div>
+                      <div class="form-group">
+                        <label for="news-date">Date</label>
+                        <input type="date" id="news-date">
+                      </div>
+                      <div class="form-group">
+                        <label for="news-modal-id">Modal ID</label>
+                        <input type="text" id="news-modal-id" placeholder="This will be auto-generated" disabled>
+                      </div>
+                    </div>
+
+                    <div id="description" class="tab-content">
+                      <div class="form-group">
+                        <label for="news-description">Description</label>
+                        <textarea id="news-description" placeholder="Enter a detailed description of the news item..."></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="news-paragraph2">Additional Paragraph (Optional)</label>
+                        <textarea id="news-paragraph2" placeholder="Enter an additional paragraph if needed..."></textarea>
+                      </div>
+                    </div>
+
+                    <div id="gallery" class="tab-content">
+                      <div class="form-group">
+                        <label>Image Gallery</label>
+                        <div class="image-preview" id="image-preview">Select images to preview</div>
+                        <input type="file" id="image-upload" accept="image/*" multiple>
+                        <div class="preview-gallery" id="preview-gallery"></div>
+                        <p class="gallery-instructions">
+                          Selected images will be used to generate the gallery code. 
+                          Make sure to upload these images to the "images" folder on your server.
+                        </p>
+                        <p class="image-instructions">
+                          <strong>Tip:</strong> The first image will be the main image shown in the gallery.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div id="links" class="tab-content">
+                      <div class="form-group links-section">
+                        <label>Related Links</label>
+                        <div class="link-item">
+                          <div class="link-icon">
+                            <i class="fas fa-newspaper"></i>
+                          </div>
+                          <div style="flex: 1;">
+                            <input type="text" placeholder="Link Label" id="link1-label">
+                            <input type="url" placeholder="URL" id="link1-url">
+                          </div>
+                        </div>
+                        <div class="link-item">
+                          <div class="link-icon">
+                            <i class="fas fa-globe"></i>
+                          </div>
+                          <div style="flex: 1;">
+                            <input type="text" placeholder="Link Label" id="link2-label">
+                            <input type="url" placeholder="URL" id="link2-url">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="button-group">
+                      <button type="button" id="generate-btn" class="btn btn-primary">Generate Code</button>
+                      <button type="button" id="reset-btn" class="btn btn-secondary">Reset Form</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="preview-section">
+                <h3>Live Preview</h3>
+                <div class="timeline-preview">
+                  <div class="preview-date" id="preview-date">Month Day, Year</div>
+                  <div class="preview-content">
+                    <p id="preview-title">News title will appear here</p>
+                    <i class="fas fa-info-circle preview-icon"></i>
+                  </div>
+                </div>
+
+                <h4>Modal Preview</h4>
+                <div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                  <div style="border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 10px;">
+                    <h3 id="preview-modal-title" style="margin: 0;">Modal title will appear here</h3>
+                  </div>
+                  <div>
+                    <p id="preview-description">News description will appear here...</p>
+                    <p id="preview-paragraph2" style="display: none;"></p>
+                  </div>
+                  <div style="margin-top: 15px; background: #f9f9f9; padding: 10px; border-radius: 4px;">
+                    <div class="slideshow-container">
+                      <div style="text-align: center; padding: 20px; background: #eee; border-radius: 4px; color: #666;">
+                        Gallery images will appear here
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 15px; background: #f5f5f5; padding: 10px; border-radius: 4px;">
+                    <h4>Related Links</h4>
+                    <div id="preview-links">
+                      <div class="link-item" id="preview-link1" style="display: none;">
+                        <i class="fas fa-newspaper link-icon"></i>
+                        <span id="preview-link1-label" style="font-weight: 500; margin-right: 10px;">Link Label:</span>
+                        <a href="#" id="preview-link1-url" style="color: #0066cc;">URL will appear here</a>
+                      </div>
+                      <div class="link-item" id="preview-link2" style="display: none;">
+                        <i class="fas fa-globe link-icon"></i>
+                        <span id="preview-link2-label" style="font-weight: 500; margin-right: 10px;">Link Label:</span>
+                        <a href="#" id="preview-link2-url" style="color: #0066cc;">URL will appear here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="output-section">
+              <h3>Generated HTML Code <span id="generated-modal-id"></span></h3>
+              <div class="tab-buttons">
+                <button class="tab-button active" data-output-tab="timeline-output">Timeline Entry</button>
+                <button class="tab-button" data-output-tab="modal-output">Modal Content</button>
+              </div>
+              
+              <div id="timeline-output" class="output-code tab-content active"></div>
+              <div id="modal-output" class="output-code tab-content"></div>
+              
+              <div style="display: flex; gap: 10px;">
+                <button id="copy-timeline-btn" class="copy-btn">Copy Timeline Code</button>
+                <button id="copy-modal-btn" class="copy-btn">Copy Modal Code</button>
+                <span id="copy-success" class="success-message">Copied to clipboard!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            
+            // Deactivate all tabs
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Activate selected tab
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+          });
+        });
+
+        // Output tab functionality
+        const outputTabButtons = document.querySelectorAll('[data-output-tab]');
+        const outputContents = document.querySelectorAll('.output-code');
+        
+        outputTabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-output-tab');
+            
+            // Deactivate all tabs
+            outputTabButtons.forEach(btn => btn.classList.remove('active'));
+            outputContents.forEach(content => content.classList.remove('active'));
+            
+            // Activate selected tab
+            button.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+          });
+        });
+
+        // Form fields
+        const titleInput = document.getElementById('news-title');
+        const dateInput = document.getElementById('news-date');
+        const descriptionInput = document.getElementById('news-description');
+        const paragraph2Input = document.getElementById('news-paragraph2');
+        const link1LabelInput = document.getElementById('link1-label');
+        const link1UrlInput = document.getElementById('link1-url');
+        const link2LabelInput = document.getElementById('link2-label');
+        const link2UrlInput = document.getElementById('link2-url');
+        const imageUpload = document.getElementById('image-upload');
+        const previewGallery = document.getElementById('preview-gallery');
+        const imagePreview = document.getElementById('image-preview');
+        
+        // Preview elements
+        const previewDate = document.getElementById('preview-date');
+        const previewTitle = document.getElementById('preview-title');
+        const previewModalTitle = document.getElementById('preview-modal-title');
+        const previewDescription = document.getElementById('preview-description');
+        const previewParagraph2 = document.getElementById('preview-paragraph2');
+        const previewLink1 = document.getElementById('preview-link1');
+        const previewLink1Label = document.getElementById('preview-link1-label');
+        const previewLink1Url = document.getElementById('preview-link1-url');
+        const previewLink2 = document.getElementById('preview-link2');
+        const previewLink2Label = document.getElementById('preview-link2-label');
+        const previewLink2Url = document.getElementById('preview-link2-url');
+        
+        // Output elements
+        const timelineOutput = document.getElementById('timeline-output');
+        const modalOutput = document.getElementById('modal-output');
+        const modalIdDisplay = document.getElementById('generated-modal-id');
+        const modalIdInput = document.getElementById('news-modal-id');
+        
+        // Set default date to today
+        const today = new Date();
+        const formattedDate = today.toISOString().substring(0, 10);
+        dateInput.value = formattedDate;
+        updatePreviewDate();
+
+        // Event listeners for real-time preview
+        titleInput.addEventListener('input', updatePreview);
+        dateInput.addEventListener('input', updatePreviewDate);
+        descriptionInput.addEventListener('input', updatePreview);
+        paragraph2Input.addEventListener('input', updatePreview);
+        link1LabelInput.addEventListener('input', updatePreview);
+        link1UrlInput.addEventListener('input', updatePreview);
+        link2LabelInput.addEventListener('input', updatePreview);
+        link2UrlInput.addEventListener('input', updatePreview);
+
+        // Image handling
+        let selectedFiles = [];
+
+        imageUpload.addEventListener('change', function(e) {
+          const files = e.target.files;
+          
+          if (files.length > 0) {
+            // Clear the preview if this is a new selection
+            if (!e.target.multiple) {
+              selectedFiles = [];
+              previewGallery.innerHTML = '';
+            }
+
+            // Add new files to the array and preview
+            for (let i = 0; i < files.length; i++) {
+              const file = files[i];
+              
+              // Only add image files
+              if (!file.type.startsWith('image/')) continue;
+              
+              // Store file information
+              selectedFiles.push({
+                file: file,
+                name: file.name,
+                url: URL.createObjectURL(file)
+              });
+              
+              // Create preview elements
+              const previewItem = document.createElement('div');
+              previewItem.className = 'preview-gallery-item';
+              previewItem.dataset.filename = file.name;
+              
+              const img = document.createElement('img');
+              img.src = URL.createObjectURL(file);
+              img.alt = file.name;
+              
+              const removeBtn = document.createElement('div');
+              removeBtn.className = 'remove-image';
+              removeBtn.innerHTML = '×';
+              removeBtn.addEventListener('click', function() {
+                // Remove from selected files array
+                selectedFiles = selectedFiles.filter(f => f.name !== file.name);
+                // Remove preview item
+                previewItem.remove();
+                
+                // Update the image preview message if no files left
+                if (selectedFiles.length === 0) {
+                  imagePreview.textContent = 'Select images to preview';
+                  imagePreview.style.display = 'flex';
+                }
+              });
+              
+              previewItem.appendChild(img);
+              previewItem.appendChild(removeBtn);
+              previewGallery.appendChild(previewItem);
+            }
+            
+            // Hide the empty preview message when we have images
+            if (selectedFiles.length > 0) {
+              imagePreview.style.display = 'none';
+            }
+          }
+        });
+
+        // Generate unique modal ID based on current count + 1
+        function generateModalId() {
+          // In a real implementation, you would count existing modals 
+          // Here we're just using a timestamp for uniqueness
+          const timestamp = Date.now();
+          return 'modal' + timestamp.toString().substring(7);
+        }
+
+        function updatePreviewDate() {
+          const date = new Date(dateInput.value);
+          const options = { month: 'long', day: 'numeric', year: 'numeric' };
+          previewDate.textContent = date.toLocaleDateString('en-US', options);
+        }
+
+        function updatePreview() {
+          // Update title
+          previewTitle.textContent = titleInput.value || 'News title will appear here';
+          previewModalTitle.textContent = titleInput.value || 'Modal title will appear here';
+          
+          // Update description
+          previewDescription.textContent = descriptionInput.value || 'News description will appear here...';
+          
+          // Update second paragraph
+          if (paragraph2Input.value.trim()) {
+            previewParagraph2.textContent = paragraph2Input.value;
+            previewParagraph2.style.display = 'block';
+          } else {
+            previewParagraph2.style.display = 'none';
+          }
+          
+          // Update links
+          if (link1LabelInput.value.trim() && link1UrlInput.value.trim()) {
+            previewLink1.style.display = 'flex';
+            previewLink1Label.textContent = link1LabelInput.value + ':';
+            previewLink1Url.textContent = link1UrlInput.value;
+            previewLink1Url.href = link1UrlInput.value;
+          } else {
+            previewLink1.style.display = 'none';
+          }
+          
+          if (link2LabelInput.value.trim() && link2UrlInput.value.trim()) {
+            previewLink2.style.display = 'flex';
+            previewLink2Label.textContent = link2LabelInput.value + ':';
+            previewLink2Url.textContent = link2UrlInput.value;
+            previewLink2Url.href = link2UrlInput.value;
+          } else {
+            previewLink2.style.display = 'none';
+          }
+        }
+
+        // Generate code
+        document.getElementById('generate-btn').addEventListener('click', function() {
+          if (!titleInput.value.trim() || !dateInput.value.trim() || !descriptionInput.value.trim()) {
+            alert('Please fill in at least the title, date, and description fields.');
+            return;
+          }
+
+          const modalId = generateModalId();
+          modalIdInput.value = modalId;
+          modalIdDisplay.textContent = modalId;
+
+          // Format date for output
+          const date = new Date(dateInput.value);
+          const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 
+                            'July', 'August', 'September', 'October', 'November', 'December'];
+          const formattedDate = `${monthNames[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+          const shortFormattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+
+          // Generate timeline HTML
+          const timelineHTML = `<!-- ${titleInput.value} (${shortFormattedDate}) -->
+<div class="timeline-item">
+  <div class="date">${formattedDate}</div>
+  <div class="content">
+    <p>${titleInput.value}</p>
+    <i class="fas fa-info-circle info-icon open-modal" data-modal="${modalId}" title="Click for more information"></i>
+  </div>
+</div>`;
+
+          // Generate modal HTML
+          let modalHTML = `<!-- ${modalId} - ${titleInput.value} -->
+<div id="${modalId}" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3>${titleInput.value}</h3>
+      <span class="close" data-modal="${modalId}">&times;</span>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section description">
+        <p>
+          ${descriptionInput.value}
+        </p>`;
+
+          // Add second paragraph if provided
+          if (paragraph2Input.value.trim()) {
+            modalHTML += `
+        <p>
+          ${paragraph2Input.value}
+        </p>`;
+          }
+
+          modalHTML += `
+      </div>`;
+
+          // Add gallery section with actual file names
+          if (selectedFiles.length > 0) {
+            modalHTML += `
+      <div class="modal-section gallery">
+        <div class="slideshow-container">`;
+
+            // Add each image as a slide
+            selectedFiles.forEach((file, index) => {
+              const isActive = index === 0 ? ' active' : '';
+              modalHTML += `
+          <div class="slide${isActive}">
+            <img src="images/${file.name}" alt="${titleInput.value}">
+          </div>`;
+            });
+
+            // Add navigation buttons if more than one image
+            if (selectedFiles.length > 1) {
+              modalHTML += `
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>`;
+            }
+
+            modalHTML += `
+        </div>
+        <div class="dots-container">`;
+
+            // Add dots for navigation
+            selectedFiles.forEach((file, index) => {
+              const isActive = index === 0 ? ' active-dot' : '';
+              modalHTML += `
+          <span class="dot${isActive}" data-slide="${index}"></span>`;
+            });
+
+            modalHTML += `
+        </div>
+      </div>`;
+          } else {
+            // Default placeholder if no images selected
+            modalHTML += `
+      <div class="modal-section gallery">
+        <div class="slideshow-container">
+          <div class="slide active">
+            <img src="images/pic08.jpg" alt="${titleInput.value}">
+          </div>
+          <a class="prev">&#10094;</a>
+          <a class="next">&#10095;</a>
+        </div>
+        <div class="dots-container">
+          <span class="dot active-dot" data-slide="0"></span>
+        </div>
+      </div>`;
+          }
+
+          // Add links section if provided
+          if (link1LabelInput.value.trim() || link2LabelInput.value.trim()) {
+            modalHTML += `
+      <div class="modal-section links">
+        <h4>Related Links</h4>`;
+
+            if (link1LabelInput.value.trim() && link1UrlInput.value.trim()) {
+              modalHTML += `
+        <div class="link-item">
+          <i class="fas fa-newspaper link-icon"></i>
+          <span class="link-label">${link1LabelInput.value}:</span>
+          <a href="${link1UrlInput.value}" class="link-url">${link1UrlInput.value}</a>
+        </div>`;
+            }
+
+            if (link2LabelInput.value.trim() && link2UrlInput.value.trim()) {
+              modalHTML += `
+        <div class="link-item">
+          <i class="fas fa-globe link-icon"></i>
+          <span class="link-label">${link2LabelInput.value}:</span>
+          <a href="${link2UrlInput.value}" class="link-url">${link2UrlInput.value}</a>
+        </div>`;
+            }
+
+            modalHTML += `
+      </div>`;
+          }
+
+          modalHTML += `
+    </div>
+  </div>
+</div>`;
+
+          // Display generated code
+          timelineOutput.textContent = timelineHTML;
+          modalOutput.textContent = modalHTML;
+        });
+
+        // Reset form
+        document.getElementById('reset-btn').addEventListener('click', function() {
+          document.getElementById('news-form').reset();
+          modalIdInput.value = '';
+          modalIdDisplay.textContent = '';
+          timelineOutput.textContent = '';
+          modalOutput.textContent = '';
+          
+          // Reset the preview
+          previewTitle.textContent = 'News title will appear here';
+          previewModalTitle.textContent = 'Modal title will appear here';
+          previewDescription.textContent = 'News description will appear here...';
+          previewParagraph2.style.display = 'none';
+          previewLink1.style.display = 'none';
+          previewLink2.style.display = 'none';
+          
+          // Reset date to today
+          const today = new Date();
+          const formattedDate = today.toISOString().substring(0, 10);
+          dateInput.value = formattedDate;
+          updatePreviewDate();
+          
+          // Reset image gallery
+          selectedFiles = [];
+          previewGallery.innerHTML = '';
+          imagePreview.textContent = 'Select images to preview';
+          imagePreview.style.display = 'flex';
+        });
+
+        // Copy buttons
+        document.getElementById('copy-timeline-btn').addEventListener('click', function() {
+          copyToClipboard(timelineOutput.textContent);
+        });
+
+        document.getElementById('copy-modal-btn').addEventListener('click', function() {
+          copyToClipboard(modalOutput.textContent);
+        });
+
+        function copyToClipboard(text) {
+          if (!text.trim()) return;
+          
+          const textarea = document.createElement('textarea');
+          textarea.value = text;
+          document.body.appendChild(textarea);
+          textarea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textarea);
+          
+          // Show success message
+          const successMsg = document.getElementById('copy-success');
+          successMsg.style.display = 'inline';
+          successMsg.style.animation = 'none';
+          void successMsg.offsetWidth;
+          successMsg.style.animation = 'fadeOut 2s forwards';
+          successMsg.style.animationDelay = '1s';
+        }
+
+        // Initialize the preview
+        updatePreview();
+        
+        // Add ESC key handler for any alerts
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            // Close any active JavaScript alerts
+            if (window.alert && window.alert.close) {
+              window.alert.close();
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html> 
