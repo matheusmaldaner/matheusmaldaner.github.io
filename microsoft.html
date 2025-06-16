@@ -39,6 +39,10 @@
                 </div>
             </section>
 
+            <div style="text-align: center; font-size: 12px; color: rgba(0, 0, 0, 0.5); margin-top: 5px;">
+                Last edited on: <span id="lastEdited"></span>
+            </div>
+
         </div>
         <!-- Scripts -->
         <script src="assets/js/jquery.min.js"></script>
@@ -47,5 +51,6 @@
         <script src="assets/js/breakpoints.min.js"></script>
         <script src="assets/js/util.js"></script>
         <script src="assets/js/main.js"></script>
+        <script>document.getElementById("lastEdited").innerText = document.lastModified;</script>
     </body>
 </html>
