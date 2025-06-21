@@ -1,0 +1,43 @@
+# VS Code settings
+.vscode/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+out/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*.swn
+*.bak
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache directories
+.cache/
+.temp/ 
