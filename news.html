@@ -8,143 +8,316 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-      .news-container {
-        max-width: 800px;
+      :root {
+        --primary-color: #d1002a;
+        --primary-hover: #b8001e;
+        --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        --card-shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+        --border-radius: 12px;
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+
+
+      .main-container {
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 10px;
+        padding: 2rem 0;
       }
 
-      .timeline-item {
-        margin-bottom: 1em;
-        position: relative;
-        padding-left: 1.5em;
+
+
+      /* Featured Section */
+      .featured-section {
+        margin-bottom: 3rem;
       }
 
-      .timeline-item::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 1px;
-        height: 100%;
-        background-color: #ddd;
-      }
-
-      .timeline-item::after {
-        content: "";
-        position: absolute;
-        left: -3px;
-        top: 8px;
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background-color: #d1002a;
-      }
-
-      .date {
-        font-weight: bold;
-        margin-bottom: 0.2em;
+      .featured-section h2 {
+        font-size: 2rem;
         color: #333;
-        font-size: 0.9em;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
       }
 
-      .content {
-        background: #f8f8f8;
-        padding: 0.8em 1em;
-        border-radius: 6px;
-        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      .featured-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .featured-card {
         position: relative;
-        margin-bottom: 0.5em;
-      }
-
-      .content p {
-        margin: 0;
-        padding-right: 1.5em;
-        font-size: 0.95em;
-        line-height: 1.4;
-      }
-
-      .info-icon {
-        position: absolute;
-        top: 50%;
-        right: 0.8em;
-        transform: translateY(-50%);
-        color: #888;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
         cursor: pointer;
-        font-size: 0.85em;
-        transition: color 0.3s;
+        height: 300px;
       }
 
-      .info-icon:hover {
-        color: #d1002a;
+      .featured-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--card-shadow-hover);
       }
 
-      /* Enhanced Modal styles */
-      .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 999; 
-        left: 0; 
-        top: 0; 
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgba(0,0,0,0.4); 
+      .featured-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
 
-      .modal-content {
-        background-color: #fff;
-        margin: 5% auto; 
-        padding: 0;
+      .featured-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 1.5rem;
+        color: white;
+      }
+
+      .featured-date {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin-bottom: 0.5rem;
+      }
+
+      .featured-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      /* Filter Section */
+      .filter-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        padding: 1rem;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--card-shadow);
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1.2rem;
         border: none;
-        border-radius: 8px;
-        width: 90%; 
-        max-width: 800px;
+        background: #f1f3f4;
+        color: #333;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      .filter-btn:hover {
+        background: #e1e5e7;
+      }
+
+      .filter-btn.active {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      /* Cards Grid */
+      .cards-section h2 {
+        font-size: 2rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .news-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .news-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--card-shadow-hover);
+      }
+
+      .card-image {
         position: relative;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        height: 180px;
         overflow: hidden;
       }
 
+      .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .news-card:hover .card-image img {
+        transform: scale(1.05);
+      }
+
+      .category-badge {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .badge-awards {
+        background: rgba(255, 193, 7, 0.9);
+        color: #856404;
+      }
+
+      .badge-competition {
+        background: rgba(0, 123, 255, 0.9);
+        color: white;
+      }
+
+      .badge-scholarship {
+        background: rgba(40, 167, 69, 0.9);
+        color: white;
+      }
+
+      .badge-recognition {
+        background: rgba(220, 53, 69, 0.9);
+        color: white;
+      }
+
+      .badge-conference {
+        background: rgba(108, 117, 125, 0.9);
+        color: white;
+      }
+
+      .card-content {
+        padding: 1.25rem;
+      }
+
+      .card-date {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+      }
+
+      .card-description {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: 2% auto;
+        border-radius: var(--border-radius);
+        width: 90%;
+        max-width: 900px;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      }
+
       .modal-header {
-        padding: 1.5em 2em;
-        background-color: #f5f5f5;
-        border-bottom: 1px solid #eee;
         position: relative;
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid #eee;
       }
 
       .modal-header h3 {
         margin: 0;
-        padding-right: 30px;
+        font-size: 1.5rem;
+        color: #333;
+        padding-right: 3rem;
+      }
+
+      .modal-close {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #666;
+        transition: color 0.3s ease;
+      }
+
+      .modal-close:hover {
+        color: var(--primary-color);
       }
 
       .modal-body {
-        display: flex;
-        flex-direction: column;
+        padding: 2rem;
       }
 
-      .modal-section {
-        padding: 1.5em 2em;
+      .modal-description {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 2rem;
       }
 
-      .modal-section.description {
-        flex: 1;
+      .modal-description p {
+        margin-bottom: 1rem;
       }
 
-      .modal-section.gallery {
-        background-color: #f9f9f9;
-        padding: 1.5em 0;
-      }
-
-      .modal-section.links {
-        background-color: #f5f5f5;
-        padding: 1em 2em;
-        border-top: 1px solid #eee;
+      .modal-gallery {
+        margin-bottom: 2rem;
       }
 
       .slideshow-container {
         position: relative;
         max-width: 100%;
         margin: auto;
+        border-radius: var(--border-radius);
+        overflow: hidden;
       }
 
       .slide {
@@ -157,14 +330,12 @@
       }
 
       .slide img {
-        max-width: 100%;
-        max-height: 300px;
-        margin: 0 auto;
-        border-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
       }
 
-      .prev, .next {
+      .nav-btn {
         cursor: pointer;
         position: absolute;
         top: 50%;
@@ -174,10 +345,14 @@
         color: white;
         font-weight: bold;
         font-size: 18px;
-        transition: 0.6s ease;
+        transition: 0.3s ease;
         border-radius: 0 3px 3px 0;
+        background-color: rgba(0,0,0,0.5);
         user-select: none;
-        background-color: rgba(0,0,0,0.3);
+      }
+
+      .nav-btn:hover {
+        background-color: rgba(0,0,0,0.8);
       }
 
       .next {
@@ -185,60 +360,68 @@
         border-radius: 3px 0 0 3px;
       }
 
-      .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-      }
-
       .dots-container {
         text-align: center;
-        padding: 10px 0;
+        padding: 1rem 0;
       }
 
       .dot {
         cursor: pointer;
-        height: 10px;
-        width: 10px;
+        height: 12px;
+        width: 12px;
         margin: 0 5px;
         background-color: #bbb;
         border-radius: 50%;
         display: inline-block;
-        transition: background-color 0.6s ease;
+        transition: background-color 0.3s ease;
       }
 
-      .active-dot, .dot:hover {
-        background-color: #d1002a;
+      .dot:hover,
+      .dot.active {
+        background-color: var(--primary-color);
+      }
+
+      .modal-links {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+      }
+
+      .modal-links h4 {
+        margin: 0 0 1rem 0;
+        color: #333;
       }
 
       .link-item {
         display: flex;
         align-items: center;
-        margin-bottom: 0.8em;
-        padding: 0.5em;
-        background-color: white;
-        border-radius: 4px;
-        transition: background-color 0.3s;
+        padding: 0.75rem;
+        background: white;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        transition: var(--transition);
       }
 
       .link-item:hover {
-        background-color: #f0f0f0;
+        background: #f1f3f4;
       }
 
       .link-icon {
-        margin-right: 10px;
-        font-size: 1.2em;
-        color: #666;
+        margin-right: 0.75rem;
+        color: var(--primary-color);
+        font-size: 1.1rem;
       }
 
       .link-label {
-        font-weight: 500;
-        margin-right: 10px;
+        font-weight: 600;
+        margin-right: 0.5rem;
         color: #333;
       }
 
       .link-url {
-        flex: 1;
-        color: #0066cc;
+        color: var(--primary-color);
         text-decoration: none;
+        flex: 1;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -248,41 +431,48 @@
         text-decoration: underline;
       }
 
-      .close {
-        position: absolute;
-        right: 20px;
-        top: 15px;
-        color: #aaa;
-        font-size: 28px;
-        font-weight: bold;
-        cursor: pointer;
-        z-index: 2;
-      }
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .main-container {
+          padding: 1rem;
+        }
 
-      .close:hover,
-      .close:focus {
-        color: #000;
-        text-decoration: none;
-      }
 
-      @media screen and (min-width: 768px) {
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .featured-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .filter-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .modal-content {
+          width: 95%;
+          margin: 5% auto;
+        }
+
+        .modal-header,
         .modal-body {
-          flex-direction: row;
-          flex-wrap: wrap;
+          padding: 1rem;
         }
-        
-        .modal-section.description {
-          flex: 1;
-          min-width: 300px;
+      }
+
+      @media (max-width: 480px) {
+
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
         }
-        
-        .modal-section.gallery {
-          flex: 1;
-          min-width: 300px;
-        }
-        
-        .modal-section.links {
-          width: 100%;
+
+        .news-card {
+          margin: 0;
         }
       }
     </style>
@@ -310,727 +500,61 @@
           <header class="major">
             <h2>News &amp; Updates</h2>
           </header>
-
-          <div class="news-container">
-            <!-- Timeline items -->
-
-            <!-- <div class="timeline-item">
-              <div class="date">Month Day, Year</div>
-              <div class="content">
-                <p>Small Description</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal1" title="Click for more information"></i>
-              </div>
-            </div> -->
-
-            <!-- NEW ENTRY -->
-            <div class="timeline-item">
-              <div class="date">May 2nd, 2025</div>
-              <div class="content">
-                <p>Scholars and Leaders Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal25" title="Click for more information"></i>
-              </div>
+          
+          <!-- Work in Progress Banner -->
+          <div style="background: linear-gradient(135deg, #ffeaa7, #fdcb6e); border-left: 4px solid #e17055; padding: 1rem 1.5rem; margin: 1rem auto 2rem auto; border-radius: 8px; max-width: 1200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <i class="fas fa-tools" style="color: #d63031; font-size: 1.1rem;"></i>
+              <span style="font-weight: 600; color: #2d3436; font-size: 0.95rem;">Work in Progress:</span>
+              <span style="color: #636e72; font-size: 0.9rem;">I am currently populating this page with additional news entries and details.</span>
             </div>
+          </div>
+          
+          <div class="main-container">
 
-            <!-- NEW ENTRY -->
-            <div class="timeline-item">
-              <div class="date">April 30, 2025</div>
-              <div class="content">
-                <p>Summa Cum Laude Honors Thesis</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal24" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <!-- NEW ENTRY -->
-            <div class="timeline-item">
-              <div class="date">April 27, 2025</div>
-              <div class="content">
-                <p>ITIAS Hack Space Con Scholarship</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal23" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <!-- NEW ENTRY -->
-            <div class="timeline-item">
-              <div class="date">April 17, 2025</div>
-              <div class="content">
-                <p>DSI Student Organization of the Year</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal22" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <!-- NEW ENTRY -->
-            <div class="timeline-item">
-              <div class="date">April 16, 2025</div>
-              <div class="content">
-                <p>UF Hall of Fame Induction</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal21" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">March 30, 2025</div>
-              <div class="content">
-                <p>UF DataFest Best Visualization Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal20" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">March 30, 2025</div>
-              <div class="content">
-                <p>Undergraduate Thesis Submission</p>
-                <!-- <i class="fas fa-info-circle info-icon open-modal" data-modal="modal1" title="Click for more information"></i> -->
-              </div>
-            </div>
-
-            <!-- CLAS Excellence Award -->
-            <div class="timeline-item">
-              <div class="date">Mar 24, 2025</div>
-              <div class="content">
-                <p>CLAS Excellence Award Finalist</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal1" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Mar 10, 2025</div>
-              <div class="content">
-                <p>Outstanding Leader and Scholar Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal1" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <!-- <div class="timeline-item">
-              <div class="date">Feb 27, 2025</div>
-              <div class="content">
-                <p>I was inducted into the UF Hall of Fame</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal2" title="Click for more information"></i>
-              </div>
-            </div> -->
-
-            <div class="timeline-item">
-              <div class="date">Jan 26, 2025</div>
-              <div class="content">
-                <p>UF Swamphacks X Best AI Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal3" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Nov 27, 2024</div>
-              <div class="content">
-                <p>Hispanic Scholarship Fund Scholar</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal4" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Oct 28, 2024</div>
-              <div class="content">
-                <p>UF GenAI Arts Competition 2nd Place Overall</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal5" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Oct 28, 2024</div>
-              <div class="content">
-                <p>UF AI Days Hackathon Most Popular Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal6" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Oct 01, 2024</div>
-              <div class="content">
-                <p>NSF REU Travel Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal7" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Sept 30, 2024</div>
-              <div class="content">
-                <p>ShellHacks Hackathon Most Popular Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal8" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Sept 19, 2024</div>
-              <div class="content">
-                <p>FGLSAMP Scholar</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal9" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Sept 17, 2024</div>
-              <div class="content">
-                <p>USCLAP 2nd Place Overall</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal10" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">May 08, 2024</div>
-              <div class="content">
-                <p>UF Joe Glover Data Science Scholarship</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal11" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">April 10, 2024</div>
-              <div class="content">
-                <p>William G. Cross Award Finalist</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal12" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">April 7, 2024</div>
-              <div class="content">
-                <p>UF DataFest Best Overall Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal13" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">March 24, 2024</div>
-              <div class="content">
-                <p>OSC Hackathon Best AI Hack & 2nd Place Overall</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal14" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">March 20, 2024</div>
-              <div class="content">
-                <p>UF AI Scholar</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal15" title="Click for more information"></i>
-              </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">March 20, 2024</div>
-                  <div class="content">
-                <p>UF University Scholar</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal16" title="Click for more information"></i>
-              </div>
-                  </div>
-
-            <div class="timeline-item">
-              <div class="date">Feb 17, 2024</div>
-                  <div class="content">
-                <p>FURC Travel Award</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal17" title="Click for more information"></i>
-                  </div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="date">Dec 20, 2023</div>
-                  <div class="content">
-                <p>Apple Pathways Alliance Scholar</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal18" title="Click for more information"></i>
-              </div>
-                  </div>
-
-            <div class="timeline-item">
-              <div class="date">Oct 15, 2023</div>
-                  <div class="content">
-                <p>UF AI Days Hackathon Finalist</p>
-                <i class="fas fa-info-circle info-icon open-modal" data-modal="modal19" title="Click for more information"></i>
-                  </div>
+          <!-- Featured Section -->
+          <div class="featured-section">
+            <h2>Featured Stories</h2>
+            <div class="featured-grid" id="featured-grid">
+              <!-- Featured cards will be populated by JavaScript -->
             </div>
           </div>
 
-
-          <!-- NEW MODAL - DSI Student Organization of the Year -->
-          <div id="modal22" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>Data Science and Informatics named Student Organization of the Year</h3>
-                <span class="close" data-modal="modal22">&times;</span>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <p>
-                    Data Science and Informatics (DSI), the club I have served as the President of for the previous academic year, has won the award for Organization of the Year. I also nominated my friend and DSI's next external-vice president, My Pham, to the Emerging Gator Award which seeks to recognize underclassmen leaders - which she won!
-                  </p>
-                  <p>
-                    Some of the initiatives we have held in the past year include hosting a free 400-person Nvidia Deep Learning workshop in which participants received official certifications, supporting 54 students to compete at ShellHacks (Florida's largest hackathon) and organizing a day-long research symposium with over 20 speakers, 7 student research posters and 100+ attendees.
-                  </p>
-                </div>
-                <div class="modal-section gallery">
-                  <div class="slideshow-container">
-                    <div class="slide active">
-                      <img src="images/news/dsi_organization_year/org_of_the_year1.jpg" alt="DSI Team Celebration">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/dsi_organization_year/org_of_the_year2.jpg" alt="Award Ceremony">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/dsi_organization_year/org_of_the_year3.jpg" alt="DSI Workshop">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/dsi_organization_year/org_of_the_year4.jpg" alt="DSI Workshop">
-                    </div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                  </div>
-                  <div class="dots-container">
-                    <span class="dot active-dot" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                  </div>
-                </div>  
-                <div class="modal-section links">
-                  <h4>Related Links</h4>
-                  <div class="link-item">
-                    <i class="fas fa-newspaper link-icon"></i>
-                    <span class="link-label">Press Release:</span>
-                    <a href="#" class="link-url">UF Student Affairs Announcement</a>
-                  </div>
-                  <div class="link-item">
-                    <i class="fas fa-globe link-icon"></i>
-                    <span class="link-label">Organization:</span>
-                    <a href="#" class="link-url">Data Science and Informatics Website</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Filter Section -->
+          <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="awards">Awards</button>
+            <button class="filter-btn" data-filter="competition">Competition</button>
+            <button class="filter-btn" data-filter="scholarship">Scholarship</button>
+            <button class="filter-btn" data-filter="recognition">Recognition</button>
+            <button class="filter-btn" data-filter="conference">Conference</button>
           </div>
 
-          <!-- NEW MODAL - UF Hall of Fame Induction -->
-          <div id="modal21" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>UF Hall of Fame Induction</h3>
-                <span class="close" data-modal="modal21">&times;</span>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <p>
-                    I was honored to be inducted into the University of Florida Hall of Fame, the highest distinction a student leader can get at UF. Since 1921, the University of Florida selects 25 seniors or graduate students for this award based on leadership experiences, academic achievements, and service to the university community.
-                  </p>
-                  <p>
-                    My parents (4th slide picture) drove up to attend the ceremony and my other guests included Dr. Catia Silva, Dr. Domenic Forte and Dr. Elizabeth Johnson who have supported me every step along the way.
-                  </p>
-                </div>
-                <div class="modal-section gallery">
-                  <div class="slideshow-container">
-                    <div class="slide active">
-                      <img src="images/news/hall_of_fame/pic1.jpg" alt="HOF Award">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/hall_of_fame/pic2.jpg" alt="HOF Wall">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/hall_of_fame/pic3.jpg" alt="HOF Silva and Forte">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/hall_of_fame/pic4.jpg" alt="HOF Parents">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/hall_of_fame/pic5.jpg" alt="HOF Screen">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/hall_of_fame/pic6.jpg" alt="HOF Group Picture">
-                    </div>
-                    <div class="slide">
-                      <img src="images/news/hall_of_fame/pic7.jpg" alt="HOF Receiving Award">
-                    </div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                  </div>
-                  <div class="dots-container">
-                    <span class="dot active-dot" data-slide="0"></span>
-                    <span class="dot" data-slide="1"></span>
-                    <span class="dot" data-slide="2"></span>
-                    <span class="dot" data-slide="3"></span>
-                    <span class="dot" data-slide="4"></span>
-                    <span class="dot" data-slide="5"></span>
-                    <span class="dot" data-slide="6"></span>
-                  </div>
-                </div>
-                <div class="modal-section links">
-                  <h4>Related Links</h4>
-                  <div class="link-item">
-                    <i class="fas fa-trophy link-icon"></i>
-                    <span class="link-label">UF Hall of Fame:</span>
-                    <a href="#" class="link-url">2025 Inductees Announcement</a>
-                  </div>
-                  <div class="link-item">
-                    <i class="fas fa-newspaper link-icon"></i>
-                    <span class="link-label">Press Coverage:</span>
-                    <a href="#" class="link-url">Parkland News</a>
-                  </div>
-                  <div class="link-item">
-                    <i class="fas fa-newspaper link-icon"></i>
-                    <span class="link-label">Press Coverage:</span>
-                    <a href="#" class="link-url">Artificial Intelligence and Informatics Research Institute</a>
-                  </div>
-                  <div class="link-item">
-                    <i class="fas fa-newspaper link-icon"></i>
-                    <span class="link-label">LinkedIn Post:</span>
-                    <a href="#" class="link-url">Personal Post</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Updated Modal for DataFest with the new design -->
-          <div id="modal20" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>DataFest 2025 - Best Visualization</h3>
-                <span class="close" data-modal="modal20">&times;</span>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <p>
-                    My team and I won the Best Visualization award at the 2025 UF ASA DataFest competition. The annual event brought together over 100 students from across campus to analyze a complex, real-world dataset over a weekend.
-                  </p>
-                  <p>
-                    Our team developed innovative visualization techniques to communicate key insights from healthcare utilization data, receiving recognition from judges from industry and academia for our clear and impactful data storytelling.
-                  </p>
-                </div>
-                <div class="modal-section gallery">
-                  <div class="slideshow-container">
-                    <div class="slide active">
-                      <img src="images/news/datafest_visualization/pic08.jpg" alt="DataFest Team">
-                    </div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
-                  </div>
-                  <div class="dots-container">
-                    <span class="dot active-dot" data-slide="0"></span>
-                  </div>
-                </div>
-                <div class="modal-section links">
-                  <h4>Related Links</h4>
-                  <div class="link-item">
-                    <i class="fas fa-newspaper link-icon"></i>
-                    <span class="link-label">Article:</span>
-                    <a href="https://phhp.ufl.edu/2025/04/03/third-annual-datafest-brings-together-students-from-across-uf-in-a-celebration-of-data/" class="link-url">Third Annual DataFest Brings Together Students from Across UF</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Keep existing modals but we'll update just the first few to the new format -->
-          <div id="modal1" class="modal">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h3>CLAS Excellence Award Finalist</h3>
-                <span class="close" data-modal="modal1">&times;</span>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <p>
-                    I was nominated by Dr. Elizabeth Johnson and Dr. Demetris Athienitis in the Department of Statistics for this college-wide award. While I did not win the award, I was one of seventeen finalists!
-                  </p>
-                </div>
-                <div class="modal-section links">
-                  <h4>Related Links</h4>
-                  <div class="link-item">
-                    <i class="fas fa-newspaper link-icon"></i>
-                    <span class="link-label">Announcement:</span>
-                    <a href="https://stat.ufl.edu/featured/2025/congratulations-to-matheus-kunzler-maldaner/" class="link-url">Congratulations to Matheus Kunzler Maldaner</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Rest of the existing modals -->
-          <!-- To be transitioned to the new format gradually -->
-          <div id="modal2" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal2">&times;</span>
-              <h3>UF Hall of Fame</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal3" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal3">&times;</span>
-              <h3>UF Swamphacks X - Best AI Hack</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal4" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal4">&times;</span>
-              <h3>Hispanic Scholarship Fund Scholar</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal5" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal5">&times;</span>
-              <h3>UF GenAI Arts Competition - 2nd Place Overall</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal6" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal6">&times;</span>
-              <h3>UF AI Days Hackathon - Most Popular</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal7" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal7">&times;</span>
-              <h3>NSF REU Travel Award</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal8" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal8">&times;</span>
-              <h3>ShellHacks Hackathon - Most Popular</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal9" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal9">&times;</span>
-              <h3>FGLSAMP Scholar</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal10" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal10">&times;</span>
-              <h3>USCLAP - 2nd Place Overall</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal11" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal11">&times;</span>
-              <h3>UF Joe Glover Data Science Scholarship</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal12" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal12">&times;</span>
-              <h3>William G. Cross Award Finalist</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal13" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal13">&times;</span>
-              <h3>UF ASA DataFest - Best Overall</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal14" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal14">&times;</span>
-              <h3>OSC Hackathon - Best AI Hack & 2nd Place Overall</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal15" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal15">&times;</span>
-              <h3>UF AI Scholar</h3>
-              <p>
-                Selected as a UF AI Scholar, a prestigious designation recognizing students with exceptional
-                potential and achievements in the field of artificial intelligence and machine learning.
-              </p>
-            </div>
-          </div>
-
-          <div id="modal16" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal16">&times;</span>
-              <h3>UF University Scholar</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal17" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal17">&times;</span>
-              <h3>FURC Travel Award</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal18" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal18">&times;</span>
-              <h3>Apple Pathways Alliance Scholar</h3>
-              <p>
-                To be filled...
-              </p>
-            </div>
-          </div>
-
-          <div id="modal19" class="modal">
-            <div class="modal-content">
-              <span class="close" data-modal="modal19">&times;</span>
-              <h3>UF AI Days Hackathon Finalist</h3>
-              <p>
-                  To be filled...
-              </p>
-            </div>
-          </div>
-
-          <!-- NEW MODAL -->
-          <div id="modal25" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="modal-header">
-                <h3>Scholars and Leaders Award</h3>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <h4>Description</h4>
-                  <p>To be filled...</p>
-                </div>
-                <div class="modal-section gallery">
-                  <h4>Gallery</h4>
-                  <div class="slideshow-container" data-slideshow-id="slideshow25">
-                    <div class="slide"><img src="to_be_filled.png" alt="Image 1"></div>
-                    <a class="prev" onclick="plusSlides(-1, 'slideshow25')">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 'slideshow25')">&#10095;</a>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-section links">
-                <h4>Links</h4>
-                <div class="link-item">
-                  <i class="fas fa-link link-icon"></i>
-                  <span class="link-label">Link 1</span>
-                  <a href="#" class="link-url">To be filled...</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- NEW MODAL -->
-          <div id="modal24" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="modal-header">
-                <h3>Summa Cum Laude Honors Thesis</h3>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <h4>Description</h4>
-                  <p>To be filled...</p>
-                </div>
-                <div class="modal-section gallery">
-                  <h4>Gallery</h4>
-                  <div class="slideshow-container" data-slideshow-id="slideshow24">
-                    <div class="slide"><img src="to_be_filled.png" alt="Image 1"></div>
-                    <a class="prev" onclick="plusSlides(-1, 'slideshow24')">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 'slideshow24')">&#10095;</a>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-section links">
-                <h4>Links</h4>
-                <div class="link-item">
-                  <i class="fas fa-link link-icon"></i>
-                  <span class="link-label">Link 1</span>
-                  <a href="#" class="link-url">To be filled...</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- NEW MODAL -->
-          <div id="modal23" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <div class="modal-header">
-                <h3>ITIAS Hack Space Con Scholarship</h3>
-              </div>
-              <div class="modal-body">
-                <div class="modal-section description">
-                  <h4>Description</h4>
-                  <p>To be filled...</p>
-                </div>
-                <div class="modal-section gallery">
-                  <h4>Gallery</h4>
-                  <div class="slideshow-container" data-slideshow-id="slideshow23">
-                    <div class="slide"><img src="to_be_filled.png" alt="Image 1"></div>
-                    <a class="prev" onclick="plusSlides(-1, 'slideshow23')">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1, 'slideshow23')">&#10095;</a>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-section links">
-                <h4>Links</h4>
-                <div class="link-item">
-                  <i class="fas fa-link link-icon"></i>
-                  <span class="link-label">Link 1</span>
-                  <a href="#" class="link-url">To be filled...</a>
-                </div>
-              </div>
+          <!-- Cards Section -->
+          <div class="cards-section">
+            <h2>All Stories</h2>
+            <div class="cards-grid" id="cards-grid">
+              <!-- Cards will be populated by JavaScript -->
             </div>
           </div>
         </div>
-
-        <div style="text-align: center; font-size: 12px; color: rgba(0, 0, 0, 0.5); margin-top: 5px;">
-          Last edited on: <span id="lastEdited"></span>
         </div>
-        
       </section>
+    </div>
+
+    <!-- Modal Template -->
+    <div id="modal-template" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="modal-title"></h3>
+          <button class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-description" id="modal-description"></div>
+          <div class="modal-gallery" id="modal-gallery"></div>
+          <div class="modal-links" id="modal-links"></div>
+        </div>
+      </div>
     </div>
 
     <!-- Scripts -->
@@ -1041,101 +565,254 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Enhanced Modal Logic with Slideshow -->
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const openButtons = document.querySelectorAll('.open-modal');
-        const closeButtons = document.querySelectorAll('.close');
-        const modals = document.querySelectorAll('.modal');
-        const slideshows = document.querySelectorAll('.slideshow-container');
+      // Global variables
+      let newsData = [];
+      let currentFilter = 'all';
+      let currentModal = null;
 
-        // Open modal
-        openButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal');
-            document.getElementById(modalId).style.display = 'block';
+      // Load news data from external JSON file
+      async function loadNewsData() {
+        try {
+          const response = await fetch('data/news-data.json');
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          newsData = await response.json();
+          
+          // Sort news by date (newest first)
+          newsData.sort((a, b) => {
+            const dateA = new Date(a.date);
+            const dateB = new Date(b.date);
+            return dateB - dateA; // Descending order (newest first)
+          });
+          
+          console.log('News data loaded and sorted successfully:', newsData.length, 'entries');
+        } catch (error) {
+          console.error('Error loading news data:', error);
+          // Fallback: show error message or use default data
+          newsData = [];
+        }
+      }
+
+      // Initialize the page
+      document.addEventListener('DOMContentLoaded', async function() {
+        // Load news data first
+        await loadNewsData();
+        
+        // Then render the page
+        renderFeaturedCards();
+        renderCards();
+        setupEventListeners();
+      });
+
+      function renderFeaturedCards() {
+        const featuredGrid = document.getElementById('featured-grid');
+        const featuredNews = newsData.filter(item => item.featured);
+        
+        featuredGrid.innerHTML = featuredNews.map(item => `
+          <div class="featured-card" data-id="${item.id}">
+            <img src="${item.image}" alt="${item.title}" loading="lazy">
+            <div class="featured-overlay">
+              <div class="category-badge badge-${item.category}">${item.category}</div>
+              <div class="featured-date">${item.date}</div>
+              <div class="featured-title">${item.title}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      function renderCards() {
+        const cardsGrid = document.getElementById('cards-grid');
+        let filteredNews = newsData;
+        
+        if (currentFilter !== 'all') {
+          filteredNews = newsData.filter(item => item.category === currentFilter);
+        }
+
+        cardsGrid.innerHTML = filteredNews.map(item => `
+          <div class="news-card" data-id="${item.id}" data-category="${item.category}">
+            <div class="card-image">
+              <img src="${item.image}" alt="${item.title}" loading="lazy">
+              <div class="category-badge badge-${item.category}">${item.category}</div>
+            </div>
+            <div class="card-content">
+              <div class="card-date">${item.date}</div>
+              <div class="card-title">${item.title}</div>
+              <div class="card-description">${item.description}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      function setupEventListeners() {
+        // Filter buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+          btn.addEventListener('click', function() {
+            // Update active filter
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            currentFilter = this.getAttribute('data-filter');
+            renderCards();
+            attachCardListeners();
           });
         });
 
-        // Close modal when clicking X
-        closeButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const modalId = button.getAttribute('data-modal');
-            document.getElementById(modalId).style.display = 'none';
-          });
-        });
+        // Initial card listeners
+        attachCardListeners();
+        
+        // Modal close listeners
+        setupModalListeners();
+      }
 
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-          modals.forEach(modal => {
-            if (event.target == modal) {
-              modal.style.display = 'none';
+      function attachCardListeners() {
+        document.querySelectorAll('.news-card, .featured-card').forEach(card => {
+          card.addEventListener('click', function() {
+            const itemId = this.getAttribute('data-id');
+            const newsItem = newsData.find(item => item.id === itemId);
+            if (newsItem) {
+              openModal(newsItem);
             }
+          });
+        });
+      }
+
+      function openModal(newsItem) {
+        const modal = document.getElementById('modal-template');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalGallery = document.getElementById('modal-gallery');
+        const modalLinks = document.getElementById('modal-links');
+
+        currentModal = modal;
+
+        // Set title
+        modalTitle.textContent = newsItem.title;
+
+        // Set description
+        let descriptionHTML = `<p>${newsItem.description}</p>`;
+        if (newsItem.secondParagraph) {
+          descriptionHTML += `<p>${newsItem.secondParagraph}</p>`;
+        }
+        modalDescription.innerHTML = descriptionHTML;
+
+        // Set gallery
+        if (newsItem.gallery && newsItem.gallery.length > 0) {
+          modalGallery.innerHTML = `
+            <div class="slideshow-container">
+              ${newsItem.gallery.map((img, index) => `
+                <div class="slide ${index === 0 ? 'active' : ''}">
+                  <img src="${img}" alt="${newsItem.title}">
+                </div>
+              `).join('')}
+              ${newsItem.gallery.length > 1 ? `
+                <a class="nav-btn prev">&#10094;</a>
+                <a class="nav-btn next">&#10095;</a>
+              ` : ''}
+            </div>
+            ${newsItem.gallery.length > 1 ? `
+              <div class="dots-container">
+                ${newsItem.gallery.map((_, index) => `
+                  <span class="dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></span>
+                `).join('')}
+              </div>
+            ` : ''}
+          `;
+          
+          // Setup slideshow functionality
+          setupSlideshow();
+        } else {
+          modalGallery.innerHTML = '';
+        }
+
+        // Set links
+        if (newsItem.links && newsItem.links.length > 0) {
+          modalLinks.innerHTML = `
+            <h4>Related Links</h4>
+            ${newsItem.links.map(link => `
+              <div class="link-item">
+                <i class="${link.icon} link-icon"></i>
+                <span class="link-label">${link.label}:</span>
+                <a href="${link.url}" class="link-url" target="_blank" rel="noopener noreferrer">${link.url}</a>
+              </div>
+            `).join('')}
+          `;
+        } else {
+          modalLinks.innerHTML = '';
+        }
+
+        // Show modal
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }
+
+      function setupModalListeners() {
+        const modal = document.getElementById('modal-template');
+        const closeBtn = modal.querySelector('.modal-close');
+
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && currentModal) {
+            closeModal();
+          }
+        });
+      }
+
+      function closeModal() {
+        if (currentModal) {
+          currentModal.style.display = 'none';
+          document.body.style.overflow = 'auto';
+          currentModal = null;
+        }
+      }
+
+      function setupSlideshow() {
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.querySelector('.nav-btn.prev');
+        const nextBtn = document.querySelector('.nav-btn.next');
+        let currentSlide = 0;
+
+        function showSlide(n) {
+          if (n >= slides.length) currentSlide = 0;
+          if (n < 0) currentSlide = slides.length - 1;
+
+          slides.forEach(slide => slide.classList.remove('active'));
+          dots.forEach(dot => dot.classList.remove('active'));
+
+          if (slides[currentSlide]) slides[currentSlide].classList.add('active');
+          if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', function() {
+            currentSlide--;
+            showSlide(currentSlide);
           });
         }
 
-        // Close modal when pressing ESC key
-        document.addEventListener('keydown', function(event) {
-          if (event.key === 'Escape') {
-            modals.forEach(modal => {
-              if (modal.style.display === 'block') {
-                modal.style.display = 'none';
-              }
-            });
-          }
-        });
+        if (nextBtn) {
+          nextBtn.addEventListener('click', function() {
+            currentSlide++;
+            showSlide(currentSlide);
+          });
+        }
 
-        // Slideshow functionality
-        slideshows.forEach(slideshow => {
-          const slides = slideshow.querySelectorAll('.slide');
-          const prevBtn = slideshow.querySelector('.prev');
-          const nextBtn = slideshow.querySelector('.next');
-          const dots = slideshow.parentElement.querySelectorAll('.dot');
-          let currentSlide = 0;
-
-          // Hide navigation if only one slide
-          if (slides.length <= 1) {
-            if (prevBtn) prevBtn.style.display = 'none';
-            if (nextBtn) nextBtn.style.display = 'none';
-          }
-
-          function showSlide(n) {
-            if (n >= slides.length) currentSlide = 0;
-            if (n < 0) currentSlide = slides.length - 1;
-
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active-dot'));
-
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active-dot');
-          }
-
-          // Next/previous controls
-          if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-              currentSlide--;
-              showSlide(currentSlide);
-            });
-          }
-
-          if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-              currentSlide++;
-              showSlide(currentSlide);
-            });
-          }
-
-          // Dots control
-          dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-              const slideIndex = parseInt(dot.getAttribute('data-slide'));
-              currentSlide = slideIndex;
-              showSlide(currentSlide);
-            });
+        dots.forEach(dot => {
+          dot.addEventListener('click', function() {
+            currentSlide = parseInt(this.getAttribute('data-slide'));
+            showSlide(currentSlide);
           });
         });
-      });
+      }
     </script>
-    <script>document.getElementById("lastEdited").innerText = document.lastModified;</script>
   </body>
-</html>
+</html> 
