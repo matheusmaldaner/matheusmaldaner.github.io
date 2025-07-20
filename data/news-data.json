@@ -152,7 +152,7 @@
   },
   {
     "id": "clas_excellence_finalist",
-    "title": "CLAS Excellence Award Finalist",
+    "title": "UF CLAS Excellence Award Finalist",
     "date": "March 24, 2025",
     "category": "awards",
     "featured": false,
@@ -187,8 +187,8 @@
     "links": []
   },
   {
-    "id": "mcknight_fellow_",
-    "title": "2024 McKnight Annual Fellows Conference",
+    "id": "mcknight_fellow_conference",
+    "title": "McKnight Annual Fellows Conference",
     "date": "November 22, 2024",
     "category": "conference",
     "featured": false,
@@ -215,12 +215,25 @@
     "date": "January 26, 2025",
     "category": "competition",
     "featured": false,
-    "image": "images/news/swamphacks_ai/pic07.jpg",
-    "description": "Our team won the Best AI Award at UF Swamphacks X, the University of Florida's premier hackathon event, for developing an innovative artificial intelligence solution.",
+    "image": "images/news/swamphacks_ai/swamphacks_1.jpg",
+    "description": "My friends Kristian O'Connor, Danush Singla, Pranav Bhargava and I won the Best AI Award at UF Swamphacks X, the University of Florida's biggest hackathon event. We developed an application to visualize the inner workings of differentiable logic gate networks. Users are able to upload a trained model (.pth file) to load the model's learned logic gates and then input images to visualize how the model propagates the input through the network and ultimately why a given image is classified as such. This enables more transparent and explainable AI and allows users to understand exactly what is going on under the hood. It is still hard to interpret thousands of logic gates and that is an interesting research direction.",
     "gallery": [
-      "images/news/swamphacks_ai/pic07.jpg"
+      "images/news/swamphacks_ai/swamphacks_1.jpg",
+      "images/news/swamphacks_ai/swamphacks_2.jpg",
+      "images/news/swamphacks_ai/swamphacks_3.jpg"
     ],
-    "links": []
+    "links": [
+      {
+        "label": "Devpost",
+        "url": "https://devpost.com/software/neural-network-visualizer",
+        "icon": "fas fa-globe"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/matheusmaldaner/DiffLogicVisualizer",
+        "icon": "fab fa-github"
+      }
+    ]
   },
   {
     "id": "hispanic_scholarship_fund",
@@ -229,7 +242,7 @@
     "category": "scholarship",
     "featured": false,
     "image": "images/news/hispanic_scholarship/pic08_hispanic.jpg",
-    "description": "Selected as a Hispanic Scholarship Fund Scholar, recognizing academic achievement and leadership potential within the Hispanic community.",
+    "description": "I was selected as a Hispanic Scholarship Fund Scholar! I am grateful for Dr. Woodard for recommending me for this scholarship that helps hispanic/latino students with their education.",
     "gallery": [
       "images/news/hispanic_scholarship/pic08_hispanic.jpg"
     ],
@@ -237,28 +250,69 @@
   },
   {
     "id": "genai_arts_competition",
-    "title": "UF GenAI Arts Competition 2nd Place Overall",
+    "title": "UF GenAI Arts Competition 2nd Place",
     "date": "October 28, 2024",
     "category": "competition",
     "featured": false,
-    "image": "images/news/genai_arts/pic09.jpg",
-    "description": "Achieved 2nd place overall in the University of Florida's Generative AI Arts Competition, showcasing creative applications of artificial intelligence technology.",
+    "image": "images/news/genai_arts/genai_arts_1.jpg",
+    "description": "My friend Brandon Wand and I placed 2nd overall in the University of Florida's Generative AI Arts Competition. The report and our generated images are attached in the links below. We sought to represent how social media can warp one's perception of reality. We primarily leveraged Flux and LoRA to generate the base imagery and used ESRGAN to upscale them to 4K. Brandon then did some minor fine-tuning on photoshop (which I do not know how to properly use) to fix some of the artifacts like fingers and faces. ",
     "gallery": [
-      "images/news/genai_arts/pic09.jpg"
+      "images/news/genai_arts/genai_arts_1.jpg",
+      "images/news/genai_arts/genai_arts_2.png",
+      "images/news/genai_arts/genai_arts_3.jpg",
+      "images/news/genai_arts/genai_arts_4.jpg",
+      "images/news/genai_arts/genai_arts_5.jpg", 
+      "images/news/genai_arts/genai_arts_6.jpg",
+      "images/news/genai_arts/genai_arts_7.jpg",
+      "images/news/genai_arts/genai_arts_8.jpg"
     ],
-    "links": []
+    "links": [
+      {
+        "label": "Google Docs Report",
+        "url": "https://docs.google.com/document/d/1ClKwX1HMPupkt3uv30bEGjqh1ElqfcqBxTW-6XDfDxA/edit?tab=t.0",
+        "icon": "fas fa-file-pdf"
+      },
+      {
+        "label": "Google Drive Folder",
+        "url": "https://drive.google.com/drive/u/1/folders/1iKbDv7eRbAm25Eo7TCwcIVCIyMgnrcdM",
+        "icon": "fas fa-file-pdf"
+      },
+      {
+        "label": "Video about the event",
+        "url": "https://www.youtube.com/watch?v=OHo1SbqqXGU&t=2s",
+        "icon": "fas fa-video"
+      }
+    ]
   },
   {
     "id": "ai_days_hackathon",
-    "title": "UF AI Days Hackathon Most Popular Award",
+    "title": "UF AI Days Hackathon Most Popular",
     "date": "October 28, 2024",
     "category": "competition",
     "featured": false,
-    "image": "images/news/ai_days_hackathon/pic10.jpg",
-    "description": "Won the Most Popular Award at UF AI Days Hackathon, where our project received the most votes from event participants and attendees.",
+    "image": "images/news/ai_days_hackathon/ai_days_4.jpg",
+    "description": "My friends Stephen Wormald, Raul Valle and Landon Nayab and I won the Most Popular Award at this year's UF AI Days Hackathon sponsored by IBM and also got to meet NVIDIA's co-founder Chris Malachowsky.",
+    "secondParagraph": "Our project titled EcoLogic trained several Differentiable Logic Gate Networks of varying widths and depths on MNIST, extracted the learned logic gates and converted them to verilog, flashed them onto an FPGA and then showed that our method was much faster than similar approaches.",
     "gallery": [
-      "images/news/ai_days_hackathon/pic10.jpg"
+      "images/news/ai_days_hackathon/ai_days_1.jpg",
+      "images/news/ai_days_hackathon/ai_days_2.jpg",
+      "images/news/ai_days_hackathon/ai_days_3.jpg",
+      "images/news/ai_days_hackathon/ai_days_4.jpg",
+      "images/news/ai_days_hackathon/ai_days_5.jpg",
+      "images/news/ai_days_hackathon/ai_days_6.jpg",
+      "images/news/ai_days_hackathon/ai_days_7.jpg"
     ],
-    "links": []
+    "links": [
+      {
+        "label": "Devpost",
+        "url": "https://devpost.com/software/ecologic?_gl=1*70vlp8*_gcl_au*MTA0MzQwMjI0NC4xNzUzMDMyMjUw*_ga*MTg5MjU5MDUwLjE3NTMwMzIyNTA.*_ga_0YHJK3Y10M*czE3NTMwMzIyNDkkbzEkZzEkdDE3NTMwMzIyNjMkajQ2JGwwJGgw",
+        "icon": "fas fa-globe"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/matheusmaldaner/EcoLogic",
+        "icon": "fab fa-github"
+      }
+    ]
   }
 ] 
