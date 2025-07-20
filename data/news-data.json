@@ -187,6 +187,29 @@
     "links": []
   },
   {
+    "id": "mcknight_fellow_",
+    "title": "2024 McKnight Annual Fellows Conference",
+    "date": "November 22, 2024",
+    "category": "conference",
+    "featured": false,
+    "image": "images/news/mcknight_fellow/mcknight_fellow_1.jpg",
+    "description": "I was honored to be invited to present a research poster at this year's McKnight Annual Fellows Conference.",
+    "secondParagraph": "I was one of the few undergraduate students present at the conference, being invited due to being a FGLSAMP scholar at the University of FLorida. I presented my research work on MIRAGE, a software I developed during my summer at Carnegie Mellon University that enables users to compare the outputs of different text-to-image models.",
+    "gallery": [
+      "images/news/mcknight_fellow/mcknight_fellow_1.jpg",
+      "images/news/mcknight_fellow/mcknight_fellow_2.jpg",
+      "images/news/mcknight_fellow/mcknight_fellow_3.jpg",
+      "images/news/mcknight_fellow/mcknight_fellow_4.jpg"
+    ],
+    "links": [
+      {
+        "label": "Event Agenda",
+        "url": "https://www.fefonline.org/2024AFM-MYM-Agenda.pdf",
+        "icon": "fas fa-newspaper"
+      }
+    ]
+  },
+  {
     "id": "swamphacks_best_ai",
     "title": "UF Swamphacks X Best AI Award",
     "date": "January 26, 2025",
