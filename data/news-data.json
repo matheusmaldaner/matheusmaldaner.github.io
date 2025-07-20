@@ -47,24 +47,11 @@
     ]
   },
   {
-    "id": "scholars_and_leaders_award",
-    "title": "Scholars and Leaders Award",
-    "date": "May 2, 2025",
-    "category": "awards",
-    "featured": true,
-    "image": "images/news/scholars_leaders_award/pic01.jpg",
-    "description": "Recognized with the prestigious Scholars and Leaders Award for outstanding academic achievement and leadership contributions.",
-    "gallery": [
-      "images/news/scholars_leaders_award/pic01.jpg"
-    ],
-    "links": []
-  },
-  {
     "id": "summa_cum_laude_thesis",
     "title": "Summa Cum Laude Honors Thesis",
     "date": "April 30, 2025",
     "category": "recognition",
-    "featured": true,
+    "featured": false,
     "image": "images/news/summa_cum_laude_thesis/pic02.jpg",
     "description": "Successfully completed my honors thesis with Summa Cum Laude distinction, representing the highest level of academic achievement.",
     "gallery": [
@@ -147,11 +134,13 @@
     "date": "March 30, 2025",
     "category": "competition",
     "featured": false,
-    "image": "images/news/datafest_visualization/pic08.jpg",
-    "description": "My team and I won the Best Visualization award at the 2025 UF ASA DataFest competition. The annual event brought together over 100 students from across campus to analyze a complex, real-world dataset over a weekend.",
-    "secondParagraph": "Our team developed innovative visualization techniques to communicate key insights from healthcare utilization data, receiving recognition from judges from industry and academia for our clear and impactful data storytelling.",
+    "image": "images/news/datafest_visualization/datafest_1.jpg",
+    "description": "My team and I won the Best Visualization Award at the 2025 UF ASA DataFest competition. This is the third year the event is hosted and also the third year I have competed.",
+    "secondParagraph": "The event is akin to a hackathon but for data science. Over the span of 2 days, teams are given a dataset and are tasked with extracting insights from the data and pitching their findings with a 5 slide presentation to a panel of judges. Grateful for my friends Aaron, Adit, Ishan and Aadhi (who got sick and did not make the closing ceremony)for the company and for the opportunity to compete.",
     "gallery": [
-      "images/news/datafest_visualization/pic08.jpg"
+      "images/news/datafest_visualization/datafest_1.jpg",
+      "images/news/datafest_visualization/datafest_2.jpg",
+      "images/news/datafest_visualization/datafest_3.jpg"
     ],
     "links": [
       {
@@ -160,19 +149,6 @@
         "icon": "fas fa-newspaper"
       }
     ]
-  },
-  {
-    "id": "thesis_submission",
-    "title": "Undergraduate Thesis Submission",
-    "date": "March 30, 2025",
-    "category": "recognition",
-    "featured": false,
-    "image": "images/news/thesis_submission/pic04.jpg",
-    "description": "Successfully submitted my undergraduate honors thesis, marking the culmination of extensive research work in data science and artificial intelligence.",
-    "gallery": [
-      "images/news/thesis_submission/pic04.jpg"
-    ],
-    "links": []
   },
   {
     "id": "clas_excellence_finalist",
@@ -194,15 +170,19 @@
     ]
   },
   {
-    "id": "outstanding_leader_scholar",
-    "title": "Outstanding Leader and Scholar Award",
-    "date": "March 10, 2025",
+    "id": "outstanding_leader_award",
+    "title": "Outstanding Leader Award",
+    "date": "May 3, 2025",
     "category": "awards",
-    "featured": false,
-    "image": "images/news/outstanding_leader/pic06.jpg",
-    "description": "Recognized with the Outstanding Leader and Scholar Award for exceptional leadership in student organizations and academic excellence.",
+    "featured": true,
+    "image": "images/news/outstanding_leader/leader_3.jpg",
+    "description": "I was honored to be one of the 7 graduating seniors across the entire University of Florida to receive the Outstanding Leader Award. Every year the University of Florida selects a total of 14 graduating seniors, 7 for leadership excellence (Leaders Award) and 7 for academic excellence (Scholars Award). This was an incredible ceremony that took place right before the general University-wide graduation ceremony where I got to speak with UF President Kent Fuchs and Provost Joe Glover (as well as many other important people)",
+    "secondParagraph": "I would like to share this award with all of the student organizations I have been a part of and the fellow student leaders I have worked with. I have been the president of Data Science and Informatics (DSI) for the past year, which recently won the award for Organization of the Year. Apart of DSI, I was the Vice President of UF's Statistics Club, Director of Campus Connections at UF's AI Club and co-founded UF's IEEE Signal Processing Society Chapter alongside my friend Raul Valle.",
     "gallery": [
-      "images/news/outstanding_leader/pic06.jpg"
+      "images/news/outstanding_leader/leader_1.jpg",
+      "images/news/outstanding_leader/leader_2.jpg",
+      "images/news/outstanding_leader/leader_3.jpg",
+      "images/news/outstanding_leader/leader_4.png"
     ],
     "links": []
   },
