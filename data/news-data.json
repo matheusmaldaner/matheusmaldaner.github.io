@@ -1,4 +1,29 @@
 [
+    {
+    "id": "itng-2025",
+    "title": "Best Student Paper Award at ITNG 2025",
+    "date": "April 27, 2025",
+    "category": "conference",
+    "featured": false,
+    "image": "images/news/itng-2025/itng_1.jpg",
+    "description": "I attended the 2025 International Conference on Information Technology: New Generations (ITNG 2025) in Las Vegas, Nevada with my mentor (and friend) Stephen Wormald. I am extremely grateful to Dr. Anne Donnelly and the UF Center of Undergraduate Research for supporting me with a Travel Award to attend this event.",
+    "secondParagraph": "Stephen and I presented a paper on leveraging Differentiable Logic Gate Networks for more explainable outputs and were honored to receive this year's Best Student Paper Award. We also had some time to explore the Valley of Fire and climb some mountains. Also grateful for Olivia and Reiner for the hospitality and for letting us crash at their place.",
+    "gallery": [
+        "images/news/itng-2025/itng_1.jpg",
+        "images/news/itng-2025/itng_2.jpg",
+        "images/news/itng-2025/itng_3.jpg",
+        "images/news/itng-2025/itng_4.jpg",
+        "images/news/itng-2025/itng_5.jpg",
+        "images/news/itng-2025/itng_6.png"
+    ],
+    "links": [
+        {
+        "label": "Best Student Paper Award",
+        "url": "https://www.itng.info/awards",
+        "icon": "fas fa-trophy"
+        }
+    ]
+    },
   {
     "id": "hack_space_con",
     "title": "Hack Space Con",
