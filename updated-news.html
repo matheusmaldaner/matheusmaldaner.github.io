@@ -205,6 +205,11 @@
         color: white;
       }
 
+      .badge-conference {
+        background: rgba(108, 117, 125, 0.9);
+        color: white;
+      }
+
       .card-content {
         padding: 1.25rem;
       }
@@ -513,6 +518,7 @@
             <button class="filter-btn" data-filter="competition">Competition</button>
             <button class="filter-btn" data-filter="scholarship">Scholarship</button>
             <button class="filter-btn" data-filter="recognition">Recognition</button>
+            <button class="filter-btn" data-filter="conference">Conference</button>
           </div>
 
           <!-- Cards Section -->
@@ -554,7 +560,24 @@
       // News data extracted from the original timeline
       const newsData = [
         {
-          id: 'modal25',
+          id: 'hack_space_con',
+          title: 'Hack Space Con',
+          date: 'May 12, 2025',
+          category: 'scholarship',
+          image: 'images/news/hack_space_con/hack_space_con_3.jpg',
+          description: 'I received the ITIAS Hack Space Con Scholarship to attend this year\'s Hack Space Con and tour the Kennedy Space Center thanks to David Vozzola. I had a phenomenal time learning more about cybersecurity and attending talks related to machine learning. I am grateful for Dr. Woodard\'s recommendation and for Dr. Vozzola\'s support and hospitality.',
+          gallery: [
+            'images/news/hack_space_con/hack_space_con_3.jpg',
+            'images/news/hack_space_con/hack_space_con_1.png',
+            'images/news/hack_space_con/hack_space_con_2.jpeg',
+            'images/news/hack_space_con/hack_space_con_4.jpg'
+          ],
+          links: [
+            { label: 'LinkedIn', url: 'https://www.linkedin.com/posts/information-technology-institute-for-advanced-study_last-week-we-attended-another-great-hack-activity-7332081220266119169-TemV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko', icon: 'fab fa-linkedin' }
+          ]
+        },
+        {
+          id: 'scholars_and_leaders_award',
           title: 'Scholars and Leaders Award',
           date: 'May 2, 2025',
           category: 'awards',
@@ -565,7 +588,7 @@
           links: []
         },
         {
-          id: 'modal24',
+          id: 'summa_cum_laude_thesis',
           title: 'Summa Cum Laude Honors Thesis',
           date: 'April 30, 2025',
           category: 'recognition',
@@ -576,17 +599,7 @@
           links: []
         },
         {
-          id: 'modal23',
-          title: 'ITIAS Hack Space Con Scholarship',
-          date: 'April 27, 2025',
-          category: 'scholarship',
-          image: 'images/news/itias_scholarship/pic03.jpg',
-          description: 'Awarded the ITIAS Hack Space Con Scholarship for to attend the Hack Space Con in Miami, Florida.',
-          gallery: ['images/news/itias_scholarship/pic03.jpg'],
-          links: []
-        },
-        {
-          id: 'modal22',
+          id: 'dsi_organization_of_year',
           title: 'DSI Student Organization of the Year',
           date: 'April 17, 2025',
           category: 'awards',
@@ -601,7 +614,7 @@
           ]
         },
         {
-          id: 'modal21',
+          id: 'uf_hall_of_fame',
           title: 'UF Hall of Fame Induction',
           date: 'April 16, 2025',
           category: 'awards',
@@ -618,7 +631,7 @@
           ]
         },
         {
-          id: 'modal20',
+          id: 'datafest_best_visualization',
           title: 'UF DataFest Best Visualization Award',
           date: 'March 30, 2025',
           category: 'competition',
@@ -641,7 +654,7 @@
           links: []
         },
         {
-          id: 'modal1',
+          id: 'clas_excellence_finalist',
           title: 'CLAS Excellence Award Finalist',
           date: 'March 24, 2025',
           category: 'awards',
@@ -653,7 +666,7 @@
           ]
         },
         {
-          id: 'outstanding-leader',
+          id: 'outstanding_leader_scholar',
           title: 'Outstanding Leader and Scholar Award',
           date: 'March 10, 2025',
           category: 'awards',
@@ -663,7 +676,7 @@
           links: []
         },
         {
-          id: 'modal3',
+          id: 'swamphacks_best_ai',
           title: 'UF Swamphacks X Best AI Award',
           date: 'January 26, 2025',
           category: 'competition',
@@ -673,7 +686,7 @@
           links: []
         },
         {
-          id: 'modal4',
+          id: 'hispanic_scholarship_fund',
           title: 'Hispanic Scholarship Fund Scholar',
           date: 'November 27, 2024',
           category: 'scholarship',
@@ -683,7 +696,7 @@
           links: []
         },
         {
-          id: 'modal5',
+          id: 'genai_arts_competition',
           title: 'UF GenAI Arts Competition 2nd Place Overall',
           date: 'October 28, 2024',
           category: 'competition',
@@ -693,7 +706,7 @@
           links: []
         },
         {
-          id: 'modal6',
+          id: 'ai_days_hackathon',
           title: 'UF AI Days Hackathon Most Popular Award',
           date: 'October 28, 2024',
           category: 'competition',
@@ -702,6 +715,7 @@
           gallery: ['images/news/ai_days_hackathon/pic10.jpg'],
           links: []
         }
+            
         // Add more news items as needed...
       ];
 
