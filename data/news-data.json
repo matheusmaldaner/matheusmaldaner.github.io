@@ -1,0 +1,236 @@
+[
+  {
+    "id": "hack_space_con",
+    "title": "Hack Space Con",
+    "date": "May 12, 2025",
+    "category": "scholarship",
+    "featured": false,
+    "image": "images/news/hack_space_con/hack_space_con_3.jpg",
+    "description": "I received the ITIAS Hack Space Con Scholarship to attend this year's Hack Space Con and tour the Kennedy Space Center thanks to David Vozzola. I had a phenomenal time learning more about cybersecurity and attending talks related to machine learning. I am grateful for Dr. Woodard's recommendation and for Dr. Vozzola's support and hospitality.",
+    "gallery": [
+      "images/news/hack_space_con/hack_space_con_3.jpg",
+      "images/news/hack_space_con/hack_space_con_1.png",
+      "images/news/hack_space_con/hack_space_con_2.jpeg",
+      "images/news/hack_space_con/hack_space_con_4.jpg"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/posts/information-technology-institute-for-advanced-study_last-week-we-attended-another-great-hack-activity-7332081220266119169-TemV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      }
+    ]
+  },
+  {
+    "id": "scholars_and_leaders_award",
+    "title": "Scholars and Leaders Award",
+    "date": "May 2, 2025",
+    "category": "awards",
+    "featured": true,
+    "image": "images/news/scholars_leaders_award/pic01.jpg",
+    "description": "Recognized with the prestigious Scholars and Leaders Award for outstanding academic achievement and leadership contributions.",
+    "gallery": [
+      "images/news/scholars_leaders_award/pic01.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "summa_cum_laude_thesis",
+    "title": "Summa Cum Laude Honors Thesis",
+    "date": "April 30, 2025",
+    "category": "recognition",
+    "featured": true,
+    "image": "images/news/summa_cum_laude_thesis/pic02.jpg",
+    "description": "Successfully completed my honors thesis with Summa Cum Laude distinction, representing the highest level of academic achievement.",
+    "gallery": [
+      "images/news/summa_cum_laude_thesis/pic02.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "dsi_organization_of_year",
+    "title": "DSI Student Organization of the Year",
+    "date": "April 17, 2025",
+    "category": "awards",
+    "featured": true,
+    "image": "images/news/dsi_organization_year/org_of_the_year1.jpg",
+    "description": "Data Science and Informatics (DSI), the club I have served as the President of for the previous academic year, has won the award for Organization of the Year. I also nominated my friend and DSI's next external-vice president, My Pham, to the Emerging Gator Award which seeks to recognize underclassmen leaders - which she won!",
+    "secondParagraph": "Some of the initiatives we have held in the past year include hosting a free 400-person Nvidia Deep Learning workshop in which participants received official certifications, supporting 54 students to compete at ShellHacks (Florida's largest hackathon) and organizing a day-long research symposium with over 20 speakers, 7 student research posters and 100+ attendees.",
+    "gallery": [
+      "images/news/dsi_organization_year/org_of_the_year1.jpg",
+      "images/news/dsi_organization_year/org_of_the_year2.jpg",
+      "images/news/dsi_organization_year/org_of_the_year3.jpg",
+      "images/news/dsi_organization_year/org_of_the_year4.jpg"
+    ],
+    "links": [
+      {
+        "label": "Press Release",
+        "url": "#",
+        "icon": "fas fa-newspaper"
+      },
+      {
+        "label": "Organization",
+        "url": "#",
+        "icon": "fas fa-globe"
+      }
+    ]
+  },
+  {
+    "id": "uf_hall_of_fame",
+    "title": "UF Hall of Fame Induction",
+    "date": "April 16, 2025",
+    "category": "awards",
+    "featured": true,
+    "image": "images/news/hall_of_fame/pic1.jpg",
+    "description": "I was honored to be inducted into the University of Florida Hall of Fame, the highest distinction a student leader can get at UF. Since 1921, the University of Florida selects 25 seniors or graduate students for this award based on leadership experiences, academic achievements, and service to the university community.",
+    "secondParagraph": "My parents (4th slide picture) drove up to attend the ceremony and my other guests included Dr. Catia Silva, Dr. Domenic Forte and Dr. Elizabeth Johnson who have supported me every step along the way.",
+    "gallery": [
+      "images/news/hall_of_fame/pic1.jpg",
+      "images/news/hall_of_fame/pic2.jpg",
+      "images/news/hall_of_fame/pic3.jpg",
+      "images/news/hall_of_fame/pic4.jpg",
+      "images/news/hall_of_fame/pic5.jpg",
+      "images/news/hall_of_fame/pic6.jpg",
+      "images/news/hall_of_fame/pic7.jpg"
+    ],
+    "links": [
+      {
+        "label": "UF Hall of Fame",
+        "url": "#",
+        "icon": "fas fa-trophy"
+      },
+      {
+        "label": "Parkland News",
+        "url": "#",
+        "icon": "fas fa-newspaper"
+      },
+      {
+        "label": "AI Research Institute",
+        "url": "#",
+        "icon": "fas fa-newspaper"
+      },
+      {
+        "label": "LinkedIn Post",
+        "url": "#",
+        "icon": "fas fa-newspaper"
+      }
+    ]
+  },
+  {
+    "id": "datafest_best_visualization",
+    "title": "UF DataFest Best Visualization Award",
+    "date": "March 30, 2025",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/datafest_visualization/pic08.jpg",
+    "description": "My team and I won the Best Visualization award at the 2025 UF ASA DataFest competition. The annual event brought together over 100 students from across campus to analyze a complex, real-world dataset over a weekend.",
+    "secondParagraph": "Our team developed innovative visualization techniques to communicate key insights from healthcare utilization data, receiving recognition from judges from industry and academia for our clear and impactful data storytelling.",
+    "gallery": [
+      "images/news/datafest_visualization/pic08.jpg"
+    ],
+    "links": [
+      {
+        "label": "Article",
+        "url": "https://phhp.ufl.edu/2025/04/03/third-annual-datafest-brings-together-students-from-across-uf-in-a-celebration-of-data/",
+        "icon": "fas fa-newspaper"
+      }
+    ]
+  },
+  {
+    "id": "thesis_submission",
+    "title": "Undergraduate Thesis Submission",
+    "date": "March 30, 2025",
+    "category": "recognition",
+    "featured": false,
+    "image": "images/news/thesis_submission/pic04.jpg",
+    "description": "Successfully submitted my undergraduate honors thesis, marking the culmination of extensive research work in data science and artificial intelligence.",
+    "gallery": [
+      "images/news/thesis_submission/pic04.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "clas_excellence_finalist",
+    "title": "CLAS Excellence Award Finalist",
+    "date": "March 24, 2025",
+    "category": "awards",
+    "featured": false,
+    "image": "images/news/clas_excellence/pic05.jpg",
+    "description": "I was nominated by Dr. Elizabeth Johnson and Dr. Demetris Athienitis in the Department of Statistics for this college-wide award. While I did not win the award, I was one of seventeen finalists!",
+    "gallery": [
+      "images/news/clas_excellence/pic05.jpg"
+    ],
+    "links": [
+      {
+        "label": "Announcement",
+        "url": "https://stat.ufl.edu/featured/2025/congratulations-to-matheus-kunzler-maldaner/",
+        "icon": "fas fa-newspaper"
+      }
+    ]
+  },
+  {
+    "id": "outstanding_leader_scholar",
+    "title": "Outstanding Leader and Scholar Award",
+    "date": "March 10, 2025",
+    "category": "awards",
+    "featured": false,
+    "image": "images/news/outstanding_leader/pic06.jpg",
+    "description": "Recognized with the Outstanding Leader and Scholar Award for exceptional leadership in student organizations and academic excellence.",
+    "gallery": [
+      "images/news/outstanding_leader/pic06.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "swamphacks_best_ai",
+    "title": "UF Swamphacks X Best AI Award",
+    "date": "January 26, 2025",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/swamphacks_ai/pic07.jpg",
+    "description": "Our team won the Best AI Award at UF Swamphacks X, the University of Florida's premier hackathon event, for developing an innovative artificial intelligence solution.",
+    "gallery": [
+      "images/news/swamphacks_ai/pic07.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "hispanic_scholarship_fund",
+    "title": "Hispanic Scholarship Fund Scholar",
+    "date": "November 27, 2024",
+    "category": "scholarship",
+    "featured": false,
+    "image": "images/news/hispanic_scholarship/pic08_hispanic.jpg",
+    "description": "Selected as a Hispanic Scholarship Fund Scholar, recognizing academic achievement and leadership potential within the Hispanic community.",
+    "gallery": [
+      "images/news/hispanic_scholarship/pic08_hispanic.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "genai_arts_competition",
+    "title": "UF GenAI Arts Competition 2nd Place Overall",
+    "date": "October 28, 2024",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/genai_arts/pic09.jpg",
+    "description": "Achieved 2nd place overall in the University of Florida's Generative AI Arts Competition, showcasing creative applications of artificial intelligence technology.",
+    "gallery": [
+      "images/news/genai_arts/pic09.jpg"
+    ],
+    "links": []
+  },
+  {
+    "id": "ai_days_hackathon",
+    "title": "UF AI Days Hackathon Most Popular Award",
+    "date": "October 28, 2024",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/ai_days_hackathon/pic10.jpg",
+    "description": "Won the Most Popular Award at UF AI Days Hackathon, where our project received the most votes from event participants and attendees.",
+    "gallery": [
+      "images/news/ai_days_hackathon/pic10.jpg"
+    ],
+    "links": []
+  }
+] 
