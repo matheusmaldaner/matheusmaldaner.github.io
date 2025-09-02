@@ -61,6 +61,33 @@
     ]
   },
   {
+    "id": "dsi-president-election",
+    "title": "Elected President of DSI",
+    "date": "April 16, 2024",
+    "category": "leadership",
+    "featured": false,
+    "image": "images/news/dsi-president-election/dsi_president_24_1.jpg",
+    "description": "Super excited to have been elected President of UF Data Science & Informatics (DSI) for the upcoming academic year! DSI is a place where students from diverse backgrounds can come together to learn more about Data Science, Machine Learning, and Artificial Intelligence.",
+    "secondParagraph": "I am honored to be part of the future of the club and look forward to all the things we will accomplish together.",
+    "gallery": [
+      "images/news/dsi-president-election/dsi_president_24_1.jpg",
+      "images/news/dsi-president-election/dsi_president_24_2.jpg",
+      "images/news/dsi-president-election/dsi_president_24_3.jpg"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_super-excited-to-have-been-elected-president-activity-7189033930988150784-6MiC?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      },
+      {
+        "label": "DSI Team Page",
+        "url": "https://www.ufdsi.com/team",
+        "icon": "fas fa-users"
+      }
+    ]
+  },
+  {
     "id": "datafest-2024-first-place",
     "title": "UF DataFest 2024 First Place",
     "date": "April 7, 2024",
