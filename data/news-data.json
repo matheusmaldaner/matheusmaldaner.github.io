@@ -1,5 +1,66 @@
 [
     {
+    "id": "hcomp-2024",
+    "title": "Presented Mirage Research at HCOMP 2024",
+    "date": "October 16, 2024",
+    "category": "conference",
+    "featured": false,
+    "image": "images/news/hcomp-2024/hcomp_1.jpg",
+    "description": "I had the opportunity to fly back to Pittsburgh to present our work on Mirage at the 12th AAAI Conference on Human Computation and Crowdsourcing (HCOMP 2024). Mirage is a web-based application we developed to explore the hypothesis that viewing outputs from multiple text-to-image AI models side-by-side can help users spot details they might otherwise miss when examining a single model.",
+    "secondParagraph": "As my first conference, HCOMP definitely set the bar high. I had an amazing time learning from professionals, presenting our research, and connecting with new people! Special thanks to everyone at Carnegie Mellon University for the continued support, the National Science Foundation (NSF) for awarding me a Travel Grant, and the HCOMP organizers.",
+    "gallery": [
+      "images/news/hcomp-2024/hcomp_1.jpg",
+      "images/news/hcomp-2024/hcomp_2.jpg",
+      "images/news/hcomp-2024/hcomp_3.jpg",
+      "images/news/hcomp-2024/hcomp_4.jpg",
+      "images/news/hcomp-2024/hcomp_5.jpg"
+    ],
+    "links": [
+      {
+        "label": "Research Paper",
+        "url": "https://www.humancomputation.com/assets/wip_2024/HCOMP_24_WIP_4.pdf",
+        "icon": "fas fa-file-pdf"
+      },
+      {
+        "label": "CMU HCII Article",
+        "url": "https://hcii.cmu.edu/news/hcii-hcomp-2024",
+        "icon": "fas fa-newspaper"
+      },
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_hcomp2024-activity-7257619135247925248-TLp6?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      }
+    ]
+  },
+  {
+    "id": "uf-ai2-summit-2024",
+    "title": "Student Volunteer at UF AI2 Summit",
+    "date": "February 17, 2024",
+    "category": "conference",
+    "featured": false,
+    "image": "images/news/uf-ai2-summit-2024/uf_orlando_conference_1.jpg",
+    "description": "I served as a student volunteer at the University of Florida's AI2 Summit, helping coordinate this important event focused on artificial intelligence research and applications. As part of my involvement, I also gave an interview about my role as president of DSI and discussed AI research opportunities available at UF.",
+    "secondParagraph": "The summit brought together researchers, students, and industry professionals to explore the latest developments in AI. It was an excellent opportunity to contribute to the AI community at UF while sharing insights about student organizations and research opportunities in artificial intelligence.",
+    "gallery": [
+      "images/news/uf-ai2-summit-2024/uf_orlando_conference_1.jpg",
+      "images/news/uf-ai2-summit-2024/uf_orlando_conference_2.jpg",
+      "images/news/uf-ai2-summit-2024/uf_orlando_conference_3.jpg"
+    ],
+    "links": [
+      {
+        "label": "AI2 Summit Website",
+        "url": "https://pwd.aa.ufl.edu/ai2-summit/",
+        "icon": "fas fa-globe"
+      },
+      {
+        "label": "Interview Video",
+        "url": "https://www.youtube.com/watch?v=m-8A-F_m2hY&t=11s&ab_channel=UniversityofFloridaAI2Center",
+        "icon": "fab fa-youtube"
+      }
+    ]
+  },
+  {
     "id": "itng-2025",
     "title": "Best Student Paper Award at ITNG 2025",
     "date": "April 27, 2025",
