@@ -61,6 +61,34 @@
     ]
   },
   {
+    "id": "datafest-2024-first-place",
+    "title": "UF DataFest 2024 First Place",
+    "date": "April 7, 2024",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/datafest-2024-first-place/datafest_24_1.jpg",
+    "description": "I am happy to have competed in this year's DataFest at the University of Florida and to have placed first with my friends Raul Valle, Justin Witter, Eric Chao and Patrick Lehman. Our team sought to represent UF Data Science & Informatics (DSI), a student-led organization that hosts technical workshops, professional development opportunities and social events.",
+    "secondParagraph": "Special thanks to the American Statistical Association (ASA) and the UF Department of Statistics for putting up such an awesome event together. I look forward to participating again next year!",
+    "gallery": [
+      "images/news/datafest-2024-first-place/datafest_24_1.jpg",
+      "images/news/datafest-2024-first-place/datafest_24_2.jpg",
+      "images/news/datafest-2024-first-place/datafest_24_3.jpg",
+      "images/news/datafest-2024-first-place/datafest_24_4.jpg"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_i-am-happy-to-have-competed-in-this-years-activity-7185055251161305088-VouL?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      },
+      {
+        "label": "DataFest 2024 Recap",
+        "url": "https://phhp.ufl.edu/2024/04/10/a-whirlwind-of-big-data-recapping-datafest-2024/",
+        "icon": "fas fa-newspaper"
+      }
+    ]
+  },
+  {
     "id": "minihack-2024",
     "title": "OSC MiniHack Best AI Hack",
     "date": "March 25, 2024",
