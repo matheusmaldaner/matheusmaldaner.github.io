@@ -1,7 +1,7 @@
 [
     {
     "id": "hcomp-2024",
-    "title": "Presented Mirage Research at HCOMP 2024",
+    "title": "Demo Paper at HCOMP 2024",
     "date": "October 16, 2024",
     "category": "conference",
     "featured": false,
@@ -56,6 +56,33 @@
       {
         "label": "Interview Video",
         "url": "https://www.youtube.com/watch?v=m-8A-F_m2hY&t=11s&ab_channel=UniversityofFloridaAI2Center",
+        "icon": "fab fa-youtube"
+      }
+    ]
+  },
+  {
+    "id": "minihack-2024",
+    "title": "OSC MiniHack Best AI Hack",
+    "date": "March 25, 2024",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/minihack-2024/osc_minihack_1.jpg",
+    "description": "Participated in OSC's MiniHack, a hackathon hosted by the Open Source Club and sponsored by Energy Drink Dino Luzzi. Our team developed DinoDetect, a Discord bot with sentiment analysis capabilities.",
+    "secondParagraph": "We are grateful to have both the 2nd place award and best AI Hack. I thank my teammates Raul Valle and Sebastian Sosa and the many many many energy drinks we drank!",
+    "gallery": [
+      "images/news/minihack-2024/osc_minihack_1.jpg",
+      "images/news/minihack-2024/osc_minihack_2.jpg",
+      "images/news/minihack-2024/osc_minihack_3.jpg"
+    ],
+    "links": [
+      {
+        "label": "Devpost",
+        "url": "https://devpost.com/software/dinodetect",
+        "icon": "fas fa-globe"
+      },
+      {
+        "label": "YouTube Demo",
+        "url": "https://www.youtube.com/watch?v=Q9cEjgjdCxQ&ab_channel=MatheusMaldaner",
         "icon": "fab fa-youtube"
       }
     ]
