@@ -116,6 +116,28 @@
     ]
   },
   {
+    "id": "shellhacks-2024",
+    "title": "ShellHacks 2024 - Most Popular Project",
+    "date": "October 1, 2024",
+    "category": "competition",
+    "featured": false,
+    "image": "images/news/shellhacks-2024/shellhacks_24_1.jpg",
+    "description": "As president of DSI, I organized and supported 54 students to compete at ShellHacks, Florida's largest hackathon. I also competed with my teammates Raul Valle, Evan Partidas, and Emily Jiji on DinoJourney, a mental health companion app that won the Most Popular Project award.",
+    "secondParagraph": "DinoJourney helps users build healthy habits without guilt or pressure through a friendly dinosaur companion. Built with React Native and featuring gamification elements, the app emphasizes positive reinforcement and privacy-focused design to support mental health and productivity.",
+    "gallery": [
+      "images/news/shellhacks-2024/shellhacks_24_1.jpg",
+      "images/news/shellhacks-2024/shellhacks_24_2.jpg",
+      "images/news/shellhacks-2024/shellhacks_24_3.jpg"
+    ],
+    "links": [
+      {
+        "label": "Devpost",
+        "url": "https://devpost.com/software/dinojourney",
+        "icon": "fas fa-globe"
+      }
+    ]
+  },
+  {
     "id": "minihack-2024",
     "title": "OSC MiniHack Best AI Hack",
     "date": "March 25, 2024",
