@@ -2105,7 +2105,6 @@ input, select, textarea {
 
 			#nav > ul > li {
 				display: inline-block;
-				font-style: italic;
 				margin: 0 0.35em 0 0.35em;
 			}
 
@@ -2133,6 +2132,7 @@ input, select, textarea {
 					background: #d52349;
 					color: #fff !important;
 					font-weight: 700;
+				font-style: italic;
 				}
 
 	.dropotron {
