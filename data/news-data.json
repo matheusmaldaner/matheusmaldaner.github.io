@@ -1,7 +1,136 @@
 [
     {
+    "id": "msr-internship-2025",
+    "title": "Microsoft Research Internship",
+    "date": "August 16, 2025",
+    "category": "internship",
+    "featured": false,
+    "image": "images/news/msr-internship/msr_1.jpg",
+    "description": "Last Friday marked my last day as a research intern in the AI Frontiers group at Microsoft Research! Since I am not a graduate student (yet), I joined this summer through the Undergraduate Research Internship (URI) program. This works as a subset of the overall research intern program, which let me work closely with other PhD interns and attend the same events.",
+    "secondParagraph": "I went into this internship expecting to just spend my days doing research on agentic systems, with maybe a few social opportunities sprinkled in over the summer. But what actually happened was far from that. From competing at Microsoft's yearly Puzzle Day to attending two concerts, sailing a pirate ship, going to a Sounder's soccer game, participating in (and somehow winning) both intern art competitions, and getting not one, but two Xboxes, it is safe to say that this was a summer well lived. Despite how accomplished everyone I met this summer was, one commonality I saw was their level of humility. I lost count of how many times I had the privilege of speaking with world renowned researchers about simple things, or how often they were open to grabbing a coffee despite their busy schedules. I even had the honor of meeting some of the company's leaders including Peter Lee, Doug Burger, Ashley Llorens, and Ece Kamar who, like the rest, were extremely humble and kind. I thank my mentors, Hussein Mozannar, Gagan Bansal and Adam Fourney for the countless meetings, lunches, and for everything I learned. If I were to go back, I would not change a single thing. I am happy to have made amazing friendships and am excited to see what my fellow interns accomplish next.",
+    "gallery": [
+      "images/news/msr-internship/msr_1.jpg"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_last-friday-marked-my-last-day-as-a-research-activity-7363694696159670274-dqUi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      }
+    ]
+  },
+  {
+    "id": "cmu-summer-2024",
+    "title": "Carnegie Mellon University Summer Research Internship",
+    "date": "August 10, 2024",
+    "category": "internship",
+    "featured": false,
+    "image": "images/news/cmu-summer-2024/cmu_internship_1.png",
+    "description": "A little bit of a late post but I want to express my gratitude for the summer I spent at Carnegie Mellon University. With the mentorship of professors Jason Hong, Motahhare Eslami, and Ken Holstein and PhD student Wesley Deng, we developed Mirage, a web-based application to explore whether viewing outputs from multiple text-to-image AI models side by side can help users spot details they might miss when examining a single model.",
+    "secondParagraph": "I am happy that we have submitted a demo paper to HCOMP and that I can continue working remotely with CMU this semester. I extend my gratitude to Laura Dabbish and Julia Chadwick for organizing this program, to all professors that hosted weekly seminars and to all the amazing people I met!",
+    "gallery": [
+      "images/news/cmu-summer-2024/cmu_internship_1.png",
+      "images/news/cmu-summer-2024/cmu_internship_2.png",
+      "images/news/cmu-summer-2024/cmu_internship_3.jpg",
+      "images/news/cmu-summer-2024/cmu_internship_4.png",
+      "images/news/cmu-summer-2024/cmu_internship_5.jpg"
+    ],
+    "links": [
+      {
+        "label": "CMU HCII Post",
+        "url": "https://www.linkedin.com/posts/cmu-human-computer-interaction-institute_carnegiemellon-cmuhcii-pittsburgh-activity-7278787544761176064-4zcM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fas fa-newspaper"
+      },
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_a-little-bit-of-a-late-post-but-i-want-activity-7255663464353148928-GgoU?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      }
+    ]
+  },
+    {
+    "id": "hlf-2025",
+    "title": "Heidelberg Laureate Forum 2025",
+    "date": "September 12, 2025",
+    "category": "conference",
+    "featured": true,
+    "image": "images/news/hlf-2025/hlf_sutton.jpg",
+    "description": "Incredibly honored to have attended this year's Heidelberg Laureate Forum in Germany with some extremely bright minds! This is a yearly event which brings 200 young researchers from around the world to spend a week with the recipients of the most prestigious prizes in mathematics and computer sciences, such as the Turing Award, Fields Medal, Abel Prize, and Nevanlinna Prize.",
+    "secondParagraph": "It was a pleasure to speak with many laureates whom I've grown up hearing and reading about. I would like to thank Leslie Valiant, Vint Cerf, David Silver, Jeff Dean, Richard Sutton, Pat Hanrahan, Jack Dongarra, Robert Tarjan, Jeffrey Ullman, Torsten Hoefler, and Bob Metcalfe, to name a few, for the great conversations and advice you've given me. Thank you Sarah MacLeod, Martina Wagner-Opitz, and all the organizing team, for this opportunity, as well as Demian Nahuel Goos Bosco and Clara Kümpel for setting up the art exposition and the continuous support in the months leading up to the forum. I also extend my gratitude to Drs. Joe Glover, Cátia Silva, and Damon L. Woodard for their support with travel logistics, as well as Drs. Ken Holstein and Jason Hong for their help with the application process. Happy to have made new friends, learned a lot, and explored a new city. I look forward to crossing paths with you all in the future!",
+    "gallery": [
+      "images/news/hlf-2025/hlf_sutton.jpg",
+      "images/news/hlf-2025/hlf_valiant.jpg",
+      "images/news/hlf-2025/hlf_cerf.png",
+      "images/news/hlf-2025/hlf_silver.jpg",
+      "images/news/hlf-2025/hlf_jeffdean.jpg",
+      "images/news/hlf-2025/hlf_pat.jpg",
+      "images/news/hlf-2025/hlf_dongarra.jpg",
+      "images/news/hlf-2025/hlf_tarjan.jpg",
+      "images/news/hlf-2025/hlf_ullman.jpg",
+      "images/news/hlf-2025/hlf_torsten.jpg",
+      "images/news/hlf-2025/hlf_metcalfe.jpg",
+      "images/news/hlf-2025/hlf_hopcroft.jpg",
+      "images/news/hlf-2025/hlf_lamport.jpg",
+      "images/news/hlf-2025/hlf_whitt.jpg",
+      "images/news/hlf-2025/hlf_shigefumi.jpg",
+      "images/news/hlf-2025/hlf_brazilians.png",
+      "images/news/hlf-2025/hlf_art.jpg"
+    ],
+    "links": [
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_hlf25-activity-7375298853132009472-83h3?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      },
+      {
+        "label": "Art Exposition Article",
+        "url": "https://demian-goos.de/isap-2025-artist-matheus-kunzler-maldaner/",
+        "icon": "fas fa-palette"
+      },
+      {
+        "label": "HLF Website",
+        "url": "https://www.heidelberg-laureate-forum.org/",
+        "icon": "fas fa-globe"
+      }
+    ]
+  },
+  {
+    "id": "acm-ci-2025",
+    "title": "First-Author Demo Paper at ACM CI 2025",
+    "date": "August 5, 2025",
+    "category": "conference",
+    "featured": false,
+    "image": "images/news/acm-ci-2025/acm_ci_1.jpg",
+    "description": "How does seeing different text-to-image models side-by-side change the way we audit them? We introduce MIRAGE - a web-based tool where users can enter a prompt and quickly generate outputs from multiple text-to-image models, viewing them side-by-side for easy comparison. Last week, I had the opportunity to fly to San Diego to present our work at ACM Collective Intelligence, in collaboration with Wesley Deng, Jason Hong, Ken Holstein, Motahhare Eslami, and the CMU Human-Computer Interaction Institute.",
+    "secondParagraph": "In our user study with 15 participants, we found that: seeing multiple models side-by-side helped people spot new details they had missed when looking at a single model. When viewing a single model, participants focused on intra-variance (differences among images from the same model). With multiple models visible, they shifted to inter-variance (differences between models). Bilingual participants (Chinese and Portuguese) uncovered language-fidelity issues, as some models performed much worse when prompts were given in their native language versus English.",
+    "gallery": [
+      "images/news/acm-ci-2025/acm_ci_1.jpg",
+      "images/news/acm-ci-2025/acm_ci_2.jpg",
+      "images/news/acm-ci-2025/acm_ci_3.jpg",
+      "images/news/acm-ci-2025/acm_ci_4.jpg",
+      "images/news/acm-ci-2025/acm_ci_5.jpg"
+    ],
+    "links": [
+      {
+        "label": "Research Paper",
+        "url": "https://ci.acm.org/2025/wp-content/uploads/101-Maldaner.pdf",
+        "icon": "fas fa-file-pdf"
+      },
+      {
+        "label": "MIRAGE Tool",
+        "url": "https://mirage.weaudit.org",
+        "icon": "fas fa-globe"
+      },
+      {
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_seeingtwice2025maldaner-activity-7361543706002292736-vmrN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      }
+    ]
+  },
+  {
     "id": "hcomp-2024",
-    "title": "Demo Paper at HCOMP 2024",
+    "title": "First-Author Demo Paper at HCOMP 2024",
     "date": "October 16, 2024",
     "category": "conference",
     "featured": false,
@@ -29,6 +158,26 @@
       {
         "label": "LinkedIn Post",
         "url": "https://www.linkedin.com/posts/matheusmaldaner_hcomp2024-activity-7257619135247925248-TLp6?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
+      }
+    ]
+  },
+  {
+    "id": "uf-spring-symposium-2024",
+    "title": "UF Undergraduate Spring Symposium",
+    "date": "April 3, 2024",
+    "category": "conference",
+    "featured": false,
+    "image": "images/posters/poster_uf_spring_symposium.jpeg",
+    "description": "I presented a research poster titled 'Ethical Horizons of Neurosymbolic AI' at the University of Florida's Undergraduate Spring Symposium. This work explores the ethical implications and considerations of neurosymbolic artificial intelligence systems, combining insights from both neural networks and symbolic reasoning approaches.",
+    "secondParagraph": "The symposium provided an excellent opportunity to share my research with the UF community and engage in discussions about the responsible development of AI technologies. I am grateful to the Florida Institute for National Security (FINS) for their support and mentorship throughout this research project.",
+    "gallery": [
+      "images/posters/poster_uf_spring_symposium.jpeg"
+    ],
+    "links": [
+      {
+        "label": "FINS LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/florida-institute-for-national-security-fins_neurosymbolicai-ai-undergradstudents-ugcPost-7181034903189213185-aKsS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
         "icon": "fab fa-linkedin"
       }
     ]
@@ -117,7 +266,7 @@
   },
   {
     "id": "shellhacks-2024",
-    "title": "ShellHacks 2024 - Most Popular Project",
+    "title": "ShellHacks 2024 Most Popular",
     "date": "October 1, 2024",
     "category": "competition",
     "featured": false,
@@ -229,7 +378,7 @@
     "title": "DSI Organization of the Year",
     "date": "April 17, 2025",
     "category": "awards",
-    "featured": true,
+    "featured": false,
     "image": "images/news/dsi_organization_year/org_of_the_year1.jpg",
     "description": "Data Science and Informatics (DSI), the club I have served as the President of for the previous academic year, has won the award for Organization of the Year. I also nominated my friend and DSI's next external-vice president, My Pham, to the Emerging Gator Award which seeks to recognize underclassmen leaders - which she won!",
     "secondParagraph": "Some of the initiatives we have held in the past year include hosting a free 400-person Nvidia Deep Learning workshop in which participants received official certifications, supporting 54 students to compete at ShellHacks (Florida's largest hackathon) and organizing a day-long research symposium with over 20 speakers, 7 student research posters and 100+ attendees.",
@@ -275,6 +424,11 @@
         "label": "UF Hall of Fame",
         "url": "https://studentlife.ufl.edu/honors-and-awards/hall-of-fame/",
         "icon": "fas fa-trophy"
+      },
+      {
+        "label": "Center of Undergraduate Research",
+        "url": "https://cur.aa.ufl.edu/matheus-kunzler-maldaner/",
+        "icon": "fas fa-graduation-cap"
       },
       {
         "label": "Parkland News",
