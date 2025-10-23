@@ -241,14 +241,14 @@
     ],
     "links": [
       {
-        "label": "Press Release",
-        "url": "#",
+        "label": "AIIRI Article",
+        "url": "https://ai.research.ufl.edu/dsi-wins-uf-organization-of-the-year/",
         "icon": "fas fa-newspaper"
       },
       {
-        "label": "Organization",
-        "url": "#",
-        "icon": "fas fa-globe"
+        "label": "LinkedIn Post",
+        "url": "https://www.linkedin.com/posts/dsiufl_yesterday-we-had-the-honor-of-being-named-activity-7319131967344574464-r2h4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
       }
     ]
   },
@@ -273,23 +273,23 @@
     "links": [
       {
         "label": "UF Hall of Fame",
-        "url": "#",
+        "url": "https://studentlife.ufl.edu/honors-and-awards/hall-of-fame/",
         "icon": "fas fa-trophy"
       },
       {
         "label": "Parkland News",
-        "url": "#",
+        "url": "https://parklandtalk.com/matheus-maldaner-named-to-uf-hall-of-fame-50385",
         "icon": "fas fa-newspaper"
       },
       {
         "label": "AI Research Institute",
-        "url": "#",
+        "url": "https://ai.research.ufl.edu/matheus-kunzler-maldaner-inducted-in-the-uf-hall-of-fame/",
         "icon": "fas fa-newspaper"
       },
       {
         "label": "LinkedIn Post",
-        "url": "#",
-        "icon": "fas fa-newspaper"
+        "url": "https://www.linkedin.com/posts/matheusmaldaner_last-week-i-was-inducted-into-the-university-activity-7320966146931806209-BBgy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko",
+        "icon": "fab fa-linkedin"
       }
     ]
   },
