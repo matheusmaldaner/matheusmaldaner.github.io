@@ -1,0 +1,48 @@
+# Example entry (all fields populated):
+# - name: "Dr. Reference Example"
+#   url: "https://example.edu/faculty"
+#   phd: true
+#   position: "Associate Professor"
+#   group: "Example Research Lab"
+#   institution: "Example University"
+#   website: "example.edu/faculty"
+
+- name: "Damon L. Woodard"
+  url: "https://www.ece.ufl.edu/people/faculty/damon-woodard/"
+  phd: true
+  position: "Professor; Director, Florida Institute for National Security"
+  group: "Florida Institute for National Security (FINS), ECE"
+  institution: "University of Florida"
+  website: "ece.ufl.edu/people/faculty/damon-woodard"
+
+- name: "Jason I. Hong"
+  url: "https://hcii.cmu.edu/people/jason-hong"
+  phd: true
+  position: "Professor Emeritus"
+  group: "Human-Computer Interaction Institute"
+  institution: "Carnegie Mellon University"
+  website: "hcii.cmu.edu/people/jason-hong"
+
+- name: "Hussein Mozannar"
+  url: "https://husseinmozannar.github.io/"
+  phd: true
+  position: "Senior Researcher"
+  group: "AI Frontiers"
+  institution: "Microsoft Research"
+  website: "husseinmozannar.github.io"
+
+- name: "Cátia Silva"
+  url: "https://www.ece.ufl.edu/people/faculty/catia-silva"
+  phd: true
+  position: "Instructional Associate Professor"
+  group: "Department of Electrical & Computer Engineering"
+  institution: "University of Florida"
+  website: "ece.ufl.edu/people/faculty/catia-silva"
+
+- name: "Elizabeth Johnson"
+  url: "https://stat.ufl.edu/people/faculty/"
+  phd: true
+  position: "Associate Instructional Professor"
+  group: "Department of Statistics"
+  institution: "University of Florida"
+  website: "stat.ufl.edu/people/faculty/"
