@@ -1,3 +1,19 @@
+# Example entry (all fields populated):
+# - institution: "Example Research Lab"
+#   institution-url: "https://examplelab.org"
+#   location: "Example City, EX"
+#   position: "Research Intern"
+#   group: "Example Group"
+#   group-url: "https://examplelab.org/group"
+#   year: "Summer 2024"
+#   year-extra: "(12 weeks)"
+#   mentors:
+#     - "Dr. Jane Mentor"
+#     - "Dr. John Mentor"
+#   advisor: true
+#   description: "One-sentence summary of the work accomplished."
+#   type: "industry"
+
 - institution: "Microsoft Research"
   location: "Redmond, WA"
   position: "Research Intern"
@@ -34,7 +50,8 @@
   mentors:
     - "Dr. Damon Woodard"
     - "Dr. Domenic Forte"
-    - Stephen Wormald
+    - "Dr. Olivia Dizon-Paradis"
+    - "Stephen Wormald"
   description: "Working on the application and optimization of Differentiable Logic Gate Networks."
   institution-url: "https://fin.institute.ufl.edu/"
   group-url: "https://aaig.ece.ufl.edu/"

@@ -1,0 +1,17 @@
+# Example entry (all fields populated):
+# - month: "Jan."
+#   year: "2024"
+#   year-extra: "(updated)"
+#   url: "https://example.com/interactive-article"
+#   title: "Example Interactive Article"
+#   authors:
+#     - "Author One"
+#     - "Author Two"
+#   description: "Brief summary of the interactive article."
+#   award: "Featured Story"
+#   parametric: true
+#   parametric-title: "Example Parametric Series"
+#   parametric-url: "https://example.com/series"
+#   parametric-issue: true
+#   parametric-issue-number: 1
+#   apple: true
