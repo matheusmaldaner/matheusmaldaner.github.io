@@ -1,0 +1,80 @@
+# Example entry (all fields populated):
+# - name: "Example Category"
+#   items:
+#     - "Skill One"
+#     - "Skill Two"
+#     - "Skill Three"
+
+- name: Programming Languages
+  items:
+    - Python
+    - JavaScript
+    - C++
+    - SQL
+    - Assembly
+    - HTML/CSS
+
+- name: AI/ML Technologies
+  items:
+    - Neurosymbolic AI
+    - Deep Learning
+    - Machine Learning Interpretability
+    - Generative AI (Text-to-Image Models)
+    - Agentic Systems
+    - Differentiable Logic Gate Networks
+    - Sentiment Analysis
+    - Natural Language Processing
+
+- name: Python Libraries & Frameworks
+  items:
+    - PyTorch
+    - TensorFlow
+    - scikit-learn
+    - pandas
+    - NumPy
+    - Jupyter Notebooks
+    - Flask
+    - Django
+
+- name: Web Development
+  items:
+    - React
+    - Node.js
+    - D3.js
+    - Svelte
+    - Jekyll
+    - REST APIs
+
+- name: Mobile Development
+  items:
+    - Flutter
+    - Discord Bot Development
+
+- name: Development Tools
+  items:
+    - Git/GitHub
+    - Docker
+    - Visual Studio Code
+    - Linux/Unix
+    - Qualtrics API
+
+- name: Data & Databases
+  items:
+    - SQL
+    - Database Design
+    - Data Structures & Algorithms
+
+- name: Academic & Documentation
+  items:
+    - LaTeX
+    - Markdown
+    - Technical Writing
+    - Research Methodology
+
+- name: Mathematics
+  items:
+    - Linear Algebra
+    - Calculus
+    - Discrete Mathematics
+    - Computational Mathematics
+    - Statistics
