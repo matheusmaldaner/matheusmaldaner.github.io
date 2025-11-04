@@ -1,0 +1,276 @@
+@use "variables" as *;
+
+#cv {
+	margin-top: 1rem;
+	margin-bottom: 3rem;
+}
+
+#cv > * {
+	grid-column: text-start / page-end;
+	// font-size: 1em;
+}
+
+#cv a {
+	color: $text-color;
+}
+
+#cv a:hover {
+	color: $blue;
+}
+
+#cv a b {
+	color: $dark-gray;
+}
+
+#cv a b:hover {
+	color: $blue;
+}
+
+#cv-title {
+	margin-bottom: 0rem;
+}
+
+#cv-title > a, #cv-title > a:hover {
+	color: $dark-gray;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+#cv-subtitle {
+	font-size: 1.25rem;
+	margin-top: 0rem;
+	margin-bottom: 0.25rem;
+}
+
+#cv h2 {
+	font-weight: 500;
+}
+
+#cv h3 {
+	font-weight: 300;
+	margin-top: 0rem;
+}
+
+.cv-ai {
+	color: $orange;
+}
+
+.cv-vis {
+	color: $blue;
+}
+
+.cv-image-links-wrapper {
+	display: flex;
+	font-size: 0.85rem;
+}
+
+.cv-image-links {
+	flex: 1;
+}
+
+.cv-social-link {
+	display: flex;
+}
+
+.cv-social-link-icon-wrapper {
+	flex: 0 0 25px;
+	text-align: center;
+	margin-right: 0.5rem;
+}
+
+.cv-social-link-text-wrapper {
+	flex: 1;
+}
+
+.cv-social-link-text-wrapper > a {
+	color: $text-color;
+}
+
+#cv-toc {
+	grid-column: page-start / kicker-end;
+}
+
+#cv-toc > ul {
+	list-style-type: none;
+}
+
+.cv-left-date {
+	grid-column: kicker !important;
+	// grid-column: 1 / kicker-start !important;
+	text-align: right;
+	font-size: 0.7rem;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cv-left-date-article {
+	color: $silver !important;
+}
+
+.cv-authors {
+	font-weight: 400 !important;
+}
+
+.cv-author {
+	color: $mid-gray !important;
+}
+
+.cv-description {
+	color: $silver !important;
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+
+.cv-spacer-large {
+	height: 1rem;
+	display: block;
+}
+
+.cv-spacer {
+	height: 0.75rem;
+	display: block;
+	// background-color: red;
+}
+
+.cv-spacer-medium {
+	height: 0.5rem;
+	display: block;
+}
+
+.cv-spacer-small {
+	height: 0.25rem;
+	display: block;
+}
+
+.appears-on, .appears-on a {
+	font-size: 0.825rem;
+	font-weight: 400;
+}
+
+.grouped-article, .grouped-article-description {
+	font-size: 0.825rem !important;
+}
+
+.grouped-article-title {
+	font-weight: 500
+}
+
+.grouped-article {
+	padding-left: 1rem;
+	border-left: 1px solid $border-color;
+}
+
+.cv-award {
+	color: $gold;
+	font-weight: 600;
+	font-size: 0.75rem;
+}
+
+.cv-service-title {
+	margin-top: 0.7rem;
+	margin-bottom: 0rem;
+}
+
+.pub-misc {
+	font-size: 0.7rem;
+	margin-top: 0.3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 0.3rem;
+	align-items: center;
+}
+
+.pub-misc a {
+	color: $gray !important;
+	white-space: nowrap;
+	background-color: $near-white;
+	padding: 0.15rem 0.4rem 0.15rem 0.4rem !important;
+	border-radius: 1rem;
+}
+
+.pub-misc a:hover {
+	color: $white !important;
+	text-decoration: none;
+	background-color: $blue;
+}
+
+.equal-contribution {
+	color: $gray;
+}
+
+.cv-blue-link a {
+	color: $blue !important;
+}
+
+.cv-blue-link a:hover {
+	color: $dark-blue !important;
+}
+
+.bibtex-wrapper {
+	overflow-x: scroll;
+	background-color: $black-025;
+	border-radius: 0.5rem;
+	// border-left: 2px solid $moon-gray;
+	padding-left: 1rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0rem;
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	font-size: 0.75rem;
+}
+
+.highlight {width: 0;}
+
+// .highlight pre {
+	// width: 100vw;
+	// max-width: 100px;
+	// overflow-x: scroll !important;
+	// grid-column: text;
+	// width: min-content;
+	// white-space:pre-wrap;
+// }
+
+@media screen and (max-width: $mobile) {
+
+	.cv-left-date {
+		text-align: left;
+	}
+	
+	.cv-left-date-article { 
+		padding-left: 1rem !important;
+		border-left: 1px solid $border-color;
+	}
+
+	.cv-image-links-wrapper {
+		display: block;
+	}
+
+}
+
+
+// .cover-links > .pub-misc {
+// 	font-size: 12px;	
+// }
+
+// h3 {
+// 	margin-top: 0rem;
+// 	font-weight: 300;
+// }
+
+// #cv h2 {
+// 	margin-top: 2.5rem;
+// 	font-weight: 300;
+// 	color: #313131;
+// }
+
+// #cv h1 {
+// 	color: #313131;
+// 	padding-bottom: 0px;
+// 	margin-bottom: 0px;
+// 	// faking .normal-web-width
+// 	// max-width: 35rem;
+// 	// margin-left: auto;
+// 	// margin-right: auto;
+// }

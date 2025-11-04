@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+$column-width: 3.5rem;
+
+// Base grid
+// Sizes: screen > page > middle > text 
+// Asides: kicker (left), and gutter (right)
+main, header, footer {
+	display: grid;
+	justify-items: stretch;
+	grid-template-columns: [screen-start] 1fr [page-start kicker-start] minmax(min-content, $column-width) [middle-start] minmax(min-content, $column-width) [text-start kicker-end] repeat(8, minmax(min-content, $column-width)) [text-end gutter-start] minmax(min-content, $column-width) [middle-end] minmax(min-content, $column-width) [page-end gutter-end] 1fr [screen-end];
+	grid-column-gap: 1.5rem;
+}
+
+// Mobile grid
+@media screen and (max-width:$mobile) {
+	main, header, footer {
+		grid-template-columns: [screen-start] 8px [page-start kicker-start text-start gutter-start middle-start] repeat(8, 1fr) [text-end page-end gutter-end kicker-end middle-end] 8px [screen-end];
+		grid-column-gap: 0.5rem;
+	}
+}
+
+main > * {
+	grid-column: text;
+}
+
+// Sizes
+.l-kicker { grid-column: kicker; }
+.l-gutter { grid-column: gutter; }
+.l-text { grid-column: text; }
+.l-middle { grid-column: middle; }
+.l-page { grid-column: page; }
+.l-screen { grid-column: screen; }
+.l-screen-inset {
+  grid-column: screen;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}

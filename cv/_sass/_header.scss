@@ -1,0 +1,69 @@
+@use "variables" as *;
+
+#masthead {
+    border-bottom: 1px solid $border-color;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#masthead > h1 {
+    grid-column: text-start / 6;
+    font-size: 1.25rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#masthead > h1 > a {
+    color: $text-color;
+}
+
+#masthead > nav {
+    grid-column: 6 / text-end;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+}
+
+nav > a {
+	background-color: $black-025;
+	border-radius: 5rem;
+	padding: 0.5rem 0.75rem;
+	margin: 0.25rem;
+	text-align: center;
+	grid-column: 1fr;
+	transition: all .2s ease-in-out;
+	color: $text-color;
+	font-weight: 500;
+}
+
+nav > a:hover {
+    text-decoration: none;
+	background: $black-05;
+	transform: scale(1.03);
+    color: $text-color;
+}
+
+@media screen and (max-width:$mobile) {
+
+    #masthead {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    #masthead > h1 {
+        grid-column: page;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #masthead > nav {
+        grid-column: page;
+        justify-content: flex-start;
+    }
+
+}
