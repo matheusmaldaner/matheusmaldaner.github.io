@@ -553,7 +553,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 id="modal-title"></h3>
-          <button class="modal-close">&times;</button>
+          <button class="modal-close" aria-label="Close modal">&times;</button>
         </div>
         <div class="modal-body">
           <div class="modal-description" id="modal-description"></div>
@@ -618,7 +618,7 @@
         
         featuredGrid.innerHTML = featuredNews.map(item => `
           <div class="featured-card" data-id="${item.id}">
-            <img src="${item.image}" alt="${item.title}" loading="lazy">
+            <img src="${item.image}" alt="${item.title} - ${item.category}" loading="lazy">
             <div class="featured-overlay">
               <div class="category-badge badge-${item.category}">${item.category}</div>
               <div class="featured-date">${item.date}</div>
@@ -639,7 +639,7 @@
         cardsGrid.innerHTML = filteredNews.map(item => `
           <div class="news-card" data-id="${item.id}" data-category="${item.category}">
             <div class="card-image">
-              <img src="${item.image}" alt="${item.title}" loading="lazy">
+              <img src="${item.image}" alt="${item.title} - ${item.category}" loading="lazy">
               <div class="category-badge badge-${item.category}">${item.category}</div>
             </div>
             <div class="card-content">
@@ -654,11 +654,18 @@
       function setupEventListeners() {
         // Filter buttons
         document.querySelectorAll('.filter-btn').forEach(btn => {
+          // Set initial aria-pressed state
+          btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+
           btn.addEventListener('click', function() {
-            // Update active filter
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            // Update active filter and aria-pressed state
+            document.querySelectorAll('.filter-btn').forEach(b => {
+              b.classList.remove('active');
+              b.setAttribute('aria-pressed', 'false');
+            });
             this.classList.add('active');
-            
+            this.setAttribute('aria-pressed', 'true');
+
             currentFilter = this.getAttribute('data-filter');
             renderCards();
             attachCardListeners();
@@ -674,11 +681,27 @@
 
       function attachCardListeners() {
         document.querySelectorAll('.news-card, .featured-card').forEach(card => {
+          // Make cards keyboard focusable
+          card.setAttribute('tabindex', '0');
+          card.setAttribute('role', 'button');
+
           card.addEventListener('click', function() {
             const itemId = this.getAttribute('data-id');
             const newsItem = newsData.find(item => item.id === itemId);
             if (newsItem) {
               openModal(newsItem);
+            }
+          });
+
+          // Keyboard support (Enter and Space)
+          card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const itemId = this.getAttribute('data-id');
+              const newsItem = newsData.find(item => item.id === itemId);
+              if (newsItem) {
+                openModal(newsItem);
+              }
             }
           });
         });
@@ -709,18 +732,18 @@
             <div class="slideshow-container">
               ${newsItem.gallery.map((img, index) => `
                 <div class="slide ${index === 0 ? 'active' : ''}">
-                  <img src="${img}" alt="${newsItem.title}">
+                  <img src="${img}" alt="${newsItem.title} - Image ${index + 1} of ${newsItem.gallery.length}">
                 </div>
               `).join('')}
               ${newsItem.gallery.length > 1 ? `
-                <a class="nav-btn prev">&#10094;</a>
-                <a class="nav-btn next">&#10095;</a>
+                <a class="nav-btn prev" aria-label="Previous image">&#10094;</a>
+                <a class="nav-btn next" aria-label="Next image">&#10095;</a>
               ` : ''}
             </div>
             ${newsItem.gallery.length > 1 ? `
               <div class="dots-container">
                 ${newsItem.gallery.map((_, index) => `
-                  <span class="dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></span>
+                  <span class="dot ${index === 0 ? 'active' : ''}" data-slide="${index}" role="button" tabindex="0" aria-label="Go to image ${index + 1}"></span>
                 `).join('')}
               </div>
             ` : ''}
@@ -817,8 +840,30 @@
             currentSlide = parseInt(this.getAttribute('data-slide'));
             showSlide(currentSlide);
           });
+
+          // Keyboard support for dots (Enter and Space)
+          dot.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              currentSlide = parseInt(this.getAttribute('data-slide'));
+              showSlide(currentSlide);
+            }
+          });
+        });
+
+        // Arrow key navigation for slideshow
+        document.addEventListener('keydown', function(e) {
+          if (currentModal && slides.length > 0) {
+            if (e.key === 'ArrowLeft') {
+              currentSlide--;
+              showSlide(currentSlide);
+            } else if (e.key === 'ArrowRight') {
+              currentSlide++;
+              showSlide(currentSlide);
+            }
+          }
         });
       }
     </script>
   </body>
-</html> 
+</html>
