@@ -29,3 +29,17 @@ Credits:
 	Other:
 		jQuery (jquery.com)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
+
+
+## CV Directory
+
+To automatically build the CV you may run the following
+```bash
+cd cv
+sudo snap install ruby --classic
+sudo apt  install ruby-bundler
+sudo apt-get install ruby-dev build-essential
+bundle install # to install jekyll
+bundle exec jekyll serve
+```
+
