@@ -1,0 +1,10 @@
+# Example entry (all fields populated):
+# - years: "2023 — 2025"
+#   title: "Example Grant Title"
+#   title-url: "https://example.com/grant"
+#   name: "Example Funding Agency"
+#   name-url: "https://agency.example"
+#   co-pis:
+#     - "Professor One"
+#     - "Professor Two"
+#   amount: "$250,000"

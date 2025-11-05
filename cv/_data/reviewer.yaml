@@ -1,0 +1,32 @@
+# Example entry (all fields populated):
+# - venue: "Example Journal"
+#   venue-shorthand: "EXJ"
+#   venue-at: "Example Society"
+#   years:
+#     - year: "2024"
+#       url: "https://example.com/reviewing"
+#       role: "Reviewer"
+
+- venue: "ACM CHI Conference on Human Factors in Computing Systems"
+  venue-shorthand: "CHI"
+  venue-at: "ACM SIGCHI"
+  years:
+    - year: "2025"
+      url: "https://chi2025.acm.org/papers-review-process/"
+      role: "Ninja Reviewer"
+
+- venue: "SEA Workshop @ NeurIPS"
+  venue-shorthand: "SEA"
+  venue-at: "NeurIPS"
+  years:
+    - year: "2025"
+      url: "https://sea-workshop.github.io/"
+      role: "Author Reviewer"
+
+- venue: "AAAI/ACM Conference on AI, Ethics, and Society"
+  venue-shorthand: "AIES-25"
+  venue-at: "AAAI & ACM"
+  years:
+    - year: "2025"
+      url: "https://www.aies-conference.com/2025/"
+      role: "Student Program Reviewer"
