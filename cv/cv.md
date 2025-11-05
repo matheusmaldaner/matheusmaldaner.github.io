@@ -1,7 +1,7 @@
 ---
 layout: cv
-title: CV
-permalink: cv/
+title: "CV"
+permalink: /
 jsarr:
 - js/scripts.js
 ---
