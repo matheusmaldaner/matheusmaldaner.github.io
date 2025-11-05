@@ -1,4 +1,4 @@
-name: Build and Deploy Jekyll (cv subsite)
+name: Build and Deploy Site with CV
 
 on:
   push:
@@ -21,17 +21,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Ruby
+      - name: Setup Ruby for CV
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
           bundler-cache: true
           working-directory: cv
 
-      - name: Build Jekyll site from cv/
+      - name: Build CV Jekyll site into _site/cv
         working-directory: cv
+        run: bundle exec jekyll build --source . --destination ../_site/cv
+
+      - name: Copy main site files to _site
         run: |
-          bundle exec jekyll build --source . --destination ../_site
+          rsync -av --exclude='cv/' --exclude='_site/' --exclude='.git/' --exclude='.github/' --exclude='vendor/' --exclude='.bundle/' ./ _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
