@@ -11,7 +11,7 @@ jsarr:
 <p id="cv-subtitle"><i>M.S. Student (<span class="cv-vis">AI Systems</span> + <span class="cv-ai">HCI</span>)</i></p>
 
 <div>
-I am a first-year master's student at the University of Florida in the M.S. AI Systems Program. I am passionate about <b><span class="cv-vis">Neurosymbolic AI</span></b> and <b><span class="cv-ai">Human-Computer Interaction</span></b>. My research spans Differentiable Logic Gate Networks at the Florida Institute for National Security, Auditing Text-to-Image Model Outputs at Carnegie Mellon University and Designing Longer Running Agentic Systems at Microsoft Research AI Frontiers.
+I am a first-year master's student at the University of Florida in the M.S. AI Systems Program. I am passionate about <b><span class="cv-vis">Neurosymbolic AI</span></b> and <b><span class="cv-ai">Human-Computer Interaction</span></b>. My research spans Differentiable Logic Gate Networks at the Florida Institute for National Security, Auditing Text-to-Image Model Outputs at Carnegie Mellon University and Designing Longer Running Agentic Systems with the Microsoft Research AI Frontiers group.
 </div>
 
 <div class="cv-spacer"></div>
