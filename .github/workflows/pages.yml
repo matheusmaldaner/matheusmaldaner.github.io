@@ -28,9 +28,12 @@ jobs:
           bundler-cache: true
           working-directory: cv
 
-      - name: Build CV Jekyll site into _site/cv
+      - name: Build CV Jekyll site
         working-directory: cv
         run: bundle exec jekyll build --source . --destination ../_site/cv
+
+      - name: Create site directory
+        run: mkdir -p _site
 
       - name: Copy main site files to _site
         run: |
