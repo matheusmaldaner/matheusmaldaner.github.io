@@ -88,13 +88,11 @@ I am a first-year master's student at the University of Florida in the M.S. AI S
 {% endfor %}
 {% endcomment %}
 
-{% comment %}
 ## Press
 
 {% for press in site.data.press %}
 {% include cv/press.html press=press %}
 {% endfor %}
-{% endcomment %}
 
 {% comment %}
 ## Teaching
@@ -119,7 +117,6 @@ I am a first-year master's student at the University of Florida in the M.S. AI S
 {% include cv/venue.html venue=venue %}
 {% endfor %}
 
-{% comment %}
 <div class="cv-service-title"><b>Program Committee</b></div>
 {% for venue in site.data.pc %}
 {% include cv/venue.html venue=venue %}
@@ -139,7 +136,6 @@ I am a first-year master's student at the University of Florida in the M.S. AI S
 {% for member in site.data.memberships %}
 {% include cv/member.html member=member %}
 {% endfor %}
-{% endcomment %}
 
 {% comment %}
 ## Grants and Funding
@@ -167,13 +163,11 @@ I am a first-year master's student at the University of Florida in the M.S. AI S
 {% endfor %}
 {% endcomment %}
 
-{% comment %}
 ## References
 
 {% for reference in site.data.references %}
 {% include cv/reference.html reference=reference %}
 {% endfor %}
-{% endcomment %}
 
 
 <!-- 
