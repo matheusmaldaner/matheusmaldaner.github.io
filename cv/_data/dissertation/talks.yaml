@@ -1,0 +1,14 @@
+# Example entry (all fields populated):
+# - key: example-talk
+#   url: https://www.youtube.com/embed/example?enablejsapi=1
+#   parts:
+#     - part: "Introduction"
+#       timestamp: "0:00"
+#       start: 0
+#       end: 60
+#       thumbnail: "../images/dissertation/thumbnails/example/1.jpg"
+#     - part: "Deep Dive"
+#       timestamp: "1:00"
+#       start: 60
+#       end: 180
+#       thumbnail: "../images/dissertation/thumbnails/example/2.jpg"

@@ -1,0 +1,13 @@
+# Example entry (all fields populated):
+# - year: "Fall 2024"
+#   position: "Graduate Teaching Assistant"
+#   institution: "Example University"
+#   institution-url: "https://example.edu"
+#   location: "Example City, EX"
+#   class: "Example Course"
+#   class-url: "https://example.edu/class"
+#   ta: true
+#   instructor:
+#     - "Professor Example"
+#     - "Dr. Co-Instructor"
+#   description: "Led weekly labs, held office hours, and graded assignments."

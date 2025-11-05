@@ -1,0 +1,38 @@
+# Example entry (all fields populated):
+# - id: example-paper
+#   title: "Example Paper Title"
+#   authors:
+#     - "Author One"
+#     - "Author Two"
+#   venue: "Example Conference"
+#   venue-shorthand: "EXCONF"
+#   year: 2025
+#   selected: true
+#   url: "https://example.com/paper"
+#   pdf: "https://example.com/paper.pdf"
+#   demo: "https://example.com/demo"
+#   blog: "https://example.com/blog"
+#   video: "https://youtu.be/example"
+#   preview: "https://example.com/preview"
+#   talk: "https://example.com/talk"
+#   recording: "https://example.com/recording"
+#   slides: "https://example.com/slides"
+#   poster: "https://example.com/poster"
+#   code: "https://github.com/example/repo"
+#   data: "https://example.com/data"
+#   doi: "10.1234/example"
+#   award: "Best Paper Award"
+#   highlight: "Spotlight Presentation"
+#   equal-contribution:
+#     - "Author One"
+#     - "Author Two"
+#   coming-soon: false
+#   figure: "/images/papers/example.png"
+#   caption: "Example figure caption describing the image."
+#   bibtex: |
+#     @inproceedings{example2025,
+#       title={Example Paper Title},
+#       author={Author One and Author Two},
+#       booktitle={Proceedings of EXCONF},
+#       year={2025}
+#     }
