@@ -1,0 +1,8 @@
+# Example entry (all fields populated):
+# - venue: "Example Conference"
+#   venue-shorthand: "EXCONF"
+#   venue-at: "Example City"
+#   years:
+#     - year: "2024"
+#       url: "https://example.com/pc2024"
+#       role: "Program Committee Member"
