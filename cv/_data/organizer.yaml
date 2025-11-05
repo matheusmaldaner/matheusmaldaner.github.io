@@ -1,0 +1,25 @@
+# Example entry (all fields populated):
+# - venue: "Example Symposium"
+#   venue-shorthand: "EXSYM"
+#   venue-at: "Example University"
+#   years:
+#     - year: "2024 — 2025"
+#       url: "https://example.com/program"
+#       role: "Co-Organizer"
+#     - year: "2023"
+#       role: "Session Chair"
+- venue: "Data Science and Informatics Symposium"
+  venue-shorthand: "DSI Symposium"
+  venue-at: "University of Florida"
+  years:
+    - year: "2025"
+      url: "https://www.ufdsi.com/symposium-new"
+      role: "Main Organizer"
+
+- venue: "UF AI2 Summit"
+  venue-shorthand: "AI2 Summit"
+  venue-at: "University of Florida"
+  years:
+    - year: "2025"
+      url: "https://pwd.aa.ufl.edu/ai2-summit/"
+      role: "Student Volunteer"
