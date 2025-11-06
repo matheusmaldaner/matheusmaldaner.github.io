@@ -1,0 +1,14 @@
+{
+  "name": "matheusmaldaner.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build scripts for matheusmaldaner.github.io",
+  "scripts": {
+    "generate:cv-pdf": "node _scripts/generate-cv-pdf.js"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "puppeteer": "^24.29.0"
+  }
+}

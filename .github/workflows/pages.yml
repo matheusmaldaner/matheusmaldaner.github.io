@@ -28,9 +28,27 @@ jobs:
           bundler-cache: true
           working-directory: cv
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install Node dependencies
+        run: npm ci
+
       - name: Build CV Jekyll site
         working-directory: cv
         run: bundle exec jekyll build --source . --destination ../_site/cv
+
+      - name: Generate CV PDF
+        run: npm run generate:cv-pdf
+
+      - name: Validate CV PDF
+        run: |
+          test -s _site/cv.pdf
+          test -s cv.pdf
 
       - name: Create site directory
         run: mkdir -p _site

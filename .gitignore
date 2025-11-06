@@ -43,9 +43,8 @@ logs/
 *~
 
 # Package manager files
-package-lock.json
 yarn.lock
-Gemfile.lock
+
 
 # Python
 __pycache__/

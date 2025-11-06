@@ -1,6 +1,14 @@
 @use "variables" as *;
 
+@page {
+  margin: 1.2in 0.75in 0.85in 0.75in;
+}
+
 @media print {
+
+  body {
+    margin: 0;
+  }
 
   i {
     // remove BlinkMacSystemFont because of Chrome bug when printing
