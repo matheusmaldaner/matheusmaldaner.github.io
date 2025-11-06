@@ -24,6 +24,8 @@
   location: "Gainesville, FL"
   years: "Aug. 2025 - Present"
   institution-url: "https://www.ufl.edu/"
+  awards:
+    - "UF Early Career HiPerGator Award"
 
 - degree: "B.S. in Data Science"
   institution: "University of Florida"
@@ -31,11 +33,16 @@
   years: "Aug. 2021 - May. 2025"
   thesis: "Applications of Differentiable Logic Gate Networks"
   description:
-    - "Graduated Summa Cum Laude, Inducted into the UF Hall of Fame."
+    - "GPA: 3.9/4.0, Summa Cum Laude"
   institution-url: "https://www.ufl.edu/"
+  awards:
+    - "UF Hall of Fame"
+    - "UF Outstanding Scholars and Leaders Award"
 
 - degree: "High-School Diploma"
   institution: "Marjory Stoneman Douglas High School"
   location: "Parkland, FL"
-  years: "Feb. 2017 - May. 2021"
+  years: "Aug. 2017 - May. 2021"
   institution-url: "https://www.browardschools.com/stonemandouglas"
+  description:
+    - "GPA: 4.0/4.0"
