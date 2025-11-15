@@ -4,10 +4,14 @@
   "private": true,
   "description": "Build scripts for matheusmaldaner.github.io",
   "scripts": {
+    "generate:homepage": "node _scripts/generate-homepage.js",
     "generate:cv-pdf": "node _scripts/generate-cv-pdf.js"
   },
   "license": "MIT",
   "type": "commonjs",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
   "devDependencies": {
     "puppeteer": "^24.29.0"
   }
