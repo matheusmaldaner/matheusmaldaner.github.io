@@ -7,6 +7,14 @@
 #   on-homepage: true
 #   cv-group: 1
 
+- id: resume
+  description: "Resume"
+  color: "#515151"
+  class: "fas fa-file-alt icon"
+  url: "https://docs.google.com/document/d/1UJ6ly5GxkVkUtCn1Yx0iDY2VqmUKr-V7QwW5elUrRSQ/edit?tab=t.0"
+  on-homepage: true
+  cv-group: 1
+
 - id: email
   description: "mkunzlermaldaner@ufl.edu"
   color: "#515151"
