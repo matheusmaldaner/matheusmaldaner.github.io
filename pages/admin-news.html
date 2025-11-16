@@ -5,7 +5,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
       .admin-container {
@@ -332,10 +332,10 @@
     <div id="page-wrapper">
       <!-- Header / Nav -->
       <section id="header">
-        <h1><a href="index.html">Matheus Kunzler Maldaner</a></h1>
+        <h1><a href="../index.html">Matheus Kunzler Maldaner</a></h1>
         <nav id="nav">
           <ul>
-            <li><a href="index.html">About</a></li>
+            <li><a href="../index.html">About</a></li>
             <li><a href="news.html">News</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="research.html">Research</a></li>
@@ -506,12 +506,12 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -777,7 +777,7 @@
               const isActive = index === 0 ? ' active' : '';
               modalHTML += `
           <div class="slide${isActive}">
-            <img src="images/${file.name}" alt="${titleInput.value}">
+            <img src="../images/${file.name}" alt="${titleInput.value}">
           </div>`;
             });
 
@@ -808,7 +808,7 @@
       <div class="modal-section gallery">
         <div class="slideshow-container">
           <div class="slide active">
-            <img src="images/pic08.jpg" alt="${titleInput.value}">
+            <img src="../images/pic08.jpg" alt="${titleInput.value}">
           </div>
           <a class="prev">&#10094;</a>
           <a class="next">&#10095;</a>
