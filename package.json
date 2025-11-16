@@ -4,7 +4,7 @@
   "private": true,
   "description": "Build scripts for matheusmaldaner.github.io",
   "scripts": {
-    "generate:homepage": "node _scripts/generate-homepage.js",
+    "convert:yaml": "node _scripts/yaml-to-json.js",
     "generate:cv-pdf": "node _scripts/generate-cv-pdf.js"
   },
   "license": "MIT",
