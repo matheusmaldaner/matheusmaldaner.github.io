@@ -580,7 +580,7 @@
       // Load news data from external JSON file
       async function loadNewsData() {
         try {
-          const response = await fetch('data/news-data.json');
+          const response = await fetch('../data/news-data.json');
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
