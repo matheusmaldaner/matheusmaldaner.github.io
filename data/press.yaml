@@ -5,7 +5,12 @@
 #   link: "https://example.com/article"
 #   publisher: "Example News Outlet"
 
-
+- month: "OCt"
+  year: "2025"
+  #day: "na"
+  title: "Matheus Kunzler Maldaner Wins HiPerGator Early Career Award"
+  link: "https://ai.ufl.edu/teaching-with-ai/for-uf-faculty/ai-faculty-awards/biography/matheus-kunzier-maldaner.html"
+  publisher: "University of Florida AI² Center"
 
 - month: "Oct"
   year: "2025"
