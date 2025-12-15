@@ -1,0 +1,39 @@
+# Example entry (all fields populated):
+# - name: "Example Mentee"
+#   url: "https://example.com/mentee"
+#   degree: "Undergraduate Student"
+#   year: "2024"
+#   year-extra: "(expected graduation 2026)"
+#   intern: "Example Company Internship"
+#   intern-url: "https://example.com/internship"
+#   description: "Mentored the mentee through an applied research project."
+#   awards:
+#     - "Outstanding Mentee Award"
+#   now-position: "Research Scientist"
+#   now-institution: "Example Labs"
+#   now-institution-url: "https://labs.example"
+
+- name: "Maryam Elfakir"
+  degree: "UF Undergraduate Student"
+  year: "2024 — Present"
+  description: "I met Maryam through the Society of Hispanic Professional Engineers (SHPE) mentorship program and have kept in touch since."
+
+- name: "Jaime Breitkreutz"
+  degree: "UF Undergraduate Student"
+  year: "2025 — Present"
+  description: "I met Jaime during my time as President of the Data Science and Informatics club, where Jaime serves as the technology coordinator."
+
+- name: "Ethan Ahmed"
+  degree: "UF Undergraduate Student"
+  year: "2025 — Present"
+  description: "I met Ethan during the 2025 OSC MiniHack where he and his team won second place overall."
+
+- name: "Luana Kunzler Maldaner"
+  degree: "UF Undergraduate Student"
+  year: "2025 — Present"
+  description: "I met Luana 19 years ago when my parents decided they wanted another child, and we have stayed close."
+
+# - name: "Society of Hispanic Professional Engineers (SHPE)"
+#   degree: "Undergraduate Mentees"
+#   year: "2023 — 2024"
+#   description: "Mentored undergraduate students as part of the SHPE mentorship program."
