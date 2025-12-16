@@ -1,0 +1,113 @@
+[
+  {
+    "id": "magentic-ui",
+    "title": "Magentic-UI: Towards Human-in-the-loop Agentic Systems",
+    "authors": [
+      "Hussein Mozannar",
+      "Gagan Bansal",
+      "Cheng Tan",
+      "Adam Fourney",
+      "Victor Dibia",
+      "Jingya Chen",
+      "Jack Gerrits",
+      "Tyler Payne",
+      "Matheus Kunzler Maldaner",
+      "Madeleine Grunde-McLaughlin",
+      "Eric Zhu",
+      "Griffin Bassman",
+      "Jacob Alber",
+      "Peter Chang",
+      "Ricky Loynd",
+      "Friederike Niedtner",
+      "Ece Kamar",
+      "Maya Murad",
+      "Rafah Hosn",
+      "Saleema Amershi"
+    ],
+    "venue": "Microsoft Research AI Frontiers (arXiv preprint)",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2507.22358v1",
+    "pdf": "https://arxiv.org/pdf/2507.22358v1.pdf",
+    "blog": "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/?msockid=00fd3664922e643528ea20339334658d",
+    "code": "https://github.com/microsoft/magentic-ui",
+    "type": "arxiv"
+  },
+  {
+    "id": "seeing-twice",
+    "title": "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies",
+    "authors": [
+      "Matheus Kunzler Maldaner",
+      "Wesley Hanwen Deng",
+      "Jason I. Hong",
+      "Ken Holstein",
+      "Motahhare Eslami"
+    ],
+    "venue": "ACM CI",
+    "year": 2025,
+    "url": "https://dl.acm.org/doi/10.1145/3678884.3681870",
+    "pdf": "https://dl.acm.org/doi/pdf/10.1145/3678884.3681870",
+    "preview": "https://mirage.weaudit.org/",
+    "type": "conference"
+  },
+  {
+    "id": "explogic",
+    "title": "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks",
+    "authors": [
+      "Stephen Wormald",
+      "David Koblah",
+      "Matheus Kunzler Maldaner",
+      "Domenic Forte",
+      "Damon L. Woodard"
+    ],
+    "venue": "ITNG",
+    "year": 2025,
+    "url": "https://arxiv.org/abs/2503.09910",
+    "pdf": "https://arxiv.org/pdf/2503.09910.pdf",
+    "type": "conference",
+    "award": "Best Student Paper Award"
+  },
+  {
+    "id": "mirage",
+    "title": "MIRAGE: Multi-model Interface for Reviewing and Auditing Generative Text-to-Image AI",
+    "authors": [
+      "Matheus Kunzler Maldaner",
+      "Wesley Hanwen Deng",
+      "Jason I. Hong",
+      "Ken Holstein",
+      "Motahhare Eslami"
+    ],
+    "venue": "HCOMP",
+    "year": 2024,
+    "url": "https://www.humancomputation.com/assets/wip_2024/HCOMP_24_WIP_4.pdf",
+    "pdf": "https://www.humancomputation.com/assets/wip_2024/HCOMP_24_WIP_4.pdf",
+    "preview": "https://mirage.weaudit.org/",
+    "type": "conference"
+  },
+  {
+    "id": "xai-syntax",
+    "title": "Abstracting General Syntax for XAI after Decomposing Explanation Sub-Components",
+    "authors": [
+      "Stephen Wormald",
+      "Matheus Kunzler Maldaner",
+      "Kristian O'Connor",
+      "Olivia P. Dizon-Paradis",
+      "Damon L. Woodard"
+    ],
+    "venue": "Springer AI",
+    "year": 2024,
+    "url": "https://www.researchsquare.com/article/rs-4824427/latest",
+    "pdf": "https://www.researchsquare.com/article/rs-4824427/v1.pdf",
+    "type": "journal"
+  },
+  {
+    "id": "thesis",
+    "title": "Efficient and Transparent Machine Learning: Exploring Applications of Differentiable Logic Gate Networks",
+    "authors": [
+      "Matheus Kunzler Maldaner"
+    ],
+    "venue": "Undergraduate Thesis, University of Florida",
+    "year": 2025,
+    "url": "#",
+    "type": "thesis"
+  }
+]
