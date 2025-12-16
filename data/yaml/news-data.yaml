@@ -24,8 +24,8 @@
       url: https://ai.ufl.edu/teaching-with-ai/for-uf-faculty/ai-faculty-awards/biography/matheus-kunzier-maldaner.html
       icon: fas fa-globe
 
-- id: 2025-10-27-uf-gator-create-3rd-place
-  title: UF Gator Create 3rd Place & 3 Track Winner
+- id: 2025-10-27-uf-ai-days-gator-create-3rd-place
+  title: UF AI Days Gator Create 3rd Place & 3 Track Winner
   date: October 27, 2025
   category: competition
   featured: false
@@ -42,7 +42,7 @@
       url: https://drive.google.com/drive/u/0/folders/18Y7meSDxkre5FtI8eHfzhGrTWlajmNHp
       icon: fab fa-google-drive
 
-- id: 2025-10-27-ai-days-gator-hack-1st-place
+- id: 2025-10-27-uf-ai-days-gator-hack-1st-place
   title: UF AI Days Gator Hack 1st Place
   date: October 27, 2025
   category: competition
