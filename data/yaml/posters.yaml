@@ -1,0 +1,91 @@
+# Example entry (all fields populated):
+# - title: "Example Poster Title"
+#   venue: "Example Venue"
+#   date: "Month Year"
+#   year: 2025
+
+- title: "Sentinel Steps: Towards Longer Running AI Agents"
+  venue: "Microsoft Research Symposium 2025"
+  date: "Summer 2025"
+  year: 2025
+
+- title: "Enhancing AI Security with FPGA-Accelerated Differentiable Logic Gate Networks"
+  venue: "UF Spring Symposium 2025"
+  date: "April 2025"
+  year: 2025
+
+- title: "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies"
+  venue: "ACM CI 2025"
+  date: "April 2025"
+  year: 2025
+
+- title: "The Ineffectiveness of the Information Maximization Algorithm on Spectrally Sparse Signals"
+  venue: "SHPE Symposium 2025"
+  date: "February 2025"
+  year: 2025
+
+- title: "Deploying Learned Logic Gates onto FPGAs for Increased Efficiency"
+  venue: "FURC 2025"
+  date: "February 2025"
+  year: 2025
+
+- title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI"
+  venue: "HCOMP 2024"
+  date: "November 2024"
+  year: 2024
+
+- title: "Side-by-Side Multi-Models T2I Comparisons Unveiling Problems in AI"
+  venue: "UF Fall Symposium 2024"
+  date: "November 2024"
+  year: 2024
+
+- title: "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks"
+  venue: "HiPerGator Symposium 2024"
+  date: "November 2024"
+  year: 2024
+
+- title: "Side-by-Side Multi-Models T2I Comparisons Unveiling Problems in AI"
+  venue: "McKnight Fellows Conference 2024"
+  date: "November 2024"
+  year: 2024
+
+- title: "Accelerating Real-Time Inference with FPGA-Implemented Logic Gate Neural Networks"
+  venue: "Warren B. Nelms IoT 2024"
+  date: "November 2024"
+  year: 2024
+
+- title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI"
+  venue: "UF AI Days 2024"
+  date: "October 2024"
+  year: 2024
+
+- title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI"
+  venue: "Carnegie Mellon 2024"
+  date: "Summer 2024"
+  year: 2024
+
+- title: "Neuro Symbolic AI: Bridging Neural Networks and Symbolic Reasoning for Enhanced AI Transparency"
+  venue: "Sigma Xi 2024"
+  date: "April 2024"
+  year: 2024
+
+- title: "Ethical Horizons in the field of Neuro Symbolic AI"
+  venue: "UF Spring Symposium 2024"
+  date: "April 2024"
+  year: 2024
+
+- title: "Ethical Horizons in the field of Neuro Symbolic AI"
+  venue: "SHPE Symposium 2024"
+  date: "April 2024"
+  year: 2024
+
+- title: "Uniting Symbolic and Neural Paradigms for Transparent AI"
+  venue: "DSI Spring Symposium 2024"
+  date: "April 2024"
+  year: 2024
+
+- title: "Neuro Symbolic AI: Bridging Neural Networks and Symbolic Reasoning for Enhanced AI Transparency"
+  venue: "FURC 2024"
+  date: "February 2024"
+  year: 2024
+

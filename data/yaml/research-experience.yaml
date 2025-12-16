@@ -1,0 +1,64 @@
+# Example entry (all fields populated):
+# - id: example-role
+#   position: "Research Intern"
+#   organization: "Example Lab"
+#   location: "Example City, EX"
+#   start-date: "May 2025"
+#   end-date: "Aug 2025"
+#   advisors:
+#     - "Advisor One"
+#   description: "One-sentence summary of the work."
+#   key-contributions:
+#     - "Key contribution"
+
+- id: msr-ai-frontiers
+  position: "Research Intern"
+  organization: "Microsoft Research - AI Frontiers"
+  location: "Redmond, WA"
+  start-date: "May 2025"
+  end-date: "August 2025"
+  advisors:
+    - "Hussein Mozannar"
+    - "Adam Fourney"
+    - "Gagan Bansal"
+  description: "Contributed to Magentic-UI, an open-source human-centered interface powered by a multi-agent system with over 7,000 GitHub stars. Introduced and implemented SentinelSteps, a novel plan orchestration approach for long-running agents. Developed SentinelBench, a 24-task benchmark for testing web agent capabilities on monitoring tasks."
+  key-contributions:
+    - "Contributed to Magentic-UI development (7,000+ GitHub stars)"
+    - "Introduced SentinelSteps for continuous agent monitoring"
+    - "Created SentinelBench: 24-task benchmark for long-running agents"
+
+- id: cmu-hcii
+  position: "Research Assistant and Developer"
+  organization: "Carnegie Mellon University - Human-Computer Interaction Institute"
+  location: "Pittsburgh, PA"
+  start-date: "May 2024"
+  end-date: "Present"
+  advisors:
+    - "Jason Hong"
+    - "Ken Holstein"
+    - "Motahhare Eslami"
+  description: "Conducting research on auditing generative AI models with focus on developing tools and methodologies to evaluate and compare text-to-image AI models. Created MIRAGE, a platform for side-by-side comparison of different Text-to-Image AI models. Extended contract to continue remote research after summer REU."
+  key-contributions:
+    - "Developed MIRAGE for multi-model T2I comparison and auditing"
+    - "Presented 5 research posters at academic venues"
+    - "First-author demo paper at AAAI HCOMP '25"
+    - "First-author demo paper at ACM CI '25"
+
+- id: fins-neurosymbolic-ai
+  position: "Researcher and Developer"
+  organization: "Florida Institute for National Security - Neurosymbolic AI Lab"
+  location: "Gainesville, FL"
+  start-date: "August 2023"
+  end-date: "Present"
+  advisors:
+    - "Damon L. Woodard"
+    - "Domenic Forte"
+  description: "Conducting research on Neurosymbolic AI, combining symbolic reasoning and neural networks to create more transparent and explainable AI models. Trained 260 Differentiable Logic Gate Networks on HiPerGator. Developed visualization software and successfully deployed learned gates on FPGAs for increased inference speeds."
+  key-contributions:
+    - "Contributed to novel Explainable AI framework"
+    - "Trained 260 DiffLogic networks on HiPerGator supercomputer"
+    - "Presented 9 research posters at various venues"
+    - "Second-author paper accepted to Springer AI"
+    - "Contributed Best Paper Award to ITNG '25 paper"
+    - "Completed Summa Cum Laude honors thesis on DiffLogic applications"
+    - "Developed visualization tools and FPGA deployment methods"
