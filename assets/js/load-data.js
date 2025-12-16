@@ -56,7 +56,7 @@ function getAriaLabel(id) {
 // Load and render social links
 async function loadSocialLinks() {
   try {
-    const response = await fetch('/data/social-links.json');
+    const response = await fetch('/data/json/social-links.json');
     const socialLinks = await response.json();
 
     const container = document.getElementById('social-links-container');
@@ -87,7 +87,7 @@ async function loadSocialLinks() {
 // Load and render about me content
 async function loadAboutContent() {
   try {
-    const response = await fetch('/data/about.json');
+    const response = await fetch('/data/json/about.json');
     const aboutData = await response.json();
 
     const container = document.getElementById('about-content-container');
