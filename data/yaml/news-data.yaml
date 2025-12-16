@@ -1,3 +1,73 @@
+- id: 2025-10-29-hipergator-early-career-award
+  title: HiPerGator Early Career Award
+  date: October 29, 2025
+  category: awards
+  featured: false
+  image: /images/news/2025-10-29-hipergator-early-career-award/cover.png
+  description: Grateful to have been awarded the HiPerGator Early Career Award for my work in using high-performance computing to optimize differentiable logic gate networks! HiPerGator is the University of Florida's supercomputer, and one of the nation's most powerful academic clusters with over 500 B200s.
+  secondParagraph: Thank you UF Information Technology (UFIT), and Drs. Matt Gitzendanner, Erik Deumens, and Ying Zhang for the recognition of my work. I would like to extend my gratitude to Dr. Cátia Silva, in whose class I first used HiPerGator, to Dr. Damon L. Woodard, with whom I have done the aforementioned work, and to both the UF AI2 Center and UF AIIRI for helping host the ceremony. I am also honored to share this with my good friend Raul Valle, who not only nominated me but also won alongside me at this year's AI Days Hackathon. Congratulations as well to Dr. Andrea Ramirez-Salgado and Dr. Cátia Silva for your awards!
+  gallery:
+    - /images/news/2025-10-29-hipergator-early-career-award/cover.png
+    - /images/news/2025-10-29-hipergator-early-career-award/01.png
+    - /images/news/2025-10-29-hipergator-early-career-award/02.png
+    - /images/news/2025-10-29-hipergator-early-career-award/03.png
+    - /images/news/2025-10-29-hipergator-early-career-award/04.png
+  links:
+    - label: LinkedIn Post
+      url: https://www.linkedin.com/posts/matheusmaldaner_grateful-to-have-been-awarded-the-hipergator-activity-7389703886330138624-Cj5z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
+      icon: fab fa-linkedin
+    - label: AI at UF Biography
+      url: https://ai.ufl.edu/teaching-with-ai/for-uf-faculty/ai-faculty-awards/biography/matheus-kunzier-maldaner.html
+      icon: fas fa-globe
+
+- id: 2025-10-27-uf-gator-create-3rd-place
+  title: UF Gator Create 3rd Place & 3 Track Winner
+  date: October 27, 2025
+  category: competition
+  featured: false
+  image: /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/cover.png
+  description: "My sister Luana Kunzler Maldaner and I placed 3rd overall and won 3 out of 7 tracks (Music, Nature, and Still Image) at this year's UF Gator Create competition, part of UF AI Days. Our project \"Symbiosis\" reimagines Gainesville after the noise fades: UF landmarks surrender to quiet ecosystems where roots thread through circuits and glass becomes trellis."
+  secondParagraph: Each piece pairs a familiar site (Century Tower, Marston, etc.) with patient, non-catastrophic reclamation - moss in the seams, banyan roots over stone, wetlands returning to fields. I built the images with locally hosted, open-source diffusion models in ComfyUI, using ControlNet for architectural preservation and inpainting to integrate organic growth. The work draws on restoration ecology and solarpunk optimism, suggesting that technology does not vanish; it composts into new habitats. Thank you to our friend Brandon Wand for his support - I competed with him last year.
+  gallery:
+    - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/cover.png
+    - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/01.png
+    - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/02.png
+    - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/03.png
+  links:
+    - label: Submission Files
+      url: https://drive.google.com/drive/u/0/folders/18Y7meSDxkre5FtI8eHfzhGrTWlajmNHp
+      icon: fab fa-google-drive
+
+- id: 2025-10-27-ai-days-gator-hack-1st-place
+  title: AI Days Gator Hack 1st Place
+  date: October 27, 2025
+  category: competition
+  featured: false
+  image: /images/news/2025-10-27-ai-days-gator-hack-1st-place/cover.jpg
+  description: My team and I won first place at UF's Gator Hack, the University of Florida's 2025 AI Days hackathon! Our project "Plato's Cave – A Human-Centered Agentic System for Validating Research Papers" is a tool designed to help researchers verify claims in academic papers using AI agents that scour the web for evidence.
+  secondParagraph: Inspired by Microsoft's Magentic-UI system, Plato's Cave takes a research paper as input and creates a knowledge graph of the paper's main claims. Our web agent then autonomously verifies each claim through web searches, computing a confidence score for every assertion. I'm grateful to my teammates Kristian O'Connor, Stephen Wormald, Raul Valle, and James Woelke for building this in 48 hours, and to the Florida Institute for National Security (FINS), Lesly Galiana, and Dr. Damon L. Woodard for their support.
+  gallery:
+    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/cover.jpg
+    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/01.jpg
+    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/02.png
+    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/03.png
+  links:
+    - label: LinkedIn Post
+      url: https://www.linkedin.com/posts/matheusmaldaner_artificial-intelligence-has-been-accelerating-activity-7391474811404820480-yb9I?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
+      icon: fab fa-linkedin
+    - label: ECE Florida Post
+      url: https://www.linkedin.com/posts/eceflorida_gatorengineers-ugcPost-7394412940021420032-giWJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
+      icon: fab fa-linkedin
+    - label: FINS Article
+      url: https://fins.institute.ufl.edu/index.php/2025/10/28/fins-students-win-top-prize-at-uf-ai-days-gator-hack-for-human-centered-ai-research-tool/
+      icon: fas fa-newspaper
+    - label: YouTube Demo
+      url: https://www.youtube.com/watch?v=oHgN90tUuBw
+      icon: fab fa-youtube
+    - label: GitHub
+      url: https://github.com/matheusmaldaner/PlatosCave
+      icon: fab fa-github
+
 - id: 2025-08-16-microsoft-research-internship
   title: Microsoft Research Internship
   date: August 16, 2025
@@ -69,20 +139,21 @@
     - label: HLF Website
       url: https://www.heidelberg-laureate-forum.org/
       icon: fas fa-globe
+
 - id: 2025-08-05-first-author-demo-paper-at-acm-ci
   title: First-Author Demo Paper at ACM CI 2025
   date: August 5, 2025
   category: conference
   featured: false
   image: /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.jpg
-  description: How does seeing different text-to-image models side-by-side change the way we audit them? We introduce MIRAGE - a web-based tool where users can enter a prompt and quickly generate outputs from multiple text-to-image models, viewing them side-by-side for easy comparison. Last week, I had the opportunity to fly to San Diego to present our work at ACM Collective Intelligence, in collaboration with Wesley Deng, Jason Hong, Ken Holstein, Motahhare Eslami, and the CMU Human-Computer Interaction Institute.
-  secondParagraph: "In our user study with 15 participants, we found that: seeing multiple models side-by-side helped people spot new details they had missed when looking at a single model. When viewing a single model, participants focused on intra-variance (differences among images from the same model). With multiple models visible, they shifted to inter-variance (differences between models). Bilingual participants (Chinese and Portuguese) uncovered language-fidelity issues, as some models performed much worse when prompts were given in their native language versus English."
+  description: I had the opportunity to fly to San Diego to present our work at ACM Collective Intelligence, in collaboration with Wesley Deng, Jason Hong, Ken Holstein, Motahhare Eslami, and the CMU Human-Computer Interaction Institute.
+  secondParagraph: "In our user study with 15 participants using MIRAGE, we found that seeing multiple models side-by-side helped people spot new details they had missed when looking at a single model. When viewing a single model, participants focused on intra-variance (differences among images from the same model). With multiple models visible, they shifted to inter-variance (differences between models). Bilingual participants (Chinese and Portuguese) uncovered language-fidelity issues, as some models performed much worse when prompts were given in their native language versus English. I also had the chance to run into my friend Claire (in last pic) and explore San Diego." 
   gallery:
-    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.jpg
-    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/01.jpg
-    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/02.jpg
-    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/03.jpg
-    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/04.jpg
+    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.png
+    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/01.png
+    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/02.png
+    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/03.png
+    - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/04.png
   links:
     - label: Research Paper
       url: https://ci.acm.org/2025/wp-content/uploads/101-Maldaner.pdf
@@ -93,6 +164,7 @@
     - label: LinkedIn Post
       url: https://www.linkedin.com/posts/matheusmaldaner_seeingtwice2025maldaner-activity-7361543706002292736-vmrN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
       icon: fab fa-linkedin
+      
 - id: 2024-10-16-first-author-demo-paper-at-hcomp
   title: First-Author Demo Paper at HCOMP 2024
   date: October 16, 2024
@@ -337,19 +409,19 @@
     - label: Article
       url: https://phhp.ufl.edu/2025/04/03/third-annual-datafest-brings-together-students-from-across-uf-in-a-celebration-of-data/
       icon: fas fa-newspaper
-- id: 2025-03-24-uf-clas-excellence-award-finalist
-  title: UF CLAS Excellence Award Finalist
-  date: March 24, 2025
-  category: awards
-  featured: false
-  image: /images/news/2025-03-24-uf-clas-excellence-award-finalist/cover.jpg
-  description: I was nominated by Dr. Elizabeth Johnson and Dr. Demetris Athienitis in the Department of Statistics for this college-wide award. While I did not win the award, I was one of seventeen finalists!
-  gallery:
-    - /images/news/2025-03-24-uf-clas-excellence-award-finalist/cover.jpg
-  links:
-    - label: Announcement
-      url: https://stat.ufl.edu/featured/2025/congratulations-to-matheus-kunzler-maldaner/
-      icon: fas fa-newspaper
+# - id: 2025-03-24-uf-clas-excellence-award-finalist
+#   title: UF CLAS Excellence Award Finalist
+#   date: March 24, 2025
+#   category: awards
+#   featured: false
+#   image: /images/news/2025-03-24-uf-clas-excellence-award-finalist/cover.jpg
+#   description: I was nominated by Dr. Elizabeth Johnson and Dr. Demetris Athienitis in the Department of Statistics for this college-wide award. While I did not win the award, I was one of seventeen finalists!
+#   gallery:
+#     - /images/news/2025-03-24-uf-clas-excellence-award-finalist/cover.jpg
+#   links:
+#     - label: Announcement
+#       url: https://stat.ufl.edu/featured/2025/congratulations-to-matheus-kunzler-maldaner/
+#       icon: fas fa-newspaper
 - id: 2025-05-03-uf-outstanding-leader-award
   title: UF Outstanding Leader Award
   date: May 3, 2025
@@ -399,16 +471,16 @@
     - label: GitHub
       url: https://github.com/matheusmaldaner/DiffLogicVisualizer
       icon: fab fa-github
-- id: 2024-11-27-hispanic-scholarship-fund-scholar
-  title: Hispanic Scholarship Fund Scholar
-  date: November 27, 2024
-  category: scholarship
-  featured: false
-  image: /images/news/2024-11-27-hispanic-scholarship-fund-scholar/cover.jpg
-  description: I was selected as a Hispanic Scholarship Fund Scholar! I am grateful for Dr. Woodard for recommending me for this scholarship that helps hispanic/latino students with their education.
-  gallery:
-    - /images/news/2024-11-27-hispanic-scholarship-fund-scholar/cover.jpg
-  links: []
+# - id: 2024-11-27-hispanic-scholarship-fund-scholar
+#   title: Hispanic Scholarship Fund Scholar
+#   date: November 27, 2024
+#   category: scholarship
+#   featured: false
+#   image: /images/news/2024-11-27-hispanic-scholarship-fund-scholar/cover.jpg
+#   description: I was selected as a Hispanic Scholarship Fund Scholar! I am grateful for Dr. Woodard for recommending me for this scholarship that helps hispanic/latino students with their education.
+#   gallery:
+#     - /images/news/2024-11-27-hispanic-scholarship-fund-scholar/cover.jpg
+#   links: []
 - id: 2024-10-28-uf-genai-arts-competition-2nd-place
   title: UF GenAI Arts Competition 2nd Place
   date: October 28, 2024
