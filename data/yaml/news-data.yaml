@@ -12,7 +12,11 @@
     - /images/news/2025-10-29-hipergator-early-career-award/02.png
     - /images/news/2025-10-29-hipergator-early-career-award/03.png
     - /images/news/2025-10-29-hipergator-early-career-award/04.png
+    - /images/news/2025-10-29-hipergator-early-career-award/05.png
   links:
+    - label: AI Faculty Awards Recap
+      url: https://ai.ufl.edu/teaching-with-ai/for-uf-faculty/ai-faculty-awards/
+      icon: fas fa-newspaper
     - label: LinkedIn Post
       url: https://www.linkedin.com/posts/matheusmaldaner_grateful-to-have-been-awarded-the-hipergator-activity-7389703886330138624-Cj5z?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
       icon: fab fa-linkedin
@@ -39,18 +43,18 @@
       icon: fab fa-google-drive
 
 - id: 2025-10-27-ai-days-gator-hack-1st-place
-  title: AI Days Gator Hack 1st Place
+  title: UF AI Days Gator Hack 1st Place
   date: October 27, 2025
   category: competition
   featured: false
-  image: /images/news/2025-10-27-ai-days-gator-hack-1st-place/cover.jpg
+  image: /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/cover.jpg
   description: My team and I won first place at UF's Gator Hack, the University of Florida's 2025 AI Days hackathon! Our project "Plato's Cave – A Human-Centered Agentic System for Validating Research Papers" is a tool designed to help researchers verify claims in academic papers using AI agents that scour the web for evidence.
   secondParagraph: Inspired by Microsoft's Magentic-UI system, Plato's Cave takes a research paper as input and creates a knowledge graph of the paper's main claims. Our web agent then autonomously verifies each claim through web searches, computing a confidence score for every assertion. I'm grateful to my teammates Kristian O'Connor, Stephen Wormald, Raul Valle, and James Woelke for building this in 48 hours, and to the Florida Institute for National Security (FINS), Lesly Galiana, and Dr. Damon L. Woodard for their support.
   gallery:
-    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/cover.jpg
-    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/01.jpg
-    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/02.png
-    - /images/news/2025-10-27-ai-days-gator-hack-1st-place/03.png
+    - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/cover.jpg
+    - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/01.jpg
+    - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/02.png
+    - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/03.png
   links:
     - label: LinkedIn Post
       url: https://www.linkedin.com/posts/matheusmaldaner_artificial-intelligence-has-been-accelerating-activity-7391474811404820480-yb9I?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
@@ -77,7 +81,20 @@
   description: Last Friday marked my last day as a research intern in the AI Frontiers group at Microsoft Research! Since I am not a graduate student (yet), I joined this summer through the Undergraduate Research Internship (URI) program. This works as a subset of the overall research intern program, which let me work closely with other PhD interns and attend the same events.
   secondParagraph: I went into this internship expecting to just spend my days doing research on agentic systems, with maybe a few social opportunities sprinkled in over the summer. But what actually happened was far from that. From competing at Microsoft's yearly Puzzle Day to attending two concerts, sailing a pirate ship, going to a Sounder's soccer game, participating in (and somehow winning) both intern art competitions, and getting not one, but two Xboxes, it is safe to say that this was a summer well lived. Despite how accomplished everyone I met this summer was, one commonality I saw was their level of humility. I lost count of how many times I had the privilege of speaking with world renowned researchers about simple things, or how often they were open to grabbing a coffee despite their busy schedules. I even had the honor of meeting some of the company's leaders including Peter Lee, Doug Burger, Ashley Llorens, and Ece Kamar who, like the rest, were extremely humble and kind. I thank my mentors, Hussein Mozannar, Gagan Bansal and Adam Fourney for the countless meetings, lunches, and for everything I learned. If I were to go back, I would not change a single thing. I am happy to have made amazing friendships and am excited to see what my fellow interns accomplish next.
   gallery:
-    - /images/news/2025-08-16-microsoft-research-internship/cover.jpg
+    - /images/news/2025-08-16-microsoft-research-internship/cover.png
+    - /images/news/2025-08-16-microsoft-research-internship/01.png
+    - /images/news/2025-08-16-microsoft-research-internship/02.png
+    - /images/news/2025-08-16-microsoft-research-internship/03.png
+    - /images/news/2025-08-16-microsoft-research-internship/04.png
+    - /images/news/2025-08-16-microsoft-research-internship/05.png
+    - /images/news/2025-08-16-microsoft-research-internship/06.png
+    - /images/news/2025-08-16-microsoft-research-internship/07.png
+    - /images/news/2025-08-16-microsoft-research-internship/08.png
+    - /images/news/2025-08-16-microsoft-research-internship/09.png
+    - /images/news/2025-08-16-microsoft-research-internship/10.png
+    - /images/news/2025-08-16-microsoft-research-internship/11.png
+    - /images/news/2025-08-16-microsoft-research-internship/12.png
+    - /images/news/2025-08-16-microsoft-research-internship/13.png
   links:
     - label: LinkedIn Post
       url: https://www.linkedin.com/posts/matheusmaldaner_last-friday-marked-my-last-day-as-a-research-activity-7363694696159670274-dqUi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
@@ -145,7 +162,7 @@
   date: August 5, 2025
   category: conference
   featured: false
-  image: /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.jpg
+  image: /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.png
   description: I had the opportunity to fly to San Diego to present our work at ACM Collective Intelligence, in collaboration with Wesley Deng, Jason Hong, Ken Holstein, Motahhare Eslami, and the CMU Human-Computer Interaction Institute.
   secondParagraph: "In our user study with 15 participants using MIRAGE, we found that seeing multiple models side-by-side helped people spot new details they had missed when looking at a single model. When viewing a single model, participants focused on intra-variance (differences among images from the same model). With multiple models visible, they shifted to inter-variance (differences between models). Bilingual participants (Chinese and Portuguese) uncovered language-fidelity issues, as some models performed much worse when prompts were given in their native language versus English. I also had the chance to run into my friend Claire (in last pic) and explore San Diego." 
   gallery:
@@ -508,7 +525,7 @@
       url: https://www.youtube.com/watch?v=OHo1SbqqXGU&t=2s
       icon: fas fa-video
 - id: 2024-10-28-uf-ai-days-hackathon-most-popular
-  title: UF AI Days Hackathon Most Popular
+  title: UF AI Days Gator Hack Most Popular
   date: October 28, 2024
   category: competition
   featured: false
