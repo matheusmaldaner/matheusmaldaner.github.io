@@ -3,7 +3,7 @@
 /**
  * YAML to JSON Converter
  *
- * Converts YAML files in the data/ directory to JSON format.
+ * Converts YAML files in the data/yaml/ directory to JSON format in data/json/.
  * This allows editing data in human-friendly YAML while serving
  * JSON to the browser for better performance.
  *
@@ -14,25 +14,36 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
-const DATA_DIR = path.join(__dirname, '../data');
-const VERBOSE = process.env.VERBOSE === 'true';
+const YAML_DIR = path.join(__dirname, '../data/yaml');
+const JSON_DIR = path.join(__dirname, '../data/json');
+
+/**
+ * Ensure directory exists
+ */
+function ensureDir(dirPath) {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+}
 
 /**
  * Convert a YAML file to JSON
  */
-function convertYamlToJson(yamlFilePath) {
+function convertYamlToJson(yamlFilePath, outputDir) {
   try {
     const yamlContent = fs.readFileSync(yamlFilePath, 'utf8');
     const data = yaml.load(yamlContent);
 
-    const jsonFilePath = yamlFilePath.replace(/\.ya?ml$/, '.json');
+    const fileName = path.basename(yamlFilePath).replace(/\.ya?ml$/, '.json');
+    const jsonFilePath = path.join(outputDir, fileName);
     const jsonContent = JSON.stringify(data, null, 2);
 
+    ensureDir(outputDir);
     fs.writeFileSync(jsonFilePath, jsonContent, 'utf8');
 
-    const fileName = path.basename(yamlFilePath);
-    const outputFileName = path.basename(jsonFilePath);
-    console.log(`✓ Converted ${fileName} → ${outputFileName}`);
+    const relativeYaml = path.relative(YAML_DIR, yamlFilePath);
+    const relativeJson = path.relative(JSON_DIR, jsonFilePath);
+    console.log(`✓ ${relativeYaml} → ${relativeJson}`);
 
     return true;
   } catch (error) {
@@ -42,42 +53,51 @@ function convertYamlToJson(yamlFilePath) {
 }
 
 /**
- * Process all YAML files in the data directory
+ * Process directory recursively
  */
-function processDataDirectory() {
-  if (!fs.existsSync(DATA_DIR)) {
-    console.error(`Error: Data directory not found at ${DATA_DIR}`);
-    process.exit(1);
-  }
-
-  const files = fs.readdirSync(DATA_DIR);
-  const yamlFiles = files.filter(file => /\.ya?ml$/i.test(file));
-
-  if (yamlFiles.length === 0) {
-    console.log('No YAML files found in data/ directory');
-    return;
-  }
-
-  console.log(`\nConverting ${yamlFiles.length} YAML file(s)...\n`);
-
+function processDirectory(inputDir, outputDir) {
   let successCount = 0;
   let failCount = 0;
 
-  yamlFiles.forEach(file => {
-    const yamlFilePath = path.join(DATA_DIR, file);
+  const items = fs.readdirSync(inputDir);
 
-    // Skip if it's a directory
-    if (fs.statSync(yamlFilePath).isDirectory()) {
-      return;
-    }
+  for (const item of items) {
+    const inputPath = path.join(inputDir, item);
+    const stat = fs.statSync(inputPath);
 
-    const success = convertYamlToJson(yamlFilePath);
-    if (success) {
-      successCount++;
-    } else {
-      failCount++;
+    if (stat.isDirectory()) {
+      // Recursively process subdirectories
+      const subOutputDir = path.join(outputDir, item);
+      const result = processDirectory(inputPath, subOutputDir);
+      successCount += result.successCount;
+      failCount += result.failCount;
+    } else if (/\.ya?ml$/i.test(item)) {
+      // Convert YAML files
+      const success = convertYamlToJson(inputPath, outputDir);
+      if (success) {
+        successCount++;
+      } else {
+        failCount++;
+      }
     }
-  });
+  }
+
+  return { successCount, failCount };
+}
+
+/**
+ * Main function
+ */
+function main() {
+  if (!fs.existsSync(YAML_DIR)) {
+    console.error(`Error: YAML directory not found at ${YAML_DIR}`);
+    process.exit(1);
+  }
+
+  console.log(`\nConverting YAML files from data/yaml/ to data/json/...\n`);
+
+  ensureDir(JSON_DIR);
+  const { successCount, failCount } = processDirectory(YAML_DIR, JSON_DIR);
 
   console.log(`\n${successCount} file(s) converted successfully`);
   if (failCount > 0) {
@@ -88,7 +108,7 @@ function processDataDirectory() {
 
 // Run the conversion
 if (require.main === module) {
-  processDataDirectory();
+  main();
 }
 
-module.exports = { convertYamlToJson, processDataDirectory };
+module.exports = { convertYamlToJson, processDirectory };
