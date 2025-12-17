@@ -64,5 +64,4 @@ vendor/
 
 # Auto-generated JSON files from YAML conversion
 # YAML files are the source of truth
-data/*.json
-!data/news-data.json
+data/json/
