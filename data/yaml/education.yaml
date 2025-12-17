@@ -22,7 +22,7 @@
 - degree: "M.S. in AI Systems"
   institution: "University of Florida"
   location: "Gainesville, FL"
-  years: "Aug. 2025 - Present"
+  years: "Aug. 2025 — Present"
   institution-url: "https://www.ufl.edu/"
   awards:
     - "UF Early Career HiPerGator Award"
@@ -30,7 +30,7 @@
 - degree: "B.S. in Data Science"
   institution: "University of Florida"
   location: "Gainesville, FL"
-  years: "Aug. 2021 - May. 2025"
+  years: "Aug. 2021 — May. 2025"
   thesis: "Applications of Differentiable Logic Gate Networks"
   description:
     - "GPA: 3.9/4.0, Summa Cum Laude"
@@ -42,7 +42,7 @@
 - degree: "High-School Diploma"
   institution: "Marjory Stoneman Douglas High School"
   location: "Parkland, FL"
-  years: "Aug. 2017 - May. 2021"
+  years: "Aug. 2017 — May. 2021"
   institution-url: "https://www.browardschools.com/stonemandouglas"
   description:
     - "GPA: 4.0/4.0"
