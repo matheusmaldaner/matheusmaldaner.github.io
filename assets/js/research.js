@@ -1,0 +1,703 @@
+// Paper data
+const papersData = {
+    paper1: {
+        title: "Abstracting General Syntax for XAI after Decomposing Explanation Sub-Components",
+        authors: "Stephen Wormald, Matheus Kunzler Maldaner, Kristian O'Connor, Olivia P. Dizon-Paradis, Damon L. Woodard",
+        venue: "Springer AI",
+        date: "2024",
+        abstract: "This paper presents an overview of the Qi-Framework, a novel approach to defining and quantifying explainability in machine learning. It introduces a mathematically grounded syntax that abstracts and organizes the subcomponents of common eXplainable Artificial Intelligence (XAI) methods. The framework aims to provide a standardized language for describing explainability needs, evaluating explanation relevance to specific use cases, and guiding the selection of XAI methods. The report explores how the Qi-Framework helps rank methods by their utility, supports the discovery of new XAI techniques, and fosters collaborative advancements in interpretable machine learning.",
+        link: "https://www.researchsquare.com/article/rs-4824427/latest"
+    },
+    paper2: {
+        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing Generative Text-to-Image AI",
+        authors: "Matheus Kunzler Maldaner, Wesley Hanwen Deng, Jason I. Hong, Ken Holstein, Motahhare Eslami",
+        venue: "HCOMP 2024",
+        date: "2024",
+        abstract: "This paper introduces MIRAGE, a web-based tool designed to enable users to audit and compare outputs from multiple AI text-to-image (T2I) models. By providing a structured platform for evaluating AI-generated images, MIRAGE empowers users to surface harmful biases and contribute to the growing efforts in improving generative AI systems. A preliminary user study with five participants revealed that MIRAGE users could draw on their lived experiences and identities to identify subtle biases more effectively when reviewing multiple T2I models simultaneously, compared to evaluating a single model. The report highlights MIRAGE's potential to foster more inclusive and trustworthy generative AI applications.",
+        link: "https://www.humancomputation.com/assets/wip_2024/HCOMP_24_WIP_4.pdf"
+    },
+    paper3: {
+        title: "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies",
+        authors: "Matheus Kunzler Maldaner, Wesley Hanwen Deng, Jason I. Hong, Ken Holstein, Motahhare Eslami",
+        venue: "ACM CI 2025",
+        date: "2025",
+        abstract: "While generative AI systems have gained popularity in diverse applications, their potential to produce harmful outputs limits their trustworthiness and utility. A small but growing line of research has explored tools and processes to better engage non-AI expert users in auditing generative AI systems. In this work, we present the design and evaluation of MIRAGE, a web-based tool exploring a 'contrast-first' workflow that allows users to pick up to four different text-to-image (T2I) models, view their images side-by-side, and provide feedback on model performance on a single screen. In our user study with fifteen participants, we used four predefined models for consistency, with only a single model initially being shown. We found that most participants shifted from analyzing individual images to general patterns once the side-by-side step appeared with all four models; several participants appeared with all four models.",
+        link: "https://ci.acm.org/2025/wp-content/uploads/101-Maldaner.pdf"
+    },
+    paper4: {
+        title: "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks",
+        authors: "Stephen Wormald, David Koblah, Matheus Kunzler Maldaner, Domenic Forte, Damon L. Woodard",
+        venue: "ITNG 2025",
+        date: "2025",
+        abstract: "This paper introduces eXpLogic, an algorithm for creating saliency maps that explain DiffLogic neural networks where each node learns specific logic types. Inspired by circuit analysis, eXpLogic precisely identifies input patterns responsible for model decisions, helping interpret predictions and optimize networks. We evaluate eXpLogic against gradient-based methods using our novel SwitchDist metric, showing eXpLogic better predicts which inputs affect class scores. This approach reduced network size by 87% and improved inference time by 8% with minimal impact on performance. Our work demonstrates how architectural choices can enhance explainability in deep learning, with applications in critical sectors that can affect human lives including healthcare, defense, and law.",
+        link: "https://arxiv.org/abs/2503.09910"
+    },
+    paper6: {
+        title: "Magentic-UI: Towards Human-in-the-loop Agentic Systems",
+        authors: "Hussein Mozannar, Gagan Bansal, Cheng Tan, Adam Fourney, Victor Dibia, Jingya Chen, Jack Gerrits, Tyler Payne, Matheus Kunzler Maldaner, Madeleine Grunde-McLaughlin, Eric Zhu, Griffin Bassman, Jacob Alber, Peter Chang, Ricky Loynd, Friederike Niedtner, Ece Kamar, Maya Murad, Rafah Hosn, Saleema Amershi",
+        venue: "Microsoft Research AI Frontiers (arXiv preprint)",
+        date: "July 2025",
+        abstract: "AI agents powered by large language models are increasingly capable of autonomously completing complex, multi-step tasks using external tools. Yet, they still fall short of human-level performance in most domains including computer use, software development, and research. Their growing autonomy and ability to interact with the outside world, also introduces safety and security risks including potentially misaligned actions and adversarial manipulation. We argue that human-in-the-loop agentic systems offer a promising path forward, combining human oversight and control with AI efficiency to unlock productivity from imperfect systems. We introduce Magentic-UI, an open-source web interface for developing and studying human-agent interaction. Built on a flexible multi-agent architecture, Magentic-UI supports web browsing, co-planning, human-agent collaboration, real-time task execution with human oversight and intervention, action approval, multi-tasking, memory planning and reuse, and final answer verification.",
+        link: "https://arxiv.org/abs/2507.22358v1"
+    },
+    paper7: {
+        title: "Efficient and Transparent Machine Learning: Exploring Applications of Differentiable Logic Gate Networks",
+        authors: "Matheus Kunzler Maldaner",
+        venue: "Undergraduate Thesis, University of Florida",
+        date: "May 2025",
+        abstract: "Despite their remarkable capabilities, the decision-making process of deep neural networks remains as black boxes, obscuring the logic behind their decisions and undermining trust in critical domains such as healthcare, national security, and law. While the field of Explainable Artificial Intelligence (XAI) has emerged to mitigate these issues, current post hoc explanation methods often fail to deliver reliable insights as they are applied after a model has already been trained, rather than addressing the underlying architecture. To overcome these fundamental limitations, this thesis explores Differentiable Logic Gate Networks (DiffLogic), a type of neurosymbolic AI (NSAI) architecture that enables neural networks to learn a distribution of logic gates for each node. Specifically, this work seeks to address unexplored areas in XAI and NSAI by: (1) implementing DiffLogic on Field Programmable Gate Arrays (FPGA) for hardware acceleration, (2) developing a compression algorithm for DiffLogic models, and (3) deploying visualization tools to intuitively interpret learned logical structures.",
+        link: "#",
+        restricted: true,
+        restrictionNote: "Under 2-year embargo period"
+    }
+};
+
+// Carousel state
+let currentPage = 0;
+const totalPapers = 6; // Note: paper_hcomp.png was missing, so this count should be accurate for available papers.
+let papersPerPage = 5;
+let activePaper = null;
+
+// Update papers per page based on screen width
+function updatePapersPerPage() {
+    const width = window.innerWidth;
+    if (width <= 736) {
+        papersPerPage = 1;
+    } else if (width <= 980) {
+        papersPerPage = 2;
+    } else if (width <= 1280) {
+        papersPerPage = 3;
+    } else {
+        papersPerPage = 5;
+    }
+}
+
+// Calculate max pages
+function getMaxPages() {
+    return Math.max(0, Math.ceil(totalPapers / papersPerPage) - 1);
+}
+
+// Update navigation buttons state
+function updateNavButtons() {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const maxPages = getMaxPages();
+
+    // Disable/enable prev button
+    if (currentPage === 0) {
+        prevBtn.classList.add('disabled');
+    } else {
+        prevBtn.classList.remove('disabled');
+    }
+
+    // Disable/enable next button
+    if (currentPage >= maxPages) {
+        nextBtn.classList.add('disabled');
+    } else {
+        nextBtn.classList.remove('disabled');
+    }
+}
+
+// Scroll carousel
+function scrollCarousel() {
+    const carousel = document.getElementById('papersCarousel');
+    const cardWidth = carousel.querySelector('.paper-card').offsetWidth;
+    const gap = 20;
+    const scrollAmount = (cardWidth + gap) * papersPerPage;
+    carousel.style.transform = `translateX(-${currentPage * scrollAmount}px)`;
+    updateNavButtons();
+}
+
+// Open panel with paper info
+function openPanel(paperId) {
+    const paper = papersData[paperId];
+    const panel = document.getElementById('paperInfoPanel');
+    const overlay = document.getElementById('panelOverlay');
+    const content = document.getElementById('panelContent');
+
+    // Remove active class from all cards
+    document.querySelectorAll('.paper-card').forEach(card => {
+        card.classList.remove('active');
+        card.classList.remove('expanded');
+    });
+
+    // Add active class to clicked card
+    const activeCard = document.querySelector(`[data-paper-id="${paperId}"]`);
+    activeCard.classList.add('active');
+    activeCard.classList.add('expanded');
+
+    // Populate panel content
+    let linkHTML;
+    if (paper.restricted) {
+        linkHTML = `
+            <div class="panel-link disabled" title="${paper.restrictionNote}">
+                <i class="fas fa-lock"></i> ${paper.restrictionNote}
+            </div>
+        `;
+    } else {
+        linkHTML = `
+            <a href="${paper.link}" target="_blank" rel="noopener noreferrer" class="panel-link">
+                <i class="fas fa-file-alt"></i> Read Full Paper
+            </a>
+        `;
+    }
+
+    content.innerHTML = `
+        <h3>${paper.title}</h3>
+        <div class="panel-meta">
+            <p><strong>Authors:</strong> ${paper.authors}</p>
+            <p><strong>Venue:</strong> ${paper.venue}</p>
+            <p><strong>Date:</strong> ${paper.date}</p>
+        </div>
+        <div class="panel-abstract">
+            <p>${paper.abstract}</p>
+        </div>
+        ${linkHTML}
+    `;
+
+    // Show panel and overlay
+    panel.classList.add('active');
+    overlay.classList.add('active');
+    activePaper = paperId;
+}
+
+// Close panel
+function closePanel() {
+    const panel = document.getElementById('paperInfoPanel');
+    const overlay = document.getElementById('panelOverlay');
+
+    panel.classList.remove('active');
+    overlay.classList.remove('active');
+
+    // Remove active class from all cards
+    document.querySelectorAll('.paper-card').forEach(card => {
+        card.classList.remove('active');
+        card.classList.remove('expanded');
+    });
+
+    activePaper = null;
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function() {
+    updatePapersPerPage();
+    updateNavButtons();
+
+    // Previous button
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        if (currentPage > 0 && !this.classList.contains('disabled')) {
+            currentPage--;
+            scrollCarousel();
+        }
+    });
+
+    // Next button
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        if (currentPage < getMaxPages() && !this.classList.contains('disabled')) {
+            currentPage++;
+            scrollCarousel();
+        }
+    });
+
+    // Paper card clicks and keyboard support
+    document.querySelectorAll('.paper-card').forEach(card => {
+        // Make cards keyboard focusable
+        card.setAttribute('tabindex', '0');
+        card.setAttribute('role', 'button');
+
+        card.addEventListener('click', function() {
+            const paperId = this.getAttribute('data-paper-id');
+            if (activePaper === paperId) {
+                closePanel();
+            } else {
+                openPanel(paperId);
+            }
+        });
+
+        // Keyboard support for cards (Enter and Space)
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const paperId = this.getAttribute('data-paper-id');
+                if (activePaper === paperId) {
+                    closePanel();
+                } else {
+                    openPanel(paperId);
+                }
+            }
+        });
+    });
+
+    // Close button
+    document.getElementById('panelCloseBtn').addEventListener('click', closePanel);
+
+    // Overlay click
+    document.getElementById('panelOverlay').addEventListener('click', closePanel);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        // ESC key to close panel
+        if (e.key === 'Escape' && activePaper) {
+            closePanel();
+        }
+
+        // Arrow keys for carousel navigation (only when panel is closed)
+        if (!activePaper) {
+            if (e.key === 'ArrowLeft') {
+                const prevBtn = document.getElementById('prevBtn');
+                if (currentPage > 0 && !prevBtn.classList.contains('disabled')) {
+                    currentPage--;
+                    scrollCarousel();
+                }
+            } else if (e.key === 'ArrowRight') {
+                const nextBtn = document.getElementById('nextBtn');
+                if (currentPage < getMaxPages() && !nextBtn.classList.contains('disabled')) {
+                    currentPage++;
+                    scrollCarousel();
+                }
+            }
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        updatePapersPerPage();
+        currentPage = 0;
+        scrollCarousel();
+    });
+});
+// Poster data (sorted in reverse chronological order)
+const postersData = [
+    {
+        id: "poster17",
+        title: "Sentinel Steps: Towards Longer Running AI Agents",
+        venue: "Microsoft Research Symposium 2025",
+        date: "Summer 2025",
+        posterImage: "../images/posters/poster17.jpg",
+        presentationImage: "../images/posters/presenting17.jpg"
+    },
+    {
+        id: "poster14",
+        title: "Enhancing AI Security with FPGA-Accelerated Differentiable Logic Gate Networks",
+        venue: "UF Spring Symposium 2025",
+        date: "April 2025",
+        posterImage: "../images/posters/poster14.jpg",
+        presentationImage: "../images/posters/presenting14.jpg"
+    },
+    {
+        id: "poster16",
+        title: "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies",
+        venue: "ACM CI 2025",
+        date: "April 2025",
+        posterImage: "../images/posters/poster16.jpg",
+        presentationImage: "../images/posters/presenting16.jpg"
+    },
+    {
+        id: "poster13",
+        title: "The Ineffectiveness of the Information Maximization Algorithm on Spectrally Sparse Signals",
+        venue: "SHPE Symposium 2025",
+        date: "February 2025",
+        posterImage: "../images/posters/poster13.jpg",
+        presentationImage: "../images/posters/presenting13.jpg"
+    },
+    {
+        id: "poster15",
+        title: "Deploying Learned Logic Gates onto FPGAs for Increased Efficiency",
+        venue: "FURC 2025",
+        date: "February 2025",
+        posterImage: "../images/posters/poster15.jpg",
+        presentationImage: "../images/posters/presenting15.jpg"
+    },
+    {
+        id: "poster7",
+        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI",
+        venue: "HCOMP 2024",
+        date: "November 2024",
+        posterImage: "../images/posters/poster_hcomp.jpg",
+        presentationImage: "../images/posters/presenting7.jpg"
+    },
+    {
+        id: "poster8",
+        title: "Side-by-Side Multi-Models T2I Comparisons Unveiling Problems in AI",
+        venue: "UF Fall Symposium 2024",
+        date: "November 2024",
+        posterImage: "../images/posters/poster8.jpg",
+        presentationImage: "../images/posters/presenting8.jpg"
+    },
+    {
+        id: "poster9",
+        title: "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks",
+        venue: "HiPerGator Symposium 2024",
+        date: "November 2024",
+        posterImage: "../images/posters/poster_uf_hipergator_explogic.jpeg",
+        presentationImage: "../images/posters/presenting9.jpg"
+    },
+    {
+        id: "poster11",
+        title: "Side-by-Side Multi-Models T2I Comparisons Unveiling Problems in AI",
+        venue: "McKnight Fellows Conference 2024",
+        date: "November 2024",
+        posterImage: "../images/posters/poster11.jpg",
+        presentationImage: "../images/posters/presenting11.jpg"
+    },
+    {
+        id: "poster12",
+        title: "Accelerating Real-Time Inference with FPGA-Implemented Logic Gate Neural Networks",
+        venue: "Warren B. Nelms IoT 2024",
+        date: "November 2024",
+        posterImage: "../images/posters/poster12.jpg",
+        presentationImage: "../images/posters/presenting12.jpg"
+    },
+    {
+        id: "poster10",
+        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI",
+        venue: "UF AI Days 2024",
+        date: "October 2024",
+        posterImage: "../images/posters/poster_uf_aidays_mirage.jpeg",
+        presentationImage: "../images/posters/presenting10.jpg"
+    },
+    {
+        id: "poster6",
+        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI",
+        venue: "Carnegie Mellon 2024",
+        date: "Summer 2024",
+        posterImage: "../images/posters/poster6.jpg",
+        presentationImage: "../images/posters/presenting6.jpg"
+    },
+    {
+        id: "poster2",
+        title: "Neuro Symbolic AI: Bridging Neural Networks and Symbolic Reasoning for Enhanced AI Transparency",
+        venue: "Sigma Xi 2024",
+        date: "April 2024",
+        posterImage: "../images/posters/poster2.jpg",
+        presentationImage: "../images/posters/presenting2.jpg"
+    },
+    {
+        id: "poster3",
+        title: "Ethical Horizons in the field of Neuro Symbolic AI",
+        venue: "UF Spring Symposium 2024",
+        date: "April 2024",
+        posterImage: "../images/posters/poster_uf_spring_symposium.jpeg",
+        presentationImage: "../images/posters/presenting3.jpg"
+    },
+    {
+        id: "poster4",
+        title: "Ethical Horizons in the field of Neuro Symbolic AI",
+        venue: "SHPE Symposium 2024",
+        date: "April 2024",
+        posterImage: "../images/posters/poster4.jpg",
+        presentationImage: "../images/posters/presenting4.jpg"
+    },
+    {
+        id: "poster5",
+        title: "Uniting Symbolic and Neural Paradigms for Transparent AI",
+        venue: "DSI Spring Symposium 2024",
+        date: "April 2024",
+        posterImage: "../images/posters/poster5.jpg",
+        presentationImage: "../images/posters/presenting5.jpg"
+    },
+    {
+        id: "poster1",
+        title: "Neuro Symbolic AI: Bridging Neural Networks and Symbolic Reasoning for Enhanced AI Transparency",
+        venue: "FURC 2024",
+        date: "February 2024",
+        posterImage: "../images/posters/poster_furc_difflogic_fpga.jpeg",
+        presentationImage: "../images/posters/presenting1.jpg"
+    }
+];
+
+// Posters carousel state
+let currentPosterPage = 0;
+const totalPosters = postersData.length;
+let postersPerPage = 3;
+let activePoster = null;
+
+// Update posters per page based on screen width
+function updatePostersPerPage() {
+    const width = window.innerWidth;
+    if (width <= 736) {
+        postersPerPage = 1;
+    } else if (width <= 980) {
+        postersPerPage = 2;
+    } else {
+        postersPerPage = 3;
+    }
+}
+
+// Calculate max pages for posters
+function getMaxPosterPages() {
+    return Math.max(0, Math.ceil(totalPosters / postersPerPage) - 1);
+}
+
+// Render poster cards
+function renderPosterCards() {
+    const carousel = document.getElementById('postersCarousel');
+    carousel.innerHTML = postersData.map(poster => `
+        <div class="poster-card" data-poster-id="${poster.id}" tabindex="0" role="button">
+            <img src="${poster.posterImage}" alt="${poster.title}" class="poster-thumbnail">
+            <div class="poster-card-info">
+                <h5 class="poster-card-title">${poster.title}</h5>
+                <p class="poster-card-venue">${poster.venue}</p>
+            </div>
+        </div>
+    `).join('');
+
+    // Attach click and keyboard listeners
+    document.querySelectorAll('.poster-card').forEach(card => {
+        card.addEventListener('click', function() {
+            const posterId = this.getAttribute('data-poster-id');
+            const poster = postersData.find(p => p.id === posterId);
+            if (activePoster === posterId) {
+                closePosterPanel();
+            } else {
+                openPosterPanel(poster);
+            }
+        });
+
+        // Keyboard support (Enter and Space)
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const posterId = this.getAttribute('data-poster-id');
+                const poster = postersData.find(p => p.id === posterId);
+                if (activePoster === posterId) {
+                    closePosterPanel();
+                } else {
+                    openPosterPanel(poster);
+                }
+            }
+        });
+    });
+}
+
+// Update poster navigation buttons
+function updatePosterNavButtons() {
+    const prevBtn = document.getElementById('prevBtnPosters');
+    const nextBtn = document.getElementById('nextBtnPosters');
+    const maxPages = getMaxPosterPages();
+
+    if (currentPosterPage === 0) {
+        prevBtn.classList.add('disabled');
+    } else {
+        prevBtn.classList.remove('disabled');
+    }
+
+    if (currentPosterPage >= maxPages) {
+        nextBtn.classList.add('disabled');
+    } else {
+        nextBtn.classList.remove('disabled');
+    }
+}
+
+// Scroll posters carousel
+function scrollPostersCarousel() {
+    const carousel = document.getElementById('postersCarousel');
+    const firstCard = carousel.querySelector('.poster-card');
+    if (!firstCard) {
+        console.log('No poster cards found!');
+        return;
+    }
+
+    const cardWidth = firstCard.offsetWidth;
+    const gap = 20;
+    const scrollAmount = (cardWidth + gap) * postersPerPage;
+    const translateX = currentPosterPage * scrollAmount;
+
+    console.log('Scroll Debug:', {
+        cardWidth,
+        postersPerPage,
+        currentPosterPage,
+        scrollAmount,
+        translateX,
+        totalCards: carousel.querySelectorAll('.poster-card').length
+    });
+
+    carousel.style.transform = `translateX(-${translateX}px)`;
+    updatePosterNavButtons();
+}
+
+// Open poster detail panel
+function openPosterPanel(poster) {
+    const panel = document.getElementById('posterDetailPanel');
+    const overlay = document.getElementById('posterPanelOverlay');
+    const content = document.getElementById('posterPanelContent');
+
+    // Remove active class from all cards
+    document.querySelectorAll('.poster-card').forEach(card => {
+        card.classList.remove('active');
+    });
+
+    // Add active class to clicked card
+    const activeCard = document.querySelector(`[data-poster-id="${poster.id}"]`);
+    activeCard.classList.add('active');
+
+    // Populate panel content
+    content.innerHTML = `
+        <div class="poster-detail-info">
+            <h3>${poster.title}</h3>
+            <div class="poster-detail-meta">
+                <p><strong>Venue:</strong> ${poster.venue}</p>
+                <p><strong>Date:</strong> ${poster.date}</p>
+            </div>
+        </div>
+        <div class="poster-images-grid">
+            <div class="poster-image-section">
+                <h4>Poster</h4>
+                <img src="${poster.posterImage}" alt="Poster">
+            </div>
+            <div class="poster-image-section">
+                <h4>Presentation</h4>
+                <img src="${poster.presentationImage}" alt="Presenting at ${poster.venue}">
+            </div>
+        </div>
+    `;
+
+    // Show panel and overlay
+    panel.classList.add('active');
+    overlay.classList.add('active');
+    activePoster = poster.id;
+}
+
+// Close poster panel
+function closePosterPanel() {
+    const panel = document.getElementById('posterDetailPanel');
+    const overlay = document.getElementById('posterPanelOverlay');
+
+    panel.classList.remove('active');
+    overlay.classList.remove('active');
+
+    // Remove active class from all cards
+    document.querySelectorAll('.poster-card').forEach(card => {
+        card.classList.remove('active');
+    });
+
+    activePoster = null;
+}
+
+// Initialize posters carousel
+document.addEventListener('DOMContentLoaded', function() {
+    updatePostersPerPage();
+    renderPosterCards();
+
+    // Wait for cards to be rendered and laid out
+    requestAnimationFrame(() => {
+        updatePosterNavButtons();
+    });
+
+    // Previous button
+    document.getElementById('prevBtnPosters').addEventListener('click', function() {
+        if (currentPosterPage > 0 && !this.classList.contains('disabled')) {
+            currentPosterPage--;
+            requestAnimationFrame(() => {
+                scrollPostersCarousel();
+            });
+        }
+    });
+
+    // Next button
+    document.getElementById('nextBtnPosters').addEventListener('click', function() {
+        if (currentPosterPage < getMaxPosterPages() && !this.classList.contains('disabled')) {
+            currentPosterPage++;
+            requestAnimationFrame(() => {
+                scrollPostersCarousel();
+            });
+        }
+    });
+
+    // Close button
+    document.getElementById('posterPanelCloseBtn').addEventListener('click', closePosterPanel);
+
+    // Overlay click
+    document.getElementById('posterPanelOverlay').addEventListener('click', closePosterPanel);
+
+    // Keyboard navigation for posters
+    document.addEventListener('keydown', function(e) {
+        // ESC key to close poster panel
+        if (e.key === 'Escape' && activePoster) {
+            closePosterPanel();
+            return;
+        }
+
+        // Arrow keys for posters carousel navigation (only when panel is closed)
+        if (!activePoster && !activePaper) {
+            if (e.key === 'ArrowLeft') {
+                const prevBtn = document.getElementById('prevBtnPosters');
+                if (currentPosterPage > 0 && !prevBtn.classList.contains('disabled')) {
+                    currentPosterPage--;
+                    requestAnimationFrame(() => {
+                        scrollPostersCarousel();
+                    });
+                }
+            } else if (e.key === 'ArrowRight') {
+                const nextBtn = document.getElementById('nextBtnPosters');
+                if (currentPosterPage < getMaxPosterPages() && !nextBtn.classList.contains('disabled')) {
+                    currentPosterPage++;
+                    requestAnimationFrame(() => {
+                        scrollPostersCarousel();
+                    });
+                }
+            }
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        updatePostersPerPage();
+        currentPosterPage = 0;
+        scrollPostersCarousel();
+    });
+});
+// Add Modal Script
+document.addEventListener('DOMContentLoaded', function() {
+    // Open modal
+    const openButtons = document.querySelectorAll('.open-modal');
+    openButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'block';
+        });
+    });
+    
+    // Close modal when clicking X
+    const closeButtons = document.querySelectorAll('.close');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modalId = button.getAttribute('data-modal');
+            document.getElementById(modalId).style.display = 'none';
+        });
+    });
+    
+    // Close modal when clicking outside
+    const modals = document.querySelectorAll('.modal');
+    window.onclick = function(event) {
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    // Add expand functionality for abstracts
+    document.querySelectorAll('.expand-button').forEach(button => {
+        // Set up initial state
+        const container = button.closest('.abstract-container');
+        const fullAbstract = container.querySelector('.full-abstract');
+        const abstractText = container.querySelector('.abstract-text');
+        
+        // Copy the full text to the abstract text on page load
+        if (fullAbstract && abstractText) {
+            abstractText.innerHTML = fullAbstract.innerHTML;
+        }
+        
+        button.addEventListener('click', function() {
+            const container = this.closest('.abstract-container');
+            const isExpanded = container.classList.contains('expanded');
+            
+            // Toggle the expanded class
+            container.classList.toggle('expanded');
+            
+            // Update button text
+            this.textContent = isExpanded ? 'Read More' : 'Show Less';
+        });
+    });
+});
