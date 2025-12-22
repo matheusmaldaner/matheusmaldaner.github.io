@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Page Not Found | Matheus Kunzler Maldaner</title>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Page not found - The page you are looking for does not exist." />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<style>
+			.error-container {
+				text-align: center;
+				padding: 4em 2em;
+			}
+
+			.error-code {
+				font-size: 8em;
+				font-weight: 700;
+				color: #d1002a;
+				line-height: 1;
+				margin-bottom: 0.2em;
+			}
+
+			.error-message {
+				font-size: 1.5em;
+				color: #666;
+				margin-bottom: 1.5em;
+			}
+
+			.error-description {
+				font-size: 1.1em;
+				color: #888;
+				max-width: 500px;
+				margin: 0 auto 2em auto;
+				line-height: 1.6;
+			}
+
+			.error-actions {
+				display: flex;
+				gap: 1em;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			.error-actions a {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5em;
+				padding: 0.8em 1.5em;
+				background: #d1002a;
+				color: white;
+				text-decoration: none;
+				border-radius: 5px;
+				font-weight: 600;
+				transition: all 0.3s ease;
+			}
+
+			.error-actions a:hover {
+				background: #b8001e;
+				transform: translateY(-2px);
+			}
+
+			.error-actions a.secondary {
+				background: #666;
+			}
+
+			.error-actions a.secondary:hover {
+				background: #555;
+			}
+
+			@media (max-width: 600px) {
+				.error-code {
+					font-size: 5em;
+				}
+
+				.error-message {
+					font-size: 1.2em;
+				}
+
+				.error-actions {
+					flex-direction: column;
+					align-items: center;
+				}
+
+				.error-actions a {
+					width: 100%;
+					max-width: 250px;
+					justify-content: center;
+				}
+			}
+		</style>
+	</head>
+	<body class="no-sidebar is-preload">
+
+		<div id="page-wrapper">
+			<!-- Header -->
+			<section id="header">
+				<h1><a href="/index.html">Matheus Kunzler Maldaner</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/index.html">About</a></li>
+						<li><a href="/pages/news.html">News</a></li>
+						<li><a href="/pages/projects.html">Projects</a></li>
+						<li><a href="/pages/research.html">Research</a></li>
+						<li><a href="/cv">CV</a></li>
+					</ul>
+				</nav>
+			</section>
+
+			<!-- Main -->
+			<section id="main">
+				<div class="container">
+					<div class="error-container">
+						<div class="error-code">404</div>
+						<div class="error-message">Page Not Found</div>
+						<p class="error-description">
+							The page you're looking for doesn't exist or has been moved.
+							Please check the URL or navigate using the links below.
+						</p>
+						<div class="error-actions">
+							<a href="/index.html">
+								<i class="fas fa-home"></i>
+								Go Home
+							</a>
+							<a href="/pages/projects.html" class="secondary">
+								<i class="fas fa-folder-open"></i>
+								View Projects
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/jquery.dropotron.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
