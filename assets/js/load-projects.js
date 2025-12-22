@@ -80,12 +80,18 @@ function renderFeaturedCard(project) {
   const awardText = typeof project.award === 'string' ? project.award : 'Award Winner';
   const filterType = getFilterCategory(project.type);
 
-  // Context line (hackathon name or class name)
+  // Context line (hackathon name or class name) with award integrated
   let contextLine = '';
   if (project.type === 'hackathon' && project.hackathon_name) {
-    contextLine = project.hackathon_name;
+    if (hasAward) {
+      contextLine = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span> - ${escapeHtml(project.hackathon_name)}`;
+    } else {
+      contextLine = escapeHtml(project.hackathon_name);
+    }
   } else if (project.type === 'class' && project.class_name) {
-    contextLine = project.class_name;
+    contextLine = escapeHtml(project.class_name);
+  } else if (hasAward) {
+    contextLine = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span>`;
   }
 
   const linkButtons = buildLinkButtons(links, 'featured-link-btn');
@@ -96,10 +102,9 @@ function renderFeaturedCard(project) {
       <div class="featured-overlay">
         <div class="featured-badges">
           <span class="category-badge badge-${filterType}">${getCategoryLabel(project.type)}</span>
-          ${hasAward ? `<span class="award-badge"><i class="fas fa-trophy"></i> ${escapeHtml(awardText)}</span>` : ''}
         </div>
         <h3 class="featured-title">${escapeHtml(project.title)}</h3>
-        ${contextLine ? `<div class="featured-context">${escapeHtml(contextLine)}</div>` : ''}
+        ${contextLine ? `<div class="featured-context">${contextLine}</div>` : ''}
         <div class="featured-links">${linkButtons}</div>
       </div>
     </div>
@@ -113,12 +118,19 @@ function renderProjectCard(project) {
   const awardText = typeof project.award === 'string' ? project.award : 'Award Winner';
   const filterType = getFilterCategory(project.type);
 
-  // Context line (hackathon name or class name)
+  // Context line (hackathon name or class name) with award integrated
   let contextLine = '';
   if (project.type === 'hackathon' && project.hackathon_name) {
-    contextLine = `<div class="project-context">${escapeHtml(project.hackathon_name)}</div>`;
+    if (hasAward) {
+      contextLine = `<div class="project-context"><span class="award-text">🏆 ${escapeHtml(awardText)}</span> - ${escapeHtml(project.hackathon_name)}</div>`;
+    } else {
+      contextLine = `<div class="project-context">${escapeHtml(project.hackathon_name)}</div>`;
+    }
   } else if (project.type === 'class' && project.class_name) {
     contextLine = `<div class="project-context">${escapeHtml(project.class_name)}</div>`;
+  } else if (hasAward) {
+    // Show award even without hackathon/class context
+    contextLine = `<div class="project-context"><span class="award-text">🏆 ${escapeHtml(awardText)}</span></div>`;
   }
 
   const linkButtons = buildLinkButtons(links, 'project-link-btn');
@@ -129,7 +141,6 @@ function renderProjectCard(project) {
         <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project['image-alt'] || project.title)}" loading="lazy">
         <div class="card-badges">
           <span class="category-badge badge-${filterType}">${getCategoryLabel(project.type)}</span>
-          ${hasAward ? `<span class="award-badge"><i class="fas fa-trophy"></i> ${escapeHtml(awardText)}</span>` : ''}
         </div>
       </div>
       <div class="card-content">
@@ -184,22 +195,26 @@ function renderProjects() {
   grid.innerHTML = filtered.map(renderProjectCard).join('');
 }
 
-// Setup filter button event listeners
+// Setup filter button event listeners using event delegation
 function setupFilterButtons() {
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Update active state
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-pressed', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed', 'true');
+  const filterSection = document.querySelector('.filter-section');
+  if (!filterSection) return;
 
-      // Update filter and re-render
-      currentFilter = btn.dataset.filter;
-      renderProjects();
+  filterSection.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+
+    // Update active state
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
     });
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+
+    // Update filter and re-render
+    currentFilter = btn.dataset.filter;
+    renderProjects();
   });
 }
 

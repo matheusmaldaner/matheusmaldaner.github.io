@@ -734,14 +734,17 @@
             throw new Error(`HTTP error! status: ${response.status}`);
           }
           newsData = await response.json();
-          
+
+          // Filter out hidden items
+          newsData = newsData.filter(item => !item.hidden);
+
           // Sort news by date (newest first)
           newsData.sort((a, b) => {
             const dateA = new Date(a.date);
             const dateB = new Date(b.date);
             return dateB - dateA; // Descending order (newest first)
           });
-          
+
           console.log('News data loaded and sorted successfully:', newsData.length, 'entries');
         } catch (error) {
           console.error('Error loading news data:', error);

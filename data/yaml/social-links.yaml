@@ -7,13 +7,29 @@
 #   on-homepage: true
 #   cv-group: 1
 
+- id: home
+  description: "matheus.wiki"
+  color: "#515151"
+  class: "fas fa-home icon"
+  url: "https://matheus.wiki"
+  on-homepage: false
+  cv-group: 1
+
 - id: resume
   description: "Resume"
   color: "#515151"
   class: "fas fa-file-alt icon"
-  url: "https://docs.google.com/document/d/1UJ6ly5GxkVkUtCn1Yx0iDY2VqmUKr-V7QwW5elUrRSQ/edit?tab=t.0"
-  on-homepage: true
+  url: "/cv"
+  on-homepage: false
   cv-group: 1
+
+- id: cv
+  description: "CV"
+  color: "#515151"
+  class: "fas fa-file-alt icon"
+  url: "https://matheus.wiki/cv"
+  on-homepage: true
+  #cv-group: 1
 
 - id: email
   description: "mkunzlermaldaner@ufl.edu"
@@ -23,12 +39,20 @@
   on-homepage: true
   cv-group: 1
 
+- id: resume-pdf
+  description: "Resume"
+  color: "#ba2818"
+  class: "far fa-file-pdf icon"
+  url: "https://docs.google.com/document/d/1UJ6ly5GxkVkUtCn1Yx0iDY2VqmUKr-V7QwW5elUrRSQ/edit?tab=t.0"
+  on-homepage: false
+  cv-group: 1
+
 - id: twitter
   description: "@matheusmaldaner"
   color: "#1da1f2"
   class: "fab fa-twitter icon"
   url: "https://x.com/matheusmaldaner"
-  on-homepage: true
+  on-homepage: false
   cv-group: 2
 
 - id: github
@@ -45,13 +69,6 @@
   class: "fab fa-linkedin-in icon"
   url: "https://www.linkedin.com/in/matheusmaldaner/"
   on-homepage: true
-
-- id: scholar
-  description: "Google Scholar"
-  color: "#515151"
-  class: "fa fa-graduation-cap icon"
-  url: "https://scholar.google.com/citations?user=Vl6XswcAAAAJ&hl=en"
-  on-homepage: true
   cv-group: 2
 
 - id: devpost
@@ -67,23 +84,15 @@
   color: "#E1306C"
   class: "fab fa-instagram icon"
   url: "https://www.instagram.com/matheusmaldaner/"
-  on-homepage: true
-
-- id: home
-  description: "matheusmaldaner.github.io"
-  color: "#515151"
-  class: "fas fa-home icon"
-  url: "https://matheusmaldaner.github.io"
   on-homepage: false
-  cv-group: 1
 
-- id: cv
-  description: CV PDF
-  color: "#ba2818"
-  class: "far fa-file-pdf icon"
-  url: "/cv.pdf"
-  on-homepage: false
-  cv-group: 1
+# - id: cv
+#   description: CV PDF
+#   color: "#ba2818"
+#   class: "far fa-file-pdf icon"
+#   url: "/cv.pdf"
+#   on-homepage: false
+#   cv-group: 1
 
 - id: cv-web
   description: CV
@@ -96,6 +105,14 @@
   description: "YouTube"
   color: "#FF0000"
   class: "fab fa-youtube icon"
-  url: "https://www.youtube.com/@matheusmaldaner"
+  url: "https://www.youtube.com/@matheusresearch"
   on-homepage: true
   cv-group: 1
+
+- id: scholar
+  description: "Papers"
+  color: "#515151"
+  class: "fa fa-graduation-cap icon"
+  url: "https://scholar.google.com/citations?user=Vl6XswcAAAAJ&hl=en"
+  on-homepage: true
+  cv-group: 2
