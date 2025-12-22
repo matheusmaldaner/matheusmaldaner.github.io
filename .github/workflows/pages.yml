@@ -41,6 +41,9 @@ jobs:
       - name: Convert YAML to JSON
         run: npm run convert:yaml
 
+      - name: Generate combined data file
+        run: npm run generate:combined
+
       - name: Build CV Jekyll site
         working-directory: cv
         run: bundle exec jekyll build --source . --destination ../_site/cv

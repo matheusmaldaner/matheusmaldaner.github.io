@@ -5,6 +5,7 @@
   "description": "Build scripts for matheusmaldaner.github.io",
   "scripts": {
     "convert:yaml": "node _scripts/yaml-to-json.js",
+    "generate:combined": "node _scripts/generate-combined.js",
     "generate:cv-pdf": "node _scripts/generate-cv-pdf.js"
   },
   "license": "MIT",
