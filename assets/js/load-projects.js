@@ -70,6 +70,27 @@ function buildLinkButtons(links, btnClass) {
     </a>`);
   }
 
+  if (links.demo) {
+    buttons.push(`<a href="${escapeHtml(links.demo)}" class="${btnClass} demo-btn"
+      target="_blank" rel="noopener" title="Live Demo" aria-label="Live Demo">
+      <i class="fas fa-external-link-alt"></i>
+    </a>`);
+  }
+
+  if (links.paper) {
+    buttons.push(`<a href="${escapeHtml(links.paper)}" class="${btnClass} paper-btn"
+      target="_blank" rel="noopener" title="Read Paper" aria-label="Read Paper">
+      <i class="fas fa-file-pdf"></i>
+    </a>`);
+  }
+
+  if (links.blog) {
+    buttons.push(`<a href="${escapeHtml(links.blog)}" class="${btnClass} blog-btn"
+      target="_blank" rel="noopener" title="Read Blog Post" aria-label="Read Blog Post">
+      <i class="fas fa-blog"></i>
+    </a>`);
+  }
+
   return buttons.join('');
 }
 
@@ -118,7 +139,7 @@ function renderProjectCard(project) {
   const awardText = typeof project.award === 'string' ? project.award : 'Award Winner';
   const filterType = getFilterCategory(project.type);
 
-  // Context line (hackathon name or class name) with award integrated
+  // Context line (hackathon name, class name, or generic context) with award integrated
   let contextLine = '';
   if (project.type === 'hackathon' && project.hackathon_name) {
     if (hasAward) {
@@ -128,8 +149,15 @@ function renderProjectCard(project) {
     }
   } else if (project.type === 'class' && project.class_name) {
     contextLine = `<div class="project-context">${escapeHtml(project.class_name)}</div>`;
+  } else if (project.context) {
+    // Generic context for work/research/personal projects
+    if (hasAward) {
+      contextLine = `<div class="project-context"><span class="award-text">🏆 ${escapeHtml(awardText)}</span> - ${escapeHtml(project.context)}</div>`;
+    } else {
+      contextLine = `<div class="project-context">${escapeHtml(project.context)}</div>`;
+    }
   } else if (hasAward) {
-    // Show award even without hackathon/class context
+    // Show award even without context
     contextLine = `<div class="project-context"><span class="award-text">🏆 ${escapeHtml(awardText)}</span></div>`;
   }
 
@@ -171,7 +199,7 @@ function renderFeaturedProjects() {
     return;
   }
 
-  featuredGrid.innerHTML = featured.map(renderFeaturedCard).join('');
+  featuredGrid.innerHTML = featured.map(renderProjectCard).join('');
 }
 
 // Render regular projects grid
@@ -267,7 +295,7 @@ function openProjectModal(project) {
   modalImage.src = project.image;
   modalImage.alt = project['image-alt'] || project.title;
 
-  // Set context (award + hackathon/class name)
+  // Set context (award + hackathon/class/generic context)
   let contextHtml = '';
   if (project.type === 'hackathon' && project.hackathon_name) {
     if (hasAward) {
@@ -277,6 +305,12 @@ function openProjectModal(project) {
     }
   } else if (project.type === 'class' && project.class_name) {
     contextHtml = escapeHtml(project.class_name);
+  } else if (project.context) {
+    if (hasAward) {
+      contextHtml = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span> - ${escapeHtml(project.context)}`;
+    } else {
+      contextHtml = escapeHtml(project.context);
+    }
   } else if (hasAward) {
     contextHtml = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span>`;
   }
@@ -307,6 +341,21 @@ function openProjectModal(project) {
   if (links.news) {
     linkButtons.push(`<a href="${escapeHtml(links.news)}" class="modal-link-btn news-btn" target="_blank" rel="noopener">
       <i class="fas fa-newspaper"></i> News
+    </a>`);
+  }
+  if (links.demo) {
+    linkButtons.push(`<a href="${escapeHtml(links.demo)}" class="modal-link-btn demo-btn" target="_blank" rel="noopener">
+      <i class="fas fa-external-link-alt"></i> Demo
+    </a>`);
+  }
+  if (links.paper) {
+    linkButtons.push(`<a href="${escapeHtml(links.paper)}" class="modal-link-btn paper-btn" target="_blank" rel="noopener">
+      <i class="fas fa-file-pdf"></i> Paper
+    </a>`);
+  }
+  if (links.blog) {
+    linkButtons.push(`<a href="${escapeHtml(links.blog)}" class="modal-link-btn blog-btn" target="_blank" rel="noopener">
+      <i class="fas fa-blog"></i> Blog
     </a>`);
   }
 
