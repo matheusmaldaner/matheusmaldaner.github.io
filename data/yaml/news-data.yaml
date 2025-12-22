@@ -25,7 +25,7 @@
       icon: fas fa-globe
 
 - id: 2025-10-27-uf-ai-days-gator-create-3rd-place
-  title: UF AI Days Gator Create 3rd Place & 3 Track Winner
+  title: UF Gator Create IV 3 Track Winner
   date: October 27, 2025
   category: competition
   featured: false
@@ -43,7 +43,7 @@
       icon: fab fa-google-drive
 
 - id: 2025-10-27-uf-ai-days-gator-hack-1st-place
-  title: UF AI Days Gator Hack 1st Place
+  title: UF Gator Hack IV 1st Place
   date: October 27, 2025
   category: competition
   featured: false
@@ -100,7 +100,7 @@
       url: https://www.linkedin.com/posts/matheusmaldaner_last-friday-marked-my-last-day-as-a-research-activity-7363694696159670274-dqUi?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
       icon: fab fa-linkedin
 - id: 2024-08-10-carnegie-mellon-university-summer-research-internship
-  title: Carnegie Mellon University Summer Research Internship
+  title: Carnegie Mellon University Internship
   date: August 10, 2024
   category: internship
   featured: false
@@ -259,7 +259,7 @@
       url: https://www.ufdsi.com/team
       icon: fas fa-users
 - id: 2024-04-07-uf-datafest-first-place
-  title: UF DataFest 2024 First Place
+  title: UF DataFest 1st Place
   date: April 7, 2024
   category: competition
   featured: false
@@ -335,7 +335,7 @@
 - id: 2025-05-12-hack-space-con
   title: Hack Space Con
   date: May 12, 2025
-  category: scholarship
+  category: conference
   featured: false
   image: /images/news/2025-05-12-hack-space-con/cover.jpg
   description: I received the ITIAS Hack Space Con Scholarship to attend this year's Hack Space Con and tour the Kennedy Space Center thanks to David Vozzola. I had a phenomenal time learning more about cybersecurity and attending talks related to machine learning. I am grateful for Dr. Woodard's recommendation and for Dr. Vozzola's support and hospitality.
@@ -379,7 +379,7 @@
       url: https://www.linkedin.com/posts/dsiufl_yesterday-we-had-the-honor-of-being-named-activity-7319131967344574464-r2h4?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
       icon: fab fa-linkedin
 - id: 2025-04-16-uf-hall-of-fame-induction
-  title: UF Hall of Fame Induction
+  title: UF Hall of Fame
   date: April 16, 2025
   category: awards
   featured: true
@@ -411,7 +411,7 @@
       url: https://www.linkedin.com/posts/matheusmaldaner_last-week-i-was-inducted-into-the-university-activity-7320966146931806209-BBgy?utm_source=share&utm_medium=member_desktop&rcm=ACoAADDwyo0Bykh-ZFQh7EzjZWi1H75IMU9v4ko
       icon: fab fa-linkedin
 - id: 2025-03-30-uf-datafest-best-visualization-award
-  title: UF DataFest Best Visualization Award
+  title: UF DataFest Best Visualization
   date: March 30, 2025
   category: competition
   featured: false
@@ -471,7 +471,7 @@
       url: https://www.fefonline.org/2024AFM-MYM-Agenda.pdf
       icon: fas fa-newspaper
 - id: 2025-01-26-uf-swamphacks-x-best-ai-award
-  title: UF Swamphacks X Best AI Award
+  title: UF Swamphacks X Best AI Hack
   date: January 26, 2025
   category: competition
   featured: false
@@ -499,7 +499,7 @@
 #     - /images/news/2024-11-27-hispanic-scholarship-fund-scholar/cover.jpg
 #   links: []
 - id: 2024-10-28-uf-genai-arts-competition-2nd-place
-  title: UF GenAI Arts Competition 2nd Place
+  title: UF Gator Create III 2nd Place
   date: October 28, 2024
   category: competition
   featured: false
@@ -525,7 +525,7 @@
       url: https://www.youtube.com/watch?v=OHo1SbqqXGU&t=2s
       icon: fas fa-video
 - id: 2024-10-28-uf-ai-days-hackathon-most-popular
-  title: UF AI Days Gator Hack Most Popular
+  title: UF Gator Hack III Most Popular
   date: October 28, 2024
   category: competition
   featured: false
@@ -546,4 +546,29 @@
       icon: fas fa-globe
     - label: GitHub
       url: https://github.com/matheusmaldaner/EcoLogic
+      icon: fab fa-github
+
+- id: 2023-10-15-uf-ai-days-gator-hack
+  title: UF Gator Hack II Finalist
+  date: October 15, 2023
+  category: competition
+  featured: false
+  image: /images/news/2023-10-15-uf-ai-days-gator-hack/cover.png
+  description: This was my first ever hackathon. Although we didn't win, my teammates Anirudh Tammisetti, Emily Jiji, Rahul Chari and I made it to the top 10 finalists with our project AdapTree, an AI-powered educational platform that creates personalized learning pathways based on a user's existing knowledge.
+  secondParagraph: This experience sparked my love for hackathons and set the foundation for the subsequent hackathons I competed in.
+  gallery:
+    - /images/news/2023-10-15-uf-ai-days-gator-hack/cover.png
+    - /images/news/2023-10-15-uf-ai-days-gator-hack/01.png
+    - /images/news/2023-10-15-uf-ai-days-gator-hack/02.png
+    - /images/news/2023-10-15-uf-ai-days-gator-hack/03.png
+    - /images/news/2023-10-15-uf-ai-days-gator-hack/04.png
+  links:
+    - label: YouTube Demo
+      url: https://www.youtube.com/watch?v=xcIVm6uuzJc
+      icon: fab fa-youtube
+    - label: Devpost
+      url: https://devpost.com/software/adaptree#updates
+      icon: fas fa-globe
+    - label: GitHub
+      url: https://github.com/emilyjiji/gatoraidays
       icon: fab fa-github
