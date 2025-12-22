@@ -94,7 +94,7 @@
   position: "President"
   year: "2018 — 2021"
   description: "Led Marjory's Garden organization during high school achieving 1000+ volunteering hours."
-  institution-url: "https://www.browardschools.com/msd"
+  #institution-url: "https://www.browardschools.com/msd"
   type: "leadership"
 
 - institution: "National Honor Society"
@@ -102,7 +102,7 @@
   position: "President"
   year: "2020 — 2021"
   description: "Served as President of the National Honor Society chapter and delivered the Pledge of Allegiance."
-  institution-url: "https://www.browardschools.com/msd"
+  #institution-url: "https://www.browardschools.com/msd"
   type: "leadership"
 
 - institution: "Mu Alpha Theta Calculus Team"
@@ -110,5 +110,5 @@
   position: "Captain"
   year: "2020 — 2021"
   description: "Led the Mu Alpha Theta Calculus competition team and hosted practice sessions."
-  institution-url: "https://www.browardschools.com/msd"
+  #institution-url: "https://www.browardschools.com/msd"
   type: "leadership"
