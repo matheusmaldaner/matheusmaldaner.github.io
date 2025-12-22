@@ -23,22 +23,93 @@
 #   hackathon_name: "Hackathon Name"  # Only if type: hackathon
 #   class_name: "COP2510"  # Only if type: class
 
-- id: neural-network-visualizer
-  title: "Neural Network Visualizer"
-  description: "Interactive tool for visualizing and interacting with logic gate neural networks, enhancing transparency in AI decision-making."
-  type: "hackathon"
-  hackathon_name: "UF Swamphacks X"
+- id: mirage
+  title: "MIRAGE"
+  description: "Multi-model Interface for Reviewing & Auditing Generative Text-to-Image AI — a platform enabling side-by-side comparison of T2I models to study how comparative auditing changes bias detection strategies."
+  type: "research"
   year: 2025
   technologies:
     - "Python"
-    - "Visualization"
-  image: "/images/projects/neural_network_visualizer/magnifying-glass.gif"
+    - "Django"
+    - "Docker"
+    - "AWS"
+  image: "/images/projects/mirage.png"
+  image-alt: "MIRAGE interface showing side-by-side comparison of text-to-image AI model outputs"
+  links:
+    demo: "https://mirage.weaudit.org/"
+  collaborators: "Wesley Hanwen Deng, Jason I. Hong, Ken Holstein, Motahhare Eslami"
+  award: "CI'25 & HCOMP'24"
+  cv_featured: true
+  featured: true
+  proprietary: true
+
+- id: platos-cave
+  title: "Plato's Cave"
+  description: "AI-powered research verification tool that decomposes academic papers into factual claims and verifies them using a legion of AI agents, generating visual knowledge graphs with mathematically-grounded integrity scores."
+  type: "hackathon"
+  hackathon_name: "UF Gator Hack IV"
+  year: 2025
+  technologies:
+    - "Python"
+    - "FastAPI"
+    - "Gatsby"
+    - "React"
+    - "Docker"
+    - "Playwright"
+  image: "/images/projects/platos-cave.png"
+  image-alt: "Plato's Cave interface showing knowledge graph visualization of verified research claims"
+  links:
+    github: "https://github.com/matheusmaldaner/PlatosCave"
+    devpost: "https://www.hackathonparty.com/hackathons/26/projects/355"
+  collaborators: "Raul Valle, Stephen Wormald, Kristian O'Connor, James Woelke"
+  award: "1st Place Overall"
+  cv_featured: true
+  featured: true
+
+- id: magentic-ui
+  title: "Magentic-UI"
+  description: "Human-in-the-loop agentic system for web automation that enables users to co-plan, co-task, and maintain control over AI agents through action guards and transparent execution."
+  type: "work"
+  year: 2025
+  technologies:
+    - "Python"
+    - "TypeScript"
+    - "AutoGen"
+    - "React"
+    - "Docker"
+  image: "/images/projects/magentic-ui.png"
+  image-alt: "Magentic-UI interface showing human-in-the-loop AI agent collaboration"
+  links:
+    github: "https://github.com/microsoft/magentic-ui"
+    paper: "https://arxiv.org/abs/2507.22358v1"
+    blog: "https://www.microsoft.com/en-us/research/blog/magentic-ui-an-experimental-human-centered-web-agent/"
+  collaborators: "Hussein Mozannar, Adam Fourney, Gagan Bansal, Microsoft AI Frontiers Team"
+  award: "9.3k+ GitHub Stars"
+  cv_featured: true
+  featured: true
+
+- id: difflogic-visualizer
+  title: "DiffLogic Visualizer"
+  description: "Interactive web-based tool for visualizing Differentiable Logic Gate Networks (DiffLogic) — structure, activations, and decision paths that explain how the model arrives at a classification."
+  type: "hackathon"
+  hackathon_name: "UF SwampHacks X"
+  year: 2025
+  technologies:
+    - "Python"
+    - "Django"
+    - "PyTorch"
+    - "Next.js"
+    - "React"
+    - "D3.js"
+  image: "/images/projects/neural-network-visualizer.gif"
   image-alt: "Animated magnifying glass examining neural network nodes and connections"
   links:
-    github: "https://github.com/matheusmaldaner/NeuralNetworkVisualizer"
+    github: "https://github.com/matheusmaldaner/DiffLogicVisualizer"
     devpost: "https://devpost.com/software/neural-network-visualizer"
+    video: "https://www.youtube.com/watch?v=QbDwbOWFjFY"
+  collaborators: "Pranav Bhargava, Danush Singla, Kristian O'Connor"
   award: "Best AI Hack"
-  cv_featured: true
+  cv_featured: false
 
 - id: ecologic
   title: "EcoLogic"
@@ -50,13 +121,14 @@
     - "FPGA"
     - "Hardware Acceleration"
     - "DiffLogic"
-  image: "/images/projects/ecologic/ecologic-logo.png"
+  image: "/images/projects/ecologic.png"
   image-alt: "EcoLogic project logo featuring green circuit board design with leaf motif representing eco-friendly AI"
   links:
     github: "https://github.com/matheusmaldaner/EcoLogic"
     devpost: "https://devpost.com/software/ecologic"
+  collaborators: "Landon Nayab, Raul Valle, Stephen Wormald"
   award: "Most Popular"
-  cv_featured: true
+  cv_featured: false
 
 - id: dinojourney
   title: "DinoJourney"
@@ -67,27 +139,30 @@
   technologies:
     - "Mobile Development"
     - "Mental Health"
-  image: "/images/projects/dinojourney/dinojourney-logo.PNG"
+  image: "/images/projects/dinojourney.png"
   image-alt: "DinoJourney logo showing a friendly cartoon dinosaur companion for mental health support"
   links:
     github: "https://github.com/matheusmaldaner/DinoJourney"
     devpost: "https://devpost.com/software/dinojourney"
+  collaborators: "Evan Partidas, Emily Jiji, Raul Valle"
   award: "Most Popular"
-  cv_featured: true
+  cv_featured: false
 
 - id: saliencyslider
   title: "SaliencySlider"
   description: "Web application that allows users to upload images and explore how a CNN classifies images based on specific regions, using a saliency slider for feature visibility."
-  type: "personal"
+  type: "class"
+  class_name: "MAS4115 - Linear Algebra"
   year: 2023
   technologies:
     - "Python"
     - "CNN"
     - "Web Development"
-  image: "/images/projects/saliencyslider/slide.png"
+  image: "/images/projects/saliency-slider.png"
   image-alt: "Saliency map visualization showing highlighted regions that CNN focuses on during image classification"
   links:
     github: "https://github.com/matheusmaldaner/SaliencySlider"
+    report: "https://github.com/matheusmaldaner/SaliencySlider/blob/main/SaliencySlider/SaliencySlider.pdf"
   award: false
   cv_featured: false
 
@@ -100,12 +175,12 @@
   technologies:
     - "Data Science"
     - "Statistical Analysis"
-  image: "/images/projects/asa_datafest/worm.png"
+  image: "/images/projects/asa-datafest.png"
   image-alt: "Data visualization worm chart showing CourseKata learning patterns analysis from DataFest competition"
   links:
     news: "https://phhp.ufl.edu/2024/04/10/a-whirlwind-of-big-data-recapping-datafest-2024/"
   award: "1st Place Overall"
-  cv_featured: true
+  cv_featured: false
 
 - id: dinodetect
   title: "DinoDetect"
@@ -117,14 +192,15 @@
     - "NLP"
     - "Discord Bot"
     - "Sentiment Analysis"
-  image: "/images/projects/dinodetect/dino.png"
+  image: "/images/projects/dinodetect.png"
   image-alt: "DinoDetect logo featuring dinosaur mascot for Discord bot sentiment analysis tool"
   links:
     github: "https://github.com/Jibby2k1/DinoDetect"
     devpost: "https://devpost.com/software/dinodetect"
+    video: "https://www.youtube.com/watch?v=Q9cEjgjdCxQ"
   collaborators: "Raul Valle, Sebastian Sosa"
   award: "2nd Place Overall and Best AI Hack"
-  cv_featured: true
+  cv_featured: false
 
 - id: adaptree
   title: "AdapTree"
@@ -135,14 +211,15 @@
   technologies:
     - "AI/ML"
     - "Education Technology"
-  image: "/images/projects/adaptree/adaptree.png"
+  image: "/images/projects/adaptree.png"
   image-alt: "AdapTree logo showing tree structure representing personalized adaptive learning pathways"
   links:
     devpost: "https://devpost.com/software/adaptree"
     github: "https://github.com/emilyjiji/gatoraidays"
+    video: "https://www.youtube.com/watch?v=xcIVm6uuzJc"
   collaborators: "Anirudh Tammisetti, Emily Jiji, Rahul Chari"
   award: "Finalist"
-  cv_featured: true
+  cv_featured: false
 
 - id: regressive-reasoning
   title: "Regressive Reasoning"
@@ -154,10 +231,11 @@
     - "TensorFlow"
     - "EfficientNet"
     - "HPC"
-  image: "/images/projects/regressive_reasoning/regressivereasoning.png"
+  image: "/images/projects/regressive-reasoning.png"
   image-alt: "Regressive Reasoning project logo for brand logo classification machine learning system"
   links:
     github: "https://github.com/matheusmaldaner/RegressiveReasoning"
+    report: "https://github.com/matheusmaldaner/RegressiveReasoning/blob/main/EEL5840_Project_Report.pdf"
   collaborators: "Pedro Moss, Ruo Chen"
   award: false
   cv_featured: false
@@ -172,10 +250,11 @@
     - "R"
     - "Bioinformatics"
     - "RNA-seq"
-  image: "/images/projects/neuronal_analysis/musmusculus.png"
+  image: "/images/projects/neuronal-analysis.png"
   image-alt: "Scientific illustration of Mus musculus house mouse used for neuronal gene analysis research"
   links:
     github: "https://github.com/matheusmaldaner/NeuronalAnalysis"
+    report: "https://github.com/matheusmaldaner/NeuronalAnalysis/blob/main/FinalReport.pdf"
   collaborators: "Rama Janco, Nathan Gilman, Ethan Fan"
   award: false
   cv_featured: false
@@ -189,12 +268,12 @@
   technologies:
     - "Flutter"
     - "Mobile Development"
-  image: "/images/projects/budget_buddy/budgetbuddy.png"
+  image: "/images/projects/budget-buddy.png"
   image-alt: "BudgetBuddy app logo with financial planning and budget tracking graphics"
   links:
     github: "https://github.com/matheusmaldaner/BudgetBuddy"
-    video:
-  collaboraters: "Samuel Trejo, Nico Gleason"
+    video: "https://www.youtube.com/watch?v=c89N0RcXqX0"
+  collaborators: "Samuel Trejo, Nico Gleason"
   award: false
   cv_featured: false
 
@@ -208,7 +287,7 @@
     - "Python"
     - "Pygame"
     - "Game Development"
-  image: "/images/projects/jasons_journey/jasonjourney.png"
+  image: "/images/projects/jasons-journey.png"
   image-alt: "Jason's Journey game screenshot showing pixel art dungeon crawler with mathematical elements"
   links:
     github: "https://github.com/matheusmaldaner/JasonJourney"
@@ -225,7 +304,7 @@
   technologies:
     - "C++"
     - "API Integration"
-  image: "/images/projects/room_automation/roomautomation.png"
+  image: "/images/projects/room-automation.png"
   image-alt: "Room Automation system interface for optimizing university housing assignments"
   links: {}
   award: false
