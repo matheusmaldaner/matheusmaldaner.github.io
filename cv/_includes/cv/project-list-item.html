@@ -1,0 +1,30 @@
+{% assign project = include.project %}
+{% assign links = project.links %}
+
+{% assign href = links.github | default: links.devpost | default: links.news | default: "/pages/projects.html" %}
+
+{% capture meta %}
+  {% if project.type == "hackathon" and project.hackathon_name %}
+    {{ project.hackathon_name }}
+  {% elsif project.type == "class" and project.class_name %}
+    {{ project.class_name }}
+  {% elsif project.type %}
+    {{ project.type | capitalize }}
+  {% endif %}
+  {% if project.award %} · {% if project.award == true %}Award{% else %}{{ project.award }}{% endif %}{% endif %}
+{% endcapture %}
+
+<div class="cv-left-date">{{ project.year }}</div>
+<div>
+  {% if project.proprietary %}
+    <b>{{ project.title }}</b> <span class="appears-on">(Proprietary)</span>
+  {% else %}
+    <a href="{{ href }}" target="_blank" rel="noopener noreferrer"><b>{{ project.title }}</b></a>
+  {% endif %}
+  {% if meta and meta != "" %}
+    <span class="appears-on"> · {{ meta | strip }}</span>
+  {% endif %}
+</div>
+<div class="cv-description">{{ project.description }}</div>
+<div class="cv-spacer"></div>
+

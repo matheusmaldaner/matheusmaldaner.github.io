@@ -33,6 +33,8 @@
 
 .project-picture {
     // width: 10rem;
+    height: 6.5rem;
+    object-fit: cover;
     border-radius: 0.5rem;
     border: $black-05 1px solid;
 }

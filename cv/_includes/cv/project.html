@@ -1,0 +1,35 @@
+{% assign project = include.project %}
+{% assign links = project.links %}
+
+{% assign image_alt = project["image-alt"] | default: project.imageAlt | default: project.title %}
+{% assign href = links.github | default: links.devpost | default: links.news | default: "/pages/projects.html" %}
+
+{% capture meta %}
+  {% if project.type == "hackathon" and project.hackathon_name %}
+    {{ project.hackathon_name }}
+  {% elsif project.type == "class" and project.class_name %}
+    {{ project.class_name }}
+  {% elsif project.type %}
+    {{ project.type | capitalize }}
+  {% endif %}
+  {% if project.year %} · {{ project.year }}{% endif %}
+  {% if project.award %} · {% if project.award == true %}Award{% else %}{{ project.award }}{% endif %}{% endif %}
+{% endcapture %}
+
+{% if project.proprietary %}
+  <div class="project">
+    <img class="project-picture" src="{{ project.image }}" alt="{{ image_alt }}" loading="lazy">
+    <div class="project-title">{{ project.title }}</div>
+    <div class="project-subtitle">{{ project.description | truncate: 120 }}</div>
+    <div class="project-venue">{{ meta | strip }} · Proprietary</div>
+  </div>
+{% else %}
+  <a class="project" href="{{ href }}" target="_blank" rel="noopener noreferrer">
+    <img class="project-picture" src="{{ project.image }}" alt="{{ image_alt }}" loading="lazy">
+    <div class="project-title">{{ project.title }}</div>
+    <div class="project-subtitle">{{ project.description | truncate: 120 }}</div>
+    {% if meta and meta != "" %}
+      <div class="project-venue">{{ meta | strip }}</div>
+    {% endif %}
+  </a>
+{% endif %}

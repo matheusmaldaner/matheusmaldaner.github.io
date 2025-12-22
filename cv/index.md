@@ -79,6 +79,15 @@ I am a first-year master's student at the University of Florida in the M.S. AI S
 {% include cv/publication.html pub=pub %}
 {% endfor %}
 
+## Selected Projects
+
+Full list: [matheusmaldaner.github.io/pages/projects.html](/pages/projects.html)
+
+{% assign cv_projects = site.data.projects | where_exp: "p", "p.cv_featured != false" %}
+{% for project in cv_projects %}
+{% include cv/project-list-item.html project=project %}
+{% endfor %}
+
 {% comment %}
 ## Talks
 
