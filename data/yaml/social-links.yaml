@@ -28,7 +28,7 @@
   color: "#515151"
   class: "fas fa-file-alt icon"
   url: "https://matheus.wiki/cv"
-  on-homepage: true
+  on-homepage: false
   #cv-group: 1
 
 - id: email
@@ -36,7 +36,7 @@
   color: "#515151"
   class: "fas fa-envelope icon"
   url: "mailto:mkunzlermaldaner@ufl.edu"
-  on-homepage: true
+  on-homepage: false
   cv-group: 1
 
 - id: resume-pdf
@@ -48,7 +48,7 @@
   cv-group: 1
 
 - id: twitter
-  description: "@matheusmaldaner"
+  description: "Twitter/X"
   color: "#1da1f2"
   class: "fab fa-twitter icon"
   url: "https://x.com/matheusmaldaner"

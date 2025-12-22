@@ -41,7 +41,6 @@
   award: "CI'25 & HCOMP'24"
   cv_featured: true
   featured: true
-  proprietary: true
 
 - id: platos-cave
   title: "Plato's Cave"
@@ -300,6 +299,7 @@
   title: "Room Automation"
   description: "A software solution for optimizing room assignments at UF, employing C++ and Qualtrics API to streamline the process for over 200 Resident Assistants."
   type: "work"
+  context: "During my time as a Resident Assistant at UF"
   year: 2022
   technologies:
     - "C++"

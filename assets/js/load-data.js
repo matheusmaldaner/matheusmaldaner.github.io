@@ -29,7 +29,7 @@ function getDisplayLabel(id, description) {
     'instagram': 'Instagram',
     'twitter': 'X',
     'devpost': 'Devpost',
-    'scholar': 'Google Scholar',
+    'scholar': 'Papers',
     'youtube': 'YouTube',
     'email': 'Email'
   };

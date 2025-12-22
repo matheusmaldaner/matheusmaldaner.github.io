@@ -221,4 +221,4 @@ Universe
 
 [linkedin]: https://www.linkedin.com/in/matheusmaldaner "@matheusmaldaner"
 [github]: https://www.github.com/matheusmaldaner "github.com/matheusmaldaner"
-[scholar]: https://scholar.google.com/citations?user=Vl6XswcAAAAJ&hl=en "Google Scholar"
+[scholar]: https://scholar.google.com/citations?user=Vl6XswcAAAAJ&hl=en "Papers"
