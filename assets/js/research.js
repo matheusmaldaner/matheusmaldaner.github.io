@@ -266,149 +266,68 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollCarousel();
     });
 });
-// Poster data (sorted in reverse chronological order)
-const postersData = [
-    {
-        id: "poster17",
-        title: "Sentinel Steps: Towards Longer Running AI Agents",
-        venue: "Microsoft Research Symposium 2025",
-        date: "Summer 2025",
-        posterImage: "../images/posters/poster17.jpg",
-        presentationImage: "../images/posters/presenting17.jpg"
-    },
-    {
-        id: "poster14",
-        title: "Enhancing AI Security with FPGA-Accelerated Differentiable Logic Gate Networks",
-        venue: "UF Spring Symposium 2025",
-        date: "April 2025",
-        posterImage: "../images/posters/poster14.jpg",
-        presentationImage: "../images/posters/presenting14.jpg"
-    },
-    {
-        id: "poster16",
-        title: "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies",
-        venue: "ACM CI 2025",
-        date: "April 2025",
-        posterImage: "../images/posters/poster16.jpg",
-        presentationImage: "../images/posters/presenting16.jpg"
-    },
-    {
-        id: "poster13",
-        title: "The Ineffectiveness of the Information Maximization Algorithm on Spectrally Sparse Signals",
-        venue: "SHPE Symposium 2025",
-        date: "February 2025",
-        posterImage: "../images/posters/poster13.jpg",
-        presentationImage: "../images/posters/presenting13.jpg"
-    },
-    {
-        id: "poster15",
-        title: "Deploying Learned Logic Gates onto FPGAs for Increased Efficiency",
-        venue: "FURC 2025",
-        date: "February 2025",
-        posterImage: "../images/posters/poster15.jpg",
-        presentationImage: "../images/posters/presenting15.jpg"
-    },
-    {
-        id: "poster7",
-        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI",
-        venue: "HCOMP 2024",
-        date: "November 2024",
-        posterImage: "../images/posters/poster_hcomp.jpg",
-        presentationImage: "../images/posters/presenting7.jpg"
-    },
-    {
-        id: "poster8",
-        title: "Side-by-Side Multi-Models T2I Comparisons Unveiling Problems in AI",
-        venue: "UF Fall Symposium 2024",
-        date: "November 2024",
-        posterImage: "../images/posters/poster8.jpg",
-        presentationImage: "../images/posters/presenting8.jpg"
-    },
-    {
-        id: "poster9",
-        title: "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks",
-        venue: "HiPerGator Symposium 2024",
-        date: "November 2024",
-        posterImage: "../images/posters/poster_uf_hipergator_explogic.jpeg",
-        presentationImage: "../images/posters/presenting9.jpg"
-    },
-    {
-        id: "poster11",
-        title: "Side-by-Side Multi-Models T2I Comparisons Unveiling Problems in AI",
-        venue: "McKnight Fellows Conference 2024",
-        date: "November 2024",
-        posterImage: "../images/posters/poster11.jpg",
-        presentationImage: "../images/posters/presenting11.jpg"
-    },
-    {
-        id: "poster12",
-        title: "Accelerating Real-Time Inference with FPGA-Implemented Logic Gate Neural Networks",
-        venue: "Warren B. Nelms IoT 2024",
-        date: "November 2024",
-        posterImage: "../images/posters/poster12.jpg",
-        presentationImage: "../images/posters/presenting12.jpg"
-    },
-    {
-        id: "poster10",
-        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI",
-        venue: "UF AI Days 2024",
-        date: "October 2024",
-        posterImage: "../images/posters/poster_uf_aidays_mirage.jpeg",
-        presentationImage: "../images/posters/presenting10.jpg"
-    },
-    {
-        id: "poster6",
-        title: "MIRAGE: Multi-model Interface for Reviewing and Auditing GEnerative Text-to-Image AI",
-        venue: "Carnegie Mellon 2024",
-        date: "Summer 2024",
-        posterImage: "../images/posters/poster6.jpg",
-        presentationImage: "../images/posters/presenting6.jpg"
-    },
-    {
-        id: "poster2",
-        title: "Neuro Symbolic AI: Bridging Neural Networks and Symbolic Reasoning for Enhanced AI Transparency",
-        venue: "Sigma Xi 2024",
-        date: "April 2024",
-        posterImage: "../images/posters/poster2.jpg",
-        presentationImage: "../images/posters/presenting2.jpg"
-    },
-    {
-        id: "poster3",
-        title: "Ethical Horizons in the field of Neuro Symbolic AI",
-        venue: "UF Spring Symposium 2024",
-        date: "April 2024",
-        posterImage: "../images/posters/poster_uf_spring_symposium.jpeg",
-        presentationImage: "../images/posters/presenting3.jpg"
-    },
-    {
-        id: "poster4",
-        title: "Ethical Horizons in the field of Neuro Symbolic AI",
-        venue: "SHPE Symposium 2024",
-        date: "April 2024",
-        posterImage: "../images/posters/poster4.jpg",
-        presentationImage: "../images/posters/presenting4.jpg"
-    },
-    {
-        id: "poster5",
-        title: "Uniting Symbolic and Neural Paradigms for Transparent AI",
-        venue: "DSI Spring Symposium 2024",
-        date: "April 2024",
-        posterImage: "../images/posters/poster5.jpg",
-        presentationImage: "../images/posters/presenting5.jpg"
-    },
-    {
-        id: "poster1",
-        title: "Neuro Symbolic AI: Bridging Neural Networks and Symbolic Reasoning for Enhanced AI Transparency",
-        venue: "FURC 2024",
-        date: "February 2024",
-        posterImage: "../images/posters/poster_furc_difflogic_fpga.jpeg",
-        presentationImage: "../images/posters/presenting1.jpg"
+let postersData = [];
+
+function parseISODate(value) {
+    if (!value) return null;
+    const date = new Date(`${value}T00:00:00Z`);
+    return Number.isNaN(date.getTime()) ? null : date;
+}
+
+function formatPosterDate(value) {
+    const parsed = parseISODate(value);
+    if (!parsed) return value || '';
+    return parsed.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+function normalizePoster(raw) {
+    const id = raw && raw.id ? String(raw.id) : '';
+    const title = raw && raw.title ? String(raw.title) : '';
+    const venue = raw && raw.venue ? String(raw.venue) : '';
+    const dateIso = raw && (raw.date || raw.date_iso) ? String(raw.date || raw.date_iso) : '';
+    const posterImage = raw && (raw.poster_image || raw.posterImage || raw.image) ? String(raw.poster_image || raw.posterImage || raw.image) : '';
+    const presentationImage = raw && (raw.presentation_image || raw.presentationImage) ? String(raw.presentation_image || raw.presentationImage) : '';
+
+    return {
+        id,
+        title,
+        venue,
+        date: raw && raw.date_display ? String(raw.date_display) : formatPosterDate(dateIso),
+        date_iso: dateIso,
+        posterImage,
+        presentationImage
+    };
+}
+
+async function loadPosters() {
+    try {
+        const response = await fetch('../data/json/posters.json');
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const data = await response.json();
+        if (!Array.isArray(data)) throw new Error('Invalid posters.json format');
+
+        postersData = data
+            .map(normalizePoster)
+            .filter(p => p.id && p.title && p.venue && p.posterImage && p.presentationImage)
+            .sort((a, b) => {
+                const da = parseISODate(a.date_iso);
+                const db = parseISODate(b.date_iso);
+                if (da && db) return db - da;
+                if (da) return -1;
+                if (db) return 1;
+                return b.id.localeCompare(a.id);
+            });
+
+        return true;
+    } catch (error) {
+        console.error('Error loading posters:', error);
+        postersData = [];
+        return false;
     }
-];
+}
 
 // Posters carousel state
 let currentPosterPage = 0;
-const totalPosters = postersData.length;
 let postersPerPage = 3;
 let activePoster = null;
 
@@ -426,12 +345,14 @@ function updatePostersPerPage() {
 
 // Calculate max pages for posters
 function getMaxPosterPages() {
+    const totalPosters = postersData.length;
     return Math.max(0, Math.ceil(totalPosters / postersPerPage) - 1);
 }
 
 // Render poster cards
 function renderPosterCards() {
     const carousel = document.getElementById('postersCarousel');
+    if (!carousel) return;
     carousel.innerHTML = postersData.map(poster => `
         <div class="poster-card" data-poster-id="${poster.id}" tabindex="0" role="button">
             <img src="${poster.posterImage}" alt="${poster.title}" class="poster-thumbnail">
@@ -529,7 +450,7 @@ function openPosterPanel(poster) {
 
     // Add active class to clicked card
     const activeCard = document.querySelector(`[data-poster-id="${poster.id}"]`);
-    activeCard.classList.add('active');
+    if (activeCard) activeCard.classList.add('active');
 
     // Populate panel content
     content.innerHTML = `
@@ -577,11 +498,14 @@ function closePosterPanel() {
 // Initialize posters carousel
 document.addEventListener('DOMContentLoaded', function() {
     updatePostersPerPage();
-    renderPosterCards();
+    loadPosters().then(() => {
+        currentPosterPage = 0;
+        renderPosterCards();
 
-    // Wait for cards to be rendered and laid out
-    requestAnimationFrame(() => {
-        updatePosterNavButtons();
+        // Wait for cards to be rendered and laid out
+        requestAnimationFrame(() => {
+            updatePosterNavButtons();
+        });
     });
 
     // Previous button
