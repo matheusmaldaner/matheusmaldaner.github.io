@@ -600,10 +600,25 @@
 					overflow: hidden;
 				}
 
-				/* Hide description and context on mobile */
-				.card-description,
-				.project-context {
+				/* Hide description on mobile, but show context */
+				.card-description {
 					display: none;
+				}
+
+				/* Compact context styling for mobile */
+				.project-context {
+					font-size: 0.55rem;
+					line-height: 1.2;
+					margin-top: 0.15rem;
+					color: #666;
+					display: -webkit-box;
+					-webkit-line-clamp: 1;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+				}
+
+				.project-context .award-text {
+					font-size: 0.55rem;
 				}
 
 				/* Hide link buttons on mobile */
