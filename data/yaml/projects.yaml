@@ -2,20 +2,33 @@
 # - id: example-project
 #   title: "Example Project"
 #   description: "One-sentence description of the project."
+#   type: "hackathon" | "class" | "personal" | "research" | "work"  # Required
 #   technologies:
 #     - "Example Tech"
 #   image: "/images/projects/example/example.png"
 #   image-alt: "Accessible description of the project image."
+#   year: 2024  # Year completed
 #   links:
 #     github: "https://github.com/example/repo"
 #     devpost: "https://devpost.com/software/example"
 #     news: "https://example.com/news"
-#   award: true
+#   contact:  # Optional - direct links
+#     linkedin: "https://linkedin.com/in/example"
+#     portfolio: "https://example.com"
+#   award: true | false | "Award Name"
+#   award_recognition: "Award recognition or placement"  # Optional
+#   collaborators: "Comma-separated list of collaborators"  # Optional
+#   cv_featured: true  # Whether to show on CV
 #   proprietary: false
+#   hackathon_name: "Hackathon Name"  # Only if type: hackathon
+#   class_name: "COP2510"  # Only if type: class
 
 - id: neural-network-visualizer
   title: "Neural Network Visualizer"
   description: "Interactive tool for visualizing and interacting with logic gate neural networks, enhancing transparency in AI decision-making."
+  type: "hackathon"
+  hackathon_name: "UF Swamphacks X"
+  year: 2025
   technologies:
     - "Python"
     - "Visualization"
@@ -24,11 +37,15 @@
   links:
     github: "https://github.com/matheusmaldaner/NeuralNetworkVisualizer"
     devpost: "https://devpost.com/software/neural-network-visualizer"
-  award: true
+  award: "Best AI Hack"
+  cv_featured: true
 
 - id: ecologic
   title: "EcoLogic"
   description: "Implemented Differentiable Logic Gate Networks on FPGAs for increased inference speeds and reduction in power consumption."
+  type: "hackathon"
+  hackathon_name: "UF Gator Hack III"
+  year: 2024
   technologies:
     - "FPGA"
     - "Hardware Acceleration"
@@ -38,11 +55,15 @@
   links:
     github: "https://github.com/matheusmaldaner/EcoLogic"
     devpost: "https://devpost.com/software/ecologic"
-  award: true
+  award: "Most Popular"
+  cv_featured: true
 
 - id: dinojourney
   title: "DinoJourney"
   description: "Mobile mental health companion app that pairs users with a supportive dinosaur pet, promoting well-being without guilt."
+  type: "hackathon"
+  hackathon_name: "ShellHacks 2024"
+  year: 2024
   technologies:
     - "Mobile Development"
     - "Mental Health"
@@ -51,11 +72,14 @@
   links:
     github: "https://github.com/matheusmaldaner/DinoJourney"
     devpost: "https://devpost.com/software/dinojourney"
-  award: true
+  award: "Most Popular"
+  cv_featured: true
 
 - id: saliencyslider
   title: "SaliencySlider"
   description: "Web application that allows users to upload images and explore how a CNN classifies images based on specific regions, using a saliency slider for feature visibility."
+  type: "personal"
+  year: 2023
   technologies:
     - "Python"
     - "CNN"
@@ -65,10 +89,14 @@
   links:
     github: "https://github.com/matheusmaldaner/SaliencySlider"
   award: false
+  cv_featured: false
 
 - id: asa-datafest
   title: "ASA DataFest"
   description: "Data analysis presentation using CourseKata data for the University of Florida's largest annual Data Science competition. Awarded best overall project."
+  type: "hackathon"
+  hackathon_name: "UF DataFest 2024"
+  year: 2024
   technologies:
     - "Data Science"
     - "Statistical Analysis"
@@ -76,11 +104,15 @@
   image-alt: "Data visualization worm chart showing CourseKata learning patterns analysis from DataFest competition"
   links:
     news: "https://phhp.ufl.edu/2024/04/10/a-whirlwind-of-big-data-recapping-datafest-2024/"
-  award: "Best Overall Project"
+  award: "1st Place Overall"
+  cv_featured: true
 
 - id: dinodetect
   title: "DinoDetect"
   description: "Discord bot that uses sentiment analysis to detect cheating, sentiment, and toxicity in server communications."
+  type: "hackathon"
+  hackathon_name: "OSC MiniHack"
+  year: 2024
   technologies:
     - "NLP"
     - "Discord Bot"
@@ -90,11 +122,16 @@
   links:
     github: "https://github.com/Jibby2k1/DinoDetect"
     devpost: "https://devpost.com/software/dinodetect"
-  award: true
+  collaborators: "Raul Valle, Sebastian Sosa"
+  award: "2nd Place Overall and Best AI Hack"
+  cv_featured: true
 
 - id: adaptree
   title: "AdapTree"
   description: "AI-powered educational platform that creates personalized learning pathways based on user's background. Finalist at 2023 AI Days Hackathon."
+  type: "hackathon"
+  hackathon_name: "UF Gator Hack II"
+  year: 2023
   technologies:
     - "AI/ML"
     - "Education Technology"
@@ -102,11 +139,17 @@
   image-alt: "AdapTree logo showing tree structure representing personalized adaptive learning pathways"
   links:
     devpost: "https://devpost.com/software/adaptree"
-  award: "Finalist - AI Days Hackathon 2023"
+    github: "https://github.com/emilyjiji/gatoraidays"
+  collaborators: "Anirudh Tammisetti, Emily Jiji, Rahul Chari"
+  award: "Finalist"
+  cv_featured: true
 
 - id: regressive-reasoning
   title: "Regressive Reasoning"
   description: "A machine learning project focused on classifying brand logos with a 95% validation accuracy, utilizing TensorFlow and EfficientNet on UF's HiPerGator supercomputer."
+  type: "class"
+  class_name: "EEL5840 - Fundamentals of Machine Learning"
+  year: 2023
   technologies:
     - "TensorFlow"
     - "EfficientNet"
@@ -115,11 +158,16 @@
   image-alt: "Regressive Reasoning project logo for brand logo classification machine learning system"
   links:
     github: "https://github.com/matheusmaldaner/RegressiveReasoning"
+  collaborators: "Pedro Moss, Ruo Chen"
   award: false
+  cv_featured: false
 
 - id: neuronal-analysis
   title: "Neuronal Analysis"
   description: "Leading gene analysis of house mouse in R, using machine learning algorithms to decode neuronal network patterns from RNA-seq datasets."
+  type: "class"
+  class_name: "CGS4144 - Bioinformatics"
+  year: 2023
   technologies:
     - "R"
     - "Bioinformatics"
@@ -127,12 +175,17 @@
   image: "/images/projects/neuronal_analysis/musmusculus.png"
   image-alt: "Scientific illustration of Mus musculus house mouse used for neuronal gene analysis research"
   links:
-    github: "https://github.com/matheusmaldaner/BioinformaticsProject"
+    github: "https://github.com/matheusmaldaner/NeuronalAnalysis"
+  collaborators: "Rama Janco, Nathan Gilman, Ethan Fan"
   award: false
+  cv_featured: false
 
 - id: budget-buddy
   title: "Budget Buddy"
   description: "Flutter-based app developed to assist in financial planning, featuring dynamic graphs and sorting algorithm analyses for efficient budget management."
+  type: "class"
+  class_name: "COP3530 - Data Structures and Algorithms"
+  year: 2023
   technologies:
     - "Flutter"
     - "Mobile Development"
@@ -140,11 +193,17 @@
   image-alt: "BudgetBuddy app logo with financial planning and budget tracking graphics"
   links:
     github: "https://github.com/matheusmaldaner/BudgetBuddy"
+    video:
+  collaboraters: "Samuel Trejo, Nico Gleason"
   award: false
+  cv_featured: false
 
 - id: jasons-journey
   title: "Jason's Journey"
-  description: "A dungeon crawler Python game inspired by professor Jason Harrington's love for mathematics, developed with Pygame for MAD2502."
+  description: "A dungeon crawler Python game inspired by professor Jason Harrington's love for mathematics, developed with Pygame for MAD2502 (with his support)."
+  type: "class"
+  class_name: "MAD2502 - Computational Mathematics"
+  year: 2023
   technologies:
     - "Python"
     - "Pygame"
@@ -152,12 +211,17 @@
   image: "/images/projects/jasons_journey/jasonjourney.png"
   image-alt: "Jason's Journey game screenshot showing pixel art dungeon crawler with mathematical elements"
   links:
-    github: "https://github.com/matheusmaldaner/RogueLike"
+    github: "https://github.com/matheusmaldaner/JasonJourney"
+    video: "https://www.youtube.com/watch?v=pitanN35QZ0&t=714s"
+  collaborators: "Gabi Sprague, Victoria Manzato, Kyle Weiner"
   award: false
+  cv_featured: false
 
 - id: room-automation
   title: "Room Automation"
   description: "A software solution for optimizing room assignments at UF, employing C++ and Qualtrics API to streamline the process for over 200 Resident Assistants."
+  type: "work"
+  year: 2022
   technologies:
     - "C++"
     - "API Integration"
@@ -165,5 +229,5 @@
   image-alt: "Room Automation system interface for optimizing university housing assignments"
   links: {}
   award: false
+  cv_featured: false
   proprietary: true
-
