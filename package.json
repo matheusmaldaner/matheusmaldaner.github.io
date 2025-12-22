@@ -6,6 +6,7 @@
   "scripts": {
     "convert:yaml": "node _scripts/yaml-to-json.js",
     "generate:combined": "node _scripts/generate-combined.js",
+    "generate:llms-txt": "node _scripts/generate-llms-txt.js",
     "generate:cv-pdf": "node _scripts/generate-cv-pdf.js"
   },
   "license": "MIT",

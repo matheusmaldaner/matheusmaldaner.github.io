@@ -1,0 +1,79 @@
+# Matheus Kunzler Maldaner
+
+> Personal website of Matheus Kunzler Maldaner - AI/ML researcher and M.S. AI Systems student at the University of Florida. Research focus: Neurosymbolic AI, Human-Computer Interaction, and Agentic Systems.
+
+Last updated: 2025-12-22
+
+## About
+
+Hi, my name is Matheus Kunzler Maldaner and I am a first-year master's student at the University of Florida in the M.S. AI Systems Program. I was born and raised in Brazil and moved to Florida in 2017 where I attended highschool at Marjory Stoneman Douglas (not the greatest timing I know). I graduated Summa Cum Laude with B.S. in Data Science from the University of Florida with a thesis on the applications of Differentiable Logic Gate Networks. During my senior year at UF, I was also inducted...
+
+- [Homepage](https://matheus.wiki/)
+- [CV](https://matheus.wiki/cv/)
+
+## Research Publications
+
+- [Magentic-UI: Towards Human-in-the-loop Agentic Systems](https://arxiv.org/abs/2507.22358v1): AI agents powered by large language models are increasingly capable of autonomously completing complex, multi-step tasks using external tools. Yet,... (Microsoft Research AI Frontiers (arXiv preprint), 2025)
+- [Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies](https://arxiv.org/abs/2511.21547v1): While generative AI systems have gained popularity in diverse applications, their potential to produce harmful outputs limits their trustworthiness... (ACM CI, 2025)
+- [eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks](https://arxiv.org/abs/2503.09910): Constraining deep neural networks (DNNs) to learn individual logic types per node, as performed using the DiffLogic network architecture, opens the... (ITNG, 2025)
+- Efficient and Transparent Machine Learning: Exploring Applications of Differentiable Logic Gate Networks: Despite their remarkable capabilities, the decision-making process of deep neural networks remains a black box, obscuring the logic behind model de... (Undergraduate Thesis, University of Florida, 2025)
+- [MIRAGE: Multi-model Interface for Reviewing and Auditing Generative Text-to-Image AI](https://arxiv.org/abs/2503.19252): While generative AI systems have gained popularity in diverse applications, their potential to produce harmful outputs limits their trustworthiness... (HCOMP, 2024)
+- [Abstracting General Syntax for XAI after Decomposing Explanation Sub-Components](https://link.springer.com/article/10.1007/s10462-025-11216-8): Policy makers, healthcare providers, and defense contractors need to understand many types of machine learning model behaviors. While eXplainable A... (Springer AI, 2024)
+
+## Featured Projects
+
+- [MIRAGE](https://mirage.weaudit.org/): Multi-model Interface for Reviewing & Auditing Generative Text-to-Image AI — a platform enabling side-by-side comparison of T2I models to study how...
+- [Plato's Cave](https://github.com/matheusmaldaner/PlatosCave): AI-powered research verification tool that decomposes academic papers into factual claims and verifies them using a legion of AI agents, generating...
+- [Magentic-UI](https://github.com/microsoft/magentic-ui): Human-in-the-loop agentic system for web automation that enables users to co-plan, co-task, and maintain control over AI agents through action guar...
+
+## Education
+
+- M.S. in AI Systems, University of Florida (Aug. 2025 — Present)
+- B.S. in Data Science, University of Florida (Aug. 2021 — May. 2025)
+- High-School Diploma, Marjory Stoneman Douglas High School (Aug. 2017 — May. 2021)
+
+## Selected Awards
+
+- UF HiPerGator Early Career Award - 2025
+- UF Gator Create 3 of 7 Tracks - 2025
+- UF Gator Hack 1st Place - 2025
+- Heidelberg Laureate Forum - 2025
+- Microsoft Intern Puzzle Day Fastest Solver - 2025
+- ITNG Best Student Paper Award - 2025
+- ITIAS Hack Space Con Scholarship - 2025
+- FGLSA Travel Support - 2025
+- UF CLAS Excellence Award Finalist - 2025
+- UF Outstanding Leader Award - 2025
+
+## Experience
+
+- Research Intern at Microsoft Research (Summer 2025)
+- Research Intern at Carnegie Mellon University (Summer 2024 — Present)
+- Research Assistant at Florida Institute for National Security (FINS) (Fall 2023 — Present)
+- President at Data Science and Informatics (DSI) Organization (Fall 2023 — Present)
+- Co-Founder & Vice-President at IEEE Signal Processing Society at UF (Fall 2024 — Present)
+- Director of Research at UF AI Club (Fall 2024 — Present)
+- Vice President at UF American Statistical Association (ASA) Chapter (Fall 2023 — Spring 2024)
+- President at Marjory's Garden (2018 — 2021)
+- President at National Honor Society (2020 — 2021)
+- Captain at Mu Alpha Theta Calculus Team (2020 — 2021)
+
+## Contact & Links
+
+- [mkunzlermaldaner@ufl.edu](mailto:mkunzlermaldaner@ufl.edu)
+- [Twitter/X](https://x.com/matheusmaldaner)
+- [@matheusmaldaner](https://github.com/matheusmaldaner)
+- [matheusmaldaner](https://www.linkedin.com/in/matheusmaldaner/)
+- [Papers](https://scholar.google.com/citations?user=Vl6XswcAAAAJ&hl=en)
+
+## Site Pages
+
+- [About / Home](https://matheus.wiki/): Main landing page with bio and social links
+- [News](https://matheus.wiki/pages/news.html): Latest updates, awards, and announcements
+- [Projects](https://matheus.wiki/pages/projects.html): Software projects, hackathon wins, and demos
+- [Research](https://matheus.wiki/pages/research.html): Publications, papers, and research posters
+- [CV](https://matheus.wiki/cv/): Full academic curriculum vitae
+
+---
+
+This file was auto-generated on 2025-12-22 from https://matheus.wiki

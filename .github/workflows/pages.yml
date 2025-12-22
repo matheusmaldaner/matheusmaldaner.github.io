@@ -44,6 +44,9 @@ jobs:
       - name: Generate combined data file
         run: npm run generate:combined
 
+      - name: Generate llms.txt for AI indexing
+        run: npm run generate:llms-txt
+
       - name: Build CV Jekyll site
         working-directory: cv
         run: bundle exec jekyll build --source . --destination ../_site/cv

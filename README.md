@@ -30,8 +30,20 @@ All content is managed through YAML files in `data/yaml/`. The build process:
 1. **Individual YAML files** (`data/yaml/*.yaml`) - Source of truth for all content
 2. **JSON conversion** (`npm run convert:yaml`) - Converts YAML to JSON for the website
 3. **Combined data** (`npm run generate:combined`) - Aggregates all YAML into `data/combined-data.yaml`
+4. **LLM indexing** (`npm run generate:llms-txt`) - Generates `llms.txt` for AI crawlers
 
 The combined data file serves as a portable knowledge base that can be shared with AI assistants or used for other integrations.
+
+### llms.txt
+
+The `llms.txt` file is a proposed standard for helping AI systems understand website content. It's automatically generated from the combined data and includes:
+
+- Research publications with abstracts
+- Featured projects
+- Education and experience
+- Contact links
+
+Learn more: [llmstxt.org](https://llmstxt.org/)
 
 ## CV
 
