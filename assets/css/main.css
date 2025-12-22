@@ -2498,10 +2498,30 @@ input, select, textarea {
 				padding: 3.5em 0 3em 0;
 			}
 
-		/* Nav */
+		/* Nav - Show on mobile with horizontal layout */
 
 			#nav {
-				display: none;
+				display: block;
+				margin: 1.5em 0 0 0;
+			}
+
+			#nav > ul {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.3em;
+				margin: 0;
+				padding: 0;
+			}
+
+			#nav > ul > li {
+				display: inline-block;
+				margin: 0;
+			}
+
+			#nav > ul > li > a {
+				padding: 0.5em 0.7em;
+				font-size: 0.85em;
 			}
 
 		/* Intro */
@@ -2565,22 +2585,7 @@ input, select, textarea {
 			}
 
 			#titleBar {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 44px;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 100%;
-				z-index: 10001;
-				background: none;
+				display: none;
 			}
 
 				#titleBar .toggle {
@@ -2947,6 +2952,7 @@ input, select, textarea {
 	outline: 2px solid #000;
 	outline-offset: 2px;
 }
+
 
 @media (min-width: 768px) {
 	.button.alt.award-button {
