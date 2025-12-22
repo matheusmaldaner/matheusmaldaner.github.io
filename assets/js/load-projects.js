@@ -97,7 +97,7 @@ function renderFeaturedCard(project) {
   const linkButtons = buildLinkButtons(links, 'featured-link-btn');
 
   return `
-    <div class="featured-card">
+    <div class="featured-card" data-id="${escapeHtml(project.id)}">
       <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project['image-alt'] || project.title)}" loading="lazy">
       <div class="featured-overlay">
         <div class="featured-badges">
@@ -136,7 +136,7 @@ function renderProjectCard(project) {
   const linkButtons = buildLinkButtons(links, 'project-link-btn');
 
   return `
-    <div class="project-card" data-type="${filterType}">
+    <div class="project-card" data-type="${filterType}" data-id="${escapeHtml(project.id)}">
       <div class="card-image">
         <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project['image-alt'] || project.title)}" loading="lazy">
         <div class="card-badges">
@@ -250,5 +250,138 @@ async function loadProjects() {
   }
 }
 
+// Modal functions
+function openProjectModal(project) {
+  const modal = document.getElementById('project-modal');
+  if (!modal || !project) return;
+
+  const links = project.links || {};
+  const hasAward = project.award && project.award !== false;
+  const awardText = typeof project.award === 'string' ? project.award : 'Award Winner';
+
+  // Set title
+  document.getElementById('modal-title').textContent = project.title;
+
+  // Set image
+  const modalImage = document.getElementById('modal-image');
+  modalImage.src = project.image;
+  modalImage.alt = project['image-alt'] || project.title;
+
+  // Set context (award + hackathon/class name)
+  let contextHtml = '';
+  if (project.type === 'hackathon' && project.hackathon_name) {
+    if (hasAward) {
+      contextHtml = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span> - ${escapeHtml(project.hackathon_name)}`;
+    } else {
+      contextHtml = escapeHtml(project.hackathon_name);
+    }
+  } else if (project.type === 'class' && project.class_name) {
+    contextHtml = escapeHtml(project.class_name);
+  } else if (hasAward) {
+    contextHtml = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span>`;
+  }
+  document.getElementById('modal-context').innerHTML = contextHtml;
+
+  // Set description
+  document.getElementById('modal-description').textContent = project.description;
+
+  // Set links
+  const linksContainer = document.getElementById('modal-links');
+  const linkButtons = [];
+
+  if (links.github) {
+    linkButtons.push(`<a href="${escapeHtml(links.github)}" class="modal-link-btn github-btn" target="_blank" rel="noopener">
+      <i class="fab fa-github"></i> GitHub
+    </a>`);
+  }
+  if (links.devpost) {
+    linkButtons.push(`<a href="${escapeHtml(links.devpost)}" class="modal-link-btn devpost-btn" target="_blank" rel="noopener">
+      <i class="fas fa-trophy"></i> DevPost
+    </a>`);
+  }
+  if (links.video) {
+    linkButtons.push(`<a href="${escapeHtml(links.video)}" class="modal-link-btn demo-btn" target="_blank" rel="noopener">
+      <i class="fab fa-youtube"></i> Demo
+    </a>`);
+  }
+  if (links.news) {
+    linkButtons.push(`<a href="${escapeHtml(links.news)}" class="modal-link-btn news-btn" target="_blank" rel="noopener">
+      <i class="fas fa-newspaper"></i> News
+    </a>`);
+  }
+
+  linksContainer.innerHTML = linkButtons.join('');
+
+  // Show modal
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+  const modal = document.getElementById('project-modal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// Setup modal event listeners
+function setupModalListeners() {
+  const modal = document.getElementById('project-modal');
+  if (!modal) return;
+
+  // Close on X button
+  const closeBtn = modal.querySelector('.modal-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeProjectModal);
+  }
+
+  // Close on overlay click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeProjectModal();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeProjectModal();
+    }
+  });
+}
+
+// Setup card click handlers for modal using event delegation
+function setupCardClickHandlers() {
+  // Use event delegation on the grids so we don't need to reattach after re-rendering
+  const projectsGrid = document.getElementById('projects-grid');
+  const featuredGrid = document.getElementById('featured-grid');
+
+  const handleCardClick = (e) => {
+    const card = e.target.closest('.project-card, .featured-card');
+    if (!card) return;
+
+    // Don't open modal if clicking on a link
+    if (e.target.closest('a')) return;
+
+    const projectId = card.dataset.id;
+    const project = projectsData.find(p => p.id === projectId);
+    if (project) {
+      openProjectModal(project);
+    }
+  };
+
+  if (projectsGrid) {
+    projectsGrid.addEventListener('click', handleCardClick);
+  }
+  if (featuredGrid) {
+    featuredGrid.addEventListener('click', handleCardClick);
+  }
+}
+
 // Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', loadProjects);
+document.addEventListener('DOMContentLoaded', () => {
+  loadProjects();
+  setupModalListeners();
+  setupCardClickHandlers();
+});
