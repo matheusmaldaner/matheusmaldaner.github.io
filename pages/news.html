@@ -207,7 +207,7 @@
       }
 
       .badge-conference {
-        background: rgba(108, 117, 125, 0.9);
+        background: rgba(72, 187, 120, 0.9);
         color: white;
       }
 
@@ -486,10 +486,151 @@
           margin: 0;
         }
       }
+
+      /* Mobile: 3 items per row with compact cards */
+      @media (max-width: 600px) {
+        /* Featured Section - 3 columns */
+        .featured-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.5rem;
+        }
+
+        .featured-card {
+          height: 120px;
+          border-radius: 8px;
+        }
+
+        .featured-overlay {
+          padding: 0.5rem;
+        }
+
+        .featured-date {
+          font-size: 0.55rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .featured-title {
+          font-size: 0.65rem;
+          line-height: 1.2;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .featured-section h2 {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        /* Hide category badge on featured cards for cleaner look */
+        .featured-overlay .category-badge {
+          display: none;
+        }
+
+        /* Cards Grid - 3 columns */
+        .cards-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.5rem;
+        }
+
+        /* Compact card styling */
+        .news-card {
+          border-radius: 8px;
+        }
+
+        .card-image {
+          height: 70px;
+        }
+
+        /* Shrink category badge */
+        .category-badge {
+          font-size: 0.45rem;
+          padding: 0.15rem 0.35rem;
+          top: 0.3rem;
+          left: 0.3rem;
+          border-radius: 10px;
+          letter-spacing: 0.3px;
+        }
+
+        /* Compact content area */
+        .card-content {
+          padding: 0.4rem;
+        }
+
+        .card-date {
+          font-size: 0.55rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .card-title {
+          font-size: 0.65rem;
+          line-height: 1.25;
+          margin-bottom: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        /* Hide description on mobile */
+        .card-description {
+          display: none;
+        }
+
+        /* Section titles */
+        .cards-section h2 {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        /* Filter buttons - horizontal scroll */
+        .filter-section {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          justify-content: flex-start;
+          padding: 0.6rem;
+          gap: 0.4rem;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+        }
+
+        .filter-section::-webkit-scrollbar {
+          display: none;
+        }
+
+        .filter-btn {
+          font-size: 0.65rem;
+          padding: 0.4rem 0.7rem;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+
+        /* Main container adjustments */
+        .main-container {
+          padding: 0.5rem;
+        }
+
+        .featured-section {
+          margin-bottom: 1.5rem;
+        }
+
+        /* Work in progress banner */
+        #main .container > div[style*="background: linear-gradient"] {
+          padding: 0.6rem 0.8rem !important;
+          margin: 0.5rem auto 1rem auto !important;
+        }
+
+        #main .container > div[style*="background: linear-gradient"] span {
+          font-size: 0.75rem !important;
+        }
+      }
     </style>
   </head>
 
   <body class="no-sidebar is-preload">
+
     <div id="page-wrapper">
       <!-- Header / Nav -->
       <section id="header">
@@ -513,7 +654,7 @@
             <h2>News &amp; Updates</h2>
           </header>
           
-          <!-- Work in Progress Banner -->
+          <!-- Work in Progress Banner (commented out)
           <div style="background: linear-gradient(135deg, #ffeaa7, #fdcb6e); border-left: 4px solid #e17055; padding: 1rem 1.5rem; margin: 1rem auto 2rem auto; border-radius: 8px; max-width: 1200px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
               <i class="fas fa-tools" style="color: #d63031; font-size: 1.1rem;"></i>
@@ -521,6 +662,7 @@
               <span style="color: #636e72; font-size: 0.9rem;">I am currently populating this page with additional news entries and details.</span>
             </div>
           </div>
+          -->
           
           <div class="main-container">
 
@@ -538,7 +680,6 @@
             <button class="filter-btn" data-filter="awards">Awards</button>
             <button class="filter-btn" data-filter="competition">Competition</button>
             <button class="filter-btn" data-filter="scholarship">Scholarship</button>
-            <button class="filter-btn" data-filter="recognition">Recognition</button>
             <button class="filter-btn" data-filter="conference">Conference</button>
             <button class="filter-btn" data-filter="internship">Internship</button>
             <button class="filter-btn" data-filter="leadership">Leadership</button>
@@ -873,5 +1014,6 @@
         });
       }
     </script>
+
   </body>
 </html>
