@@ -16,9 +16,22 @@ npm install
 # 3. Convert YAML to JSON (run this when you change content in `data/yaml/`)
 npm run convert:yaml
 
-# 4. Start a local web server and open http://localhost:8000 in your browser.
+# 4. Generate combined data file (optional - creates a single YAML with all data)
+npm run generate:combined
+
+# 5. Start a local web server and open http://localhost:8000 in your browser.
 python3 -m http.server
 ```
+
+## Data Architecture
+
+All content is managed through YAML files in `data/yaml/`. The build process:
+
+1. **Individual YAML files** (`data/yaml/*.yaml`) - Source of truth for all content
+2. **JSON conversion** (`npm run convert:yaml`) - Converts YAML to JSON for the website
+3. **Combined data** (`npm run generate:combined`) - Aggregates all YAML into `data/combined-data.yaml`
+
+The combined data file serves as a portable knowledge base that can be shared with AI assistants or used for other integrations.
 
 ## CV
 
