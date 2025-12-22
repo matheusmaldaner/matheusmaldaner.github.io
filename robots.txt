@@ -1,0 +1,6 @@
+# robots.txt for matheus.wiki
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://matheus.wiki/sitemap.xml
