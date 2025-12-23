@@ -62,6 +62,9 @@ venv.bak/
 .bundle/
 vendor/
 
-# Auto-generated JSON files from YAML conversion
+# Auto-generated files from YAML conversion
 # YAML files are the source of truth
 data/json/
+cv/_posts/news/
+cv/_posts/projects/
+cv/_posts/papers/
