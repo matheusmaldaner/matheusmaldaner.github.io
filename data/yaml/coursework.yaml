@@ -1,0 +1,121 @@
+# Example entry (all fields populated):
+# - code: "COP3530"
+#   name: "Data Structures and Algorithms"
+#   category: "computer-science"
+#   language: "C++"  # Optional - programming language used
+
+# Mathematics
+- code: "MAC2311"
+  name: "Analytical Geometry and Calculus 1"
+  category: "mathematics"
+
+- code: "MAC2312"
+  name: "Analytical Geometry and Calculus 2"
+  category: "mathematics"
+
+- code: "MAC2313"
+  name: "Analytical Geometry and Calculus 3"
+  category: "mathematics"
+
+- code: "COT3100"
+  name: "Applied Discrete Structures"
+  category: "mathematics"
+
+- code: "MAS3114"
+  name: "Computational Linear Algebra"
+  category: "mathematics"
+
+- code: "MAS4115"
+  name: "Linear Algebra for Data Science"
+  category: "mathematics"
+
+# Computer Science
+- code: "MAD2502"
+  name: "Computational Mathematics"
+  category: "computer-science"
+  language: "Python"
+
+- code: "COP3502C"
+  name: "Programming Fundamentals 1"
+  category: "computer-science"
+  language: "JavaScript"
+
+- code: "COP3503C"
+  name: "Programming Fundamentals 2"
+  category: "computer-science"
+  language: "C++"
+
+- code: "COP3530"
+  name: "Data Structures and Algorithms"
+  category: "computer-science"
+  language: "C++"
+
+- code: "CDA3101"
+  name: "Computer Organization"
+  category: "computer-science"
+  language: "Assembly"
+
+- code: "COP4600"
+  name: "Operating Systems"
+  category: "computer-science"
+  language: "C++"
+
+- code: "CIS4301"
+  name: "Database Systems"
+  category: "computer-science"
+  language: "SQL"
+
+# Statistics
+- code: "STA2023"
+  name: "Intro to Statistics"
+  category: "statistics"
+
+- code: "STA4321"
+  name: "Probability"
+  category: "statistics"
+
+- code: "STA4322"
+  name: "Statistics Theory"
+  category: "statistics"
+
+- code: "STA3100"
+  name: "Programming with Data"
+  category: "statistics"
+
+- code: "STA4210"
+  name: "Regression Analysis"
+  category: "statistics"
+
+# Artificial Intelligence / Machine Learning
+- code: "EEL3872"
+  name: "AI Fundamentals"
+  category: "ai-ml"
+
+- code: "PHI3681"
+  name: "Ethics, Data, and Technology"
+  category: "ai-ml"
+
+- code: "EEL5840"
+  name: "Fundamentals of Machine Learning"
+  category: "ai-ml"
+
+- code: "EEE6512"
+  name: "Image Processing and Computer Vision"
+  category: "ai-ml"
+
+- code: "EEL6814"
+  name: "Deep Learning and Neural Networks"
+  category: "ai-ml"
+
+- code: "QMB3302"
+  name: "Business Analytics and AI"
+  category: "ai-ml"
+
+# Miscellaneous
+- code: "GIS3043"
+  name: "Foundations GIS"
+  category: "miscellaneous"
+
+- code: "BSC4434"
+  name: "Bioinformatics"
+  category: "miscellaneous"
