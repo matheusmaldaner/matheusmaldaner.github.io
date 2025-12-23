@@ -105,15 +105,15 @@
 # -----------------------------------------------------------------------------
 
 - id: 2025-09-12-heidelberg-laureate-forum
-  title: Heidelberg Laureate Forum 2025
+  title: Heidelberg Laureate Forum
   date: September 12, 2025
   category: conference
   featured: true
-  image: /images/news/2025-09-12-heidelberg-laureate-forum/cover.jpg
+  image: /images/news/2025-09-12-heidelberg-laureate-forum/cover.png
   description: I had a lot of fun at this yearly event which brings 200 young researchers from around the world to spend a week with the recipients of the most prestigious prizes in mathematics and computer sciences, such as the Turing Award, Fields Medal, Abel Prize, and Nevanlinna Prize.
   secondParagraph: It was a pleasure to speak with many laureates whom I've grown up hearing and reading about including Leslie Valiant, Vint Cerf, David Silver and Richard Sutton, to name a few. Happy to have made new friends, learned a lot, and explored a new city.
   gallery:
-    - /images/news/2025-09-12-heidelberg-laureate-forum/cover.jpg
+    - /images/news/2025-09-12-heidelberg-laureate-forum/cover.png
     - /images/news/2025-09-12-heidelberg-laureate-forum/01.jpg
     - /images/news/2025-09-12-heidelberg-laureate-forum/02.png
     - /images/news/2025-09-12-heidelberg-laureate-forum/03.jpg
@@ -174,7 +174,7 @@
 # -----------------------------------------------------------------------------
 
 - id: 2025-08-05-first-author-demo-paper-at-acm-ci
-  title: First-Author Demo Paper at ACM CI 2025
+  title: First-Author Demo Paper at ACM CI
   date: August 5, 2025
   category: conference
   featured: false
@@ -223,7 +223,7 @@
   title: UF Outstanding Leader Award
   date: May 3, 2025
   category: awards
-  featured: true
+  featured: false
   image: /images/news/2025-05-03-uf-outstanding-leader-award/cover.jpg
   description: I was honored to be one of the 7 graduating seniors across the entire University of Florida to receive the Outstanding Leader Award. Every year the University of Florida selects a total of 14 graduating seniors, 7 for leadership excellence (Leaders Award) and 7 for academic excellence (Scholars Award). This was an incredible ceremony that took place right before the general University-wide graduation ceremony where I got to speak with UF President Kent Fuchs and Provost Joe Glover (as well as many other important people)
   secondParagraph: I would like to share this award with all of the student organizations I have been a part of and the fellow student leaders I have worked with. I have been the president of Data Science and Informatics (DSI) for the past year, which recently won the award for Organization of the Year. Apart of DSI, I was the Vice President of UF's Statistics Club, Director of Campus Connections at UF's AI Club and co-founded UF's IEEE Signal Processing Society Chapter alongside my friend Raul Valle.
@@ -251,7 +251,7 @@
 # -----------------------------------------------------------------------------
 
 - id: 2025-04-27-best-student-paper-award-at-itng
-  title: Best Student Paper Award at ITNG 2025
+  title: Best Student Paper Award at ITNG
   date: April 27, 2025
   category: conference
   featured: false
@@ -374,7 +374,7 @@
 # =============================================================================
 
 - id: 2024-11-22-mcknight-annual-fellows-conference
-  title: McKnight Annual Fellows Conference
+  title: McKnight Fellows Conference
   date: November 22, 2024
   category: conference
   featured: false
@@ -449,7 +449,7 @@
 # -----------------------------------------------------------------------------
 
 - id: 2024-10-16-first-author-demo-paper-at-hcomp
-  title: First-Author Demo Paper at HCOMP 2024
+  title: First-Author Demo Paper at HCOMP
   date: October 16, 2024
   category: conference
   featured: false

@@ -33,3 +33,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-redirect-from
+
+# Feed settings
+feed:
+  posts_limit: 50

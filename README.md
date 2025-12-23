@@ -19,7 +19,16 @@ npm run convert:yaml
 # 4. Generate combined data file (optional - creates a single YAML with all data)
 npm run generate:combined
 
-# 5. Start a local web server and open http://localhost:8000 in your browser.
+# 5. Generate llms.txt for AI crawlers (optional)
+npm run generate:llms-txt
+
+# 6. Generate CV posts for Jekyll RSS feeds (optional)
+npm run generate:cv-posts
+
+# 7. Generate favicons from source image (optional - only when updating favicon)
+npm run generate:favicons -- images/headshot.png
+
+# 8. Start a local web server and open http://localhost:8000 in your browser.
 python3 -m http.server
 ```
 
