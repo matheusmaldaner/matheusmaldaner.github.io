@@ -14,13 +14,13 @@ html, body {
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
 @media screen and (max-width: $mobile) {
   html {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
@@ -38,11 +38,11 @@ img {
 }
 
 .fake-image {
-    height: 50px;
+    height: 3.125rem;
     background-color: $black-05;
     border: 1px solid $black-30;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-top: $space-2;
+    margin-bottom: $space-2;
     text-align: center;
     display: flex;
     flex-direction: column;

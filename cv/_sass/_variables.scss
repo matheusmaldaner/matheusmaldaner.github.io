@@ -1,6 +1,16 @@
+// ==========================================
+// CV Design System Variables
+// Aligned with main site CSS custom properties
+// ==========================================
+
 // Breakpoints
 $mobile: 768px;
 $homepage-pre-mobile: 1100px;
+
+// Primary Colors (matching main site)
+$primary: #d52349;
+$primary-hover: #e53359;
+$primary-active: #c51349;
 
 // Colors
 $text-color: #414141;
@@ -83,4 +93,26 @@ $washed-red:  #ffdfdf;
 
 $intro-blue: #e4f2ff;
 
-$border-radius: 1rem;
+// Spacing Scale (matching main site)
+$space-1: 0.25rem;  // 4px
+$space-2: 0.5rem;   // 8px
+$space-3: 0.75rem;  // 12px
+$space-4: 1rem;     // 16px
+$space-5: 1.5rem;   // 24px
+$space-6: 2rem;     // 32px
+$space-7: 2.5rem;   // 40px
+$space-8: 3rem;     // 48px
+$space-9: 4rem;     // 64px
+$space-10: 5rem;    // 80px
+
+// Border Radius (matching main site)
+$radius-sm: 0.25rem;   // 4px
+$radius-md: 0.3125rem; // 5px - standard
+$radius-lg: 0.5rem;    // 8px
+$radius-xl: 1rem;      // 16px (legacy)
+$border-radius: 1rem;  // legacy support
+
+// Transitions (matching main site)
+$transition-fast: 0.15s ease;
+$transition-base: 0.25s ease-in-out;
+$transition-slow: 0.35s ease;
