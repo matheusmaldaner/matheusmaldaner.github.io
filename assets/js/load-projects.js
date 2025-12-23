@@ -7,6 +7,10 @@
 let projectsData = [];
 let currentFilter = 'all';
 
+// Site owner identifier for linking to ProfilePage
+const SITE_OWNER_ID = "https://matheus.wiki/#matheus-maldaner";
+const SITE_OWNER_NAME = "matheus kunzler maldaner";
+
 // Inject JSON-LD structured data for SEO and AI indexing
 function injectProjectsSchema(projects) {
   const schema = {
@@ -19,11 +23,19 @@ function injectProjectsSchema(projects) {
         "dateCreated": String(project.year)
       };
 
-      // Add author
-      item.author = {
-        "@type": "Person",
-        "name": "Matheus Kunzler Maldaner"
-      };
+      // Build authors list: site owner + collaborators
+      const authors = [{ "@id": SITE_OWNER_ID }];
+      if (project.collaborators) {
+        const collabNames = project.collaborators.split(',').map(n => n.trim());
+        collabNames.forEach(name => {
+          if (name.toLowerCase() === SITE_OWNER_NAME) {
+            authors.push({ "@id": SITE_OWNER_ID });
+          } else {
+            authors.push({ "@type": "Person", "name": name });
+          }
+        });
+      }
+      item.author = authors.length === 1 ? authors[0] : authors;
 
       // Add technologies as programming languages
       if (project.technologies && project.technologies.length > 0) {

@@ -7,6 +7,10 @@
 let papersData = [];
 let currentModal = null;
 
+// Site owner identifier for linking to ProfilePage
+const SITE_OWNER_ID = "https://matheus.wiki/#matheus-maldaner";
+const SITE_OWNER_NAME = "matheus kunzler maldaner";
+
 // Inject JSON-LD structured data for SEO and AI indexing
 function injectPublicationsSchema(papers) {
   const schema = {
@@ -21,10 +25,16 @@ function injectPublicationsSchema(papers) {
       };
 
       if (paper.authors && paper.authors.length > 0) {
-        article.author = paper.authors.map(name => ({
-          "@type": "Person",
-          "name": name
-        }));
+        article.author = paper.authors.map(name => {
+          // Reference the ProfilePage Person for site owner, inline for others
+          if (name.toLowerCase() === SITE_OWNER_NAME) {
+            return { "@id": SITE_OWNER_ID };
+          }
+          return {
+            "@type": "Person",
+            "name": name
+          };
+        });
       }
 
       if (paper.abstract) {
