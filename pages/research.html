@@ -2,7 +2,11 @@
 <html lang="en">
     <head>
         <title>Research | Matheus Kunzler Maldaner</title>
-        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link rel="icon" href="/favicon.ico" sizes="32x32">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+        <link rel="manifest" href="/icons/site.webmanifest">
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta name="description" content="Research by Matheus Kunzler Maldaner - Neurosymbolic AI at UF, Text-to-Image auditing at CMU, and Agentic Systems at Microsoft Research. Publications, papers, and posters." />
@@ -19,6 +23,7 @@
         <meta name="twitter:description" content="Research in Neurosymbolic AI at UF, Text-to-Image auditing at CMU, and Agentic Systems at Microsoft Research." />
         <meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
         <link rel="stylesheet" href="../assets/css/main.css" />
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
     </head>
     <body>
 
@@ -604,9 +609,26 @@
                 gap: 1.5rem;
             }
 
+            /* Tablet range - keep 3 columns */
             @media (max-width: 1024px) {
                 .papers-grid {
-                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
+                }
+
+                .featured-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .papers-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1rem;
+                }
+
+                .featured-grid {
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1rem;
                 }
             }
 

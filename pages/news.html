@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <title>News | Matheus Kunzler Maldaner</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" href="/favicon.ico" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/icons/site.webmanifest">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="Latest news and updates from Matheus Kunzler Maldaner - awards, conferences, hackathon wins, scholarships, and research presentations." />
@@ -19,6 +23,7 @@
     <meta name="twitter:description" content="Latest news and updates - awards, conferences, hackathon wins, scholarships, and research presentations." />
     <meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
     <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
       :root {
@@ -151,7 +156,7 @@
 
       .cards-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
       }
 
@@ -454,25 +459,63 @@
         text-decoration: underline;
       }
 
-      /* Responsive Design */
+      /* Responsive Design - Tablet range */
+      @media (max-width: 1024px) and (min-width: 769px) {
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cards-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Responsive Design - Tablet/Mobile */
       @media (max-width: 768px) {
         .main-container {
           padding: 1rem;
         }
 
-
-
-        .cards-grid {
-          grid-template-columns: 1fr;
+        /* Featured Section - 2 columns */
+        .featured-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.5rem;
         }
 
-        .featured-grid {
-          grid-template-columns: 1fr;
+        .featured-card {
+          height: 150px;
+          border-radius: 8px;
+        }
+
+        .featured-overlay {
+          padding: 0.75rem;
+        }
+
+        .featured-date {
+          font-size: 0.65rem;
+          margin-bottom: 0.2rem;
+        }
+
+        .featured-title {
+          font-size: 0.8rem;
+          line-height: 1.2;
+        }
+
+        .featured-section h2 {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        /* Cards Grid - 3 columns */
+        .cards-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.5rem;
         }
 
         .filter-section {
-          flex-direction: column;
-          align-items: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
         }
 
         .modal-content {
@@ -486,65 +529,8 @@
         }
       }
 
+      /* Small mobile adjustments */
       @media (max-width: 480px) {
-
-
-        .cards-grid {
-          grid-template-columns: 1fr;
-          gap: 1rem;
-        }
-
-        .news-card {
-          margin: 0;
-        }
-      }
-
-      /* Mobile: 3 items per row with compact cards */
-      @media (max-width: 600px) {
-        /* Featured Section - 3 columns */
-        .featured-grid {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.5rem;
-        }
-
-        .featured-card {
-          height: 120px;
-          border-radius: 8px;
-        }
-
-        .featured-overlay {
-          padding: 0.5rem;
-        }
-
-        .featured-date {
-          font-size: 0.55rem;
-          margin-bottom: 0.2rem;
-        }
-
-        .featured-title {
-          font-size: 0.65rem;
-          line-height: 1.2;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-
-        .featured-section h2 {
-          font-size: 1.3rem;
-          margin-bottom: 1rem;
-        }
-
-        /* Hide category badge on featured cards for cleaner look */
-        .featured-overlay .category-badge {
-          display: none;
-        }
-
-        /* Cards Grid - 3 columns */
-        .cards-grid {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.5rem;
-        }
 
         /* Compact card styling */
         .news-card {

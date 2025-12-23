@@ -2,7 +2,11 @@
 <html lang="en">
 	<head>
 		<title>Projects | Matheus Kunzler Maldaner</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		<link rel="icon" href="/favicon.ico" sizes="32x32">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="manifest" href="/icons/site.webmanifest">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Projects by Matheus Kunzler Maldaner - Neural Network Visualizer, EcoLogic, DinoJourney, SaliencySlider, and other AI/ML projects from hackathons and coursework." />
@@ -19,6 +23,7 @@
 		<meta name="twitter:description" content="AI/ML projects including Neural Network Visualizer, EcoLogic, DinoJourney, SaliencySlider, and hackathon projects." />
 		<meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../assets/css/responsive.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<style>
 			:root {
@@ -183,9 +188,14 @@
 				gap: 1.5rem;
 			}
 
+			/* Tablet range - keep 3 columns */
 			@media (max-width: 1024px) {
 				.projects-grid {
-					grid-template-columns: repeat(2, 1fr);
+					grid-template-columns: repeat(3, 1fr);
+				}
+
+				.featured-grid {
+					grid-template-columns: repeat(3, 1fr);
 				}
 			}
 
@@ -538,12 +548,12 @@
 				}
 
 				.projects-grid {
-					grid-template-columns: repeat(2, 1fr);
+					grid-template-columns: repeat(3, 1fr);
 					gap: 1rem;
 				}
 
 				.featured-grid {
-					grid-template-columns: repeat(2, 1fr);
+					grid-template-columns: repeat(3, 1fr);
 					gap: 1rem;
 				}
 
