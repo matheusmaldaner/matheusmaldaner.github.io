@@ -7,6 +7,56 @@
 let papersData = [];
 let currentModal = null;
 
+// Inject JSON-LD structured data for SEO and AI indexing
+function injectPublicationsSchema(papers) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": papers.map(paper => {
+      const article = {
+        "@type": "ScholarlyArticle",
+        "name": paper.title,
+        "headline": paper.title,
+        "datePublished": String(paper.year),
+        "publisher": paper.venue
+      };
+
+      if (paper.authors && paper.authors.length > 0) {
+        article.author = paper.authors.map(name => ({
+          "@type": "Person",
+          "name": name
+        }));
+      }
+
+      if (paper.abstract) {
+        article.abstract = paper.abstract;
+      }
+
+      if (paper.url && paper.url !== "#") {
+        article.url = paper.url;
+      }
+
+      if (paper.pdf) {
+        article.mainEntityOfPage = paper.pdf;
+      }
+
+      if (paper.image) {
+        article.image = `https://matheus.wiki${paper.image}`;
+      }
+
+      if (paper.award) {
+        article.award = paper.award;
+      }
+
+      return article;
+    })
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
 // Escape HTML to prevent XSS
 function escapeHtml(value) {
   if (value === null || value === undefined) return '';
@@ -289,6 +339,9 @@ async function loadPapers() {
 
     // Sort by year (newest first)
     papersData.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+    // Inject JSON-LD structured data for SEO/AI
+    injectPublicationsSchema(papersData);
 
     // Render sections
     renderFeaturedPapers();

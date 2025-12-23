@@ -7,6 +7,60 @@
 let projectsData = [];
 let currentFilter = 'all';
 
+// Inject JSON-LD structured data for SEO and AI indexing
+function injectProjectsSchema(projects) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": projects.map(project => {
+      const item = {
+        "@type": "SoftwareSourceCode",
+        "name": project.title,
+        "description": project.description,
+        "dateCreated": String(project.year)
+      };
+
+      // Add author
+      item.author = {
+        "@type": "Person",
+        "name": "Matheus Kunzler Maldaner"
+      };
+
+      // Add technologies as programming languages
+      if (project.technologies && project.technologies.length > 0) {
+        item.programmingLanguage = project.technologies;
+      }
+
+      // Add GitHub link as code repository
+      if (project.links?.github) {
+        item.codeRepository = project.links.github;
+      }
+
+      // Add demo as target product
+      if (project.links?.demo) {
+        item.targetProduct = {
+          "@type": "WebApplication",
+          "url": project.links.demo
+        };
+      }
+
+      if (project.image) {
+        item.image = `https://matheus.wiki${project.image}`;
+      }
+
+      if (project.award && project.award !== false) {
+        item.award = typeof project.award === 'string' ? project.award : 'Award Winner';
+      }
+
+      return item;
+    })
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
 // Escape HTML to prevent XSS
 function escapeHtml(value) {
   if (value === null || value === undefined) return '';
@@ -266,6 +320,9 @@ async function loadProjects() {
 
     // Sort by year (newest first)
     projectsData.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+    // Inject JSON-LD structured data for SEO/AI
+    injectProjectsSchema(projectsData);
 
     // Render sections
     renderFeaturedProjects();
