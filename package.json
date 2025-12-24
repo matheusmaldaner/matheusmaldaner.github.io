@@ -10,7 +10,9 @@
     "generate:cv-pdf": "node _scripts/generate-cv-pdf.js",
     "generate:cv-posts": "node _scripts/generate-cv-posts.js",
     "generate:favicons": "node _scripts/generate-favicons.js",
-    "build:data": "npm run convert:yaml && npm run generate:cv-posts"
+    "build:data": "npm run convert:yaml && npm run generate:cv-posts",
+    "lint": "eslint assets/js _scripts",
+    "lint:fix": "eslint assets/js _scripts --fix"
   },
   "license": "MIT",
   "type": "commonjs",
@@ -19,6 +21,10 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-plugin-security": "^3.0.1",
+    "globals": "^16.5.0",
     "puppeteer": "^24.29.0"
   }
 }

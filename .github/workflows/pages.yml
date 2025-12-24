@@ -38,6 +38,9 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Run ESLint
+        run: npm run lint
+
       - name: Convert YAML to JSON
         run: npm run convert:yaml
 
