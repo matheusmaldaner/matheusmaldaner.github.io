@@ -26,7 +26,7 @@ npm run generate:llms-txt
 npm run generate:cv-posts
 
 # 7. Generate favicons from source image (optional - only when updating favicon)
-npm run generate:favicons -- images/headshot.png
+npm run generate:favicons -- images/headshot.jpeg
 
 # 8. Start a local web server and open http://localhost:8000 in your browser.
 python3 -m http.server

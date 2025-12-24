@@ -3,7 +3,7 @@
  * Favicon Generator Script
  *
  * Usage: node _scripts/generate-favicons.js <source-image>
- * Example: node _scripts/generate-favicons.js images/headshot.png
+ * Example: node _scripts/generate-favicons.js images/headshot.jpeg
  *
  * Generates all required favicon sizes from a single source image.
  * Source image should be at least 512x512px (square works best).
@@ -18,7 +18,7 @@ const OUTPUT_DIR = path.join(__dirname, '..', 'icons');
 
 if (!SOURCE_IMAGE) {
     console.error('Usage: node _scripts/generate-favicons.js <source-image>');
-    console.error('Example: node _scripts/generate-favicons.js images/headshot.png');
+    console.error('Example: node _scripts/generate-favicons.js images/headshot.jpeg');
     process.exit(1);
 }
 
