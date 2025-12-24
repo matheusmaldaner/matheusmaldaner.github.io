@@ -596,7 +596,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modals = document.querySelectorAll('.modal');
     window.onclick = function(event) {
         modals.forEach(modal => {
-            if (event.target == modal) {
+            if (event.target === modal) {
                 modal.style.display = 'none';
             }
         });
