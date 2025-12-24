@@ -99,6 +99,7 @@ async function loadSocialLinks() {
 }
 
 // Load and render about me content
+// Note: about.json is trusted content from the site owner, so HTML is allowed
 async function loadAboutContent() {
   try {
     const response = await fetch('/data/json/about.json');
@@ -110,7 +111,10 @@ async function loadAboutContent() {
     const container = document.getElementById('about-content-container');
     if (!container) return;
 
-    let html = `<p>${escapeHtml(aboutData.bio.main)}</p>`;
+    // Convert newlines to <br> for proper display
+    const formatContent = (text) => text.replace(/\n/g, '<br>');
+
+    let html = `<p>${formatContent(aboutData.bio.main)}</p>`;
 
     aboutData.sections.forEach(section => {
       html += `
@@ -118,7 +122,7 @@ async function loadAboutContent() {
           <header>
             <h3>${escapeHtml(section.title)}</h3>
           </header>
-          <p>${escapeHtml(section.content)}</p>
+          <p>${formatContent(section.content)}</p>
         </section>
       `;
     });

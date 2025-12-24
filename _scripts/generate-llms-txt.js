@@ -54,17 +54,6 @@ function truncate(str, maxLength = 200) {
 }
 
 /**
- * Format authors list
- */
-function formatAuthors(authors) {
-  if (!authors) return '';
-  if (Array.isArray(authors)) {
-    return authors.join(', ');
-  }
-  return authors;
-}
-
-/**
  * Generate the llms.txt content
  */
 function generateLlmsTxt(data) {
@@ -101,7 +90,6 @@ function generateLlmsTxt(data) {
     const sortedPubs = [...data.publications].sort((a, b) => (b.year || 0) - (a.year || 0));
 
     for (const pub of sortedPubs) {
-      const authors = formatAuthors(pub.authors);
       const venue = pub.venue || '';
       const year = pub.year || '';
       const url = pub.url && pub.url !== '#' ? pub.url : null;
@@ -138,7 +126,7 @@ function generateLlmsTxt(data) {
         }
         lines.push('');
       }
-    } catch (e) {
+    } catch {
       // Skip if projects.json can't be loaded
     }
   }

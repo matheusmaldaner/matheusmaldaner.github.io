@@ -87,7 +87,7 @@ function parseDate(dateStr, year) {
 function escapeYamlString(str) {
   if (!str) return '';
   // If string contains special characters, wrap in quotes
-  if (/[:#\[\]{}|>&*!?,\\]/.test(str) || str.includes('\n')) {
+  if (/[:#[\]{}|>&*!?,\\]/.test(str) || str.includes('\n')) {
     return `"${str.replace(/"/g, '\\"')}"`;
   }
   return str;

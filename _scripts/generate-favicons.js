@@ -57,22 +57,9 @@ async function generateFavicons() {
         console.log(`✓ Generated ${name} (${size}x${size})`);
     }
 
-    // Generate favicon.ico (multi-size ICO)
-    // ICO with 16, 32, and 48px versions
-    const icoSizes = [16, 32, 48];
-    const icoBuffers = await Promise.all(
-        icoSizes.map(size =>
-            sharp(sourcePath)
-                .resize(size, size, { fit: 'cover' })
-                .png()
-                .toBuffer()
-        )
-    );
-
-    // Write favicon.ico to icons folder
-    const ico16 = await sharp(sourcePath).resize(16, 16, { fit: 'cover' }).png().toBuffer();
-    const icoPath = path.join(OUTPUT_DIR, 'favicon.ico');
+    // Generate favicon.ico
     // For simplicity, use the 32x32 PNG as ICO (browsers handle it fine)
+    const icoPath = path.join(OUTPUT_DIR, 'favicon.ico');
     await sharp(sourcePath)
         .resize(32, 32, { fit: 'cover' })
         .png()

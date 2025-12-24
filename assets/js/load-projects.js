@@ -160,44 +160,6 @@ function buildLinkButtons(links, btnClass) {
   return buttons.join('');
 }
 
-// Render a featured project card
-function renderFeaturedCard(project) {
-  const links = project.links || {};
-  const hasAward = project.award && project.award !== false;
-  const awardText = typeof project.award === 'string' ? project.award : 'Award Winner';
-  const filterType = getFilterCategory(project.type);
-
-  // Context line (hackathon name or class name) with award integrated
-  let contextLine = '';
-  if (project.type === 'hackathon' && project.hackathon_name) {
-    if (hasAward) {
-      contextLine = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span> - ${escapeHtml(project.hackathon_name)}`;
-    } else {
-      contextLine = escapeHtml(project.hackathon_name);
-    }
-  } else if (project.type === 'class' && project.class_name) {
-    contextLine = escapeHtml(project.class_name);
-  } else if (hasAward) {
-    contextLine = `<span class="award-text">🏆 ${escapeHtml(awardText)}</span>`;
-  }
-
-  const linkButtons = buildLinkButtons(links, 'featured-link-btn');
-
-  return `
-    <div class="featured-card" data-id="${escapeHtml(project.id)}">
-      <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project['image-alt'] || project.title)}" loading="lazy">
-      <div class="featured-overlay">
-        <div class="featured-badges">
-          <span class="category-badge badge-${filterType}">${getCategoryLabel(project.type)}</span>
-        </div>
-        <h3 class="featured-title">${escapeHtml(project.title)}</h3>
-        ${contextLine ? `<div class="featured-context">${contextLine}</div>` : ''}
-        <div class="featured-links">${linkButtons}</div>
-      </div>
-    </div>
-  `;
-}
-
 // Render a regular project card
 function renderProjectCard(project) {
   const links = project.links || {};

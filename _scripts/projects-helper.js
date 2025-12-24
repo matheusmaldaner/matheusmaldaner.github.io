@@ -23,7 +23,6 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 const PROJECTS_YAML = path.join(__dirname, '../data/yaml/projects.yaml');
-const PROJECTS_JSON = path.join(__dirname, '../data/json/projects.json');
 
 // Color codes for terminal output
 const colors = {

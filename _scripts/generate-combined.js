@@ -41,13 +41,6 @@ function getYamlFiles(dir) {
 }
 
 /**
- * Format the current date
- */
-function getCurrentDate() {
-  return new Date().toISOString().split('T')[0];
-}
-
-/**
  * Main function to generate combined data
  */
 function generateCombinedData() {
