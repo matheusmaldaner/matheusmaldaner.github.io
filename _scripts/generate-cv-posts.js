@@ -147,8 +147,14 @@ function generatePublicationPosts() {
     return 0;
   }
 
-  const yamlContent = fs.readFileSync(yamlPath, 'utf8');
-  const publications = yaml.load(yamlContent) || [];
+  let publications;
+  try {
+    const yamlContent = fs.readFileSync(yamlPath, 'utf8');
+    publications = yaml.load(yamlContent) || [];
+  } catch (error) {
+    console.error(`  ✗ Error parsing publications.yaml: ${error.message}`);
+    return 0;
+  }
 
   ensureDir(outputDir);
   clearDir(outputDir);
@@ -226,8 +232,14 @@ function generateNewsPosts() {
     return 0;
   }
 
-  const yamlContent = fs.readFileSync(yamlPath, 'utf8');
-  const newsItems = yaml.load(yamlContent) || [];
+  let newsItems;
+  try {
+    const yamlContent = fs.readFileSync(yamlPath, 'utf8');
+    newsItems = yaml.load(yamlContent) || [];
+  } catch (error) {
+    console.error(`  ✗ Error parsing news-data.yaml: ${error.message}`);
+    return 0;
+  }
 
   ensureDir(outputDir);
   clearDir(outputDir);
@@ -289,8 +301,14 @@ function generateProjectPosts() {
     return 0;
   }
 
-  const yamlContent = fs.readFileSync(yamlPath, 'utf8');
-  const projects = yaml.load(yamlContent) || [];
+  let projects;
+  try {
+    const yamlContent = fs.readFileSync(yamlPath, 'utf8');
+    projects = yaml.load(yamlContent) || [];
+  } catch (error) {
+    console.error(`  ✗ Error parsing projects.yaml: ${error.message}`);
+    return 0;
+  }
 
   ensureDir(outputDir);
   clearDir(outputDir);

@@ -1,3 +1,14 @@
+// Escape HTML to prevent XSS
+function escapeHtml(value) {
+    if (value === null || value === undefined) return '';
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 // Paper data
 const papersData = {
     paper1: {
@@ -130,27 +141,27 @@ function openPanel(paperId) {
     let linkHTML;
     if (paper.restricted) {
         linkHTML = `
-            <div class="panel-link disabled" title="${paper.restrictionNote}">
-                <i class="fas fa-lock"></i> ${paper.restrictionNote}
+            <div class="panel-link disabled" title="${escapeHtml(paper.restrictionNote)}">
+                <i class="fas fa-lock"></i> ${escapeHtml(paper.restrictionNote)}
             </div>
         `;
     } else {
         linkHTML = `
-            <a href="${paper.link}" target="_blank" rel="noopener noreferrer" class="panel-link">
+            <a href="${escapeHtml(paper.link)}" target="_blank" rel="noopener noreferrer" class="panel-link">
                 <i class="fas fa-file-alt"></i> Read Full Paper
             </a>
         `;
     }
 
     content.innerHTML = `
-        <h3>${paper.title}</h3>
+        <h3>${escapeHtml(paper.title)}</h3>
         <div class="panel-meta">
-            <p><strong>Authors:</strong> ${paper.authors}</p>
-            <p><strong>Venue:</strong> ${paper.venue}</p>
-            <p><strong>Date:</strong> ${paper.date}</p>
+            <p><strong>Authors:</strong> ${escapeHtml(paper.authors)}</p>
+            <p><strong>Venue:</strong> ${escapeHtml(paper.venue)}</p>
+            <p><strong>Date:</strong> ${escapeHtml(paper.date)}</p>
         </div>
         <div class="panel-abstract">
-            <p>${paper.abstract}</p>
+            <p>${escapeHtml(paper.abstract)}</p>
         </div>
         ${linkHTML}
     `;
@@ -354,11 +365,11 @@ function renderPosterCards() {
     const carousel = document.getElementById('postersCarousel');
     if (!carousel) return;
     carousel.innerHTML = postersData.map(poster => `
-        <div class="poster-card" data-poster-id="${poster.id}" tabindex="0" role="button">
-            <img src="${poster.posterImage}" alt="${poster.title}" class="poster-thumbnail">
+        <div class="poster-card" data-poster-id="${escapeHtml(poster.id)}" tabindex="0" role="button">
+            <img src="${escapeHtml(poster.posterImage)}" alt="${escapeHtml(poster.title)}" class="poster-thumbnail">
             <div class="poster-card-info">
-                <h5 class="poster-card-title">${poster.title}</h5>
-                <p class="poster-card-venue">${poster.venue}</p>
+                <h5 class="poster-card-title">${escapeHtml(poster.title)}</h5>
+                <p class="poster-card-venue">${escapeHtml(poster.venue)}</p>
             </div>
         </div>
     `).join('');
@@ -415,7 +426,6 @@ function scrollPostersCarousel() {
     const carousel = document.getElementById('postersCarousel');
     const firstCard = carousel.querySelector('.poster-card');
     if (!firstCard) {
-        console.log('No poster cards found!');
         return;
     }
 
@@ -423,15 +433,6 @@ function scrollPostersCarousel() {
     const gap = 20;
     const scrollAmount = (cardWidth + gap) * postersPerPage;
     const translateX = currentPosterPage * scrollAmount;
-
-    console.log('Scroll Debug:', {
-        cardWidth,
-        postersPerPage,
-        currentPosterPage,
-        scrollAmount,
-        translateX,
-        totalCards: carousel.querySelectorAll('.poster-card').length
-    });
 
     carousel.style.transform = `translateX(-${translateX}px)`;
     updatePosterNavButtons();
@@ -455,20 +456,20 @@ function openPosterPanel(poster) {
     // Populate panel content
     content.innerHTML = `
         <div class="poster-detail-info">
-            <h3>${poster.title}</h3>
+            <h3>${escapeHtml(poster.title)}</h3>
             <div class="poster-detail-meta">
-                <p><strong>Venue:</strong> ${poster.venue}</p>
-                <p><strong>Date:</strong> ${poster.date}</p>
+                <p><strong>Venue:</strong> ${escapeHtml(poster.venue)}</p>
+                <p><strong>Date:</strong> ${escapeHtml(poster.date)}</p>
             </div>
         </div>
         <div class="poster-images-grid">
             <div class="poster-image-section">
                 <h4>Poster</h4>
-                <img src="${poster.posterImage}" alt="Poster">
+                <img src="${escapeHtml(poster.posterImage)}" alt="Poster">
             </div>
             <div class="poster-image-section">
                 <h4>Presentation</h4>
-                <img src="${poster.presentationImage}" alt="Presenting at ${poster.venue}">
+                <img src="${escapeHtml(poster.presentationImage)}" alt="Presenting at ${escapeHtml(poster.venue)}">
             </div>
         </div>
     `;
