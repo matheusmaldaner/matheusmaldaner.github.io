@@ -70,6 +70,15 @@
   institution: "microsoft"
   image: "/images/papers/paper_magui.png"
   abstract: "AI agents powered by large language models are increasingly capable of autonomously completing complex, multi-step tasks using external tools. Yet, they still fall short of human-level performance in most domains including computer use, software development, and research. Their growing autonomy and ability to interact with the outside world, also introduces safety and security risks including potentially misaligned actions and adversarial manipulation. We argue that human-in-the-loop agentic systems offer a promising path forward, combining human oversight and control with AI efficiency to unlock productivity from imperfect systems. We introduce Magentic-UI, an open-source web interface for developing and studying human-agent interaction. Built on a flexible multi-agent architecture, Magentic-UI supports web browsing, code execution, and file manipulation, and can be extended with diverse tools via Model Context Protocol (MCP). Moreover, Magentic-UI presents six interaction mechanisms for enabling effective, low-cost human involvement: co-planning, co-tasking, multi-tasking, action guards, and long-term memory. We evaluate Magentic-UI across four dimensions: autonomous task completion on agentic benchmarks, simulated user testing of its interaction capabilities, qualitative studies with real users, and targeted safety assessments. Our findings highlight Magentic-UI's potential to advance safe and efficient human-agent collaboration."
+  bibtex: |
+    @misc{mozannar2025magenticui,
+      title={Magentic-UI: Towards Human-in-the-loop Agentic Systems},
+      author={Hussein Mozannar and Gagan Bansal and Cheng Tan and Adam Fourney and Victor Dibia and Jingya Chen and Jack Gerrits and Tyler Payne and Matheus Kunzler Maldaner and Madeleine Grunde-McLaughlin and Eric Zhu and Griffin Bassman and Jacob Alber and Peter Chang and Ricky Loynd and Friederike Niedtner and Ece Kamar and Maya Murad and Rafah Hosn and Saleema Amershi},
+      year={2025},
+      eprint={2507.22358},
+      archivePrefix={arXiv},
+      primaryClass={cs.HC}
+    }
 
 - id: seeing-twice
   title: "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies"
@@ -89,6 +98,13 @@
   institution: "carnegie-mellon"
   image: "/images/papers/paper_seeingtwice.png"
   abstract: "While generative AI systems have gained popularity in diverse applications, their potential to produce harmful outputs limits their trustworthiness and utility. A small but growing line of research has explored tools and processes to better engage non-AI expert users in auditing generative AI systems. In this work, we present the design and evaluation of MIRAGE, a web-based tool exploring a 'contrast-first' workflow that allows users to pick up to four different text-to-image (T2I) models, view their images side-by-side, and provide feedback on model performance on a single screen. In our user study with fifteen participants, we used four predefined models for consistency, with only a single model initially being shown. We found that most participants shifted from analyzing individual images to general model output patterns once the side-by-side step appeared with all four models; several participants coined persistent 'model personalities' (e.g., cartoonish, saturated) that helped them form expectations about how each model would behave on future prompts. Bilingual participants also surfaced a language-fidelity gap, as English prompts produced more accurate images than Portuguese or Chinese, an issue often overlooked when dealing with a single model. These findings suggest that simple comparative interfaces can accelerate bias discovery and reshape how people think about generative models."
+  bibtex: |
+    @inproceedings{maldaner2025seeingtwice,
+      title={Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies},
+      author={Maldaner, Matheus Kunzler and Deng, Wesley Hanwen and Hong, Jason I. and Holstein, Ken and Eslami, Motahhare},
+      booktitle={Proceedings of the ACM Conference on Collective Intelligence (CI)},
+      year={2025}
+    }
 
 - id: explogic
   title: "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks"
@@ -107,7 +123,14 @@
   featured: true
   institution: "university-of-florida"
   image: "/images/papers/paper_explogic.png"
-  abstract: "Constraining deep neural networks (DNNs) to learn individual logic types per node, as performed using the DiffLogic network architecture, opens the door to model-specific explanation techniques that quell the complexity inherent to DNNs. Inspired by principles of circuit analysis from computer engineering, this work presents an algorithm (eXpLogic) for producing saliency maps which explain input patterns that activate certain functions. The eXpLogic explanations: (1) show the exact set of inputs responsible for a decision, which helps interpret false negative and false positive predictions, (2) highlight common input patterns that activate certain outputs, and (3) help reduce the network size to improve class-specific inference. To evaluate the eXpLogic saliency map, we introduce a metric that quantifies how much an input changes before switching a model’s class prediction (the SwitchDist) and use this metric to compare eXpLogic against the Vanilla Gradients (VG) and Integrated Gradient (IG) methods. Generally, we show that eXpLogic saliency maps are better at predicting which inputs will change the class score. These maps help reduce the network size and inference times by 87% and 8%, respectively, while having a limited impact (-3.8%) on class-specific predictions. The broader value of this work to machine learning is in demonstrating how certain DNN architectures promote explainability, which is relevant to healthcare, defense, and law."
+  abstract: "Constraining deep neural networks (DNNs) to learn individual logic types per node, as performed using the DiffLogic network architecture, opens the door to model-specific explanation techniques that quell the complexity inherent to DNNs. Inspired by principles of circuit analysis from computer engineering, this work presents an algorithm (eXpLogic) for producing saliency maps which explain input patterns that activate certain functions. The eXpLogic explanations: (1) show the exact set of inputs responsible for a decision, which helps interpret false negative and false positive predictions, (2) highlight common input patterns that activate certain outputs, and (3) help reduce the network size to improve class-specific inference. To evaluate the eXpLogic saliency map, we introduce a metric that quantifies how much an input changes before switching a model's class prediction (the SwitchDist) and use this metric to compare eXpLogic against the Vanilla Gradients (VG) and Integrated Gradient (IG) methods. Generally, we show that eXpLogic saliency maps are better at predicting which inputs will change the class score. These maps help reduce the network size and inference times by 87% and 8%, respectively, while having a limited impact (-3.8%) on class-specific predictions. The broader value of this work to machine learning is in demonstrating how certain DNN architectures promote explainability, which is relevant to healthcare, defense, and law."
+  bibtex: |
+    @inproceedings{wormald2025explogic,
+      title={eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks},
+      author={Wormald, Stephen and Koblah, David and Maldaner, Matheus Kunzler and Forte, Domenic and Woodard, Damon L.},
+      booktitle={Proceedings of the International Conference on Information Technology: New Generations (ITNG)},
+      year={2025}
+    }
 
 - id: mirage
   title: "MIRAGE: Multi-model Interface for Reviewing and Auditing Generative Text-to-Image AI"
@@ -127,6 +150,13 @@
   institution: "carnegie-mellon"
   image: "/images/papers/paper_mirage.png"
   abstract: "While generative AI systems have gained popularity in diverse applications, their potential to produce harmful outputs limits their trustworthiness and usability in different applications. Recent years have seen growing interest in engaging diverse AI users in auditing generative AI that might impact their lives. To this end, we propose MIRAGE as a web-based tool where AI users can compare outputs from multiple AI text-to-image (T2I) models by auditing AI-generated images, and report their findings in a structured way. We used MIRAGE to conduct a preliminary user study with five participants and found that MIRAGE users could leverage their own lived experiences and identities to surface previously unnoticed details around harmful biases when reviewing multiple T2I models' outputs compared to reviewing only one."
+  bibtex: |
+    @inproceedings{maldaner2024mirage,
+      title={MIRAGE: Multi-model Interface for Reviewing and Auditing Generative Text-to-Image AI},
+      author={Maldaner, Matheus Kunzler and Deng, Wesley Hanwen and Hong, Jason I. and Holstein, Ken and Eslami, Motahhare},
+      booktitle={Proceedings of the AAAI Conference on Human Computation and Crowdsourcing (HCOMP)},
+      year={2024}
+    }
 
 - id: xai-syntax
   title: "Abstracting General Syntax for XAI after Decomposing Explanation Sub-Components"
@@ -145,6 +175,15 @@
   institution: "university-of-florida"
   image: "/images/papers/paper_xai.png"
   abstract: "Policy makers, healthcare providers, and defense contractors need to understand many types of machine learning model behaviors. While eXplainable Artificial Intelligence (XAI) provides tools for interpreting these behaviors, few frameworks, surveys, and taxonomies produce succinct yet general notation to help researchers and practitioners describe their explainability needs and quantify whether these needs are met. Such quantified comparisons could help individuals rank XAI methods by their relevance to use-cases, select explanations best suited for individual users, and evaluate what explanations are most useful for describing model behaviors. This paper collects, decomposes, and abstracts subcomponents of common XAI methods to identify a mathematically grounded syntax that applies generally to describing modern and future explanation types while remaining useful for discovering novel XAI methods. The resulting syntax, introduced as the Qi-Framework, generally defines explanation types in terms of the information being explained, their utility to inspectors, and the methods and information used to produce explanations. Just as programming languages define syntax to structure, simplify, and standardize software development, so too the Qi-Framework acts as a common language to help researchers and practitioners select, compare, and discover XAI methods. Derivative works may extend and implement the Qi-Framework to develop a more rigorous science for interpretable machine learning and inspire collaborative competition arcoss XAI research."
+  bibtex: |
+    @article{wormald2024xaisyntax,
+      title={Abstracting General Syntax for XAI after Decomposing Explanation Sub-Components},
+      author={Wormald, Stephen and Maldaner, Matheus Kunzler and O'Connor, Kristian and Dizon-Paradis, Olivia P. and Woodard, Damon L.},
+      journal={Artificial Intelligence Review},
+      publisher={Springer},
+      year={2024},
+      doi={10.1007/s10462-025-11216-8}
+    }
 
 - id: thesis
   title: "Efficient and Transparent Machine Learning: Exploring Applications of Differentiable Logic Gate Networks"
@@ -158,3 +197,11 @@
   institution: "university-of-florida"
   image: "/images/papers/paper_thesis.png"
   abstract: "Despite their remarkable capabilities, the decision-making process of deep neural networks remains a black box, obscuring the logic behind model decisions and undermining trust in critical domains such as healthcare, national security, and law. While the field of Explainable Artificial Intelligence (XAI) has emerged to mitigate these issues, current post hoc explanation methods often fail to deliver reliable insights as they are applied after a model has been trained, rather than addressing the underlying architecture. To overcome these fundamental limitations, this thesis explores Differentiable Logic Gate Networks (DiffLogic), a type of neurosymbolic AI (NSAI) architecture that enables neural networks to learn a distribution of logic gates for each node. Although DiffLogic was originally introduced with a focus on accelerating inference speeds, its potential for explainability has remained largely unexplored. Specifically, this work seeks to address these gaps by: (1) implementing DiffLogic on Field Programmable Gate Arrays (FPGA) for hardware acceleration, (2) developing a compression algorithm for DiffLogic models, and (3) deploying visualization tools to intuitively interpret learned logical structures."
+  bibtex: |
+    @thesis{maldaner2025thesis,
+      title={Efficient and Transparent Machine Learning: Exploring Applications of Differentiable Logic Gate Networks},
+      author={Maldaner, Matheus Kunzler},
+      school={University of Florida},
+      type={Undergraduate Honors Thesis},
+      year={2025}
+    }
