@@ -1,0 +1,43 @@
+# Dependabot configuration for automated dependency updates
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+version: 2
+updates:
+  # NPM dependencies (package.json)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "npm"
+    labels:
+      - "dependencies"
+      - "npm"
+
+  # Ruby/Bundler dependencies (cv/Gemfile)
+  - package-ecosystem: "bundler"
+    directory: "/cv"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "bundler"
+    labels:
+      - "dependencies"
+      - "ruby"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "actions"
+    labels:
+      - "dependencies"
+      - "github-actions"

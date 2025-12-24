@@ -2,6 +2,17 @@
  * Load and render content from JSON data files
  */
 
+// Escape HTML to prevent XSS
+function escapeHtml(value) {
+  if (value === null || value === undefined) return '';
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 // Map social link IDs to Font Awesome icon classes
 function getIconClass(id) {
   const iconMap = {
@@ -57,6 +68,9 @@ function getAriaLabel(id) {
 async function loadSocialLinks() {
   try {
     const response = await fetch('/data/json/social-links.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const socialLinks = await response.json();
 
     const container = document.getElementById('social-links-container');
@@ -70,10 +84,10 @@ async function loadSocialLinks() {
       const ariaLabel = getAriaLabel(link.id);
 
       return `
-        <a href="${link.url}" target="_blank" aria-label="${ariaLabel}"
+        <a href="${escapeHtml(link.url)}" target="_blank" aria-label="${escapeHtml(ariaLabel)}"
            style="display: inline-block; margin: 0 15px; color: #555; text-decoration: none; transition: color 0.3s ease;">
-          <i class="${iconClass}" aria-hidden="true" style="font-size: 1.8em;"></i>
-          <div style="font-size: 0.8em; margin-top: 3px;">${label}</div>
+          <i class="${escapeHtml(iconClass)}" aria-hidden="true" style="font-size: 1.8em;"></i>
+          <div style="font-size: 0.8em; margin-top: 3px;">${escapeHtml(label)}</div>
         </a>
       `;
     }).join('');
@@ -88,20 +102,23 @@ async function loadSocialLinks() {
 async function loadAboutContent() {
   try {
     const response = await fetch('/data/json/about.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
     const aboutData = await response.json();
 
     const container = document.getElementById('about-content-container');
     if (!container) return;
 
-    let html = `<p>${aboutData.bio.main}</p>`;
+    let html = `<p>${escapeHtml(aboutData.bio.main)}</p>`;
 
     aboutData.sections.forEach(section => {
       html += `
         <section>
           <header>
-            <h3>${section.title}</h3>
+            <h3>${escapeHtml(section.title)}</h3>
           </header>
-          <p>${section.content}</p>
+          <p>${escapeHtml(section.content)}</p>
         </section>
       `;
     });
