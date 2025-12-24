@@ -182,7 +182,6 @@ input, select, textarea {
 
 	body {
 		background: var(--color-bg-dark);
-		background-image: url("images/bg02.png");
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2379,24 +2378,12 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: var(--color-bg-light) url("images/bg02.png");
+		background: var(--color-bg-light);
 		padding: var(--space-9) 0;
 	}
 
-		#main:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: url("images/bg01.png");
-			background-size: 100% 100%;
-			z-index: 0;
-			opacity: 0.1;
-		}
-
 		#main .major h2 {
-			background: var(--color-bg-light) url("images/bg02.png");
+			background: var(--color-bg-light);
 		}
 
 /* Footer */
@@ -2407,17 +2394,6 @@ input, select, textarea {
 		padding: var(--space-9) 0;
 	}
 
-		#footer:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			background: url("images/bg01.png");
-			background-size: 100% 100%;
-			z-index: 0;
-			opacity: 0.5;
-		}
 
 		#footer a {
 			color: var(--color-link);
@@ -2749,7 +2725,6 @@ input, select, textarea {
 				width: 275px;
 				z-index: 10002;
 				color: #858484;
-				background-image: url("images/bg02.png");
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 			}
 
