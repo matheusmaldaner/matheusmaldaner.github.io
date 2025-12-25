@@ -960,7 +960,7 @@ news:
     date: October 29, 2025
     category: awards
     featured: false
-    image: /images/news/2025-10-29-hipergator-early-career-award/cover.png
+    image: /images/news/2025-10-29-hipergator-early-career-award/cover.jpg
     description: >-
       Grateful to have been awarded the HiPerGator Early Career Award for my work in using high-performance computing to
       optimize differentiable logic gate networks! HiPerGator is the University of Florida's supercomputer, and one of
@@ -973,12 +973,12 @@ news:
       not only nominated me but also won alongside me at this year's AI Days Hackathon. Congratulations as well to Dr.
       Andrea Ramirez-Salgado and Dr. Cátia Silva for your awards!
     gallery:
-      - /images/news/2025-10-29-hipergator-early-career-award/cover.png
-      - /images/news/2025-10-29-hipergator-early-career-award/01.png
-      - /images/news/2025-10-29-hipergator-early-career-award/02.png
-      - /images/news/2025-10-29-hipergator-early-career-award/03.png
-      - /images/news/2025-10-29-hipergator-early-career-award/04.png
-      - /images/news/2025-10-29-hipergator-early-career-award/05.png
+      - /images/news/2025-10-29-hipergator-early-career-award/cover.jpg
+      - /images/news/2025-10-29-hipergator-early-career-award/01.jpg
+      - /images/news/2025-10-29-hipergator-early-career-award/02.jpg
+      - /images/news/2025-10-29-hipergator-early-career-award/03.jpg
+      - /images/news/2025-10-29-hipergator-early-career-award/04.jpg
+      - /images/news/2025-10-29-hipergator-early-career-award/05.jpg
     links:
       - label: AI Faculty Awards Recap
         url: https://ai.ufl.edu/teaching-with-ai/for-uf-faculty/ai-faculty-awards/
@@ -995,7 +995,7 @@ news:
     date: October 27, 2025
     category: competition
     featured: false
-    image: /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/cover.png
+    image: /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/cover.jpg
     description: >-
       My sister Luana Kunzler Maldaner and I placed 3rd overall and won 3 out of 7 tracks (Music, Nature, and Still
       Image) at this year's UF Gator Create competition, part of UF AI Days. Our project "Symbiosis" reimagines
@@ -1009,10 +1009,10 @@ news:
       does not vanish; it composts into new habitats. Thank you to our friend Brandon Wand for his support - I competed
       with him last year.
     gallery:
-      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/cover.png
-      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/01.png
-      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/02.png
-      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/03.png
+      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/cover.jpg
+      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/01.jpg
+      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/02.jpg
+      - /images/news/2025-10-27-uf-ai-days-gator-create-3rd-place/03.jpg
     links:
       - label: Submission Files
         url: https://drive.google.com/drive/u/0/folders/18Y7meSDxkre5FtI8eHfzhGrTWlajmNHp
@@ -1036,8 +1036,8 @@ news:
     gallery:
       - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/cover.jpg
       - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/01.jpg
-      - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/02.png
-      - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/03.png
+      - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/02.jpg
+      - /images/news/2025-10-27-uf-ai-days-gator-hack-1st-place/03.jpg
     links:
       - label: LinkedIn Post
         url: >-
@@ -1062,7 +1062,7 @@ news:
     date: September 12, 2025
     category: conference
     featured: true
-    image: /images/news/2025-09-12-heidelberg-laureate-forum/cover.png
+    image: /images/news/2025-09-12-heidelberg-laureate-forum/cover.jpg
     description: >-
       I had a lot of fun at this yearly event which brings 200 young researchers from around the world to spend a week
       with the recipients of the most prestigious prizes in mathematics and computer sciences, such as the Turing Award,
@@ -1072,9 +1072,9 @@ news:
       Valiant, Vint Cerf, David Silver and Richard Sutton, to name a few. Happy to have made new friends, learned a lot,
       and explored a new city.
     gallery:
-      - /images/news/2025-09-12-heidelberg-laureate-forum/cover.png
+      - /images/news/2025-09-12-heidelberg-laureate-forum/cover.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/01.jpg
-      - /images/news/2025-09-12-heidelberg-laureate-forum/02.png
+      - /images/news/2025-09-12-heidelberg-laureate-forum/02.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/03.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/04.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/05.jpg
@@ -1087,7 +1087,7 @@ news:
       - /images/news/2025-09-12-heidelberg-laureate-forum/12.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/13.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/14.jpg
-      - /images/news/2025-09-12-heidelberg-laureate-forum/15.png
+      - /images/news/2025-09-12-heidelberg-laureate-forum/15.jpg
       - /images/news/2025-09-12-heidelberg-laureate-forum/16.jpg
     links:
       - label: LinkedIn Post
@@ -1105,7 +1105,7 @@ news:
     date: August 16, 2025
     category: internship
     featured: false
-    image: /images/news/2025-08-16-microsoft-research-internship/cover.png
+    image: /images/news/2025-08-16-microsoft-research-internship/cover.jpg
     description: >-
       Last Friday marked my last day as a research intern in the AI Frontiers group at Microsoft Research! Since I am
       not a graduate student (yet), I joined this summer through the Undergraduate Research Internship (URI) program.
@@ -1125,20 +1125,20 @@ news:
       were to go back, I would not change a single thing. I am happy to have made amazing friendships and am excited to
       see what my fellow interns accomplish next.
     gallery:
-      - /images/news/2025-08-16-microsoft-research-internship/cover.png
-      - /images/news/2025-08-16-microsoft-research-internship/01.png
-      - /images/news/2025-08-16-microsoft-research-internship/02.png
-      - /images/news/2025-08-16-microsoft-research-internship/03.png
-      - /images/news/2025-08-16-microsoft-research-internship/04.png
-      - /images/news/2025-08-16-microsoft-research-internship/05.png
-      - /images/news/2025-08-16-microsoft-research-internship/06.png
-      - /images/news/2025-08-16-microsoft-research-internship/07.png
-      - /images/news/2025-08-16-microsoft-research-internship/08.png
-      - /images/news/2025-08-16-microsoft-research-internship/09.png
-      - /images/news/2025-08-16-microsoft-research-internship/10.png
-      - /images/news/2025-08-16-microsoft-research-internship/11.png
-      - /images/news/2025-08-16-microsoft-research-internship/12.png
-      - /images/news/2025-08-16-microsoft-research-internship/13.png
+      - /images/news/2025-08-16-microsoft-research-internship/cover.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/01.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/02.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/03.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/04.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/05.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/06.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/07.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/08.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/09.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/10.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/11.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/12.jpg
+      - /images/news/2025-08-16-microsoft-research-internship/13.jpg
     links:
       - label: LinkedIn Post
         url: >-
@@ -1149,7 +1149,7 @@ news:
     date: August 5, 2025
     category: conference
     featured: false
-    image: /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.png
+    image: /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.jpg
     description: >-
       I had the opportunity to fly to San Diego to present our work at ACM Collective Intelligence, in collaboration
       with Wesley Deng, Jason Hong, Ken Holstein, Motahhare Eslami, and the CMU Human-Computer Interaction Institute.
@@ -1161,11 +1161,11 @@ news:
       language-fidelity issues, as some models performed much worse when prompts were given in their native language
       versus English. I also had the chance to run into my friend Claire (in last pic) and explore San Diego.
     gallery:
-      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.png
-      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/01.png
-      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/02.png
-      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/03.png
-      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/04.png
+      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/cover.jpg
+      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/01.jpg
+      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/02.jpg
+      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/03.jpg
+      - /images/news/2025-08-05-first-author-demo-paper-at-acm-ci/04.jpg
     links:
       - label: Research Paper
         url: https://ci.acm.org/2025/wp-content/uploads/101-Maldaner.pdf
@@ -1190,7 +1190,7 @@ news:
       hospitality.
     gallery:
       - /images/news/2025-05-12-hack-space-con/cover.jpg
-      - /images/news/2025-05-12-hack-space-con/01.png
+      - /images/news/2025-05-12-hack-space-con/01.jpg
       - /images/news/2025-05-12-hack-space-con/02.jpeg
       - /images/news/2025-05-12-hack-space-con/03.jpg
     links:
@@ -1220,7 +1220,7 @@ news:
       - /images/news/2025-05-03-uf-outstanding-leader-award/01.jpg
       - /images/news/2025-05-03-uf-outstanding-leader-award/02.jpg
       - /images/news/2025-05-03-uf-outstanding-leader-award/cover.jpg
-      - /images/news/2025-05-03-uf-outstanding-leader-award/03.png
+      - /images/news/2025-05-03-uf-outstanding-leader-award/03.jpg
     links: []
   - id: 2025-04-30-summa-cum-laude-honors-thesis
     title: Summa Cum Laude Honors Thesis
@@ -1256,7 +1256,7 @@ news:
       - /images/news/2025-04-27-best-student-paper-award-at-itng/02.jpg
       - /images/news/2025-04-27-best-student-paper-award-at-itng/03.jpg
       - /images/news/2025-04-27-best-student-paper-award-at-itng/04.jpg
-      - /images/news/2025-04-27-best-student-paper-award-at-itng/05.png
+      - /images/news/2025-04-27-best-student-paper-award-at-itng/05.jpg
     links:
       - label: Best Student Paper Award
         url: https://www.itng.info/awards
@@ -1409,7 +1409,7 @@ news:
       to fix some of the artifacts like fingers and faces. 
     gallery:
       - /images/news/2024-10-28-uf-genai-arts-competition-2nd-place/cover.jpg
-      - /images/news/2024-10-28-uf-genai-arts-competition-2nd-place/01.png
+      - /images/news/2024-10-28-uf-genai-arts-competition-2nd-place/01.jpg
       - /images/news/2024-10-28-uf-genai-arts-competition-2nd-place/02.jpg
       - /images/news/2024-10-28-uf-genai-arts-competition-2nd-place/03.jpg
       - /images/news/2024-10-28-uf-genai-arts-competition-2nd-place/04.jpg
@@ -1515,7 +1515,7 @@ news:
     date: August 10, 2024
     category: internship
     featured: false
-    image: /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/cover.png
+    image: /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/cover.jpg
     description: >-
       A little bit of a late post but I want to express my gratitude for the summer I spent at Carnegie Mellon
       University. With the mentorship of professors Jason Hong, Motahhare Eslami, and Ken Holstein and PhD student
@@ -1526,10 +1526,10 @@ news:
       semester. I extend my gratitude to Laura Dabbish and Julia Chadwick for organizing this program, to all professors
       that hosted weekly seminars and to all the amazing people I met!
     gallery:
-      - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/cover.png
-      - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/01.png
+      - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/cover.jpg
+      - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/01.jpg
       - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/02.jpg
-      - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/03.png
+      - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/03.jpg
       - /images/news/2024-08-10-carnegie-mellon-university-summer-research-internship/04.jpg
     links:
       - label: CMU HCII Post
@@ -1664,18 +1664,18 @@ news:
     date: October 15, 2023
     category: competition
     featured: false
-    image: /images/news/2023-10-15-uf-ai-days-gator-hack/cover.png
+    image: /images/news/2023-10-15-uf-ai-days-gator-hack/cover.jpg
     description: >-
       This was my first ever hackathon. Although we didn't win, my teammates Anirudh Tammisetti, Emily Jiji, Rahul Chari
       and I made it to the top 10 finalists with our project AdapTree, an AI-powered educational platform that creates
       personalized learning pathways based on a user's existing knowledge.
     secondParagraph: This experience sparked my love for hackathons and set the foundation for the subsequent hackathons I competed in.
     gallery:
-      - /images/news/2023-10-15-uf-ai-days-gator-hack/cover.png
-      - /images/news/2023-10-15-uf-ai-days-gator-hack/01.png
-      - /images/news/2023-10-15-uf-ai-days-gator-hack/02.png
-      - /images/news/2023-10-15-uf-ai-days-gator-hack/03.png
-      - /images/news/2023-10-15-uf-ai-days-gator-hack/04.png
+      - /images/news/2023-10-15-uf-ai-days-gator-hack/cover.jpg
+      - /images/news/2023-10-15-uf-ai-days-gator-hack/01.jpg
+      - /images/news/2023-10-15-uf-ai-days-gator-hack/02.jpg
+      - /images/news/2023-10-15-uf-ai-days-gator-hack/03.jpg
+      - /images/news/2023-10-15-uf-ai-days-gator-hack/04.jpg
     links:
       - label: YouTube Demo
         url: https://www.youtube.com/watch?v=xcIVm6uuzJc
