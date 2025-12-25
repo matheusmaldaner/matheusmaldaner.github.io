@@ -22,13 +22,16 @@ npm run generate:combined
 # 5. Generate llms.txt for AI crawlers (optional)
 npm run generate:llms-txt
 
-# 6. Generate CV posts for Jekyll RSS feeds (optional)
+# 6. Generate sitemap.xml with git-based lastmod dates (optional)
+npm run generate:sitemap
+
+# 7. Generate CV posts for Jekyll RSS feeds (optional)
 npm run generate:cv-posts
 
-# 7. Generate favicons from source image (optional - only when updating favicon)
+# 8. Generate favicons from source image (optional - only when updating favicon)
 npm run generate:favicons -- images/headshot.jpeg
 
-# 8. Start a local web server and open http://localhost:8000 in your browser.
+# 9. Start a local web server and open http://localhost:8000 in your browser.
 python3 -m http.server
 ```
 
@@ -42,17 +45,6 @@ All content is managed through YAML files in `data/yaml/`. The build process:
 4. **LLM indexing** (`npm run generate:llms-txt`) - Generates `llms.txt` for AI crawlers
 
 The combined data file serves as a portable knowledge base that can be shared with AI assistants or used for other integrations.
-
-### llms.txt
-
-The `llms.txt` file is a proposed standard for helping AI systems understand website content. It's automatically generated from the combined data and includes:
-
-- Research publications with abstracts
-- Featured projects
-- Education and experience
-- Contact links
-
-Learn more: [llmstxt.org](https://llmstxt.org/)
 
 ## CV
 

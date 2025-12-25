@@ -50,6 +50,9 @@ jobs:
       - name: Generate llms.txt for AI indexing
         run: npm run generate:llms-txt
 
+      - name: Generate sitemap.xml
+        run: npm run generate:sitemap
+
       - name: Build CV Jekyll site
         working-directory: cv
         run: bundle exec jekyll build --source . --destination ../_site/cv

@@ -10,6 +10,7 @@
     "generate:cv-pdf": "node _scripts/generate-cv-pdf.js",
     "generate:cv-posts": "node _scripts/generate-cv-posts.js",
     "generate:favicons": "node _scripts/generate-favicons.js",
+    "generate:sitemap": "node _scripts/generate-sitemap.js",
     "build:data": "npm run convert:yaml && npm run generate:cv-posts",
     "lint": "eslint assets/js _scripts",
     "lint:fix": "eslint assets/js _scripts --fix"
