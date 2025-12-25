@@ -1,6 +1,9 @@
 {
   "name": "Matheus Kunzler Maldaner",
   "short_name": "Matheus",
+  "description": "AI/ML researcher and M.S. AI Systems student at the University of Florida. Research in Neurosymbolic AI, Human-Computer Interaction, and Agentic Systems.",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/icons/android-chrome-192x192.png",
@@ -13,7 +16,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#d1002a",
   "background_color": "#ffffff",
   "display": "standalone"
 }
