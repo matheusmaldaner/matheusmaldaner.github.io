@@ -19,11 +19,21 @@
     <meta property="og:title" content="News | Matheus Kunzler Maldaner" />
     <meta property="og:description" content="Latest news and updates - awards, conferences, hackathon wins, scholarships, and research presentations." />
     <meta property="og:image" content="https://matheus.wiki/images/test-banner.png" />
+    <meta property="og:site_name" content="Matheus Kunzler Maldaner" />
+    <meta property="og:locale" content="en_US" />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@matheusmaldaner" />
+    <meta name="twitter:creator" content="@matheusmaldaner" />
     <meta name="twitter:title" content="News | Matheus Kunzler Maldaner" />
     <meta name="twitter:description" content="Latest news and updates - awards, conferences, hackathon wins, scholarships, and research presentations." />
     <meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
+    <!-- Preconnect hints -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="stylesheet" href="../assets/css/responsive.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -39,6 +49,21 @@
 
       * {
         box-sizing: border-box;
+      }
+
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #d1002a;
+        color: white;
+        padding: 8px 16px;
+        z-index: 1000;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .skip-link:focus {
+        top: 0;
       }
 
 
@@ -619,9 +644,35 @@
         }
       }
     </style>
+    <!-- JSON-LD CollectionPage Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "News & Updates | Matheus Kunzler Maldaner",
+      "description": "Latest news and updates from Matheus Kunzler Maldaner - awards, conferences, hackathon wins, scholarships, and research presentations.",
+      "url": "https://matheus.wiki/pages/news.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Matheus Kunzler Maldaner",
+        "url": "https://matheus.wiki"
+      },
+      "about": {
+        "@type": "Person",
+        "name": "Matheus Kunzler Maldaner",
+        "url": "https://matheus.wiki"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "name": "News & Updates",
+        "description": "Collection of news, awards, and updates"
+      }
+    }
+    </script>
   </head>
 
   <body class="no-sidebar is-preload">
+    <a href="#main" class="skip-link">Skip to main content</a>
 
     <div id="page-wrapper">
       <!-- Header / Nav -->
@@ -640,7 +691,7 @@
       </section>
 
       <!-- Main -->
-      <section id="main">
+      <section id="main" role="main">
         <div class="container">
           <header class="major">
             <h2>News &amp; Updates</h2>

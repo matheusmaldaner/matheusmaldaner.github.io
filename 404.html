@@ -1,13 +1,39 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 	<head>
 		<!-- Content Security Policy -->
 		<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' https: data:; connect-src 'self' https://www.google-analytics.com;">
 		<title>Page Not Found | Matheus Kunzler Maldaner</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+		<link rel="icon" href="/favicon.ico" sizes="32x32">
+		<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
+		<link rel="manifest" href="/icons/site.webmanifest">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Page not found - The page you are looking for does not exist." />
+		<meta name="description" content="Page not found - The page you're looking for doesn't exist or has been moved. Navigate back to Matheus Kunzler Maldaner's portfolio to explore research, projects, and more." />
+		<link rel="canonical" href="https://matheus.wiki/404.html" />
+		<!-- Open Graph / Social Media -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://matheus.wiki/404.html" />
+		<meta property="og:title" content="Page Not Found | Matheus Kunzler Maldaner" />
+		<meta property="og:description" content="Page not found - Navigate back to explore Matheus Kunzler Maldaner's research, projects, and portfolio." />
+		<meta property="og:image" content="https://matheus.wiki/images/test-banner.png" />
+		<meta property="og:site_name" content="Matheus Kunzler Maldaner" />
+		<meta property="og:locale" content="en_US" />
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@matheusmaldaner" />
+		<meta name="twitter:creator" content="@matheusmaldaner" />
+		<meta name="twitter:title" content="Page Not Found | Matheus Kunzler Maldaner" />
+		<meta name="twitter:description" content="Page not found - Navigate back to explore research, projects, and portfolio." />
+		<meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
+		<!-- Preconnect hints -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+		<link rel="dns-prefetch" href="https://www.google-analytics.com">
 		<link rel="stylesheet" href="/assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<style>
@@ -71,6 +97,21 @@
 				background: #555;
 			}
 
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #d1002a;
+				color: white;
+				padding: 8px 16px;
+				z-index: 1000;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			.skip-link:focus {
+				top: 0;
+			}
+
 			@media (max-width: 600px) {
 				.error-code {
 					font-size: 5em;
@@ -94,6 +135,7 @@
 		</style>
 	</head>
 	<body class="no-sidebar is-preload">
+		<a href="#main" class="skip-link">Skip to main content</a>
 
 		<div id="page-wrapper">
 			<!-- Header -->
@@ -111,7 +153,7 @@
 			</section>
 
 			<!-- Main -->
-			<section id="main">
+			<main id="main" role="main">
 				<div class="container">
 					<div class="error-container">
 						<div class="error-code">404</div>
@@ -132,7 +174,7 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</main>
 
 		</div>
 

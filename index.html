@@ -24,11 +24,21 @@
 		<meta property="og:title" content="Matheus Kunzler Maldaner" />
 		<meta property="og:description" content="M.S. AI Systems student at University of Florida. Research in Neurosymbolic AI, Human-Computer Interaction, and Agentic Systems at UF, CMU, and Microsoft Research." />
 		<meta property="og:image" content="https://matheus.wiki/images/test-banner.png" />
+		<meta property="og:site_name" content="Matheus Kunzler Maldaner" />
+		<meta property="og:locale" content="en_US" />
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@matheusmaldaner" />
+		<meta name="twitter:creator" content="@matheusmaldaner" />
 		<meta name="twitter:title" content="Matheus Kunzler Maldaner" />
 		<meta name="twitter:description" content="M.S. AI Systems student at University of Florida. Research in Neurosymbolic AI, Human-Computer Interaction, and Agentic Systems at UF, CMU, and Microsoft Research." />
 		<meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
+		<!-- Preconnect hints -->
+		<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+		<link rel="dns-prefetch" href="https://www.google-analytics.com">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<!-- JSON-LD ProfilePage Schema for SEO and AI indexing -->
@@ -83,6 +93,20 @@
 		}
 		</script>
 		<style>
+			.skip-link {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				background: #d1002a;
+				color: white;
+				padding: 8px 16px;
+				z-index: 1000;
+				text-decoration: none;
+				font-weight: 600;
+			}
+			.skip-link:focus {
+				top: 0;
+			}
 			.social-icons a:hover {
 				color: #d1002a !important;
 				transform: translateY(-3px);
@@ -91,6 +115,7 @@
 		</style>
 	</head>
 	<body class="about is-preload">
+		<a href="#main" class="skip-link">Skip to main content</a>
 
 		<div id="page-wrapper">
 			<!-- Header -->
@@ -113,7 +138,7 @@
 			</section>
 
 			<!-- Main -->
-			<section id="main">
+			<section id="main" role="main">
 				<div class="container">
 					<!-- Social Links -->
 					<header class="major" style="margin-bottom: 2em;">
@@ -131,10 +156,7 @@
 					</header>
 
 					<article class="">
-						<img src="images/test-banner.png" alt="Professional banner image of Matheus Kunzler Maldaner in a suit standing outdoors" class="image featured" />
-						<header>
-							<h3>About Me</h3>
-						</header>
+						<img src="images/test-banner.png" alt="Matheus Kunzler Maldaner - AI researcher and M.S. student at University of Florida" class="image featured" />
 							<div id="about-content-container">
 								<!-- Loaded dynamically from data/json/about.json -->
 							</div>

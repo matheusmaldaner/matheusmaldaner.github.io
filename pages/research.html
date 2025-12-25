@@ -19,16 +19,96 @@
         <meta property="og:title" content="Research | Matheus Kunzler Maldaner" />
         <meta property="og:description" content="Research in Neurosymbolic AI at UF, Text-to-Image auditing at CMU, and Agentic Systems at Microsoft Research. Publications, papers, and posters." />
         <meta property="og:image" content="https://matheus.wiki/images/test-banner.png" />
+        <meta property="og:site_name" content="Matheus Kunzler Maldaner" />
+        <meta property="og:locale" content="en_US" />
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@matheusmaldaner" />
+        <meta name="twitter:creator" content="@matheusmaldaner" />
         <meta name="twitter:title" content="Research | Matheus Kunzler Maldaner" />
         <meta name="twitter:description" content="Research in Neurosymbolic AI at UF, Text-to-Image auditing at CMU, and Agentic Systems at Microsoft Research." />
         <meta name="twitter:image" content="https://matheus.wiki/images/test-banner.png" />
+        <!-- Preconnect hints -->
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+        <link rel="dns-prefetch" href="https://www.google-analytics.com">
         <link rel="stylesheet" href="../assets/css/main.css" />
         <link rel="stylesheet" href="../assets/css/responsive.css" />
         <link rel="stylesheet" href="../assets/css/research.css" />
+        <style>
+            .skip-link {
+                position: absolute;
+                top: -40px;
+                left: 0;
+                background: #d1002a;
+                color: white;
+                padding: 8px 16px;
+                z-index: 1000;
+                text-decoration: none;
+                font-weight: 600;
+            }
+            .skip-link:focus {
+                top: 0;
+            }
+        </style>
+        <!-- JSON-LD CollectionPage Schema for SEO -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "name": "Research | Matheus Kunzler Maldaner",
+            "description": "Research publications by Matheus Kunzler Maldaner - Neurosymbolic AI at UF, Text-to-Image auditing at CMU, and Agentic Systems at Microsoft Research.",
+            "url": "https://matheus.wiki/pages/research.html",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Matheus Kunzler Maldaner",
+                "url": "https://matheus.wiki"
+            },
+            "about": {
+                "@type": "Person",
+                "name": "Matheus Kunzler Maldaner",
+                "url": "https://matheus.wiki",
+                "affiliation": [
+                    {"@type": "Organization", "name": "University of Florida"},
+                    {"@type": "Organization", "name": "Carnegie Mellon University"},
+                    {"@type": "Organization", "name": "Microsoft Research"}
+                ]
+            },
+            "mainEntity": {
+                "@type": "ItemList",
+                "name": "Research Publications",
+                "description": "Academic papers, publications, and research posters",
+                "itemListElement": [
+                    {
+                        "@type": "ScholarlyArticle",
+                        "name": "Magentic-UI: Towards Human-in-the-loop Agentic Systems",
+                        "author": "Hussein Mozannar, Gagan Bansal, Cheng Tan, Adam Fourney, Victor Dibia, Jingya Chen, Jack Gerrits, Tyler Payne, Matheus Kunzler Maldaner, et al.",
+                        "datePublished": "2025",
+                        "publisher": "Microsoft Research AI Frontiers"
+                    },
+                    {
+                        "@type": "ScholarlyArticle",
+                        "name": "Seeing Twice: How Side-by-Side T2I Comparison Changes Auditing Strategies",
+                        "author": "Matheus Kunzler Maldaner, Wesley Hanwen Deng, Jason I. Hong, Ken Holstein, Motahhare Eslami",
+                        "datePublished": "2025",
+                        "publisher": "ACM CI"
+                    },
+                    {
+                        "@type": "ScholarlyArticle",
+                        "name": "eXpLogic: Explaining Logic Types and Patterns in DiffLogic Networks",
+                        "author": "Stephen Wormald, David Koblah, Matheus Kunzler Maldaner, Domenic Forte, Damon L. Woodard",
+                        "datePublished": "2025",
+                        "publisher": "ITNG"
+                    }
+                ]
+            }
+        }
+        </script>
     </head>
     <body>
+        <a href="#main" class="skip-link">Skip to main content</a>
 
         <div id="page-wrapper">
             <!-- Header -->
@@ -47,7 +127,7 @@
             </section>
 
             <!-- Main -->
-            <section id="main">
+            <section id="main" role="main">
                 <div class="container">
                     <!-- COMMENTED OUT: Research Affiliations Section
                     <header class="major">
@@ -120,14 +200,14 @@
                     <div class="papers-container">
                         <!-- Featured Papers Section -->
                         <div class="featured-section">
-                            <h2>Featured Papers</h2>
+                            <h3>Featured Papers</h3>
                             <div class="papers-grid" id="featured-papers-grid">
                                 <!-- Dynamically loaded -->
                             </div>
                         </div>
 
                         <!-- All Papers Grid -->
-                        <h2>All Publications</h2>
+                        <h3>All Publications</h3>
                         <div class="papers-grid" id="papers-grid">
                             <!-- Dynamically loaded -->
                         </div>
