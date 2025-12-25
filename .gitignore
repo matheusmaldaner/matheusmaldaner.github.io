@@ -68,3 +68,6 @@ data/json/
 cv/_posts/news/
 cv/_posts/projects/
 cv/_posts/papers/
+
+# Sentinel Searcher temporary output (merged into data/yaml/)
+data/sentinel-output/*.yaml

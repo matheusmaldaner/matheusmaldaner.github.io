@@ -1,0 +1,202 @@
+# =============================================================================
+# SENTINEL SEARCHER CONFIGURATION
+# =============================================================================
+# Automated web crawler to find new content about Matheus Kunzler Maldaner
+# and generate structured YAML entries for the portfolio website.
+#
+# Run manually: python _scripts/run-sentinel-search.py
+# Run single job: python _scripts/run-sentinel-search.py --job news-updates
+# =============================================================================
+
+api:
+  provider: openai
+  model: gpt-4o
+  delay_between_jobs: 60
+
+jobs:
+  # ---------------------------------------------------------------------------
+  # NEWS & UPDATES
+  # ---------------------------------------------------------------------------
+  - name: news-updates
+    instruction: |
+      Search for EXTERNAL news coverage about "Matheus Kunzler Maldaner" from 2025.
+
+      EXCLUDE these sources (they are owned by the subject):
+      - matheus.wiki
+      - ufdsi.com
+      - matheusmaldaner.github.io
+
+      INCLUDE these sources:
+      - linkedin.com/in/matheusmaldaner (check for posts/announcements)
+      - University of Florida official news (news.ufl.edu, ai.ufl.edu, eng.ufl.edu)
+      - Academic conference announcements
+      - Tech news sites
+      - Local news (Gainesville, Parkland, Florida)
+
+      For EACH result:
+      - Must have a real, working source URL
+      - Must be from 2025
+      - Must be EXTERNAL coverage (not self-published)
+
+      Categories: awards, competition, conference, internship, leadership, scholarship
+
+      Return empty array [] if nothing found. Quality over quantity.
+    file_path: data/sentinel-output/news-updates.yaml
+    output_format: yaml
+    schema:
+      type: array
+      items:
+        id: "string"
+        title: "string"
+        date: "string"
+        category: "string"
+        description: "string"
+        source_url: "string"
+
+  # ---------------------------------------------------------------------------
+  # AWARDS & HONORS
+  # ---------------------------------------------------------------------------
+  - name: awards
+    instruction: |
+      Search for awards received by "Matheus Kunzler Maldaner" announced in 2025.
+
+      EXCLUDE these sources:
+      - matheus.wiki
+      - ufdsi.com
+
+      INCLUDE:
+      - linkedin.com/in/matheusmaldaner
+      - University announcements (ai.ufl.edu, news.ufl.edu)
+      - Conference award announcements
+      - Scholarship program announcements
+
+      For EACH award:
+      - Must have a verifiable external source URL
+      - Must be from 2025
+
+      Return empty array [] if nothing found.
+    file_path: data/sentinel-output/awards.yaml
+    output_format: yaml
+    schema:
+      type: array
+      items:
+        name: "string"
+        description: "string"
+        year: "string"
+        source_url: "string"
+
+  # ---------------------------------------------------------------------------
+  # PUBLICATIONS & PAPERS
+  # ---------------------------------------------------------------------------
+  - name: publications
+    instruction: |
+      Search for academic papers authored by "Matheus Kunzler Maldaner" from 2024-2025.
+
+      Check:
+      - arXiv.org (arxiv.org)
+      - Google Scholar
+      - ACM Digital Library (dl.acm.org)
+      - IEEE Xplore
+      - Semantic Scholar
+
+      For EACH paper:
+      - Must have the actual paper URL (arxiv, ACM, etc.)
+      - Must verify Matheus is listed as an author
+
+      Return empty array [] if nothing found.
+    file_path: data/sentinel-output/publications.yaml
+    output_format: yaml
+    schema:
+      type: array
+      items:
+        id: "string"
+        title: "string"
+        authors: "string"
+        venue: "string"
+        year: "string"
+        url: "string"
+
+  # ---------------------------------------------------------------------------
+  # PROJECTS
+  # ---------------------------------------------------------------------------
+  - name: projects
+    instruction: |
+      Search for projects by GitHub user "matheusmaldaner" from 2024-2025.
+
+      Check:
+      - GitHub (github.com/matheusmaldaner) for repositories
+      - Devpost for hackathon submissions
+
+      For EACH project:
+      - Must have the GitHub or Devpost URL
+      - Must be from 2024-2025
+
+      Return empty array [] if nothing found.
+    file_path: data/sentinel-output/projects.yaml
+    output_format: yaml
+    schema:
+      type: array
+      items:
+        id: "string"
+        title: "string"
+        description: "string"
+        type: "string"
+        year: "string"
+        url: "string"
+
+  # ---------------------------------------------------------------------------
+  # AGGREGATOR - Cross-reference all YAML files
+  # ---------------------------------------------------------------------------
+  - name: aggregator
+    instruction: |
+      You are a data consistency checker. Review the EXISTING_CONTENT which contains
+      all current YAML data for Matheus Kunzler Maldaner's portfolio.
+
+      Search the web to find information that should be ADDED to these files:
+
+      1. **skills.yaml** - Technical skills organized by category
+         Schema: {name: "Category Name", items: ["Skill1", "Skill2"]}
+         Look for: Skills mentioned in papers, projects, or job descriptions
+
+      2. **awards.yaml** - Awards and honors
+         Schema: {name: "Award Name", description: "...", year: "YYYY"}
+         Look for: Awards not yet listed
+
+      3. **publications.yaml** - Academic papers
+         Schema: {id: "slug", title: "...", authors: "...", venue: "...", year: "YYYY", url: "..."}
+         Look for: Papers on arXiv, ACM, IEEE not yet listed
+
+      4. **experiences.yaml** - Work/research experiences
+         Schema: {title: "...", organization: "...", location: "...", start: "...", end: "..."}
+         Look for: Positions not yet listed
+
+      5. **memberships.yaml** - Professional memberships
+         Schema: {name: "Org Name", role: "...", year: "YYYY"}
+         Look for: Organizations not yet listed
+
+      EXCLUDE sources: matheus.wiki, ufdsi.com
+
+      Output format - return additions grouped by file:
+      ```yaml
+      skills:
+        - category: "Existing Category Name"
+          add_items: ["New Skill 1", "New Skill 2"]
+      awards:
+        - name: "New Award"
+          description: "..."
+          year: "2025"
+      publications:
+        - id: "paper-slug"
+          title: "..."
+          # ... full entry
+      ```
+
+      Only include items that are NOT already in EXISTING_CONTENT.
+      Return empty sections if nothing new found for that category.
+    file_path: data/sentinel-output/aggregator.yaml
+    output_format: yaml
+    schema:
+      type: array
+      items:
+        file: "string"
+        additions: "string"
