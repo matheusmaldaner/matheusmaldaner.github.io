@@ -560,9 +560,11 @@
     box-sizing: border-box;
 }
 
-/* Featured Section */
-.featured-section h2,
-.papers-container > h2 {
+/* Featured Section Headings */
+.featured-section > h2,
+.featured-section > h3,
+.papers-container > h2,
+.papers-container > h3 {
     font-size: 2rem;
     color: var(--color-heading);
     margin-bottom: var(--space-5);
@@ -596,8 +598,10 @@
         gap: var(--space-2);
     }
 
-    .featured-section h2,
-    .papers-container > h2 {
+    .featured-section > h2,
+    .featured-section > h3,
+    .papers-container > h2,
+    .papers-container > h3 {
         font-size: 1.3rem;
         margin-bottom: var(--space-4);
     }

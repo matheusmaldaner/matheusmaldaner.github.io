@@ -42,7 +42,7 @@ function getLastModifiedDate(filePath) {
       const date = new Date(gitDate);
       return date.toISOString().split('T')[0]; // Returns YYYY-MM-DD
     }
-  } catch (error) {
+  } catch (_error) {
     // Git command failed - file might be new or untracked
     console.warn(`Warning: Could not get git date for ${filePath}`);
   }
