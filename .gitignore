@@ -71,3 +71,8 @@ cv/_posts/papers/
 
 # Sentinel Searcher temporary output (merged into data/yaml/)
 data/sentinel-output/*.yaml
+
+# Image optimization backups
+_image-backups/
+_scripts/png-to-jpg-conversions.txt
+_scripts/optimization-log.txt

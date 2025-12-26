@@ -41,6 +41,17 @@ jobs:
       - name: Run ESLint
         run: npm run lint
 
+      - name: Check for unoptimized images
+        run: |
+          echo "Checking for unoptimized images..."
+          oversized=$(find images -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" \) -size +500k 2>/dev/null | wc -l)
+          large_pngs=$(find images -type f -name "*.png" -size +100k 2>/dev/null | wc -l)
+          if [ "$oversized" -gt 0 ] || [ "$large_pngs" -gt 0 ]; then
+            echo "::warning::Found $oversized oversized images and $large_pngs large PNGs. Run 'npm run optimize:images' locally."
+          else
+            echo "Images are optimized."
+          fi
+
       - name: Convert YAML to JSON
         run: npm run convert:yaml
 
