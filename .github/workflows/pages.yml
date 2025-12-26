@@ -38,6 +38,12 @@ jobs:
       - name: Install Node dependencies
         run: npm ci
 
+      - name: Cache Puppeteer
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
       - name: Run ESLint
         run: npm run lint
 
@@ -79,12 +85,24 @@ jobs:
           test -s _site/cv.pdf
           test -s cv.pdf
 
-      - name: Create site directory
-        run: mkdir -p _site
-
       - name: Copy main site files to _site
         run: |
-          rsync -av --exclude='cv/' --exclude='_site/' --exclude='.git/' --exclude='.github/' --exclude='vendor/' --exclude='.bundle/' ./ _site/
+          rsync -av \
+            --exclude='cv/' \
+            --exclude='_site/' \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='vendor/' \
+            --exclude='.bundle/' \
+            --exclude='node_modules/' \
+            --exclude='.venv/' \
+            --exclude='_scripts/' \
+            --exclude='package.json' \
+            --exclude='package-lock.json' \
+            --exclude='*.config.yaml' \
+            --exclude='*.txt' \
+            --exclude='Gemfile*' \
+            ./ _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
