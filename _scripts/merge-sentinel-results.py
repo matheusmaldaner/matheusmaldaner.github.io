@@ -102,7 +102,7 @@ def clean_sentinel_entry(entry: dict, target_file: str) -> dict:
         cleaned.setdefault("institution", "university-of-florida")
         # Add placeholder image
         if "image" not in cleaned and "id" in cleaned:
-            cleaned["image"] = f"/images/papers/paper_{cleaned['id']}.png"
+            cleaned["image"] = f"/images/papers/paper_{cleaned['id']}.jpg"
 
     return cleaned
 

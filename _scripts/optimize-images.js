@@ -24,8 +24,7 @@ const CONFIG = {
   maxWidth: 1920,
   maxHeight: 1920,
   jpegQuality: 85,
-  sizeThresholdKB: 500,
-  pngSizeThresholdKB: 100,
+  sizeThresholdKB: 500,  // Only for compression, not PNG→JPG conversion
   convertPngToJpg: true,
   dryRun: false
 };
@@ -126,6 +125,15 @@ function getDirSize(dir) {
 }
 
 /**
+ * Check if file was already processed (backup exists)
+ */
+function wasAlreadyProcessed(filePath) {
+  const relPath = path.relative(IMAGES_DIR, filePath);
+  const backupPath = path.join(BACKUP_DIR, relPath);
+  return fs.existsSync(backupPath);
+}
+
+/**
  * Create backup of file
  */
 function backupFile(filePath) {
@@ -177,11 +185,7 @@ async function hasTransparency(filePath) {
 async function convertPngToJpg(filePath) {
   const sizeBeforeKB = getFileSizeKB(filePath);
 
-  if (sizeBeforeKB < CONFIG.pngSizeThresholdKB) {
-    return false;
-  }
-
-  // Check for transparency
+  // Check for transparency (only reason to skip conversion)
   if (await hasTransparency(filePath)) {
     console.log(`  Skipping (has transparency): ${path.relative(PROJECT_ROOT, filePath)}`);
     stats.skipped++;
@@ -237,6 +241,11 @@ async function optimizeImage(filePath) {
   const sizeBeforeKB = getFileSizeKB(filePath);
 
   if (sizeBeforeKB < CONFIG.sizeThresholdKB) {
+    return false;
+  }
+
+  // Skip if already processed (backup exists)
+  if (wasAlreadyProcessed(filePath)) {
     return false;
   }
 
