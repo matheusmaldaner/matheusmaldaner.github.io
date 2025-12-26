@@ -199,6 +199,16 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
