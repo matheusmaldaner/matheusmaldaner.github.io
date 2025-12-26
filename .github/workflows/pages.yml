@@ -64,6 +64,9 @@ jobs:
       - name: Generate sitemap.xml
         run: npm run generate:sitemap
 
+      - name: Generate CV posts for RSS feeds
+        run: npm run generate:cv-posts
+
       - name: Build CV Jekyll site
         working-directory: cv
         run: bundle exec jekyll build --source . --destination ../_site/cv

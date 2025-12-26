@@ -16,22 +16,25 @@ npm install
 # 3. Convert YAML to JSON (run this when you change content in `data/yaml/`)
 npm run convert:yaml
 
-# 4. Generate combined data file (optional - creates a single YAML with all data)
+# 4. Generate CV posts for Jekyll RSS feeds (run after changing publications/projects/news)
+npm run generate:cv-posts
+
+# 5. Generate combined data file (optional - creates a single YAML with all data)
 npm run generate:combined
 
-# 5. Generate llms.txt for AI crawlers (optional)
+# 6. Generate llms.txt for AI crawlers (optional)
 npm run generate:llms-txt
 
-# 6. Generate sitemap.xml with git-based lastmod dates (optional)
+# 7. Generate sitemap.xml with git-based lastmod dates (optional)
 npm run generate:sitemap
-
-# 7. Generate CV posts for Jekyll RSS feeds (optional)
-npm run generate:cv-posts
 
 # 8. Generate favicons from source image (optional - only when updating favicon)
 npm run generate:favicons -- images/headshot.jpeg
 
-# 9. Start a local web server and open http://localhost:8000 in your browser.
+# 9. Optimize images before committing (if you added new images)
+npm run optimize:images
+
+# 10. Start a local web server and open http://localhost:8000 in your browser.
 python3 -m http.server
 ```
 
@@ -45,6 +48,21 @@ All content is managed through YAML files in `data/yaml/`. The build process:
 4. **LLM indexing** (`npm run generate:llms-txt`) - Generates `llms.txt` for AI crawlers
 
 The combined data file serves as a portable knowledge base that can be shared with AI assistants or used for other integrations.
+
+### Utility Scripts
+
+Additional helper scripts in `_scripts/`:
+
+- **`projects-helper.js`** - Utility for managing projects.yaml:
+  ```bash
+  node _scripts/projects-helper.js stats        # Show project statistics
+  node _scripts/projects-helper.js list-cv      # List CV-featured projects
+  node _scripts/projects-helper.js validate     # Validate projects.yaml structure
+  ```
+
+- **Sentinel scripts** (internal use) - Academic paper search automation:
+  - `run-sentinel-search.py` - Searches for new publications
+  - `merge-sentinel-results.py` - Merges search results
 
 ## CV
 
