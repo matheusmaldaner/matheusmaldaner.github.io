@@ -1,0 +1,508 @@
+/* ===========================================
+   News Page CSS
+   Page-specific styles for news.html
+   =========================================== */
+
+/* ===========================================
+   Main Container
+   =========================================== */
+.main-container {
+  max-width: 1200px;
+  margin: -1.5rem auto 0 auto;
+  padding: 2rem 0;
+}
+
+/* ===========================================
+   Featured Section
+   =========================================== */
+.featured-section {
+  margin-bottom: 3rem;
+}
+
+.featured-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.featured-card {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+  height: 300px;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: white;
+}
+
+.featured-date {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.featured-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ===========================================
+   Cards Section
+   =========================================== */
+.cards-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ===========================================
+   News Card
+   =========================================== */
+.news-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.card-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+/* News page category badge positioning */
+.news-card .category-badge,
+.featured-overlay .category-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+}
+
+.featured-overlay .category-badge {
+  position: static;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================================
+   News Category Badge Colors
+   =========================================== */
+.badge-awards {
+  background: rgba(255, 193, 7, 0.9);
+  color: #856404;
+}
+
+.badge-competition {
+  background: rgba(0, 123, 255, 0.9);
+  color: white;
+}
+
+.badge-scholarship {
+  background: rgba(40, 167, 69, 0.9);
+  color: white;
+}
+
+.badge-recognition {
+  background: rgba(220, 53, 69, 0.9);
+  color: white;
+}
+
+.badge-conference {
+  background: rgba(72, 187, 120, 0.9);
+  color: white;
+}
+
+.badge-leadership {
+  background: rgba(102, 16, 242, 0.9);
+  color: white;
+}
+
+.badge-internship {
+  background: rgba(23, 162, 184, 0.9);
+  color: white;
+}
+
+/* ===========================================
+   Card Content
+   =========================================== */
+.card-content {
+  padding: 1.25rem;
+}
+
+.card-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ===========================================
+   News Modal Extensions
+   (extends base modal from components.css)
+   =========================================== */
+.modal-content {
+  margin: 2% auto;
+  max-width: 900px;
+  max-height: 90vh;
+}
+
+.modal-header {
+  padding: 1.5rem 2rem;
+}
+
+.modal-header h3 {
+  font-size: 1.5rem;
+  padding-right: 3rem;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-description {
+  margin-bottom: 2rem;
+}
+
+.modal-description p {
+  margin-bottom: 1rem;
+}
+
+/* ===========================================
+   Modal Gallery / Slideshow
+   =========================================== */
+.modal-gallery {
+  margin-bottom: 2rem;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide.active {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+.nav-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.5);
+  user-select: none;
+}
+
+.nav-btn:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.dots-container {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot:hover,
+.dot.active {
+  background-color: var(--primary-color);
+}
+
+/* ===========================================
+   Modal Links Section
+   =========================================== */
+.modal-links {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+}
+
+.modal-links h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+
+.link-item:hover {
+  background: #f1f3f4;
+}
+
+.link-icon {
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.link-label {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: #333;
+}
+
+.link-url {
+  color: var(--primary-color);
+  text-decoration: none;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link-url:hover {
+  text-decoration: underline;
+}
+
+/* ===========================================
+   Responsive - Tablet Range (769px - 1024px)
+   =========================================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===========================================
+   Responsive - Tablet/Mobile (max-width: 768px)
+   =========================================== */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1rem;
+  }
+
+  /* Featured Section - 2 columns */
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .featured-card {
+    height: 150px;
+    border-radius: 8px;
+  }
+
+  .featured-overlay {
+    padding: 0.75rem;
+  }
+
+  .featured-date {
+    font-size: 0.65rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .featured-title {
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+
+  .featured-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Cards Grid - 3 columns */
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 5% auto;
+  }
+
+  .modal-header,
+  .modal-body {
+    padding: 1rem;
+  }
+}
+
+/* ===========================================
+   Responsive - Small Mobile (max-width: 480px)
+   =========================================== */
+@media (max-width: 480px) {
+  /* Compact card styling */
+  .news-card {
+    border-radius: 8px;
+  }
+
+  .card-image {
+    height: 70px;
+  }
+
+  /* Hide category badge on mobile */
+  .category-badge {
+    display: none;
+  }
+
+  /* Compact content area */
+  .card-content {
+    padding: 0.4rem;
+  }
+
+  .card-date {
+    font-size: 0.55rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .card-title {
+    font-size: 0.65rem;
+    line-height: 1.25;
+    margin-bottom: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Hide description on mobile */
+  .card-description {
+    display: none;
+  }
+
+  /* Section titles */
+  .cards-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Main container adjustments */
+  .main-container {
+    padding: 0.5rem;
+  }
+
+  .featured-section {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Work in progress banner */
+  #main .container > div[style*="background: linear-gradient"] {
+    padding: 0.6rem 0.8rem !important;
+    margin: 0.5rem auto 1rem auto !important;
+  }
+
+  #main .container > div[style*="background: linear-gradient"] span {
+    font-size: 0.75rem !important;
+  }
+}

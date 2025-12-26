@@ -560,6 +560,11 @@
     box-sizing: border-box;
 }
 
+/* Reduce spacing between main header and featured section */
+.papers-container {
+    margin-top: -1.5rem;
+}
+
 /* Featured Section Headings */
 .featured-section > h2,
 .featured-section > h3,
