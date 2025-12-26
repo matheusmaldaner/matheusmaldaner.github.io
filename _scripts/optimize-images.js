@@ -54,6 +54,10 @@ const PROJECT_ROOT = path.resolve(__dirname, '..');
 const IMAGES_DIR = path.join(PROJECT_ROOT, 'images');
 const BACKUP_DIR = path.join(PROJECT_ROOT, '_image-backups');
 const CONVERSIONS_LOG = path.join(__dirname, 'png-to-jpg-conversions.txt');
+const DATA_DIR = path.join(PROJECT_ROOT, 'data');
+
+// Track conversions for path fixing
+const conversions = [];
 
 // Stats tracking
 const stats = {
@@ -216,9 +220,10 @@ async function convertPngToJpg(filePath) {
   stats.savedBytes += savedKB * 1024;
   stats.converted++;
 
-  // Log conversion for path fixing
-  const relOld = path.relative(PROJECT_ROOT, filePath);
-  const relNew = path.relative(PROJECT_ROOT, jpgPath);
+  // Track conversion for path fixing
+  const relOld = '/' + path.relative(PROJECT_ROOT, filePath).replace(/\\/g, '/');
+  const relNew = '/' + path.relative(PROJECT_ROOT, jpgPath).replace(/\\/g, '/');
+  conversions.push({ from: relOld, to: relNew });
   fs.appendFileSync(CONVERSIONS_LOG, `${relOld} -> ${relNew}\n`);
 
   console.log(`  Converted PNG->JPG: ${path.relative(PROJECT_ROOT, filePath)} (${sizeBeforeKB}KB -> ${sizeAfterKB}KB, saved ${savedKB}KB)`);
@@ -291,6 +296,74 @@ function formatBytes(bytes) {
 }
 
 /**
+ * Get all YAML files recursively
+ */
+function getYamlFiles(dir) {
+  const files = [];
+  function walk(currentDir) {
+    if (!fs.existsSync(currentDir)) return;
+    const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(currentDir, entry.name);
+      if (entry.isDirectory()) {
+        walk(fullPath);
+      } else if (entry.name.endsWith('.yaml') || entry.name.endsWith('.yml')) {
+        files.push(fullPath);
+      }
+    }
+  }
+  walk(dir);
+  return files;
+}
+
+/**
+ * Update image paths in YAML files
+ */
+function updateYamlPaths() {
+  if (conversions.length === 0) {
+    return;
+  }
+
+  console.log('\n=== Updating YAML References ===\n');
+
+  const yamlFiles = getYamlFiles(path.join(DATA_DIR, 'yaml'));
+  // Also check combined-data.yaml
+  const combinedPath = path.join(DATA_DIR, 'combined-data.yaml');
+  if (fs.existsSync(combinedPath)) {
+    yamlFiles.push(combinedPath);
+  }
+
+  let totalUpdates = 0;
+
+  for (const yamlFile of yamlFiles) {
+    let content = fs.readFileSync(yamlFile, 'utf8');
+    let fileUpdates = 0;
+
+    for (const { from, to } of conversions) {
+      // Count occurrences before replacing
+      const regex = new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+      const matches = content.match(regex);
+      if (matches) {
+        fileUpdates += matches.length;
+        content = content.replace(regex, to);
+      }
+    }
+
+    if (fileUpdates > 0) {
+      fs.writeFileSync(yamlFile, content);
+      console.log(`  Updated ${fileUpdates} path(s) in ${path.relative(PROJECT_ROOT, yamlFile)}`);
+      totalUpdates += fileUpdates;
+    }
+  }
+
+  if (totalUpdates > 0) {
+    console.log(`\nTotal: ${totalUpdates} path(s) updated in YAML files`);
+  } else {
+    console.log('  No YAML paths needed updating');
+  }
+}
+
+/**
  * Main execution
  */
 async function main() {
@@ -351,12 +424,12 @@ async function main() {
   console.log(`\nConverted: ${stats.converted} | Optimized: ${stats.optimized} | Skipped: ${stats.skipped}`);
 
   if (!CONFIG.dryRun) {
-    console.log(`\nBackups saved to: ${path.relative(PROJECT_ROOT, BACKUP_DIR)}`);
-
+    // Update YAML paths for converted images
     if (stats.converted > 0) {
-      console.log(`\nPNG->JPG conversions logged to: ${path.relative(PROJECT_ROOT, CONVERSIONS_LOG)}`);
-      console.log('Update YAML references if needed.');
+      updateYamlPaths();
     }
+
+    console.log(`\nBackups saved to: ${path.relative(PROJECT_ROOT, BACKUP_DIR)}`);
   }
 }
 

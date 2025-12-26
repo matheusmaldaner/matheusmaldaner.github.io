@@ -2,7 +2,7 @@
 
 > Personal website of Matheus Kunzler Maldaner - AI/ML researcher and M.S. AI Systems student at the University of Florida. Research focus: Neurosymbolic AI, Human-Computer Interaction, and Agentic Systems.
 
-Last updated: 2025-12-25
+Last updated: 2025-12-26
 
 ## About
 
@@ -76,4 +76,4 @@ Hi, my name is Matheus Kunzler Maldaner and I am a first-year master's student a
 
 ---
 
-This file was auto-generated on 2025-12-25 from https://matheus.wiki
+This file was auto-generated on 2025-12-26 from https://matheus.wiki

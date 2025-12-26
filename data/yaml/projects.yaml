@@ -5,7 +5,7 @@
 #   type: "hackathon" | "class" | "personal" | "research" | "work"  # Required
 #   technologies:
 #     - "Example Tech"
-#   image: "/images/projects/example/example.png"
+#   image: "/images/projects/example/example.jpg"
 #   image-alt: "Accessible description of the project image."
 #   year: 2024  # Year completed
 #   links:
@@ -39,7 +39,7 @@
     - "Django"
     - "Docker"
     - "AWS"
-  image: "/images/projects/mirage.png"
+  image: "/images/projects/mirage.jpg"
   image-alt: "MIRAGE interface showing side-by-side comparison of text-to-image AI model outputs"
   links:
     demo: "https://mirage.weaudit.org/"
@@ -61,7 +61,7 @@
     - "React"
     - "Docker"
     - "Playwright"
-  image: "/images/projects/platos-cave.png"
+  image: "/images/projects/platos-cave.jpg"
   image-alt: "Plato's Cave interface showing knowledge graph visualization of verified research claims"
   links:
     github: "https://github.com/matheusmaldaner/PlatosCave"
@@ -82,7 +82,7 @@
     - "AutoGen"
     - "React"
     - "Docker"
-  image: "/images/projects/magentic-ui.png"
+  image: "/images/projects/magentic-ui.jpg"
   image-alt: "Magentic-UI interface showing human-in-the-loop AI agent collaboration"
   links:
     github: "https://github.com/microsoft/magentic-ui"
@@ -126,7 +126,7 @@
     - "FPGA"
     - "Hardware Acceleration"
     - "DiffLogic"
-  image: "/images/projects/ecologic.png"
+  image: "/images/projects/ecologic.jpg"
   image-alt: "EcoLogic project logo featuring green circuit board design with leaf motif representing eco-friendly AI"
   links:
     github: "https://github.com/matheusmaldaner/EcoLogic"
@@ -144,7 +144,7 @@
   technologies:
     - "Mobile Development"
     - "Mental Health"
-  image: "/images/projects/dinojourney.png"
+  image: "/images/projects/dinojourney.jpg"
   image-alt: "DinoJourney logo showing a friendly cartoon dinosaur companion for mental health support"
   links:
     github: "https://github.com/matheusmaldaner/DinoJourney"
@@ -163,7 +163,7 @@
     - "Python"
     - "CNN"
     - "Web Development"
-  image: "/images/projects/saliency-slider.png"
+  image: "/images/projects/saliency-slider.jpg"
   image-alt: "Saliency map visualization showing highlighted regions that CNN focuses on during image classification"
   links:
     github: "https://github.com/matheusmaldaner/SaliencySlider"
@@ -180,7 +180,7 @@
   technologies:
     - "Data Science"
     - "Statistical Analysis"
-  image: "/images/projects/asa-datafest.png"
+  image: "/images/projects/asa-datafest.jpg"
   image-alt: "Data visualization worm chart showing CourseKata learning patterns analysis from DataFest competition"
   links:
     news: "https://phhp.ufl.edu/2024/04/10/a-whirlwind-of-big-data-recapping-datafest-2024/"
@@ -197,7 +197,7 @@
     - "NLP"
     - "Discord Bot"
     - "Sentiment Analysis"
-  image: "/images/projects/dinodetect.png"
+  image: "/images/projects/dinodetect.jpg"
   image-alt: "DinoDetect logo featuring dinosaur mascot for Discord bot sentiment analysis tool"
   links:
     github: "https://github.com/Jibby2k1/DinoDetect"
@@ -216,7 +216,7 @@
   technologies:
     - "AI/ML"
     - "Education Technology"
-  image: "/images/projects/adaptree.png"
+  image: "/images/projects/adaptree.jpg"
   image-alt: "AdapTree logo showing tree structure representing personalized adaptive learning pathways"
   links:
     devpost: "https://devpost.com/software/adaptree"
@@ -236,7 +236,7 @@
     - "TensorFlow"
     - "EfficientNet"
     - "HPC"
-  image: "/images/projects/regressive-reasoning.png"
+  image: "/images/projects/regressive-reasoning.jpg"
   image-alt: "Regressive Reasoning project logo for brand logo classification machine learning system"
   links:
     github: "https://github.com/matheusmaldaner/RegressiveReasoning"
@@ -255,7 +255,7 @@
     - "R"
     - "Bioinformatics"
     - "RNA-seq"
-  image: "/images/projects/neuronal-analysis.png"
+  image: "/images/projects/neuronal-analysis.jpg"
   image-alt: "Scientific illustration of Mus musculus house mouse used for neuronal gene analysis research"
   links:
     github: "https://github.com/matheusmaldaner/NeuronalAnalysis"
@@ -273,7 +273,7 @@
   technologies:
     - "Flutter"
     - "Mobile Development"
-  image: "/images/projects/budget-buddy.png"
+  image: "/images/projects/budget-buddy.jpg"
   image-alt: "BudgetBuddy app logo with financial planning and budget tracking graphics"
   links:
     github: "https://github.com/matheusmaldaner/BudgetBuddy"
@@ -292,7 +292,7 @@
     - "Python"
     - "Pygame"
     - "Game Development"
-  image: "/images/projects/jasons-journey.png"
+  image: "/images/projects/jasons-journey.jpg"
   image-alt: "Jason's Journey game screenshot showing pixel art dungeon crawler with mathematical elements"
   links:
     github: "https://github.com/matheusmaldaner/JasonJourney"
@@ -310,7 +310,7 @@
   technologies:
     - "C++"
     - "API Integration"
-  image: "/images/projects/room-automation.png"
+  image: "/images/projects/room-automation.jpg"
   image-alt: "Room Automation system interface for optimizing university housing assignments"
   links: {}
   award: false
