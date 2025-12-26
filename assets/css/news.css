@@ -8,7 +8,7 @@
    =========================================== */
 .main-container {
   max-width: 1200px;
-  margin: -1.5rem auto 0 auto;
+  margin: -2.5rem auto 0 auto;
   padding: 2rem 0;
 }
 
@@ -22,7 +22,7 @@
 .featured-section h2 {
   font-size: 2rem;
   color: #333;
-  margin-bottom: 1.5rem;
+  margin: 0 0 1.5rem 0;
   font-weight: 600;
 }
 
@@ -418,7 +418,7 @@
 
   .featured-section h2 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
   }
 
   /* Cards Grid - 3 columns */

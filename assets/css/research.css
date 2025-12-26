@@ -552,17 +552,12 @@
 
 .papers-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
+    margin: -2.5rem auto 0 auto;
+    padding: 2rem 0;
 }
 
 .papers-container * {
     box-sizing: border-box;
-}
-
-/* Reduce spacing between main header and featured section */
-.papers-container {
-    margin-top: -1.5rem;
 }
 
 /* Featured Section Headings */
@@ -572,7 +567,7 @@
 .papers-container > h3 {
     font-size: 2rem;
     color: var(--color-heading);
-    margin-bottom: var(--space-5);
+    margin: 0 0 1.5rem 0;
     font-weight: 600;
 }
 
@@ -608,7 +603,7 @@
     .papers-container > h2,
     .papers-container > h3 {
         font-size: 1.3rem;
-        margin-bottom: var(--space-4);
+        margin: 0 0 1rem 0;
     }
 }
 
