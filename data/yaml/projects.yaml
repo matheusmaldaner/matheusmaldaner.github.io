@@ -12,12 +12,18 @@
 #     github: "https://github.com/example/repo"
 #     devpost: "https://devpost.com/software/example"
 #     news: "https://example.com/news"
+#     demo: "https://example.com/demo"
+#     video: "https://youtube.com/watch?v=example"
+#     paper: "https://arxiv.org/abs/example"
+#     blog: "https://example.com/blog"
+#     report: "https://example.com/report.pdf"
 #   contact:  # Optional - direct links
 #     linkedin: "https://linkedin.com/in/example"
 #     portfolio: "https://example.com"
 #   award: true | false | "Award Name"
 #   award_recognition: "Award recognition or placement"  # Optional
 #   collaborators: "Comma-separated list of collaborators"  # Optional
+#   featured: true  # Show on homepage/featured sections
 #   cv_featured: true  # Whether to show on CV
 #   proprietary: false
 #   hackathon_name: "Hackathon Name"  # Only if type: hackathon

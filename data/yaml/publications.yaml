@@ -8,7 +8,7 @@
 #   venue-shorthand: "EXCONF"
 #   location: "Example City, EX"
 #   year: 2025
-#   type: "conference"
+#   type: "conference" | "journal" | "arxiv" | "thesis"
 #   url: "https://example.com/paper"
 #   pdf: "https://example.com/paper.pdf"
 #   demo: "https://example.com/demo"
@@ -25,6 +25,10 @@
 #   coming-soon: false
 #   award: "Best Paper Award"
 #   highlight: "Spotlight Presentation"
+#   featured: true  # Show on homepage/featured sections
+#   institution: "microsoft" | "carnegie-mellon" | "university-of-florida"  # Affiliation
+#   image: "/images/papers/paper_example.png"  # Paper thumbnail
+#   abstract: "Full abstract text for the paper."
 #   equal-contribution:
 #     - "Author One"
 #     - "Author Two"
